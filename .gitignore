@@ -43,3 +43,7 @@ desktop.ini
 
 # External references (separate git repositories)
 references/
+
+# Local configuration files
+.mcp.json
+.claude/settings.local.json
