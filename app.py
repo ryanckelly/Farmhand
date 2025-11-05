@@ -195,6 +195,18 @@ def dashboard_files(filename):
     return send_from_directory(BASE_PATH / 'dashboard', filename)
 
 
+@app.route('/chart_config.js')
+def chart_config():
+    """Serve chart_config.js from dashboard directory"""
+    return send_from_directory(BASE_PATH / 'dashboard', 'chart_config.js')
+
+
+@app.route('/chart_renderer.js')
+def chart_renderer():
+    """Serve chart_renderer.js from dashboard directory"""
+    return send_from_directory(BASE_PATH / 'dashboard', 'chart_renderer.js')
+
+
 @app.route('/api/status')
 def api_status():
     """API endpoint for system status"""

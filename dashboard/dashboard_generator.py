@@ -1126,8 +1126,8 @@ class DashboardGenerator:
         // Embed diary data
         const diaryData = {diary_data};
     </script>
-    <script src="dashboard/chart_config.js"></script>
-    <script src="dashboard/chart_renderer.js"></script>
+    <script src="chart_config.js"></script>
+    <script src="chart_renderer.js"></script>
 </body>
 </html>"""
         else:
