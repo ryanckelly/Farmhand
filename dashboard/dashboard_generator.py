@@ -791,9 +791,9 @@ class DashboardGenerator:
         return f"""
     <div class="nav-container">
         <span class="nav-bracket">[</span>
-        <a href="dashboard.html" class="nav-link {dashboard_style}">DASHBOARD</a>
+        <a href="/dashboard" class="nav-link {dashboard_style}">DASHBOARD</a>
         <span class="nav-separator">|</span>
-        <a href="trends.html" class="nav-link {trends_style}">TRENDS</a>
+        <a href="/trends" class="nav-link {trends_style}">TRENDS</a>
         <span class="nav-bracket">]</span>
     </div>
 """
