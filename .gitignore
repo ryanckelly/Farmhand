@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# User-specific game data (should not be tracked)
+save_snapshot.json
+diary.json
+metrics.json
+dashboard_state.json
+
+# Generated files
+dashboard.html
+*.png
+*.html
+temp_analysis.json
+current_state.json
+
+# Test files
+test_*.txt
+nul
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+
+# External references (separate git repositories)
+references/
