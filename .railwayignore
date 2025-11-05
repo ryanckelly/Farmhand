@@ -1,0 +1,58 @@
+# Railway deployment ignore file
+# Similar to .gitignore, but for Railway deployments
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Documentation (optional - remove if you want docs deployed)
+doc/
+*.md
+
+# Git files
+.git/
+.gitignore
+.gitattributes
+
+# Test files (if any)
+tests/
+test_*.py
+*_test.py
+
+# Development files
+*.log
+*.tmp
+
+# Stardew Valley save files (local only - users will upload via API)
+# Uncomment these if you don't want to deploy with pre-loaded data
+# save_snapshot.json
+# diary.json
+# metrics.json
+# goals.md
+
+# Large generated files that can be regenerated
+dashboard/stardew_trends.png
+dashboard/stardew_bundles_money.png
+
+# Reference data (optional)
+references/

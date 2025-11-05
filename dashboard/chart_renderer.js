@@ -16,6 +16,7 @@ const chartInstances = {
 // Global data storage
 let fullChartData = null;
 let maxSessions = 0;
+let xAxisMode = 'sessions'; // 'sessions' or 'dates'
 
 // Wait for DOM and diary data to be loaded
 document.addEventListener('DOMContentLoaded', function() {
@@ -26,6 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     initializeCharts(diaryData);
     setupSessionFilter();
+    setupXAxisToggle();
 });
 
 /**
@@ -65,6 +67,7 @@ function initializeCharts(diary) {
 function extractChartData(entries) {
     const data = {
         sessionLabels: [],
+        dateLabels: [],
         moneyChanges: [],
         farmingXP: [],
         fishingXP: [],
@@ -82,7 +85,22 @@ function extractChartData(entries) {
     let cumulativeMoney = entries[0].financial.starting_money || 0;
 
     entries.forEach((entry, index) => {
-        data.sessionLabels.push(index.toString());
+        // Extract in-game date (e.g., "Spring 3, Year 1" -> "Spring 3")
+        let gameDate = `Session ${index}`;
+        if (entry.game_progress?.end) {
+            // Remove the year portion for brevity (e.g., "Winter 7, Year 2" -> "Winter 7")
+            gameDate = entry.game_progress.end.replace(/, Year \d+/, '');
+        }
+        data.sessionLabels.push(gameDate);
+
+        // Extract real-world date from detected_at timestamp
+        let dateLabel = `Session ${index}`;
+        if (entry.detected_at) {
+            const date = new Date(entry.detected_at);
+            // Format as "Nov 1" for brevity
+            dateLabel = date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+        }
+        data.dateLabels.push(dateLabel);
 
         // Money
         const moneyChange = entry.financial.change || 0;
@@ -443,6 +461,7 @@ function filterCharts(sessionCount) {
     // Create filtered data
     const filteredData = {
         sessionLabels: fullChartData.sessionLabels.slice(startIndex),
+        dateLabels: fullChartData.dateLabels.slice(startIndex),
         moneyChanges: fullChartData.moneyChanges.slice(startIndex),
         farmingXP: fullChartData.farmingXP.slice(startIndex),
         fishingXP: fullChartData.fishingXP.slice(startIndex),
@@ -475,7 +494,7 @@ function updateMoneyChart(chartData) {
         v >= 0 ? TERMINAL_COLORS.green : TERMINAL_COLORS.red
     );
 
-    chartInstances.money.data.labels = chartData.sessionLabels;
+    chartInstances.money.data.labels = getCurrentLabels(chartData);
     chartInstances.money.data.datasets[0].data = chartData.moneyChanges;
     chartInstances.money.data.datasets[0].backgroundColor = colors;
     chartInstances.money.data.datasets[0].borderColor = colors.map(c =>
@@ -487,7 +506,7 @@ function updateMoneyChart(chartData) {
 function updateXPBySkillChart(chartData) {
     if (!chartInstances.xpBySkill) return;
 
-    chartInstances.xpBySkill.data.labels = chartData.sessionLabels;
+    chartInstances.xpBySkill.data.labels = getCurrentLabels(chartData);
     chartInstances.xpBySkill.data.datasets[0].data = chartData.farmingXP;
     chartInstances.xpBySkill.data.datasets[1].data = chartData.fishingXP;
     chartInstances.xpBySkill.data.datasets[2].data = chartData.foragingXP;
@@ -499,7 +518,7 @@ function updateXPBySkillChart(chartData) {
 function updateTotalXPChart(chartData) {
     if (!chartInstances.totalXP) return;
 
-    chartInstances.totalXP.data.labels = chartData.sessionLabels;
+    chartInstances.totalXP.data.labels = getCurrentLabels(chartData);
     chartInstances.totalXP.data.datasets[0].data = chartData.totalXP;
     chartInstances.totalXP.update();
 }
@@ -507,7 +526,7 @@ function updateTotalXPChart(chartData) {
 function updateRelationshipChart(chartData) {
     if (!chartInstances.relationship) return;
 
-    chartInstances.relationship.data.labels = chartData.sessionLabels;
+    chartInstances.relationship.data.labels = getCurrentLabels(chartData);
     chartInstances.relationship.data.datasets[0].data = chartData.abigailHearts;
     chartInstances.relationship.update();
 }
@@ -515,7 +534,7 @@ function updateRelationshipChart(chartData) {
 function updateBundlesChart(chartData) {
     if (!chartInstances.bundles) return;
 
-    chartInstances.bundles.data.labels = chartData.sessionLabels;
+    chartInstances.bundles.data.labels = getCurrentLabels(chartData);
     chartInstances.bundles.data.datasets[0].data = chartData.bundlesCompleted;
     chartInstances.bundles.data.datasets[1].data = chartData.cumulativeBundles;
     chartInstances.bundles.update();
@@ -524,7 +543,43 @@ function updateBundlesChart(chartData) {
 function updateCumulativeMoneyChart(chartData) {
     if (!chartInstances.cumulativeMoney) return;
 
-    chartInstances.cumulativeMoney.data.labels = chartData.sessionLabels;
+    chartInstances.cumulativeMoney.data.labels = getCurrentLabels(chartData);
     chartInstances.cumulativeMoney.data.datasets[0].data = chartData.cumulativeMoney;
     chartInstances.cumulativeMoney.update();
+}
+
+/**
+ * Get current labels based on x-axis mode
+ */
+function getCurrentLabels(chartData) {
+    return xAxisMode === 'dates' ? chartData.dateLabels : chartData.sessionLabels;
+}
+
+/**
+ * Setup x-axis toggle button
+ */
+function setupXAxisToggle() {
+    const toggleButton = document.getElementById('xAxisToggle');
+    if (!toggleButton) return;
+
+    toggleButton.addEventListener('click', function() {
+        // Toggle mode
+        xAxisMode = xAxisMode === 'sessions' ? 'dates' : 'sessions';
+
+        // Update button text
+        if (xAxisMode === 'dates') {
+            toggleButton.textContent = 'X-Axis: Real Dates';
+            toggleButton.classList.add('active');
+        } else {
+            toggleButton.textContent = 'X-Axis: Game Dates';
+            toggleButton.classList.remove('active');
+        }
+
+        // Get current filter value
+        const filterInput = document.getElementById('sessionFilter');
+        const sessionCount = filterInput ? parseInt(filterInput.value) : maxSessions;
+
+        // Re-filter charts with new labels
+        filterCharts(sessionCount >= maxSessions ? maxSessions : sessionCount);
+    });
 }

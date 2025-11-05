@@ -966,13 +966,13 @@ class DashboardGenerator:
         }}
         pre {{
             margin: 0 auto 20px auto;
-            max-width: 1200px;
+            max-width: 70ch;
             font-size: 14px;
         }}
         .filter-container {{
-            max-width: 1200px;
+            max-width: 70ch;
             margin: 0 auto 20px auto;
-            padding: 20px;
+            padding: 15px;
             background: rgba(0, 0, 0, 0.3);
             border: 2px solid #00ff00;
             border-radius: 4px;
@@ -989,8 +989,8 @@ class DashboardGenerator:
         }}
         #sessionFilter {{
             flex: 1;
-            min-width: 200px;
-            max-width: 400px;
+            min-width: 150px;
+            max-width: 250px;
             height: 6px;
             background: rgba(0, 255, 0, 0.2);
             border-radius: 3px;
@@ -1043,6 +1043,11 @@ class DashboardGenerator:
             background: rgba(0, 255, 0, 0.3);
             box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
         }}
+        .filter-button.active {{
+            background: rgba(255, 215, 0, 0.2);
+            border-color: #ffd700;
+            color: #ffd700;
+        }}
         .chart-grid {{
             display: flex;
             flex-direction: column;
@@ -1082,6 +1087,7 @@ class DashboardGenerator:
         <input type="range" id="sessionFilter" min="5" max="100" value="100" step="1">
         <span id="sessionCount">All</span>
         <button id="resetFilter" class="filter-button">Reset</button>
+        <button id="xAxisToggle" class="filter-button">X-Axis: Game Dates</button>
     </div>
 
     <div class="chart-grid">
@@ -1120,8 +1126,8 @@ class DashboardGenerator:
         // Embed diary data
         const diaryData = {diary_data};
     </script>
-    <script src="chart_config.js"></script>
-    <script src="chart_renderer.js"></script>
+    <script src="dashboard/chart_config.js"></script>
+    <script src="dashboard/chart_renderer.js"></script>
 </body>
 </html>"""
         else:

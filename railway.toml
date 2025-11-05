@@ -1,0 +1,15 @@
+[build]
+builder = "nixpacks"
+buildCommand = "pip install -r requirements.txt"
+
+[deploy]
+startCommand = "gunicorn app:app --bind 0.0.0.0:$PORT --workers 2 --threads 4 --timeout 120"
+restartPolicyType = "on_failure"
+restartPolicyMaxRetries = 10
+
+[env]
+# Python version
+NIXPACKS_PYTHON_VERSION = "3.11"
+
+# Production mode
+FLASK_ENV = "production"
