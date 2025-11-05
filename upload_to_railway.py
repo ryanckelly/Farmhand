@@ -34,19 +34,19 @@ def upload_to_railway(base_url):
     for filename in data_files:
         if not Path(filename).exists():
             missing_files.append(filename)
-            print(f"  ❌ Missing: {filename}")
+            print(f"  [X] Missing: {filename}")
         else:
             # Check if valid JSON
             try:
                 with open(filename, 'r', encoding='utf-8') as f:
                     json.load(f)
-                print(f"  ✅ Valid: {filename}")
+                print(f"  [OK] Valid: {filename}")
             except json.JSONDecodeError as e:
-                print(f"  ❌ Invalid JSON in {filename}: {e}")
+                print(f"  [X] Invalid JSON in {filename}: {e}")
                 missing_files.append(filename)
 
     if missing_files:
-        print(f"\n❌ Missing or invalid files: {', '.join(missing_files)}")
+        print(f"\n[ERROR] Missing or invalid files: {', '.join(missing_files)}")
         print("   Run session_tracker.py first to generate these files")
         return False
 
@@ -67,10 +67,10 @@ def upload_to_railway(base_url):
 
                 if response.status_code == 200:
                     result = response.json()
-                    print(f"✅ {result.get('status', 'success')}")
+                    print(f"[OK] {result.get('status', 'success')}")
                     uploaded += 1
                 else:
-                    print(f"❌ Error {response.status_code}")
+                    print(f"[ERROR] Status {response.status_code}")
                     try:
                         error = response.json()
                         print(f"     {error.get('error', 'Unknown error')}")
@@ -78,15 +78,15 @@ def upload_to_railway(base_url):
                         print(f"     {response.text}")
 
         except requests.exceptions.RequestException as e:
-            print(f"❌ Connection error: {e}")
+            print(f"[ERROR] Connection error: {e}")
         except Exception as e:
-            print(f"❌ Error: {e}")
+            print(f"[ERROR] {e}")
 
     if uploaded == 0:
-        print("\n❌ No files uploaded successfully")
+        print("\n[ERROR] No files uploaded successfully")
         return False
 
-    print(f"\n✅ Uploaded {uploaded}/{len(data_files)} files")
+    print(f"\n[SUCCESS] Uploaded {uploaded}/{len(data_files)} files")
 
     # Refresh dashboard
     print("\n[3/3] Refreshing dashboard...")
@@ -95,11 +95,11 @@ def upload_to_railway(base_url):
 
         if response.status_code == 200:
             result = response.json()
-            print(f"  ✅ Status: {result.get('status')}")
-            print(f"  📅 Game Date: {result.get('game_date')}")
-            print(f"  🕐 Generated: {result.get('generated_at')}")
+            print(f"  [OK] Status: {result.get('status')}")
+            print(f"  Game Date: {result.get('game_date')}")
+            print(f"  Generated: {result.get('generated_at')}")
         else:
-            print(f"  ❌ Error {response.status_code}")
+            print(f"  [ERROR] Status {response.status_code}")
             try:
                 error = response.json()
                 print(f"     {error.get('error', 'Unknown error')}")
@@ -108,18 +108,18 @@ def upload_to_railway(base_url):
             return False
 
     except requests.exceptions.RequestException as e:
-        print(f"  ❌ Connection error: {e}")
+        print(f"  [ERROR] Connection error: {e}")
         return False
 
     # Success!
     print("\n" + "=" * 70)
-    print("✅ DEPLOYMENT SUCCESSFUL!")
+    print("[SUCCESS] DEPLOYMENT SUCCESSFUL!")
     print("=" * 70)
     print()
     print("Your dashboard is now live at:")
-    print(f"  🌐 Dashboard: {base_url}/dashboard")
-    print(f"  📊 Trends:    {base_url}/trends")
-    print(f"  📡 API:       {base_url}/api/status")
+    print(f"  Dashboard: {base_url}/dashboard")
+    print(f"  Trends:    {base_url}/trends")
+    print(f"  API:       {base_url}/api/status")
     print()
     print("=" * 70)
 
