@@ -40,10 +40,24 @@
             color: #ffd700;
             font-weight: bold;
         }
-        pre {
+        .dashboard-container {
             margin: 0 auto;
-            max-width: 70ch;
-            font-size: 14px;
+            max-width: 800px;
+            width: 95%;
+            padding: 20px;
+            box-sizing: border-box;
+            border: 3px solid #00ff00;
+            border-radius: 8px;
+            font-size: clamp(10px, 2.5vw, 14px);
+            line-height: 1.6;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            text-align: center;
+        }
+        @media (max-width: 768px) {
+            .dashboard-container {
+                font-size: clamp(8px, 3vw, 12px);
+            }
         }
         .header {
             color: #ffd700;
@@ -78,36 +92,26 @@
         <span class="nav-bracket">]</span>
     </div>
 
-    <pre>╔════════════════════════════════════════════════════════════════════╗
-║                              FARMHAND                              ║
-║         Generated: 2025-11-05 20:23:12 | Winter 7, Year 2          ║
-╠════════════════════════════════════════════════════════════════════╣
-║                                                                    ║
-║  UNLOCKS PROGRESS                                                  ║
-║  ────────────────                                                  ║
-║  Community Center  [===================.]  96% (30/31)             ║
-║  Museum Collection [=============.......]  69% (66/95)             ║
-║  Cooking Recipes   [....................]   0% (0/74)              ║
-║  Max Friendships   [....................]   3% (1/32)              ║
-║  Master Skills     [============........]  60% (3/5)               ║
-║                                                                    ║
-║  FINANCIAL TRENDS                                                  ║
-║  ────────────────                                                  ║
-║  Current Balance:  658,405g                                        ║
-║  Daily Average:    19,310g/day - 0%                                ║
-║  30-Day Trend:     ▂▆▃▄█▂▁                                         ║
-║  Best Day:         231,464g on Fall 16, Year 2                     ║
-║                                                                    ║
-║  MOMENTUM ANALYSIS                                                 ║
-║  ─────────────────                                                 ║
-║                                                                    ║
-║  === 3-SESSION MOMENTUM ===                                        ║
-║    [HOT] High XP gains (+961/session)                              ║
-║    [COLD] No bundle progress in 3 sessions                         ║
-║                                                                    ║
-║  === 7-SESSION MOMENTUM ===                                        ║
-║    [STALLED] No museum donations in 7 sessions                     ║
-║                                                                    ║
-╚════════════════════════════════════════════════════════════════════╝</pre>
+    <div class="dashboard-container">FARMHAND
+Generated: 2025-11-05 21:08:47 | Winter 7, Year 2
+UNLOCKS PROGRESS
+────────────────
+Community Center  [===================.]  96% (30/31)
+Museum Collection [=============.......]  69% (66/95)
+Cooking Recipes   [....................]   0% (0/74)
+Max Friendships   [....................]   3% (1/32)
+Master Skills     [============........]  60% (3/5)
+FINANCIAL TRENDS
+────────────────
+Current Balance:  658,405g
+Daily Average:    19,310g/day - 0%
+Best Day:         231,464g on Fall 16, Year 2
+MOMENTUM ANALYSIS
+─────────────────
+=== 3-SESSION MOMENTUM ===
+[HOT] High XP gains (+961/session)
+[COLD] No bundle progress in 3 sessions
+=== 7-SESSION MOMENTUM ===
+[STALLED] No museum donations in 7 sessions</div>
 </body>
 </html>

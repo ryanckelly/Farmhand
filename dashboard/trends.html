@@ -41,13 +41,29 @@
             color: #ffd700;
             font-weight: bold;
         }
-        pre {
+        .dashboard-container {
             margin: 0 auto 20px auto;
-            max-width: 70ch;
-            font-size: 14px;
+            max-width: 800px;
+            width: 95%;
+            padding: 20px;
+            box-sizing: border-box;
+            border: 3px solid #00ff00;
+            border-radius: 8px;
+            font-size: clamp(10px, 2.5vw, 14px);
+            line-height: 1.6;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            text-align: center;
+        }
+        @media (max-width: 768px) {
+            .dashboard-container {
+                font-size: clamp(8px, 3vw, 12px);
+            }
         }
         .filter-container {
-            max-width: 70ch;
+            max-width: 800px;
+            width: 95%;
+            box-sizing: border-box;
             margin: 0 auto 20px auto;
             padding: 15px;
             background: rgba(0, 0, 0, 0.3);
@@ -129,9 +145,10 @@
             display: flex;
             flex-direction: column;
             gap: 30px;
-            max-width: 1200px;
+            max-width: 800px;
+            width: 95%;
             margin: 30px auto;
-            padding: 0 20px;
+            box-sizing: border-box;
         }
         .chart-container {
             background: rgba(0, 0, 0, 0.3);
@@ -140,6 +157,8 @@
             padding: 20px;
             box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
             width: 100%;
+            margin: 0 auto;
+            box-sizing: border-box;
         }
         .chart-container canvas {
             max-width: 100%;
@@ -165,14 +184,10 @@
         <span class="nav-bracket">]</span>
     </div>
 
-    <pre>╔═══════════════════════════════════════════════════════════════╗
-║                      TRENDS &amp; ANALYTICS                       ║
-║       Generated: 2025-11-05 20:23:12 | Winter 7, Year 2       ║
-╠═══════════════════════════════════════════════════════════════╣
-║                                                               ║
-║       Session-by-session analysis of your farm progress       ║
-║                                                               ║
-╚═══════════════════════════════════════════════════════════════╝</pre>
+    <div class="dashboard-container">TRENDS &amp; ANALYTICS
+Generated: 2025-11-05 21:08:47 | Winter 7, Year 2
+
+Session-by-session analysis of your farm progress</div>
 
     <div class="filter-container">
         <div class="filter-label">Sessions to Display:</div>

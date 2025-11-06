@@ -71,49 +71,67 @@ class ASCIIRenderer:
             return "0%"
 
     @staticmethod
-    def box_line(text, width=70, align='left'):
+    def box_line(text, width=50, align='left'):
         """Create a line within a box with padding.
 
-        Automatically truncates text that exceeds maximum width to prevent
-        border overflow issues with Unicode characters.
+        Dynamically adjusts spacing without truncation - CSS handles overflow.
         """
         # Calculate maximum text length based on alignment
         if align == 'left':
             max_length = width - 4  # Account for "║  " and "║"
-            # Truncate if needed
-            if len(text) > max_length:
-                text = text[:max_length-3] + '...'
-            return f"║  {text:<{max_length}}║"
+            actual_length = len(text)
+
+            # No truncation - calculate padding
+            if actual_length <= max_length:
+                padding = max_length - actual_length
+                return f"║  {text}{' ' * padding}║"
+            else:
+                # Content too long, just add border without padding
+                return f"║  {text}║"
+
         elif align == 'center':
             max_length = width - 2  # Account for "║" on both sides
-            # Truncate if needed
-            if len(text) > max_length:
-                text = text[:max_length-3] + '...'
-            return f"║{text:^{max_length}}║"
+            actual_length = len(text)
+
+            # No truncation - calculate padding for centering
+            if actual_length <= max_length:
+                total_padding = max_length - actual_length
+                left_padding = total_padding // 2
+                right_padding = total_padding - left_padding
+                return f"║{' ' * left_padding}{text}{' ' * right_padding}║"
+            else:
+                # Content too long, just center with borders
+                return f"║{text}║"
+
         else:  # right
             max_length = width - 2  # Account for "║" on both sides
-            # Truncate if needed
-            if len(text) > max_length:
-                text = text[:max_length-3] + '...'
-            return f"║{text:>{max_length}}║"
+            actual_length = len(text)
+
+            # No truncation - calculate padding
+            if actual_length <= max_length:
+                padding = max_length - actual_length
+                return f"║{' ' * padding}{text}║"
+            else:
+                # Content too long, just add border
+                return f"║{text}║"
 
     @staticmethod
-    def separator(width=70):
+    def separator(width=50):
         """Create a box separator line."""
         return f"╠{'═' * (width-2)}╣"
 
     @staticmethod
-    def box_top(width=70):
+    def box_top(width=50):
         """Create top of box."""
         return f"╔{'═' * (width-2)}╗"
 
     @staticmethod
-    def box_bottom(width=70):
+    def box_bottom(width=50):
         """Create bottom of box."""
         return f"╚{'═' * (width-2)}╝"
 
     @staticmethod
-    def empty_line(width=70):
+    def empty_line(width=50):
         """Create empty line in box."""
         return f"║{' ' * (width-2)}║"
 
@@ -588,10 +606,6 @@ class DashboardGenerator:
             arrow = "-"
         lines.append(f"  Daily Average:    {daily_avg}/day {arrow} {trend}")
 
-        # Sparkline
-        sparkline = ASCIIRenderer.sparkline(fin['sparkline_data'])
-        lines.append(f"  30-Day Trend:     {sparkline}")
-
         # Best day
         best = ASCIIRenderer.format_number(fin['best_day']['amount'])
         lines.append(f"  Best Day:         {best} on {fin['best_day']['date']}")
@@ -724,10 +738,6 @@ class DashboardGenerator:
             arrow = "-"
         lines.append(r.box_line(f"Daily Average:    {daily_avg}/day {arrow} {trend}"))
 
-        # Sparkline (no label - trend already shown by arrow above)
-        sparkline = r.sparkline(fin['sparkline_data'])
-        lines.append(r.box_line(f"30-Day Trend:     {sparkline}"))
-
         # Best day
         best = r.format_number(fin['best_day']['amount'])
         lines.append(r.box_line(f"Best Day:         {best} on {fin['best_day']['date']}"))
@@ -820,6 +830,16 @@ class DashboardGenerator:
         # Get ASCII content
         ascii_content = self.render_ascii_dashboard(state)
 
+        # Strip ASCII box characters since CSS provides border
+        box_chars = ['╔', '╗', '╚', '╝', '║', '╠', '╣', '═']
+        for char in box_chars:
+            ascii_content = ascii_content.replace(char, '')
+
+        # Clean up extra spaces and empty lines from removed borders
+        lines = ascii_content.split('\n')
+        lines = [line.strip() for line in lines if line.strip()]
+        ascii_content = '\n'.join(lines)
+
         # Escape for HTML
         html_content = ascii_content.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
 
@@ -872,10 +892,24 @@ class DashboardGenerator:
             color: #ffd700;
             font-weight: bold;
         }}
-        pre {{
+        .dashboard-container {{
             margin: 0 auto;
-            max-width: 70ch;
-            font-size: 14px;
+            max-width: 800px;
+            width: 95%;
+            padding: 20px;
+            box-sizing: border-box;
+            border: 3px solid #00ff00;
+            border-radius: 8px;
+            font-size: clamp(10px, 2.5vw, 14px);
+            line-height: 1.6;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            text-align: center;
+        }}
+        @media (max-width: 768px) {{
+            .dashboard-container {{
+                font-size: clamp(8px, 3vw, 12px);
+            }}
         }}
         .header {{
             color: #ffd700;
@@ -902,7 +936,7 @@ class DashboardGenerator:
 </head>
 <body>
     {nav_html}
-    <pre>{html_content}</pre>
+    <div class="dashboard-container">{html_content}</div>
 </body>
 </html>"""
 
@@ -916,17 +950,12 @@ class DashboardGenerator:
 
     def render_trends_page(self, state, use_chartjs=True):
         """Generate trends page with charts."""
-        # Create ASCII header for trends page
-        width = 65
+        # Create text header (CSS border replaces ASCII box)
         lines = []
-        lines.append(ASCIIRenderer.box_top(width))
-        lines.append(ASCIIRenderer.box_line("TRENDS & ANALYTICS", width, 'center'))
-        lines.append(ASCIIRenderer.box_line(f"Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} | {state['game_date']}", width, 'center'))
-        lines.append(ASCIIRenderer.separator(width))
-        lines.append(ASCIIRenderer.empty_line(width))
-        lines.append(ASCIIRenderer.box_line("Session-by-session analysis of your farm progress", width, 'center'))
-        lines.append(ASCIIRenderer.empty_line(width))
-        lines.append(ASCIIRenderer.box_bottom(width))
+        lines.append("TRENDS & ANALYTICS")
+        lines.append(f"Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} | {state['game_date']}")
+        lines.append("")
+        lines.append("Session-by-session analysis of your farm progress")
 
         ascii_header = '\n'.join(lines)
         html_header = ascii_header.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
@@ -981,13 +1010,29 @@ class DashboardGenerator:
             color: #ffd700;
             font-weight: bold;
         }}
-        pre {{
+        .dashboard-container {{
             margin: 0 auto 20px auto;
-            max-width: 70ch;
-            font-size: 14px;
+            max-width: 800px;
+            width: 95%;
+            padding: 20px;
+            box-sizing: border-box;
+            border: 3px solid #00ff00;
+            border-radius: 8px;
+            font-size: clamp(10px, 2.5vw, 14px);
+            line-height: 1.6;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            text-align: center;
+        }}
+        @media (max-width: 768px) {{
+            .dashboard-container {{
+                font-size: clamp(8px, 3vw, 12px);
+            }}
         }}
         .filter-container {{
-            max-width: 70ch;
+            max-width: 800px;
+            width: 95%;
+            box-sizing: border-box;
             margin: 0 auto 20px auto;
             padding: 15px;
             background: rgba(0, 0, 0, 0.3);
@@ -1069,9 +1114,10 @@ class DashboardGenerator:
             display: flex;
             flex-direction: column;
             gap: 30px;
-            max-width: 1200px;
+            max-width: 800px;
+            width: 95%;
             margin: 30px auto;
-            padding: 0 20px;
+            box-sizing: border-box;
         }}
         .chart-container {{
             background: rgba(0, 0, 0, 0.3);
@@ -1080,6 +1126,8 @@ class DashboardGenerator:
             padding: 20px;
             box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
             width: 100%;
+            margin: 0 auto;
+            box-sizing: border-box;
         }}
         .chart-container canvas {{
             max-width: 100%;
@@ -1097,7 +1145,7 @@ class DashboardGenerator:
 </head>
 <body>
     {nav_html}
-    <pre>{html_header}</pre>
+    <div class="dashboard-container">{html_header}</div>
 
     <div class="filter-container">
         <div class="filter-label">Sessions to Display:</div>
@@ -1191,10 +1239,24 @@ class DashboardGenerator:
             color: #ffd700;
             font-weight: bold;
         }}
-        pre {{
+        .dashboard-container {{
             margin: 0 auto;
-            max-width: 70ch;
-            font-size: 14px;
+            max-width: 800px;
+            width: 95%;
+            padding: 20px;
+            box-sizing: border-box;
+            border: 3px solid #00ff00;
+            border-radius: 8px;
+            font-size: clamp(10px, 2.5vw, 14px);
+            line-height: 1.6;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            text-align: center;
+        }}
+        @media (max-width: 768px) {{
+            .dashboard-container {{
+                font-size: clamp(8px, 3vw, 12px);
+            }}
         }}
         .chart-container {{
             text-align: center;
@@ -1219,7 +1281,7 @@ class DashboardGenerator:
 </head>
 <body>
     {nav_html}
-    <pre>{html_header}</pre>
+    <div class="dashboard-container">{html_header}</div>
 
     <div class="chart-title">SESSION TRENDS</div>
     <div class="chart-container">
