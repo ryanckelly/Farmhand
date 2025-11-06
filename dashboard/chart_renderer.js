@@ -56,7 +56,7 @@ function initializeCharts(diary) {
     initMoneyChart(fullChartData);
     initXPBySkillChart(fullChartData);
     initTotalXPChart(fullChartData);
-    initRelationshipChart(fullChartData);
+    initRelationshipChart(fullChartData, selectedVillager || 'Abigail');
     initBundlesChart(fullChartData);
     initCumulativeMoneyChart(fullChartData);
 }
@@ -77,9 +77,16 @@ function extractChartData(entries) {
         totalXP: [],
         bundlesCompleted: [],
         cumulativeBundles: [],
-        abigailHearts: [],
+        villagerHearts: {},  // Dynamic: stores hearts for all villagers
         cumulativeMoney: []
     };
+
+    // Initialize villager hearts tracking for all villagers
+    if (typeof villagersData !== 'undefined') {
+        villagersData.forEach(villager => {
+            data.villagerHearts[villager.name] = [];
+        });
+    }
 
     let cumulativeBundles = 0;
     let cumulativeMoney = entries[0].financial.starting_money || 0;
@@ -130,11 +137,18 @@ function extractChartData(entries) {
         cumulativeBundles += bundles;
         data.cumulativeBundles.push(cumulativeBundles);
 
-        // Abigail hearts
+        // Track hearts for ALL villagers
         const friendships = entry.changes_detail?.friendship_changes || {};
-        const abigailHearts = friendships.Abigail?.new_hearts ||
-                            (data.abigailHearts.length > 0 ? data.abigailHearts[data.abigailHearts.length - 1] : 0);
-        data.abigailHearts.push(abigailHearts);
+
+        // Update each villager's hearts (carry forward previous value if no change)
+        for (const villagerName in data.villagerHearts) {
+            const previousHearts = data.villagerHearts[villagerName].length > 0
+                ? data.villagerHearts[villagerName][data.villagerHearts[villagerName].length - 1]
+                : 0;
+
+            const newHearts = friendships[villagerName]?.new_hearts ?? previousHearts;
+            data.villagerHearts[villagerName].push(newHearts);
+        }
     });
 
     return data;
@@ -299,25 +313,31 @@ function initTotalXPChart(chartData) {
 }
 
 /**
- * Initialize Relationship Chart (Abigail)
+ * Initialize Relationship Chart (Dynamic Villager)
  */
-function initRelationshipChart(chartData) {
+function initRelationshipChart(chartData, villagerName = 'Abigail') {
     const ctx = document.getElementById('relationshipChart');
     if (!ctx) return;
+
+    // Get villager data
+    const villagerHearts = chartData.villagerHearts[villagerName] || [];
+    const villagerData = villagersData?.find(v => v.name === villagerName);
+    const villagerColor = villagerData?.color || TERMINAL_COLORS.relationship;
 
     const config = createLineChartConfig({
         labels: chartData.sessionLabels,
         datasets: [{
-            label: 'Abigail Hearts',
-            data: chartData.abigailHearts,
-            backgroundColor: 'transparent',
-            borderColor: TERMINAL_COLORS.relationship,
+            label: `${villagerName} Hearts`,
+            data: villagerHearts,
+            backgroundColor: `${villagerColor}33`,  // 20% opacity
+            borderColor: villagerColor,
             borderWidth: 3,
-            fill: false,
-            pointBackgroundColor: TERMINAL_COLORS.relationship,
+            fill: true,
+            pointBackgroundColor: villagerColor,
             pointBorderColor: TERMINAL_COLORS.gold,
             pointBorderWidth: 2,
-            pointRadius: 5
+            pointRadius: 5,
+            tension: 0.4
         }]
     }, {
         scales: {
@@ -471,15 +491,20 @@ function filterCharts(sessionCount) {
         totalXP: fullChartData.totalXP.slice(startIndex),
         bundlesCompleted: fullChartData.bundlesCompleted.slice(startIndex),
         cumulativeBundles: fullChartData.cumulativeBundles.slice(startIndex),
-        abigailHearts: fullChartData.abigailHearts.slice(startIndex),
+        villagerHearts: {},
         cumulativeMoney: fullChartData.cumulativeMoney.slice(startIndex)
     };
+
+    // Slice villager hearts for all villagers
+    for (const villagerName in fullChartData.villagerHearts) {
+        filteredData.villagerHearts[villagerName] = fullChartData.villagerHearts[villagerName].slice(startIndex);
+    }
 
     // Update each chart
     updateMoneyChart(filteredData);
     updateXPBySkillChart(filteredData);
     updateTotalXPChart(filteredData);
-    updateRelationshipChart(filteredData);
+    updateRelationshipChart(filteredData); // Will use selectedVillager if available
     updateBundlesChart(filteredData);
     updateCumulativeMoneyChart(filteredData);
 }
@@ -523,11 +548,26 @@ function updateTotalXPChart(chartData) {
     chartInstances.totalXP.update();
 }
 
-function updateRelationshipChart(chartData) {
+function updateRelationshipChart(chartData, villagerName) {
     if (!chartInstances.relationship) return;
 
+    // If villagerName not provided, use currently selected villager
+    if (!villagerName && typeof selectedVillager !== 'undefined') {
+        villagerName = selectedVillager;
+    }
+    if (!villagerName) villagerName = 'Abigail';
+
+    // Get villager data
+    const villagerHearts = chartData.villagerHearts[villagerName] || [];
+    const villagerData = villagersData?.find(v => v.name === villagerName);
+    const villagerColor = villagerData?.color || TERMINAL_COLORS.relationship;
+
     chartInstances.relationship.data.labels = getCurrentLabels(chartData);
-    chartInstances.relationship.data.datasets[0].data = chartData.abigailHearts;
+    chartInstances.relationship.data.datasets[0].label = `${villagerName} Hearts`;
+    chartInstances.relationship.data.datasets[0].data = villagerHearts;
+    chartInstances.relationship.data.datasets[0].borderColor = villagerColor;
+    chartInstances.relationship.data.datasets[0].backgroundColor = `${villagerColor}33`;
+    chartInstances.relationship.data.datasets[0].pointBackgroundColor = villagerColor;
     chartInstances.relationship.update();
 }
 
@@ -583,3 +623,34 @@ function setupXAxisToggle() {
         filterCharts(sessionCount >= maxSessions ? maxSessions : sessionCount);
     });
 }
+
+/**
+ * Global function to refresh relationship chart (called from villager chip click)
+ */
+window.refreshRelationshipChart = function(villagerName) {
+    // Get current filter value
+    const filterInput = document.getElementById('sessionFilter');
+    const sessionCount = filterInput ? parseInt(filterInput.value) : maxSessions;
+
+    // If showing all sessions, use full data
+    if (sessionCount >= maxSessions && fullChartData) {
+        updateRelationshipChart(fullChartData, villagerName);
+    } else {
+        // Re-filter with new villager
+        const totalSessions = fullChartData.sessionLabels.length;
+        const startIndex = Math.max(0, totalSessions - sessionCount);
+
+        const filteredData = {
+            sessionLabels: fullChartData.sessionLabels.slice(startIndex),
+            dateLabels: fullChartData.dateLabels.slice(startIndex),
+            villagerHearts: {}
+        };
+
+        // Slice villager hearts
+        for (const vName in fullChartData.villagerHearts) {
+            filteredData.villagerHearts[vName] = fullChartData.villagerHearts[vName].slice(startIndex);
+        }
+
+        updateRelationshipChart(filteredData, villagerName);
+    }
+};

@@ -14,6 +14,12 @@ import json
 import os
 from datetime import datetime
 from pathlib import Path
+import sys
+
+# Add parent directory to path for imports
+sys.path.insert(0, str(Path(__file__).parent.parent))
+from villager_aggregator import get_all_villagers_summary, get_villager_chart_data
+from villager_database import get_all_villagers
 
 
 class ASCIIRenderer:
@@ -967,6 +973,23 @@ class DashboardGenerator:
             # Load diary data to embed
             diary_data = json.dumps(self.diary)
 
+            # Get villager data for chip bar
+            villagers_summary = get_all_villagers_summary()
+            villagers_data_json = json.dumps(villagers_summary)
+
+            # Generate villager chip bar HTML
+            villager_chips_html = ""
+            for villager in villagers_summary:
+                is_active = "active" if villager['name'] == "Abigail" else ""
+                villager_chips_html += f"""
+        <div class="villager-chip {is_active}" data-villager="{villager['name']}">
+            <div class="villager-circle" style="background-color: {villager['color']};">
+                {villager['initials']}
+            </div>
+            <div class="villager-name">{villager['name']}</div>
+            <div class="villager-hearts">{villager['hearts']}♥</div>
+        </div>"""
+
             html = f"""<!DOCTYPE html>
 <html>
 <head>
@@ -1141,6 +1164,77 @@ class DashboardGenerator:
             text-transform: uppercase;
             text-align: center;
         }}
+        .villager-chip-bar {{
+            display: flex;
+            overflow-x: auto;
+            gap: 12px;
+            padding: 15px 10px;
+            margin: 20px auto;
+            max-width: 800px;
+            width: 95%;
+            box-sizing: border-box;
+            background: rgba(0, 0, 0, 0.3);
+            border: 2px solid #00ff00;
+            border-radius: 4px;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+        }}
+        .villager-chip-bar::-webkit-scrollbar {{
+            height: 8px;
+        }}
+        .villager-chip-bar::-webkit-scrollbar-track {{
+            background: rgba(0, 255, 0, 0.1);
+            border-radius: 4px;
+        }}
+        .villager-chip-bar::-webkit-scrollbar-thumb {{
+            background: #00ff00;
+            border-radius: 4px;
+        }}
+        .villager-chip {{
+            flex-shrink: 0;
+            width: 80px;
+            text-align: center;
+            cursor: pointer;
+            opacity: 0.5;
+            transition: all 0.3s ease;
+            padding: 5px;
+        }}
+        .villager-chip:hover {{
+            opacity: 0.8;
+            transform: scale(1.05);
+        }}
+        .villager-chip.active {{
+            opacity: 1;
+            filter: drop-shadow(0 0 10px #ffd700);
+        }}
+        .villager-circle {{
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 3px solid #00ff00;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 18px;
+            color: white;
+            margin: 0 auto 5px auto;
+            transition: all 0.3s ease;
+        }}
+        .villager-chip.active .villager-circle {{
+            border-color: #ffd700;
+            border-width: 4px;
+        }}
+        .villager-name {{
+            font-size: 11px;
+            color: #00ff00;
+            margin-top: 3px;
+        }}
+        .villager-hearts {{
+            font-size: 12px;
+            color: #ffd700;
+            font-weight: bold;
+        }}
     </style>
 </head>
 <body>
@@ -1172,7 +1266,10 @@ class DashboardGenerator:
         </div>
 
         <div class="chart-container">
-            <div class="chart-title">Abigail Relationship</div>
+            <div class="chart-title">Villager Relationships</div>
+            <div class="villager-chip-bar" id="villagerChipBar">
+{villager_chips_html}
+            </div>
             <canvas id="relationshipChart"></canvas>
         </div>
 
@@ -1190,6 +1287,49 @@ class DashboardGenerator:
     <script>
         // Embed diary data
         const diaryData = {diary_data};
+
+        // Embed villager data
+        const villagersData = {villagers_data_json};
+
+        // Store selected villager (default: Abigail)
+        let selectedVillager = localStorage.getItem('selectedVillager') || 'Abigail';
+
+        // Villager chip selection handler
+        document.addEventListener('DOMContentLoaded', function() {{
+            const chips = document.querySelectorAll('.villager-chip');
+
+            chips.forEach(chip => {{
+                chip.addEventListener('click', function() {{
+                    const villagerName = this.dataset.villager;
+
+                    // Update active state
+                    chips.forEach(c => c.classList.remove('active'));
+                    this.classList.add('active');
+
+                    // Save selection
+                    selectedVillager = villagerName;
+                    localStorage.setItem('selectedVillager', villagerName);
+
+                    // Scroll chip into view
+                    this.scrollIntoView({{ behavior: 'smooth', block: 'nearest', inline: 'center' }});
+
+                    // Update relationship chart using window function
+                    if (window.refreshRelationshipChart) {{
+                        window.refreshRelationshipChart(villagerName);
+                    }}
+                }});
+            }});
+
+            // Set initial selection from localStorage
+            if (selectedVillager !== 'Abigail') {{
+                const savedChip = document.querySelector(`[data-villager="${{selectedVillager}}"]`);
+                if (savedChip) {{
+                    document.querySelector('.villager-chip.active')?.classList.remove('active');
+                    savedChip.classList.add('active');
+                    savedChip.scrollIntoView({{ behavior: 'auto', block: 'nearest', inline: 'center' }});
+                }}
+            }}
+        }});
     </script>
     <script src="chart_config.js"></script>
     <script src="chart_renderer.js"></script>
