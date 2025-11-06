@@ -207,6 +207,12 @@ def chart_renderer():
     return send_from_directory(BASE_PATH / 'dashboard', 'chart_renderer.js')
 
 
+@app.route('/portraits/<filename>')
+def portraits(filename):
+    """Serve portrait images from dashboard/portraits directory"""
+    return send_from_directory(BASE_PATH / 'dashboard' / 'portraits', filename)
+
+
 @app.route('/api/status')
 def api_status():
     """API endpoint for system status"""

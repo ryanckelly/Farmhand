@@ -983,9 +983,7 @@ class DashboardGenerator:
                 is_active = "active" if villager['name'] == "Abigail" else ""
                 villager_chips_html += f"""
         <div class="villager-chip {is_active}" data-villager="{villager['name']}">
-            <div class="villager-circle" style="background-color: {villager['color']};">
-                {villager['initials']}
-            </div>
+            <img src="/portraits/{villager['name']}.png" alt="{villager['name']}" class="villager-portrait" />
             <div class="villager-name">{villager['name']}</div>
             <div class="villager-hearts">{villager['hearts']}♥</div>
         </div>"""
@@ -1207,21 +1205,18 @@ class DashboardGenerator:
             opacity: 1;
             filter: drop-shadow(0 0 10px #ffd700);
         }}
-        .villager-circle {{
+        .villager-portrait {{
             width: 60px;
             height: 60px;
             border-radius: 50%;
             border: 3px solid #00ff00;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            font-size: 18px;
-            color: white;
+            display: block;
             margin: 0 auto 5px auto;
             transition: all 0.3s ease;
+            object-fit: cover;
+            background: rgba(0, 0, 0, 0.5);
         }}
-        .villager-chip.active .villager-circle {{
+        .villager-chip.active .villager-portrait {{
             border-color: #ffd700;
             border-width: 4px;
         }}
