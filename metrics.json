@@ -191,14 +191,30 @@
         "luck": 0
       },
       "bundles_complete": 30
+    },
+    {
+      "date": "2025-11-06T18:58:45.645722",
+      "game_date": "Winter 8, Year 2",
+      "money": 679963,
+      "total_earned": 2359941,
+      "animals": 36,
+      "skills": {
+        "farming": 10,
+        "fishing": 9,
+        "foraging": 10,
+        "mining": 10,
+        "combat": 8,
+        "luck": 0
+      },
+      "bundles_complete": 30
     }
   ],
   "trends": {
-    "daily_income_avg": -26169,
-    "money_growth_rate": -0.03822669280457627
+    "daily_income_avg": 21558,
+    "money_growth_rate": 0.03274276471168961
   },
   "meta": {
     "tracking_started": "2024-01-15",
-    "total_snapshots": 12
+    "total_snapshots": 13
   }
 }

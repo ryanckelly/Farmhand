@@ -1827,11 +1827,192 @@
         },
         "bundles_completed": 0
       }
+    },
+    {
+      "session_id": "2025-11-06-1858",
+      "detected_at": "2025-11-06T18:58:45.627528",
+      "game_progress": {
+        "start": "Winter 7, Year 2",
+        "end": "Winter 8, Year 2",
+        "days_played": 1,
+        "play_time_minutes": 20
+      },
+      "financial": {
+        "starting_money": 658405,
+        "ending_money": 679963,
+        "change": 21558,
+        "total_earned_lifetime": 2359941
+      },
+      "key_accomplishments": [
+        "Gained 175 Farming XP",
+        "Gained 633 Fishing XP",
+        "Gained 75 Foraging XP",
+        "Earned 21,558g (net)",
+        "Reached 12 hearts with Abigail",
+        "Progressed 1 in-game day(s)"
+      ],
+      "bundle_readiness": {
+        "ready_to_complete": [],
+        "priority_bundles": [
+          {
+            "name": "The Missing Bundle",
+            "missing": 4,
+            "completion": "20%"
+          }
+        ]
+      },
+      "changes_detail": {
+        "money_change": 21558,
+        "total_earned_change": 23058,
+        "days_passed": 1,
+        "play_time_change": 1211264,
+        "skill_changes": {
+          "farming": {
+            "old_level": 10,
+            "new_level": 10,
+            "xp_gained": 175
+          },
+          "fishing": {
+            "old_level": 9,
+            "new_level": 9,
+            "xp_gained": 633
+          },
+          "foraging": {
+            "old_level": 10,
+            "new_level": 10,
+            "xp_gained": 75
+          }
+        },
+        "animals_change": 0,
+        "friendship_changes": {
+          "Lewis": {
+            "old_hearts": 3,
+            "new_hearts": 3,
+            "points_gained": -2
+          },
+          "Robin": {
+            "old_hearts": 5,
+            "new_hearts": 5,
+            "points_gained": -2
+          },
+          "Abigail": {
+            "old_hearts": 11,
+            "new_hearts": 12,
+            "points_gained": 13
+          },
+          "Pierre": {
+            "old_hearts": 1,
+            "new_hearts": 1,
+            "points_gained": -2
+          },
+          "Marnie": {
+            "old_hearts": 1,
+            "new_hearts": 1,
+            "points_gained": -2
+          },
+          "Gus": {
+            "old_hearts": 2,
+            "new_hearts": 2,
+            "points_gained": -2
+          },
+          "Evelyn": {
+            "old_hearts": 1,
+            "new_hearts": 1,
+            "points_gained": -2
+          },
+          "George": {
+            "old_hearts": 2,
+            "new_hearts": 2,
+            "points_gained": -2
+          },
+          "Pam": {
+            "old_hearts": 1,
+            "new_hearts": 1,
+            "points_gained": -2
+          },
+          "Clint": {
+            "old_hearts": 2,
+            "new_hearts": 2,
+            "points_gained": -2
+          },
+          "Elliott": {
+            "old_hearts": 0,
+            "new_hearts": 0,
+            "points_gained": -2
+          },
+          "Jodi": {
+            "old_hearts": 1,
+            "new_hearts": 1,
+            "points_gained": -2
+          },
+          "Vincent": {
+            "old_hearts": 1,
+            "new_hearts": 1,
+            "points_gained": -2
+          },
+          "Jas": {
+            "old_hearts": 1,
+            "new_hearts": 1,
+            "points_gained": -2
+          },
+          "Willy": {
+            "old_hearts": 2,
+            "new_hearts": 2,
+            "points_gained": -2
+          },
+          "Emily": {
+            "old_hearts": 0,
+            "new_hearts": 0,
+            "points_gained": -2
+          },
+          "Demetrius": {
+            "old_hearts": 2,
+            "new_hearts": 2,
+            "points_gained": -2
+          },
+          "Linus": {
+            "old_hearts": 3,
+            "new_hearts": 3,
+            "points_gained": -2
+          },
+          "Caroline": {
+            "old_hearts": 1,
+            "new_hearts": 1,
+            "points_gained": -2
+          },
+          "Sebastian": {
+            "old_hearts": 0,
+            "new_hearts": 0,
+            "points_gained": -2
+          },
+          "Wizard": {
+            "old_hearts": 3,
+            "new_hearts": 3,
+            "points_gained": -2
+          },
+          "Dwarf": {
+            "old_hearts": 0,
+            "new_hearts": 0,
+            "points_gained": -2
+          },
+          "Kent": {
+            "old_hearts": 1,
+            "new_hearts": 1,
+            "points_gained": -2
+          },
+          "Krobus": {
+            "old_hearts": 2,
+            "new_hearts": 2,
+            "points_gained": -2
+          }
+        },
+        "bundles_completed": 0
+      }
     }
   ],
   "meta": {
     "created": "2024-01-15",
-    "total_sessions": 12,
-    "last_updated": "2025-11-05T00:10:07.805874"
+    "total_sessions": 13,
+    "last_updated": "2025-11-06T18:58:45.633801"
   }
 }

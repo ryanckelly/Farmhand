@@ -1,6 +1,6 @@
 {
-  "generated_at": "2025-11-05T20:23:12.325853",
-  "game_date": "Winter 7, Year 2",
+  "generated_at": "2025-11-06T18:58:47.474075",
+  "game_date": "Winter 8, Year 2",
   "unlocks": {
     "community_center": {
       "completed": 30,
@@ -29,21 +29,21 @@
     }
   },
   "financials": {
-    "current_balance": 658405,
-    "daily_average": 19310,
+    "current_balance": 679963,
+    "daily_average": 20199,
     "weekly_trend": 0,
     "best_day": {
       "amount": 231464,
       "date": "Fall 16, Year 2"
     },
     "sparkline_data": [
-      0.0994275384151853,
       0.7312352205392277,
       0.13839509892537913,
       0.32420316451651193,
       1.0,
       0.061318213773772674,
-      -0.23892738776739983
+      -0.23892738776739983,
+      0.19682817935303623
     ]
   },
   "momentum_3session": {
@@ -52,7 +52,7 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+961/session)"
+        "description": "High XP gains (+732/session)"
       }
     ],
     "cold_streaks": [
@@ -62,8 +62,19 @@
         "description": "No bundle progress in 3 sessions"
       }
     ],
-    "rising_trends": [],
+    "rising_trends": [
+      {
+        "category": "Friendship",
+        "icon": "[RISING]",
+        "description": "Abigail (12 hearts)"
+      }
+    ],
     "stalled_areas": [
+      {
+        "category": "Money",
+        "icon": "[STALLED]",
+        "description": "Low income (701g/session)"
+      },
       {
         "category": "Museum",
         "icon": "[STALLED]",
@@ -77,7 +88,7 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+2097/session)"
+        "description": "High XP gains (+1877/session)"
       }
     ],
     "cold_streaks": [
@@ -87,7 +98,13 @@
         "description": "No bundle progress in 7 sessions"
       }
     ],
-    "rising_trends": [],
+    "rising_trends": [
+      {
+        "category": "Friendship",
+        "icon": "[RISING]",
+        "description": "Abigail (12 hearts)"
+      }
+    ],
     "stalled_areas": [
       {
         "category": "Museum",
