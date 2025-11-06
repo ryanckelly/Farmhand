@@ -71,7 +71,7 @@ class ASCIIRenderer:
             return "0%"
 
     @staticmethod
-    def box_line(text, width=65, align='left'):
+    def box_line(text, width=70, align='left'):
         """Create a line within a box with padding."""
         if align == 'left':
             return f"║  {text:<{width-4}}║"
@@ -81,22 +81,22 @@ class ASCIIRenderer:
             return f"║{text:>{width-2}}║"
 
     @staticmethod
-    def separator(width=65):
+    def separator(width=70):
         """Create a box separator line."""
         return f"╠{'═' * (width-2)}╣"
 
     @staticmethod
-    def box_top(width=65):
+    def box_top(width=70):
         """Create top of box."""
         return f"╔{'═' * (width-2)}╗"
 
     @staticmethod
-    def box_bottom(width=65):
+    def box_bottom(width=70):
         """Create bottom of box."""
         return f"╚{'═' * (width-2)}╝"
 
     @staticmethod
-    def empty_line(width=65):
+    def empty_line(width=70):
         """Create empty line in box."""
         return f"║{' ' * (width-2)}║"
 
@@ -516,7 +516,7 @@ class DashboardGenerator:
         RESET = '\033[0m'
 
         # Header - simple equals signs, no fancy box chars
-        lines.append("=" * 70)
+        lines.append("=" * 75)
         lines.append("FARMHAND".center(70))
         lines.append("=" * 70)
         lines.append("")
