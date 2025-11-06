@@ -74,6 +74,8 @@ When this project is opened:
 - **dashboard/dashboard_generator.py**: Focus Flow Dashboard generator
 - **dashboard/dashboard_state.json**: Dashboard analytics (auto-generated)
 - **dashboard/dashboard.html**: Visual dashboard (auto-generated)
+- **dashboard/trends.html**: Trends page with Chart.js visualizations (auto-generated)
+- **app.py**: Flask web server for Railway deployment
 
 ## Important Notes
 
@@ -126,7 +128,35 @@ For accurate tracking:
 - Detects bundle completion via dual-state validation
 - See `/doc/bundle_system.md` for technical details
 
+### Web Deployment
+
+**Live Dashboard**: https://farmhand-production.up.railway.app
+
+The dashboard is deployed on Railway and accessible from any device:
+- **Main Dashboard**: `/dashboard` - Progress overview, financials, momentum
+- **Trends Page**: `/trends` - Interactive Chart.js visualizations
+
+**Key Features:**
+- Mobile-responsive CSS design (works on phones, tablets, desktops)
+- Auto-deploys when you push to GitHub
+- HTTPS enabled by default
+- Free tier hosting on Railway
+
+**Updating the Deployment:**
+1. Play Stardew Valley and end session
+2. Run `python session_tracker.py` locally
+3. Regenerate dashboard: `python dashboard/dashboard_generator.py --with-trends`
+4. Commit and push to GitHub (Railway auto-deploys in ~60 seconds)
+
+See `/doc/deployment.md` for full deployment guide.
+
 ### Recent Improvements
+
+**2025-11-05:**
+- ✅ **Railway Deployment** - Dashboard accessible via web from any device
+- ✅ **Mobile Responsiveness** - Replaced ASCII borders with CSS for proper mobile scaling
+- ✅ **Consistent Container Widths** - All divs dynamically sized with matching widths
+- ✅ **Chart.js Integration** - Interactive trends charts with session filtering
 
 **2025-11-02:**
 - ✅ **Subagent Validation Step** - All session strategies must be validated by independent subagent before presentation
@@ -159,14 +189,17 @@ For detailed technical information, see the `/doc` directory:
 - **doc/bundle_system.md** - Bundle tracking deep dive and slot mechanics
 - **doc/item_database.md** - Item lookup system and database structure
 - **doc/common_mistakes.md** - Data interpretation errors and how to avoid them
+- **doc/deployment.md** - Railway deployment guide and web hosting setup
 - **dev/roadmap.md** - Development plans and known issues
 
 ## Quick Reference
 
 ### Common Commands
 ```bash
-python session_tracker.py     # Detect changes and update diary
-python save_analyzer.py       # Analyze current save file
+python session_tracker.py                           # Detect changes and update diary
+python save_analyzer.py                             # Analyze current save file
+python dashboard/dashboard_generator.py --terminal  # Generate terminal dashboard
+python dashboard/dashboard_generator.py --with-trends  # Generate HTML dashboard + trends
 ```
 
 ### Web Resources

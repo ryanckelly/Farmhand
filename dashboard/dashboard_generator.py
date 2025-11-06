@@ -904,7 +904,7 @@ class DashboardGenerator:
             line-height: 1.6;
             white-space: pre-wrap;
             word-wrap: break-word;
-            text-align: center;
+            text-align: left;
         }}
         @media (max-width: 768px) {{
             .dashboard-container {{
