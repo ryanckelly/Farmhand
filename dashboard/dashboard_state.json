@@ -1,0 +1,99 @@
+{
+  "generated_at": "2025-11-05T19:54:53.484400",
+  "game_date": "Winter 7, Year 2",
+  "unlocks": {
+    "community_center": {
+      "completed": 30,
+      "total": 31,
+      "percent": 0.967741935483871
+    },
+    "museum": {
+      "donated": 66,
+      "total": 95,
+      "percent": 0.6947368421052632
+    },
+    "cooking": {
+      "known": 0,
+      "total": 74,
+      "percent": 0.0
+    },
+    "friendships_8plus": {
+      "count": 1,
+      "total": 32,
+      "percent": 0.03125
+    },
+    "skills_maxed": {
+      "count": 3,
+      "total": 5,
+      "percent": 0.6
+    }
+  },
+  "financials": {
+    "current_balance": 658405,
+    "daily_average": 19310,
+    "weekly_trend": 0,
+    "best_day": {
+      "amount": 231464,
+      "date": "Fall 16, Year 2"
+    },
+    "sparkline_data": [
+      0.0994275384151853,
+      0.7312352205392277,
+      0.13839509892537913,
+      0.32420316451651193,
+      1.0,
+      0.061318213773772674,
+      -0.23892738776739983
+    ]
+  },
+  "momentum_3session": {
+    "window_size": 3,
+    "hot_streaks": [
+      {
+        "category": "Skills",
+        "icon": "[HOT]",
+        "description": "High XP gains (+961/session)"
+      }
+    ],
+    "cold_streaks": [
+      {
+        "category": "Bundles",
+        "icon": "[COLD]",
+        "description": "No bundle progress in 3 sessions"
+      }
+    ],
+    "rising_trends": [],
+    "stalled_areas": [
+      {
+        "category": "Museum",
+        "icon": "[STALLED]",
+        "description": "No museum donations in 3 sessions"
+      }
+    ]
+  },
+  "momentum_7session": {
+    "window_size": 7,
+    "hot_streaks": [
+      {
+        "category": "Skills",
+        "icon": "[HOT]",
+        "description": "High XP gains (+2097/session)"
+      }
+    ],
+    "cold_streaks": [
+      {
+        "category": "Bundles",
+        "icon": "[COLD]",
+        "description": "No bundle progress in 7 sessions"
+      }
+    ],
+    "rising_trends": [],
+    "stalled_areas": [
+      {
+        "category": "Museum",
+        "icon": "[STALLED]",
+        "description": "No museum donations in 7 sessions"
+      }
+    ]
+  }
+}

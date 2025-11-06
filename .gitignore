@@ -10,16 +10,15 @@ venv/
 env/
 ENV/
 
-# User-specific game data (should not be tracked)
-save_snapshot.json
-diary.json
-metrics.json
-dashboard_state.json
+# User-specific game data (now tracked for Railway deployment)
+# save_snapshot.json
+# diary.json
+# metrics.json
+# dashboard_state.json
 
-# Generated files
-dashboard.html
+# Generated files (dashboard HTML will be tracked, but temp files excluded)
+# dashboard.html
 *.png
-*.html
 temp_analysis.json
 current_state.json
 

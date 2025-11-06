@@ -1,0 +1,114 @@
+{
+  "generated_at": "2025-11-03T21:18:22.832705",
+  "game_date": "Winter 1, Year 2",
+  "unlocks": {
+    "community_center": {
+      "completed": 30,
+      "total": 31,
+      "percent": 0.967741935483871
+    },
+    "museum": {
+      "donated": 66,
+      "total": 95,
+      "percent": 0.6947368421052632
+    },
+    "cooking": {
+      "known": 0,
+      "total": 74,
+      "percent": 0.0
+    },
+    "friendships_8plus": {
+      "count": 1,
+      "total": 32,
+      "percent": 0.03125
+    },
+    "skills_maxed": {
+      "count": 3,
+      "total": 5,
+      "percent": 0.6
+    }
+  },
+  "financials": {
+    "current_balance": 532822,
+    "daily_average": 13009,
+    "weekly_trend": 0,
+    "best_day": {
+      "amount": 231464,
+      "date": "Fall 16, Year 2"
+    },
+    "sparkline_data": [
+      0.03558652749455639,
+      -0.6170419590087444,
+      1.0,
+      0.1908072097604811,
+      0.04704835309162548,
+      0.34601493104759273,
+      0.06548750561642415
+    ]
+  },
+  "momentum_3session": {
+    "window_size": 3,
+    "hot_streaks": [
+      {
+        "category": "Skills",
+        "icon": "[HOT]",
+        "description": "High XP gains (+2561/session)"
+      }
+    ],
+    "cold_streaks": [
+      {
+        "category": "Bundles",
+        "icon": "[COLD]",
+        "description": "No bundle progress in 3 sessions"
+      }
+    ],
+    "rising_trends": [],
+    "stalled_areas": [
+      {
+        "category": "Museum",
+        "icon": "[STALLED]",
+        "description": "No museum donations in 3 sessions"
+      }
+    ]
+  },
+  "momentum_7session": {
+    "window_size": 7,
+    "hot_streaks": [
+      {
+        "category": "Bundles",
+        "icon": "[HOT]",
+        "description": "Bundle completion (+4.1/session)"
+      },
+      {
+        "category": "Skills",
+        "icon": "[HOT]",
+        "description": "High XP gains (+2985/session)"
+      }
+    ],
+    "cold_streaks": [],
+    "rising_trends": [
+      {
+        "category": "Mining",
+        "icon": "[RISING]",
+        "description": "Mining leveling up (gained 1 levels)"
+      },
+      {
+        "category": "Friendship",
+        "icon": "[RISING]",
+        "description": "Abigail (10 hearts)"
+      },
+      {
+        "category": "Friendship",
+        "icon": "[RISING]",
+        "description": "Abigail (11 hearts)"
+      }
+    ],
+    "stalled_areas": [
+      {
+        "category": "Museum",
+        "icon": "[STALLED]",
+        "description": "No museum donations in 7 sessions"
+      }
+    ]
+  }
+}
