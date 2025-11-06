@@ -72,13 +72,30 @@ class ASCIIRenderer:
 
     @staticmethod
     def box_line(text, width=70, align='left'):
-        """Create a line within a box with padding."""
+        """Create a line within a box with padding.
+
+        Automatically truncates text that exceeds maximum width to prevent
+        border overflow issues with Unicode characters.
+        """
+        # Calculate maximum text length based on alignment
         if align == 'left':
-            return f"║  {text:<{width-4}}║"
+            max_length = width - 4  # Account for "║  " and "║"
+            # Truncate if needed
+            if len(text) > max_length:
+                text = text[:max_length-3] + '...'
+            return f"║  {text:<{max_length}}║"
         elif align == 'center':
-            return f"║{text:^{width-2}}║"
-        else:
-            return f"║{text:>{width-2}}║"
+            max_length = width - 2  # Account for "║" on both sides
+            # Truncate if needed
+            if len(text) > max_length:
+                text = text[:max_length-3] + '...'
+            return f"║{text:^{max_length}}║"
+        else:  # right
+            max_length = width - 2  # Account for "║" on both sides
+            # Truncate if needed
+            if len(text) > max_length:
+                text = text[:max_length-3] + '...'
+            return f"║{text:>{max_length}}║"
 
     @staticmethod
     def separator(width=70):
