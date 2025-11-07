@@ -207,14 +207,62 @@
         "luck": 0
       },
       "bundles_complete": 30
+    },
+    {
+      "date": "2025-11-06T19:32:43.075351",
+      "game_date": "Winter 9, Year 2",
+      "money": 700946,
+      "total_earned": 2380924,
+      "animals": 36,
+      "skills": {
+        "farming": 10,
+        "fishing": 9,
+        "foraging": 10,
+        "mining": 10,
+        "combat": 8,
+        "luck": 0
+      },
+      "bundles_complete": 30
+    },
+    {
+      "date": "2025-11-06T19:53:39.323375",
+      "game_date": "Winter 10, Year 2",
+      "money": 602504,
+      "total_earned": 2414557,
+      "animals": 36,
+      "skills": {
+        "farming": 10,
+        "fishing": 9,
+        "foraging": 10,
+        "mining": 10,
+        "combat": 8,
+        "luck": 0
+      },
+      "bundles_complete": 30
+    },
+    {
+      "date": "2025-11-06T20:23:38.204430",
+      "game_date": "Winter 11, Year 2",
+      "money": 611147,
+      "total_earned": 2423200,
+      "animals": 36,
+      "skills": {
+        "farming": 10,
+        "fishing": 10,
+        "foraging": 10,
+        "mining": 10,
+        "combat": 8,
+        "luck": 0
+      },
+      "bundles_complete": 30
     }
   ],
   "trends": {
-    "daily_income_avg": 21558,
-    "money_growth_rate": 0.03274276471168961
+    "daily_income_avg": 8643,
+    "money_growth_rate": 0.014345132978370269
   },
   "meta": {
     "tracking_started": "2024-01-15",
-    "total_snapshots": 13
+    "total_snapshots": 16
   }
 }

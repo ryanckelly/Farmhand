@@ -1,6 +1,6 @@
 {
-  "generated_at": "2025-11-06T18:58:47.474075",
-  "game_date": "Winter 8, Year 2",
+  "generated_at": "2025-11-06T20:23:38.846287",
+  "game_date": "Winter 11, Year 2",
   "unlocks": {
     "community_center": {
       "completed": 30,
@@ -23,27 +23,27 @@
       "percent": 0.03125
     },
     "skills_maxed": {
-      "count": 3,
+      "count": 4,
       "total": 5,
-      "percent": 0.6
+      "percent": 0.8
     }
   },
   "financials": {
-    "current_balance": 679963,
-    "daily_average": 20199,
-    "weekly_trend": 0,
+    "current_balance": 611147,
+    "daily_average": 6116,
+    "weekly_trend": -0.8439951467100014,
     "best_day": {
       "amount": 231464,
       "date": "Fall 16, Year 2"
     },
     "sparkline_data": [
-      0.7312352205392277,
-      0.13839509892537913,
-      0.32420316451651193,
       1.0,
       0.061318213773772674,
       -0.23892738776739983,
-      0.19682817935303623
+      0.19682817935303623,
+      0.1915783322833639,
+      -0.8987920786655346,
+      0.07891204908378756
     ]
   },
   "momentum_3session": {
@@ -52,7 +52,7 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+732/session)"
+        "description": "High XP gains (+972/session)"
       }
     ],
     "cold_streaks": [
@@ -60,21 +60,21 @@
         "category": "Bundles",
         "icon": "[COLD]",
         "description": "No bundle progress in 3 sessions"
+      },
+      {
+        "category": "Money",
+        "icon": "[COLD]",
+        "description": "Net losses (-22,938g/session)"
       }
     ],
     "rising_trends": [
       {
-        "category": "Friendship",
+        "category": "Fishing",
         "icon": "[RISING]",
-        "description": "Abigail (12 hearts)"
+        "description": "Fishing leveling up (gained 1 levels)"
       }
     ],
     "stalled_areas": [
-      {
-        "category": "Money",
-        "icon": "[STALLED]",
-        "description": "Low income (701g/session)"
-      },
       {
         "category": "Museum",
         "icon": "[STALLED]",
@@ -88,7 +88,7 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+1877/session)"
+        "description": "High XP gains (+954/session)"
       }
     ],
     "cold_streaks": [
@@ -100,12 +100,22 @@
     ],
     "rising_trends": [
       {
+        "category": "Fishing",
+        "icon": "[RISING]",
+        "description": "Fishing leveling up (gained 1 levels)"
+      },
+      {
         "category": "Friendship",
         "icon": "[RISING]",
         "description": "Abigail (12 hearts)"
       }
     ],
     "stalled_areas": [
+      {
+        "category": "Money",
+        "icon": "[STALLED]",
+        "description": "Low income (6,116g/session)"
+      },
       {
         "category": "Museum",
         "icon": "[STALLED]",
