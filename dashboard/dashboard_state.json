@@ -1,6 +1,6 @@
 {
-  "generated_at": "2025-11-06T22:03:47.386441",
-  "game_date": "Winter 13, Year 2",
+  "generated_at": "2025-11-07T20:44:53.974748",
+  "game_date": "Winter 14, Year 2",
   "unlocks": {
     "community_center": {
       "completed": 30,
@@ -29,21 +29,21 @@
     }
   },
   "financials": {
-    "current_balance": 712218,
-    "daily_average": 4295,
-    "weekly_trend": -0.9347763775073413,
+    "current_balance": 441408,
+    "daily_average": -30395,
+    "weekly_trend": -1.8050388174339114,
     "best_day": {
       "amount": 231464,
       "date": "Fall 16, Year 2"
     },
     "sparkline_data": [
-      0.06644833829684084,
       -0.2589169989413383,
       0.2132956040803,
       0.20760653402063894,
       -0.9739885822837411,
       0.08551414352287007,
-      1.0
+      1.0,
+      -2.67940358757705
     ]
   },
   "momentum_3session": {
@@ -52,7 +52,7 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+1555/session)"
+        "description": "High XP gains (+1606/session)"
       }
     ],
     "cold_streaks": [
@@ -60,6 +60,11 @@
         "category": "Bundles",
         "icon": "[COLD]",
         "description": "No bundle progress in 3 sessions"
+      },
+      {
+        "category": "Money",
+        "icon": "[COLD]",
+        "description": "Net losses (-53,698g/session)"
       }
     ],
     "rising_trends": [
@@ -70,11 +75,6 @@
       }
     ],
     "stalled_areas": [
-      {
-        "category": "Money",
-        "icon": "[STALLED]",
-        "description": "Low income (3,757g/session)"
-      },
       {
         "category": "Museum",
         "icon": "[STALLED]",
@@ -88,7 +88,7 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+1016/session)"
+        "description": "High XP gains (+1080/session)"
       }
     ],
     "cold_streaks": [
@@ -96,6 +96,11 @@
         "category": "Bundles",
         "icon": "[COLD]",
         "description": "No bundle progress in 7 sessions"
+      },
+      {
+        "category": "Money",
+        "icon": "[COLD]",
+        "description": "Net losses (-34,738g/session)"
       }
     ],
     "rising_trends": [
@@ -111,11 +116,6 @@
       }
     ],
     "stalled_areas": [
-      {
-        "category": "Money",
-        "icon": "[STALLED]",
-        "description": "Low income (4,908g/session)"
-      },
       {
         "category": "Museum",
         "icon": "[STALLED]",

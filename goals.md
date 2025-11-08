@@ -2,7 +2,6 @@
 
 ## Short-term Goals (This Season - Winter Year 2)
 - [ ] Upgrade remaining tools to Iridium (Axe, Hoe, Watering Can)
-- [ ] Reach Fishing Level 10 (currently 9, 11,999/13,000 XP)
 - [ ] Reach Combat Level 10 (currently 8, 7,385/15,000 XP)
 
 ## Medium-term Goals (This Year - Year 2)
@@ -13,19 +12,20 @@
 
 ## Long-term Goals (Ultimate Objectives)
 - [ ] Achieve Perfection rating (100%)
-- [ ] Reach 10 million lifetime earnings (currently 2.3M)
+- [ ] Reach 10 million lifetime earnings (currently 2.5M)
 - [ ] Complete all achievements and collections
 - [x] Find all Dwarf Scrolls (all 4 found - can trade with Dwarf)
 
 ## Completed Goals
 - [x] Unlock Greenhouse
 - [x] Reach Farming Level 10 (58,233 XP)
+- [x] Reach Fishing Level 10 - completed Winter 11, Year 2
 - [x] Reach Foraging Level 10 (23,084 XP)
 - [x] Reach Mining Level 10 (15,132 XP) - completed Fall 20, Year 2
 - [x] Build 2 Deluxe Barns
 - [x] Build Deluxe Coop
 - [x] Acquire Galaxy Sword
-- [x] Marry Abigail (11 hearts)
+- [x] Marry Abigail (12 hearts)
 - [x] Establish truffle production (12 pigs)
 - [x] Complete Community Center
 - [x] Reach deepest mine level 120 (currently at floor 159)
@@ -46,4 +46,4 @@
 - Update this file as you complete goals or add new ones
 - Goals should be strategic objectives, not tactical tasks
 - Claude will convert these into specific daily recommendations
-- Last updated: Winter 7, Year 2 (2.3M lifetime earnings, 30/31 bundles)
+- Last updated: Winter 13, Year 2 (2.5M lifetime earnings, all skills maxed)
