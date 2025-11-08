@@ -1,6 +1,6 @@
 {
-  "generated_at": "2025-11-07T20:44:53.974748",
-  "game_date": "Winter 14, Year 2",
+  "generated_at": "2025-11-07T22:09:22.895509",
+  "game_date": "Winter 15, Year 2",
   "unlocks": {
     "community_center": {
       "completed": 30,
@@ -29,21 +29,21 @@
     }
   },
   "financials": {
-    "current_balance": 441408,
-    "daily_average": -30395,
-    "weekly_trend": -1.8050388174339114,
+    "current_balance": 440473,
+    "daily_average": -27241,
+    "weekly_trend": -1.9404930929868247,
     "best_day": {
       "amount": 231464,
       "date": "Fall 16, Year 2"
     },
     "sparkline_data": [
-      -0.2589169989413383,
       0.2132956040803,
       0.20760653402063894,
       -0.9739885822837411,
       0.08551414352287007,
       1.0,
-      -2.67940358757705
+      -2.67940358757705,
+      -0.009250922618753155
     ]
   },
   "momentum_3session": {
@@ -52,7 +52,7 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+1606/session)"
+        "description": "High XP gains (+3031/session)"
       }
     ],
     "cold_streaks": [
@@ -64,16 +64,15 @@
       {
         "category": "Money",
         "icon": "[COLD]",
-        "description": "Net losses (-53,698g/session)"
-      }
-    ],
-    "rising_trends": [
+        "description": "Net losses (-56,891g/session)"
+      },
       {
-        "category": "Fishing",
-        "icon": "[RISING]",
-        "description": "Fishing leveling up (gained 1 levels)"
+        "category": "Social",
+        "icon": "[COLD]",
+        "description": "No relationship progress"
       }
     ],
+    "rising_trends": [],
     "stalled_areas": [
       {
         "category": "Museum",
@@ -88,7 +87,7 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+1080/session)"
+        "description": "High XP gains (+1841/session)"
       }
     ],
     "cold_streaks": [
@@ -100,7 +99,12 @@
       {
         "category": "Money",
         "icon": "[COLD]",
-        "description": "Net losses (-34,738g/session)"
+        "description": "Net losses (-31,133g/session)"
+      },
+      {
+        "category": "Social",
+        "icon": "[COLD]",
+        "description": "No relationship progress"
       }
     ],
     "rising_trends": [
