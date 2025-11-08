@@ -1,6 +1,6 @@
 {
-  "generated_at": "2025-11-07T22:09:22.895509",
-  "game_date": "Winter 15, Year 2",
+  "generated_at": "2025-11-08T16:02:22.471866",
+  "game_date": "Winter 18, Year 2",
   "unlocks": {
     "community_center": {
       "completed": 30,
@@ -8,9 +8,9 @@
       "percent": 0.967741935483871
     },
     "museum": {
-      "donated": 66,
+      "donated": 72,
       "total": 95,
-      "percent": 0.6947368421052632
+      "percent": 0.7578947368421053
     },
     "cooking": {
       "known": 0,
@@ -29,21 +29,21 @@
     }
   },
   "financials": {
-    "current_balance": 440473,
-    "daily_average": -27241,
-    "weekly_trend": -1.9404930929868247,
+    "current_balance": 436094,
+    "daily_average": -20801,
+    "weekly_trend": -3.388134668924543,
     "best_day": {
       "amount": 231464,
       "date": "Fall 16, Year 2"
     },
     "sparkline_data": [
-      0.2132956040803,
-      0.20760653402063894,
-      -0.9739885822837411,
       0.08551414352287007,
       1.0,
       -2.67940358757705,
-      -0.009250922618753155
+      -0.009250922618753155,
+      0.17353147787199097,
+      -0.11417716258867529,
+      -0.10268029405071682
     ]
   },
   "momentum_3session": {
@@ -52,7 +52,7 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+3031/session)"
+        "description": "High XP gains (+617/session)"
       }
     ],
     "cold_streaks": [
@@ -64,7 +64,7 @@
       {
         "category": "Money",
         "icon": "[COLD]",
-        "description": "Net losses (-56,891g/session)"
+        "description": "Net losses (-1,459g/session)"
       },
       {
         "category": "Social",
@@ -87,7 +87,7 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+1841/session)"
+        "description": "High XP gains (+1812/session)"
       }
     ],
     "cold_streaks": [
@@ -99,12 +99,7 @@
       {
         "category": "Money",
         "icon": "[COLD]",
-        "description": "Net losses (-31,133g/session)"
-      },
-      {
-        "category": "Social",
-        "icon": "[COLD]",
-        "description": "No relationship progress"
+        "description": "Net losses (-23,772g/session)"
       }
     ],
     "rising_trends": [
@@ -112,11 +107,6 @@
         "category": "Fishing",
         "icon": "[RISING]",
         "description": "Fishing leveling up (gained 1 levels)"
-      },
-      {
-        "category": "Friendship",
-        "icon": "[RISING]",
-        "description": "Abigail (12 hearts)"
       }
     ],
     "stalled_areas": [
