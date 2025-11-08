@@ -1,6 +1,6 @@
 {
-  "generated_at": "2025-11-08T19:11:47.691281",
-  "game_date": "Winter 18, Year 2",
+  "generated_at": "2025-11-08T19:52:09.751732",
+  "game_date": "Winter 20, Year 2",
   "unlocks": {
     "community_center": {
       "completed": 30,
@@ -28,9 +28,9 @@
       "percent": 0.8
     },
     "golden_walnuts": {
-      "found": 4,
+      "found": 9,
       "total": 130,
-      "percent": 0.03076923076923077
+      "percent": 0.06923076923076923
     },
     "skull_cavern_depth": {
       "deepest": 125,
@@ -39,21 +39,21 @@
     }
   },
   "financials": {
-    "current_balance": 436094,
-    "daily_average": -20801,
-    "weekly_trend": -3.388134668924543,
+    "current_balance": 487473,
+    "daily_average": -32106,
+    "weekly_trend": -7.540890570430734,
     "best_day": {
       "amount": 231464,
       "date": "Fall 16, Year 2"
     },
     "sparkline_data": [
-      0.08551414352287007,
+      -5.053745381256299,
+      -0.01744858731758295,
+      0.32730563953271374,
+      -0.215354756839473,
+      -0.19366998842981376,
       1.0,
-      -2.67940358757705,
-      -0.009250922618753155,
-      0.17353147787199097,
-      -0.11417716258867529,
-      -0.10268029405071682
+      -0.04118613070578136
     ]
   },
   "momentum_3session": {
@@ -62,7 +62,7 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+617/session)"
+        "description": "High XP gains (+1584/session)"
       }
     ],
     "cold_streaks": [
@@ -70,16 +70,6 @@
         "category": "Bundles",
         "icon": "[COLD]",
         "description": "No bundle progress in 3 sessions"
-      },
-      {
-        "category": "Money",
-        "icon": "[COLD]",
-        "description": "Net losses (-1,459g/session)"
-      },
-      {
-        "category": "Social",
-        "icon": "[COLD]",
-        "description": "No relationship progress"
       }
     ],
     "rising_trends": [],
@@ -97,7 +87,7 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+1812/session)"
+        "description": "High XP gains (+1825/session)"
       }
     ],
     "cold_streaks": [
@@ -109,16 +99,10 @@
       {
         "category": "Money",
         "icon": "[COLD]",
-        "description": "Net losses (-23,772g/session)"
+        "description": "Net losses (-32,106g/session)"
       }
     ],
-    "rising_trends": [
-      {
-        "category": "Fishing",
-        "icon": "[RISING]",
-        "description": "Fishing leveling up (gained 1 levels)"
-      }
-    ],
+    "rising_trends": [],
     "stalled_areas": [
       {
         "category": "Museum",
