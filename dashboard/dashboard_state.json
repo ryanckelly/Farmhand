@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-11-08T16:02:22.471866",
+  "generated_at": "2025-11-08T19:11:47.691281",
   "game_date": "Winter 18, Year 2",
   "unlocks": {
     "community_center": {
@@ -26,6 +26,16 @@
       "count": 4,
       "total": 5,
       "percent": 0.8
+    },
+    "golden_walnuts": {
+      "found": 4,
+      "total": 130,
+      "percent": 0.03076923076923077
+    },
+    "skull_cavern_depth": {
+      "deepest": 125,
+      "milestone_100": true,
+      "milestone_200": false
     }
   },
   "financials": {

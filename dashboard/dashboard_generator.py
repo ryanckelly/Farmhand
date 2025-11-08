@@ -468,6 +468,24 @@ class DashboardGenerator:
             'percent': maxed_skills / total_skills
         }
 
+        # Golden Walnuts (Ginger Island)
+        unlock_data = self.snapshot.get('unlocks', {})
+        walnuts_found = unlock_data.get('golden_walnuts_found', 0)
+        total_walnuts = 130  # Total Golden Walnuts in game
+        unlocks['golden_walnuts'] = {
+            'found': walnuts_found,
+            'total': total_walnuts,
+            'percent': walnuts_found / total_walnuts if total_walnuts > 0 else 0
+        }
+
+        # Skull Cavern deepest level
+        skull_depth = unlock_data.get('skull_cavern_level', 0)
+        unlocks['skull_cavern_depth'] = {
+            'deepest': skull_depth,
+            'milestone_100': skull_depth >= 100,
+            'milestone_200': skull_depth >= 200
+        }
+
         return unlocks
 
     def extract_financials(self):
@@ -719,6 +737,18 @@ class DashboardGenerator:
         skills = unlocks['skills_maxed']
         bar = r.progress_bar(skills['percent'])
         line = f"Master Skills     {bar} ({skills['count']}/{skills['total']})"
+        lines.append(r.box_line(line))
+
+        # Golden Walnuts
+        walnuts = unlocks['golden_walnuts']
+        bar = r.progress_bar(walnuts['percent'])
+        line = f"Golden Walnuts    {bar} ({walnuts['found']}/{walnuts['total']})"
+        lines.append(r.box_line(line))
+
+        # Skull Cavern
+        skull = unlocks['skull_cavern_depth']
+        milestone = "✓ 200+" if skull['milestone_200'] else "✓ 100+" if skull['milestone_100'] else ""
+        line = f"Skull Cavern      Floor {skull['deepest']} {milestone}".strip()
         lines.append(r.box_line(line))
 
         lines.append(r.empty_line())

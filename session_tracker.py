@@ -171,6 +171,16 @@ def calculate_changes(old_state, new_state):
     new_complete = new_state.get('bundles', {}).get('complete_count', 0)
     changes['bundles_completed'] = new_complete - old_complete
 
+    # Golden Walnuts (Ginger Island)
+    old_walnuts = old_state.get('unlocks', {}).get('golden_walnuts_found', 0)
+    new_walnuts = new_state.get('unlocks', {}).get('golden_walnuts_found', 0)
+    changes['golden_walnuts_found'] = new_walnuts - old_walnuts
+
+    # Skull Cavern deepest level
+    old_skull_depth = old_state.get('unlocks', {}).get('skull_cavern_level', 0)
+    new_skull_depth = new_state.get('unlocks', {}).get('skull_cavern_level', 0)
+    changes['skull_cavern_depth_change'] = new_skull_depth - old_skull_depth
+
     return changes
 
 def calculate_days_passed(old_date, new_date):
@@ -253,6 +263,14 @@ def generate_diary_entry(changes, old_state, new_state, bundle_readiness=None):
     # Bundles
     if changes['bundles_completed'] > 0:
         accomplishments.append(f"Completed {changes['bundles_completed']} Community Center bundle(s)")
+
+    # Golden Walnuts (Ginger Island)
+    if changes['golden_walnuts_found'] > 0:
+        accomplishments.append(f"Found {changes['golden_walnuts_found']} Golden Walnut(s)")
+
+    # Skull Cavern depth
+    if changes['skull_cavern_depth_change'] > 0:
+        accomplishments.append(f"Reached floor {new_state['unlocks']['skull_cavern_level']} in Skull Cavern (new record!)")
 
     # Days progression
     if changes['days_passed'] > 0:
