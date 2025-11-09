@@ -1516,17 +1516,6 @@ class DashboardGenerator:
                 // Handle numeric values (session count)
                 if (!isNaN(value) || value === 'all') {{
                     const count = value === 'all' ? maxSessions : parseInt(value);
-
-                    // Update slider if using session-level aggregation
-                    if (aggregationState.currentLevel === 'session') {{
-                        const filterInput = document.getElementById('sessionFilter');
-                        const sessionCount = document.getElementById('sessionCount');
-                        if (filterInput) {{
-                            filterInput.value = count >= maxSessions ? maxSessions : count;
-                            sessionCount.textContent = count >= maxSessions ? 'All' : count;
-                        }}
-                    }}
-
                     filterChartsByCount(count);
                     return;
                 }}
@@ -1805,8 +1794,17 @@ class DashboardGenerator:
 
             if (level === 'session') {{
                 // Reset to session-level view
-                const filterInput = document.getElementById('sessionFilter');
-                const count = filterInput ? parseInt(filterInput.value) : maxSessions;
+                const quickFilter = document.getElementById('quickFilter');
+                const filterValue = quickFilter ? quickFilter.value : '10';
+
+                // Extract count from filter value (handle numeric or 'all')
+                let count = 10; // Default to 10 if time-based filter is active
+                if (filterValue === 'all') {{
+                    count = maxSessions;
+                }} else if (!isNaN(filterValue)) {{
+                    count = parseInt(filterValue);
+                }}
+
                 filterCharts(count >= maxSessions ? maxSessions : count);
                 return;
             }}
@@ -2106,12 +2104,10 @@ class DashboardGenerator:
                     setTimeout(() => {{
                         syncAggregationMode();
 
-                        // Re-apply current aggregation if not at session level
-                        if (aggregationState.currentLevel !== 'session') {{
-                            // Clear cache since mode changed
-                            aggregationState.cachedRollups = {{}};
-                            applyAggregation(aggregationState.currentLevel);
-                        }}
+                        // Re-apply current aggregation (including session level)
+                        // Clear cache since mode changed
+                        aggregationState.cachedRollups = {{}};
+                        applyAggregation(aggregationState.currentLevel);
                     }}, 50);
                 }});
             }}, 100);
