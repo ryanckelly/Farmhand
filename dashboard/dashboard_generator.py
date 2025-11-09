@@ -1003,6 +1003,20 @@ class DashboardGenerator:
             # Load diary data to embed
             diary_data = json.dumps(self.diary)
 
+            # Load rollup data if available
+            rollups_path = Path(r'C:\opt\stardew\diary_rollups.json')
+            if rollups_path.exists():
+                with open(rollups_path, 'r') as f:
+                    rollups_data = json.load(f)
+                rollups_data_json = json.dumps(rollups_data)
+            else:
+                # Fallback to empty rollups structure
+                rollups_data_json = json.dumps({
+                    'game_time': {},
+                    'real_time': {},
+                    'meta': {'total_entries': 0}
+                })
+
             # Get villager data for chip bar
             villagers_summary = get_all_villagers_summary()
             villagers_data_json = json.dumps(villagers_summary)
@@ -1089,56 +1103,40 @@ class DashboardGenerator:
             background: rgba(0, 0, 0, 0.3);
             border: 2px solid #00ff00;
             border-radius: 4px;
+        }}
+        .filter-primary {{
             display: flex;
             align-items: center;
             gap: 15px;
             justify-content: center;
             flex-wrap: wrap;
+            margin-bottom: 10px;
         }}
         .filter-label {{
             color: #ffd700;
             font-weight: bold;
             font-size: 14px;
         }}
-        #sessionFilter {{
-            flex: 1;
-            min-width: 150px;
-            max-width: 250px;
-            height: 6px;
+        .quick-filter-select {{
             background: rgba(0, 255, 0, 0.2);
-            border-radius: 3px;
-            outline: none;
-            -webkit-appearance: none;
-        }}
-        #sessionFilter::-webkit-slider-thumb {{
-            -webkit-appearance: none;
-            appearance: none;
-            width: 18px;
-            height: 18px;
-            background: #00ff00;
-            border: 2px solid #ffd700;
-            border-radius: 50%;
-            cursor: pointer;
-            box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
-        }}
-        #sessionFilter::-moz-range-thumb {{
-            width: 18px;
-            height: 18px;
-            background: #00ff00;
-            border: 2px solid #ffd700;
-            border-radius: 50%;
-            cursor: pointer;
-            box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
-        }}
-        #sessionFilter::-webkit-slider-track {{
-            background: rgba(0, 255, 0, 0.2);
-            border-radius: 3px;
-        }}
-        #sessionCount {{
+            border: 2px solid #00ff00;
             color: #00ff00;
+            padding: 8px 40px 8px 12px;
+            font-family: 'Courier New', 'Consolas', 'Monaco', monospace;
+            font-size: 13px;
             font-weight: bold;
-            min-width: 50px;
-            text-align: center;
+            border-radius: 4px;
+            cursor: pointer;
+            min-width: 180px;
+            transition: all 0.2s;
+        }}
+        .quick-filter-select:hover {{
+            background: rgba(0, 255, 0, 0.3);
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+        }}
+        .quick-filter-select:focus {{
+            outline: 2px solid #ffd700;
+            outline-offset: 2px;
         }}
         .filter-button {{
             background: rgba(0, 255, 0, 0.2);
@@ -1160,6 +1158,87 @@ class DashboardGenerator:
             background: rgba(255, 215, 0, 0.2);
             border-color: #ffd700;
             color: #ffd700;
+        }}
+        .filter-advanced {{
+            margin-top: 10px;
+        }}
+        .advanced-toggle {{
+            background: rgba(0, 255, 0, 0.1);
+            border: 1px solid rgba(0, 255, 0, 0.3);
+            color: #00ff00;
+            padding: 8px 12px;
+            font-family: 'Courier New', 'Consolas', 'Monaco', monospace;
+            font-size: 12px;
+            cursor: pointer;
+            border-radius: 4px;
+            width: 100%;
+            text-align: left;
+            transition: all 0.2s;
+        }}
+        .advanced-toggle:hover {{
+            background: rgba(0, 255, 0, 0.2);
+        }}
+        .advanced-toggle .toggle-icon {{
+            display: inline-block;
+            transition: transform 0.3s;
+        }}
+        .advanced-toggle[aria-expanded="true"] .toggle-icon {{
+            transform: rotate(180deg);
+        }}
+        .advanced-content {{
+            margin-top: 10px;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(0, 255, 0, 0.2);
+            border-radius: 4px;
+        }}
+        .aggregation-controls {{
+            border: none;
+            padding: 0;
+            margin: 0;
+        }}
+        .aggregation-controls legend {{
+            color: #ffd700;
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }}
+        .aggregation-buttons {{
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 10px;
+        }}
+        .agg-btn {{
+            background: rgba(0, 255, 0, 0.1);
+            border: 2px solid rgba(0, 255, 0, 0.3);
+            color: #00ff00;
+            padding: 8px 16px;
+            font-family: 'Courier New', 'Consolas', 'Monaco', monospace;
+            font-size: 12px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 20px;
+            transition: all 0.2s;
+            min-width: 80px;
+        }}
+        .agg-btn:hover {{
+            background: rgba(0, 255, 0, 0.2);
+            border-color: rgba(0, 255, 0, 0.5);
+        }}
+        .agg-btn.active {{
+            background: rgba(255, 215, 0, 0.2);
+            border-color: #ffd700;
+            color: #ffd700;
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+        }}
+        .agg-help-text {{
+            color: rgba(0, 255, 0, 0.7);
+            font-size: 11px;
+            text-align: center;
+            margin: 0;
+            font-style: italic;
         }}
         .chart-grid {{
             display: flex;
@@ -1267,11 +1346,44 @@ class DashboardGenerator:
     <div class="dashboard-container">{html_header}</div>
 
     <div class="filter-container">
-        <div class="filter-label">Sessions to Display:</div>
-        <input type="range" id="sessionFilter" min="5" max="100" value="100" step="1">
-        <span id="sessionCount">All</span>
-        <button id="resetFilter" class="filter-button">Reset</button>
-        <button id="xAxisToggle" class="filter-button">X-Axis: Game Dates</button>
+        <div class="filter-primary">
+            <label class="filter-label">Filter:</label>
+            <select id="quickFilter" class="quick-filter-select">
+                <option value="all">All Sessions</option>
+                <option value="5">Last 5 Sessions</option>
+                <option value="10" selected>Last 10 Sessions</option>
+                <option value="20">Last 20 Sessions</option>
+                <option value="this-week-real">This Week (real)</option>
+                <option value="this-month-real">This Month (real)</option>
+                <option value="this-season-game">This Season (game)</option>
+                <option value="this-year-game">This Year (game)</option>
+                <option value="custom">Custom Range...</option>
+            </select>
+            <button id="resetFilter" class="filter-button">Reset</button>
+            <button id="xAxisToggle" class="filter-button">X-Axis: Game Dates</button>
+        </div>
+
+        <div class="filter-advanced" id="advancedPanel">
+            <button class="advanced-toggle" id="advancedToggle" aria-expanded="false">
+                <span class="toggle-icon">▼</span> Advanced Filters
+            </button>
+
+            <div class="advanced-content" id="advancedContent" hidden>
+                <fieldset class="aggregation-controls">
+                    <legend>Group by Time Period:</legend>
+                    <div class="aggregation-buttons" id="aggregationButtons">
+                        <button class="agg-btn active" data-level="session">Session</button>
+                        <button class="agg-btn" data-level="day">Day</button>
+                        <button class="agg-btn" data-level="week">Week</button>
+                        <button class="agg-btn" data-level="period" data-game="season" data-real="month">Season/Month</button>
+                        <button class="agg-btn" data-level="year">Year</button>
+                    </div>
+                    <p class="agg-help-text" id="aggHelpText">
+                        💡 Currently grouping by GAME time. Switch X-Axis for real-world time.
+                    </p>
+                </fieldset>
+            </div>
+        </div>
     </div>
 
     <div class="chart-grid">
@@ -1312,6 +1424,9 @@ class DashboardGenerator:
     <script>
         // Embed diary data
         const diaryData = {diary_data};
+
+        // Embed rollup data
+        const rollupData = {rollups_data_json};
 
         // Embed villager data
         const villagersData = {villagers_data_json};
@@ -1355,6 +1470,652 @@ class DashboardGenerator:
                 }}
             }}
         }});
+
+        // ============================================================
+        // ADVANCED DATE FILTERING SYSTEM
+        // Handles quick filters, aggregation controls, and context-aware UI
+        // ============================================================
+
+        // Global aggregation state
+        const aggregationState = {{
+            currentLevel: 'session',  // session, day, week, period, year
+            currentMode: 'game',      // game or real (follows xAxisMode)
+            cachedRollups: {{}},      // Cache processed data to avoid recomputation
+            originalData: null        // Store original chart data
+        }};
+
+        /**
+         * Initialize advanced filtering system
+         */
+        document.addEventListener('DOMContentLoaded', function() {{
+            // Check if rollupData exists
+            if (typeof rollupData === 'undefined') {{
+                console.warn('Rollup data not available - advanced filtering disabled');
+                return;
+            }}
+
+            console.log('Initializing advanced filtering system');
+
+            setupQuickFilter();
+            setupAdvancedPanel();
+            setupAggregationButtons();
+            syncAggregationMode(); // Initial sync with xAxisMode
+        }});
+
+        /**
+         * Setup quick filter dropdown handler
+         */
+        function setupQuickFilter() {{
+            const quickFilter = document.getElementById('quickFilter');
+            if (!quickFilter) return;
+
+            quickFilter.addEventListener('change', function() {{
+                const value = this.value;
+                console.log('Quick filter changed:', value);
+
+                // Handle numeric values (session count)
+                if (!isNaN(value) || value === 'all') {{
+                    const count = value === 'all' ? maxSessions : parseInt(value);
+
+                    // Update slider if using session-level aggregation
+                    if (aggregationState.currentLevel === 'session') {{
+                        const filterInput = document.getElementById('sessionFilter');
+                        const sessionCount = document.getElementById('sessionCount');
+                        if (filterInput) {{
+                            filterInput.value = count >= maxSessions ? maxSessions : count;
+                            sessionCount.textContent = count >= maxSessions ? 'All' : count;
+                        }}
+                    }}
+
+                    filterChartsByCount(count);
+                    return;
+                }}
+
+                // Handle time-based filters
+                switch(value) {{
+                    case 'this-week-real':
+                        filterByRealTimeRange('week');
+                        break;
+                    case 'this-month-real':
+                        filterByRealTimeRange('month');
+                        break;
+                    case 'this-season-game':
+                        filterByGameTimeRange('season');
+                        break;
+                    case 'this-year-game':
+                        filterByGameTimeRange('year');
+                        break;
+                    case 'custom':
+                        openAdvancedPanel();
+                        break;
+                }}
+            }});
+        }}
+
+        /**
+         * Filter charts by session count
+         */
+        function filterChartsByCount(count) {{
+            if (aggregationState.currentLevel === 'session') {{
+                // Use existing filterCharts function
+                filterCharts(count);
+            }} else {{
+                // For aggregated data, filter the rollup entries
+                const aggregatedData = getAggregatedChartData(
+                    aggregationState.currentLevel,
+                    aggregationState.currentMode
+                );
+
+                if (!aggregatedData) return;
+
+                // Apply count filter to aggregated data
+                const totalEntries = aggregatedData.sessionLabels.length;
+                const startIndex = Math.max(0, totalEntries - count);
+
+                const filteredData = sliceChartData(aggregatedData, startIndex);
+                updateAllCharts(filteredData);
+            }}
+        }}
+
+        /**
+         * Filter by real-world time range
+         */
+        function filterByRealTimeRange(period) {{
+            console.log('Filtering by real time range:', period);
+
+            const now = new Date();
+            const entries = diaryData.entries || [];
+
+            let filteredEntries = entries;
+
+            if (period === 'week') {{
+                // Last 7 days
+                const weekAgo = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
+                filteredEntries = entries.filter(e => {{
+                    const entryDate = new Date(e.detected_at);
+                    return entryDate >= weekAgo;
+                }});
+            }} else if (period === 'month') {{
+                // Current month
+                const monthStart = new Date(now.getFullYear(), now.getMonth(), 1);
+                filteredEntries = entries.filter(e => {{
+                    const entryDate = new Date(e.detected_at);
+                    return entryDate >= monthStart;
+                }});
+            }}
+
+            if (filteredEntries.length === 0) {{
+                console.warn('No entries found in selected time range');
+                return;
+            }}
+
+            // Update session count to match filtered entries
+            const filterInput = document.getElementById('sessionFilter');
+            const sessionCount = document.getElementById('sessionCount');
+            if (filterInput) {{
+                filterInput.value = filteredEntries.length;
+                sessionCount.textContent = filteredEntries.length;
+            }}
+
+            filterCharts(filteredEntries.length);
+        }}
+
+        /**
+         * Filter by game time range
+         */
+        function filterByGameTimeRange(period) {{
+            console.log('Filtering by game time range:', period);
+
+            const entries = diaryData.entries || [];
+            if (entries.length === 0) return;
+
+            // Get the most recent game date
+            const lastEntry = entries[entries.length - 1];
+            const lastGameDate = lastEntry.game_progress?.end;
+            if (!lastGameDate) {{
+                console.warn('Cannot determine current game date');
+                return;
+            }}
+
+            // Parse last game date (e.g., "Winter 23, Year 2")
+            const match = lastGameDate.match(/(\\w+)\\s+(\\d+),\\s+Year\\s+(\\d+)/);
+            if (!match) return;
+
+            const [, lastSeason, lastDay, lastYear] = match;
+
+            let filteredEntries = entries;
+
+            if (period === 'season') {{
+                // Filter to current season
+                filteredEntries = entries.filter(e => {{
+                    const endDate = e.game_progress?.end;
+                    if (!endDate) return false;
+                    const m = endDate.match(/(\\w+)\\s+(\\d+),\\s+Year\\s+(\\d+)/);
+                    if (!m) return false;
+                    return m[1] === lastSeason && m[3] === lastYear;
+                }});
+            }} else if (period === 'year') {{
+                // Filter to current year
+                filteredEntries = entries.filter(e => {{
+                    const endDate = e.game_progress?.end;
+                    if (!endDate) return false;
+                    const m = endDate.match(/Year\\s+(\\d+)/);
+                    if (!m) return false;
+                    return m[1] === lastYear;
+                }});
+            }}
+
+            if (filteredEntries.length === 0) {{
+                console.warn('No entries found in selected game time range');
+                return;
+            }}
+
+            // Update session count
+            const filterInput = document.getElementById('sessionFilter');
+            const sessionCount = document.getElementById('sessionCount');
+            if (filterInput) {{
+                filterInput.value = filteredEntries.length;
+                sessionCount.textContent = filteredEntries.length;
+            }}
+
+            filterCharts(filteredEntries.length);
+        }}
+
+        /**
+         * Setup advanced panel toggle
+         */
+        function setupAdvancedPanel() {{
+            const advancedToggle = document.getElementById('advancedToggle');
+            const advancedContent = document.getElementById('advancedContent');
+
+            if (!advancedToggle || !advancedContent) return;
+
+            advancedToggle.addEventListener('click', function() {{
+                const isExpanded = this.getAttribute('aria-expanded') === 'true';
+                const newState = !isExpanded;
+
+                this.setAttribute('aria-expanded', newState);
+                advancedContent.hidden = !newState;
+
+                // Update icon
+                const icon = this.querySelector('.toggle-icon');
+                if (icon) {{
+                    icon.textContent = newState ? '▲' : '▼';
+                }}
+
+                console.log('Advanced panel toggled:', newState ? 'open' : 'closed');
+            }});
+        }}
+
+        /**
+         * Open advanced panel programmatically
+         */
+        function openAdvancedPanel() {{
+            const advancedToggle = document.getElementById('advancedToggle');
+            const advancedContent = document.getElementById('advancedContent');
+
+            if (!advancedToggle || !advancedContent) return;
+
+            advancedToggle.setAttribute('aria-expanded', 'true');
+            advancedContent.hidden = false;
+
+            const icon = advancedToggle.querySelector('.toggle-icon');
+            if (icon) icon.textContent = '▲';
+
+            // Scroll into view
+            advancedToggle.scrollIntoView({{ behavior: 'smooth', block: 'nearest' }});
+        }}
+
+        /**
+         * Setup aggregation button handlers
+         */
+        function setupAggregationButtons() {{
+            const buttons = document.querySelectorAll('.agg-btn');
+            if (buttons.length === 0) return;
+
+            buttons.forEach(button => {{
+                button.addEventListener('click', function() {{
+                    const level = this.dataset.level;
+                    console.log('Aggregation button clicked:', level);
+
+                    // Update active state
+                    buttons.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+
+                    // Update aggregation state
+                    aggregationState.currentLevel = level;
+
+                    // Apply aggregation
+                    applyAggregation(level);
+                }});
+            }});
+        }}
+
+        /**
+         * Sync aggregation mode with X-axis mode
+         * Called when xAxisMode changes
+         */
+        function syncAggregationMode() {{
+            // Detect current xAxisMode
+            const mode = (typeof xAxisMode !== 'undefined' && xAxisMode === 'dates') ? 'real' : 'game';
+            aggregationState.currentMode = mode;
+
+            console.log('Aggregation mode synced to:', mode);
+
+            // Update help text
+            updateAggregationHelpText(mode);
+
+            // Update period button text
+            updatePeriodButtonText(mode);
+        }}
+
+        /**
+         * Update help text based on current mode
+         */
+        function updateAggregationHelpText(mode) {{
+            const helpText = document.getElementById('aggHelpText');
+            if (!helpText) return;
+
+            if (mode === 'game') {{
+                helpText.textContent = '💡 Currently grouping by GAME time. Switch X-Axis for real-world time.';
+            }} else {{
+                helpText.textContent = '💡 Currently grouping by REAL time. Switch X-Axis for game time.';
+            }}
+        }}
+
+        /**
+         * Update period button text (Season/Month)
+         */
+        function updatePeriodButtonText(mode) {{
+            const periodBtn = document.querySelector('[data-level="period"]');
+            if (!periodBtn) return;
+
+            if (mode === 'game') {{
+                periodBtn.textContent = 'Season';
+            }} else {{
+                periodBtn.textContent = 'Month';
+            }}
+        }}
+
+        /**
+         * Apply aggregation to charts
+         */
+        function applyAggregation(level) {{
+            console.log('Applying aggregation:', level, 'mode:', aggregationState.currentMode);
+
+            if (level === 'session') {{
+                // Reset to session-level view
+                const filterInput = document.getElementById('sessionFilter');
+                const count = filterInput ? parseInt(filterInput.value) : maxSessions;
+                filterCharts(count >= maxSessions ? maxSessions : count);
+                return;
+            }}
+
+            // Get aggregated data
+            const aggregatedData = getAggregatedChartData(level, aggregationState.currentMode);
+
+            if (!aggregatedData || aggregatedData.sessionLabels.length === 0) {{
+                console.warn('No aggregated data available for:', level, aggregationState.currentMode);
+                return;
+            }}
+
+            // Update all charts with aggregated data
+            updateAllCharts(aggregatedData);
+        }}
+
+        /**
+         * Get aggregated chart data from rollup data
+         */
+        function getAggregatedChartData(level, mode) {{
+            // Check cache first
+            const cacheKey = `${{level}}_${{mode}}`;
+            if (aggregationState.cachedRollups[cacheKey]) {{
+                console.log('Using cached rollup data:', cacheKey);
+                return aggregationState.cachedRollups[cacheKey];
+            }}
+
+            console.log('Computing aggregated data:', level, mode);
+
+            // Determine which rollup source to use
+            let rollupArray = null;
+            const timeMode = mode === 'real' ? 'real_time' : 'game_time';
+
+            if (level === 'day') {{
+                // Day-level: use session data grouped by day (not in rollups, use entries)
+                return computeDayLevelData(mode);
+            }} else if (level === 'week') {{
+                rollupArray = rollupData[timeMode]?.by_week;
+            }} else if (level === 'period') {{
+                // Season for game, Month for real
+                rollupArray = mode === 'real'
+                    ? rollupData.real_time?.by_month
+                    : rollupData.game_time?.by_season;
+            }} else if (level === 'year') {{
+                rollupArray = rollupData[timeMode]?.by_year;
+            }}
+
+            if (!rollupArray || rollupArray.length === 0) {{
+                console.warn('No rollup data found for:', level, mode);
+                return null;
+            }}
+
+            // Convert rollup data to chart-compatible format
+            const chartData = {{
+                sessionLabels: [],
+                dateLabels: [],
+                moneyChanges: [],
+                farmingXP: [],
+                fishingXP: [],
+                foragingXP: [],
+                miningXP: [],
+                combatXP: [],
+                totalXP: [],
+                bundlesCompleted: [],
+                cumulativeBundles: [],
+                villagerHearts: {{}},
+                cumulativeMoney: []
+            }};
+
+            // Initialize villager hearts
+            if (typeof villagersData !== 'undefined') {{
+                villagersData.forEach(villager => {{
+                    chartData.villagerHearts[villager.name] = [];
+                }});
+            }}
+
+            let cumulativeBundles = 0;
+            let cumulativeMoney = 0;
+
+            rollupArray.forEach((entry, index) => {{
+                // Extract label (period name)
+                const label = entry.period || `Entry ${{index}}`;
+                chartData.sessionLabels.push(label);
+                chartData.dateLabels.push(label); // Same for both in aggregated view
+
+                // Money change
+                const moneyChange = entry.money_change || 0;
+                chartData.moneyChanges.push(moneyChange);
+                cumulativeMoney += moneyChange;
+                chartData.cumulativeMoney.push(cumulativeMoney);
+
+                // XP by skill
+                const xpBySkill = entry.xp_by_skill || {{}};
+                chartData.farmingXP.push(xpBySkill.farming || 0);
+                chartData.fishingXP.push(xpBySkill.fishing || 0);
+                chartData.foragingXP.push(xpBySkill.foraging || 0);
+                chartData.miningXP.push(xpBySkill.mining || 0);
+                chartData.combatXP.push(xpBySkill.combat || 0);
+                chartData.totalXP.push(entry.total_xp || 0);
+
+                // Bundles
+                const bundles = entry.bundles_completed || 0;
+                chartData.bundlesCompleted.push(bundles);
+                cumulativeBundles += bundles;
+                chartData.cumulativeBundles.push(cumulativeBundles);
+
+                // Villager hearts (use zeros for aggregated view - not tracked in rollups)
+                for (const villagerName in chartData.villagerHearts) {{
+                    chartData.villagerHearts[villagerName].push(0);
+                }}
+            }});
+
+            // Cache the result
+            aggregationState.cachedRollups[cacheKey] = chartData;
+
+            return chartData;
+        }}
+
+        /**
+         * Compute day-level aggregation from session entries
+         */
+        function computeDayLevelData(mode) {{
+            const entries = diaryData.entries || [];
+            if (entries.length === 0) return null;
+
+            // Group entries by day
+            const dayGroups = {{}};
+
+            entries.forEach(entry => {{
+                let dayKey;
+
+                if (mode === 'real') {{
+                    // Group by real-world date (YYYY-MM-DD)
+                    if (!entry.detected_at) return;
+                    const date = new Date(entry.detected_at);
+                    dayKey = date.toISOString().split('T')[0];
+                }} else {{
+                    // Group by game date (Season Day, Year)
+                    const gameDate = entry.game_progress?.end;
+                    if (!gameDate) return;
+                    dayKey = gameDate; // Use full date as key
+                }}
+
+                if (!dayGroups[dayKey]) {{
+                    dayGroups[dayKey] = [];
+                }}
+                dayGroups[dayKey].push(entry);
+            }});
+
+            // Convert to chart data
+            const chartData = {{
+                sessionLabels: [],
+                dateLabels: [],
+                moneyChanges: [],
+                farmingXP: [],
+                fishingXP: [],
+                foragingXP: [],
+                miningXP: [],
+                combatXP: [],
+                totalXP: [],
+                bundlesCompleted: [],
+                cumulativeBundles: [],
+                villagerHearts: {{}},
+                cumulativeMoney: []
+            }};
+
+            // Initialize villager hearts
+            if (typeof villagersData !== 'undefined') {{
+                villagersData.forEach(villager => {{
+                    chartData.villagerHearts[villager.name] = [];
+                }});
+            }}
+
+            let cumulativeBundles = 0;
+            let cumulativeMoney = 0;
+
+            // Process each day
+            Object.keys(dayGroups).sort().forEach(dayKey => {{
+                const dayEntries = dayGroups[dayKey];
+
+                // Format label
+                let label = dayKey;
+                if (mode === 'real') {{
+                    const date = new Date(dayKey);
+                    label = date.toLocaleDateString('en-US', {{ month: 'short', day: 'numeric' }});
+                }} else {{
+                    // Remove year from game date
+                    label = dayKey.replace(/, Year \\d+/, '');
+                }}
+
+                chartData.sessionLabels.push(label);
+                chartData.dateLabels.push(label);
+
+                // Aggregate values for all entries in this day
+                let dayMoney = 0;
+                let dayFarming = 0;
+                let dayFishing = 0;
+                let dayForaging = 0;
+                let dayMining = 0;
+                let dayCombat = 0;
+                let dayBundles = 0;
+
+                dayEntries.forEach(entry => {{
+                    dayMoney += entry.financial?.change || 0;
+
+                    const skills = entry.changes_detail?.skill_changes || {{}};
+                    dayFarming += skills.farming?.xp_gained || 0;
+                    dayFishing += skills.fishing?.xp_gained || 0;
+                    dayForaging += skills.foraging?.xp_gained || 0;
+                    dayMining += skills.mining?.xp_gained || 0;
+                    dayCombat += skills.combat?.xp_gained || 0;
+
+                    dayBundles += entry.changes_detail?.bundles_completed || 0;
+                }});
+
+                chartData.moneyChanges.push(dayMoney);
+                cumulativeMoney += dayMoney;
+                chartData.cumulativeMoney.push(cumulativeMoney);
+
+                chartData.farmingXP.push(dayFarming);
+                chartData.fishingXP.push(dayFishing);
+                chartData.foragingXP.push(dayForaging);
+                chartData.miningXP.push(dayMining);
+                chartData.combatXP.push(dayCombat);
+                chartData.totalXP.push(dayFarming + dayFishing + dayForaging + dayMining + dayCombat);
+
+                chartData.bundlesCompleted.push(dayBundles);
+                cumulativeBundles += dayBundles;
+                chartData.cumulativeBundles.push(cumulativeBundles);
+
+                // Villager hearts (use last entry's values)
+                const lastEntry = dayEntries[dayEntries.length - 1];
+                const friendships = lastEntry.changes_detail?.friendship_changes || {{}};
+
+                for (const villagerName in chartData.villagerHearts) {{
+                    const hearts = friendships[villagerName]?.new_hearts || 0;
+                    chartData.villagerHearts[villagerName].push(hearts);
+                }}
+            }});
+
+            return chartData;
+        }}
+
+        /**
+         * Slice chart data from startIndex
+         */
+        function sliceChartData(data, startIndex) {{
+            const sliced = {{
+                sessionLabels: data.sessionLabels.slice(startIndex),
+                dateLabels: data.dateLabels.slice(startIndex),
+                moneyChanges: data.moneyChanges.slice(startIndex),
+                farmingXP: data.farmingXP.slice(startIndex),
+                fishingXP: data.fishingXP.slice(startIndex),
+                foragingXP: data.foragingXP.slice(startIndex),
+                miningXP: data.miningXP.slice(startIndex),
+                combatXP: data.combatXP.slice(startIndex),
+                totalXP: data.totalXP.slice(startIndex),
+                bundlesCompleted: data.bundlesCompleted.slice(startIndex),
+                cumulativeBundles: data.cumulativeBundles.slice(startIndex),
+                villagerHearts: {{}},
+                cumulativeMoney: data.cumulativeMoney.slice(startIndex)
+            }};
+
+            for (const villagerName in data.villagerHearts) {{
+                sliced.villagerHearts[villagerName] = data.villagerHearts[villagerName].slice(startIndex);
+            }}
+
+            return sliced;
+        }}
+
+        /**
+         * Update all charts with new data
+         */
+        function updateAllCharts(chartData) {{
+            updateMoneyChart(chartData);
+            updateXPBySkillChart(chartData);
+            updateTotalXPChart(chartData);
+            updateRelationshipChart(chartData);
+            updateBundlesChart(chartData);
+            updateCumulativeMoneyChart(chartData);
+        }}
+
+        /**
+         * Hook into existing xAxisToggle to sync aggregation mode
+         */
+        (function() {{
+            // Wait for chart_renderer.js to load
+            const checkInterval = setInterval(() => {{
+                const toggleButton = document.getElementById('xAxisToggle');
+                if (!toggleButton) return;
+
+                clearInterval(checkInterval);
+
+                // Add event listener to sync aggregation mode
+                toggleButton.addEventListener('click', function() {{
+                    // Wait for xAxisMode to update
+                    setTimeout(() => {{
+                        syncAggregationMode();
+
+                        // Re-apply current aggregation if not at session level
+                        if (aggregationState.currentLevel !== 'session') {{
+                            // Clear cache since mode changed
+                            aggregationState.cachedRollups = {{}};
+                            applyAggregation(aggregationState.currentLevel);
+                        }}
+                    }}, 50);
+                }});
+            }}, 100);
+        }})();
     </script>
     <script src="chart_config.js"></script>
     <script src="chart_renderer.js"></script>

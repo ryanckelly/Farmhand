@@ -199,14 +199,52 @@ def calculate_days_passed(old_date, new_date):
 
     return new_total - old_total
 
+def parse_game_date(date_string):
+    """
+    Parse human-readable game date string into structured object.
+
+    Args:
+        date_string (str): Date in format "Fall 6, Year 2"
+
+    Returns:
+        dict: {season: str, day: int, year: int} or None if parsing fails
+
+    Examples:
+        "Fall 6, Year 2" -> {'season': 'fall', 'day': 6, 'year': 2}
+        "Spring 1, Year 1" -> {'season': 'spring', 'day': 1, 'year': 1}
+    """
+    import re
+
+    # Pattern: "Season Day, Year Y"
+    match = re.match(r'(\w+)\s+(\d+),\s+Year\s+(\d+)', date_string)
+
+    if not match:
+        return None
+
+    season = match.group(1).lower()
+    day = int(match.group(2))
+    year = int(match.group(3))
+
+    return {
+        'season': season,
+        'day': day,
+        'year': year
+    }
+
 def generate_diary_entry(changes, old_state, new_state, bundle_readiness=None):
     """Generate a detailed diary entry from the changes detected."""
+    # Parse game dates into structured format
+    start_parsed = parse_game_date(old_state['game_date_str'])
+    end_parsed = parse_game_date(new_state['game_date_str'])
+
     entry = {
         'session_id': f"{datetime.now().strftime('%Y-%m-%d-%H%M')}",
         'detected_at': datetime.now().isoformat(),
         'game_progress': {
             'start': old_state['game_date_str'],
             'end': new_state['game_date_str'],
+            'start_parsed': start_parsed,
+            'end_parsed': end_parsed,
             'days_played': changes['days_passed'],
             'play_time_minutes': changes['play_time_change'] // 60000
         },
@@ -290,6 +328,13 @@ def add_diary_entry(entry):
     diary['meta']['total_sessions'] = len(diary['entries'])
     diary['meta']['last_updated'] = datetime.now().isoformat()
 
+    # Update date_index metadata
+    diary['meta']['schema_version'] = "1.2"
+    diary['meta']['date_index'] = {
+        'game': get_game_date_range(diary['entries']),
+        'real': get_real_date_range(diary['entries'])
+    }
+
     with open(DIARY_PATH, 'w') as f:
         json.dump(diary, f, indent=2)
 
@@ -363,9 +408,414 @@ def initialize_tracking_files():
                 }
             }, f, indent=2)
 
+def compute_time_rollups(entries):
+    """
+    Compute time-based aggregations for both game and real time.
+
+    Args:
+        entries (list): List of diary entries from diary.json
+
+    Returns:
+        dict: Rollup data structure with game_time and real_time aggregations
+    """
+    from collections import defaultdict
+    from datetime import datetime as dt
+
+    if not entries:
+        return {
+            'game_time': {},
+            'real_time': {},
+            'meta': {'total_entries': 0, 'generated_at': dt.now().isoformat()}
+        }
+
+    # Aggregate by different periods
+    rollups = {
+        'game_time': {
+            'by_week': aggregate_by_game_weeks(entries),
+            'by_season': aggregate_by_game_seasons(entries),
+            'by_year': aggregate_by_game_years(entries)
+        },
+        'real_time': {
+            'by_week': aggregate_by_real_weeks(entries),
+            'by_month': aggregate_by_real_months(entries),
+            'by_year': aggregate_by_real_years(entries)
+        },
+        'meta': {
+            'total_entries': len(entries),
+            'generated_at': dt.now().isoformat(),
+            'game_date_range': get_game_date_range(entries),
+            'real_date_range': get_real_date_range(entries)
+        }
+    }
+
+    return rollups
+
+def aggregate_by_game_weeks(entries):
+    """Aggregate entries by 7-day game weeks."""
+    from collections import defaultdict
+
+    weeks = defaultdict(lambda: {
+        'sessions': [],
+        'money_change': 0,
+        'xp_by_skill': defaultdict(int),
+        'bundles_completed': 0,
+        'days_played': 0
+    })
+
+    for entry in entries:
+        end_parsed = entry.get('game_progress', {}).get('end_parsed')
+        if not end_parsed:
+            # Fall back to parsing the human-readable string
+            end_str = entry.get('game_progress', {}).get('end')
+            if end_str:
+                end_parsed = parse_game_date(end_str)
+            if not end_parsed:
+                continue
+
+        # Calculate week number: (year-1)*16 + (season_idx*4) + ((day-1)//7)
+        season_idx = {'spring': 0, 'summer': 1, 'fall': 2, 'winter': 3}.get(end_parsed['season'], 0)
+        week_in_season = (end_parsed['day'] - 1) // 7  # 0-3
+        week_num = (end_parsed['year'] - 1) * 16 + season_idx * 4 + week_in_season
+
+        # Create key: "Y{year}W{week}"
+        key = f"Y{end_parsed['year']}W{week_in_season + 1}-{end_parsed['season'].title()}"
+
+        # Aggregate data
+        weeks[key]['sessions'].append(entry['session_id'])
+        weeks[key]['money_change'] += entry.get('financial', {}).get('change', 0)
+        weeks[key]['bundles_completed'] += entry.get('changes_detail', {}).get('bundles_completed', 0)
+        weeks[key]['days_played'] += entry.get('game_progress', {}).get('days_played', 0)
+
+        # Aggregate XP
+        for skill, data in entry.get('changes_detail', {}).get('skill_changes', {}).items():
+            weeks[key]['xp_by_skill'][skill] += data.get('xp_gained', 0)
+
+    # Convert to list format
+    result = []
+    for key in sorted(weeks.keys()):
+        data = weeks[key]
+        result.append({
+            'period': key,
+            'sessions_count': len(data['sessions']),
+            'money_change': data['money_change'],
+            'xp_by_skill': dict(data['xp_by_skill']),
+            'total_xp': sum(data['xp_by_skill'].values()),
+            'bundles_completed': data['bundles_completed'],
+            'days_played': data['days_played']
+        })
+
+    return result
+
+def aggregate_by_game_seasons(entries):
+    """Aggregate entries by 28-day game seasons."""
+    from collections import defaultdict
+
+    seasons = defaultdict(lambda: {
+        'sessions': [],
+        'money_change': 0,
+        'xp_by_skill': defaultdict(int),
+        'bundles_completed': 0,
+        'days_played': 0
+    })
+
+    for entry in entries:
+        end_parsed = entry.get('game_progress', {}).get('end_parsed')
+        if not end_parsed:
+            # Fall back to parsing the human-readable string
+            end_str = entry.get('game_progress', {}).get('end')
+            if end_str:
+                end_parsed = parse_game_date(end_str)
+            if not end_parsed:
+                continue
+
+        key = f"{end_parsed['season'].title()} Y{end_parsed['year']}"
+
+        # Aggregate data
+        seasons[key]['sessions'].append(entry['session_id'])
+        seasons[key]['money_change'] += entry.get('financial', {}).get('change', 0)
+        seasons[key]['bundles_completed'] += entry.get('changes_detail', {}).get('bundles_completed', 0)
+        seasons[key]['days_played'] += entry.get('game_progress', {}).get('days_played', 0)
+
+        for skill, data in entry.get('changes_detail', {}).get('skill_changes', {}).items():
+            seasons[key]['xp_by_skill'][skill] += data.get('xp_gained', 0)
+
+    # Convert to list
+    result = []
+    for key in sorted(seasons.keys(), key=lambda x: (int(x.split('Y')[1]), ['Spring', 'Summer', 'Fall', 'Winter'].index(x.split(' ')[0]))):
+        data = seasons[key]
+        result.append({
+            'period': key,
+            'sessions_count': len(data['sessions']),
+            'money_change': data['money_change'],
+            'xp_by_skill': dict(data['xp_by_skill']),
+            'total_xp': sum(data['xp_by_skill'].values()),
+            'bundles_completed': data['bundles_completed'],
+            'days_played': data['days_played']
+        })
+
+    return result
+
+def aggregate_by_game_years(entries):
+    """Aggregate entries by game years."""
+    from collections import defaultdict
+
+    years = defaultdict(lambda: {
+        'sessions': [],
+        'money_change': 0,
+        'xp_by_skill': defaultdict(int),
+        'bundles_completed': 0,
+        'days_played': 0
+    })
+
+    for entry in entries:
+        end_parsed = entry.get('game_progress', {}).get('end_parsed')
+        if not end_parsed:
+            # Fall back to parsing the human-readable string
+            end_str = entry.get('game_progress', {}).get('end')
+            if end_str:
+                end_parsed = parse_game_date(end_str)
+            if not end_parsed:
+                continue
+
+        key = f"Year {end_parsed['year']}"
+
+        years[key]['sessions'].append(entry['session_id'])
+        years[key]['money_change'] += entry.get('financial', {}).get('change', 0)
+        years[key]['bundles_completed'] += entry.get('changes_detail', {}).get('bundles_completed', 0)
+        years[key]['days_played'] += entry.get('game_progress', {}).get('days_played', 0)
+
+        for skill, data in entry.get('changes_detail', {}).get('skill_changes', {}).items():
+            years[key]['xp_by_skill'][skill] += data.get('xp_gained', 0)
+
+    result = []
+    for key in sorted(years.keys(), key=lambda x: int(x.split()[1])):
+        data = years[key]
+        result.append({
+            'period': key,
+            'sessions_count': len(data['sessions']),
+            'money_change': data['money_change'],
+            'xp_by_skill': dict(data['xp_by_skill']),
+            'total_xp': sum(data['xp_by_skill'].values()),
+            'bundles_completed': data['bundles_completed'],
+            'days_played': data['days_played']
+        })
+
+    return result
+
+def aggregate_by_real_weeks(entries):
+    """Aggregate entries by ISO calendar weeks."""
+    from collections import defaultdict
+    from datetime import datetime as dt
+
+    weeks = defaultdict(lambda: {
+        'sessions': [],
+        'money_change': 0,
+        'xp_by_skill': defaultdict(int),
+        'bundles_completed': 0,
+        'days_played': 0
+    })
+
+    for entry in entries:
+        timestamp = entry.get('detected_at')
+        if not timestamp:
+            continue
+
+        date = dt.fromisoformat(timestamp)
+        iso_cal = date.isocalendar()
+        key = f"{iso_cal[0]}-W{iso_cal[1]:02d}"  # "2025-W45"
+
+        weeks[key]['sessions'].append(entry['session_id'])
+        weeks[key]['money_change'] += entry.get('financial', {}).get('change', 0)
+        weeks[key]['bundles_completed'] += entry.get('changes_detail', {}).get('bundles_completed', 0)
+        weeks[key]['days_played'] += entry.get('game_progress', {}).get('days_played', 0)
+
+        for skill, data in entry.get('changes_detail', {}).get('skill_changes', {}).items():
+            weeks[key]['xp_by_skill'][skill] += data.get('xp_gained', 0)
+
+    result = []
+    for key in sorted(weeks.keys()):
+        data = weeks[key]
+        result.append({
+            'period': key,
+            'sessions_count': len(data['sessions']),
+            'money_change': data['money_change'],
+            'xp_by_skill': dict(data['xp_by_skill']),
+            'total_xp': sum(data['xp_by_skill'].values()),
+            'bundles_completed': data['bundles_completed'],
+            'days_played': data['days_played']
+        })
+
+    return result
+
+def aggregate_by_real_months(entries):
+    """Aggregate entries by calendar months."""
+    from collections import defaultdict
+    from datetime import datetime as dt
+
+    months = defaultdict(lambda: {
+        'sessions': [],
+        'money_change': 0,
+        'xp_by_skill': defaultdict(int),
+        'bundles_completed': 0,
+        'days_played': 0
+    })
+
+    for entry in entries:
+        timestamp = entry.get('detected_at')
+        if not timestamp:
+            continue
+
+        date = dt.fromisoformat(timestamp)
+        key = f"{date.year}-{date.month:02d}"  # "2025-11"
+
+        months[key]['sessions'].append(entry['session_id'])
+        months[key]['money_change'] += entry.get('financial', {}).get('change', 0)
+        months[key]['bundles_completed'] += entry.get('changes_detail', {}).get('bundles_completed', 0)
+        months[key]['days_played'] += entry.get('game_progress', {}).get('days_played', 0)
+
+        for skill, data in entry.get('changes_detail', {}).get('skill_changes', {}).items():
+            months[key]['xp_by_skill'][skill] += data.get('xp_gained', 0)
+
+    result = []
+    for key in sorted(months.keys()):
+        data = months[key]
+        result.append({
+            'period': key,
+            'sessions_count': len(data['sessions']),
+            'money_change': data['money_change'],
+            'xp_by_skill': dict(data['xp_by_skill']),
+            'total_xp': sum(data['xp_by_skill'].values()),
+            'bundles_completed': data['bundles_completed'],
+            'days_played': data['days_played']
+        })
+
+    return result
+
+def aggregate_by_real_years(entries):
+    """Aggregate entries by calendar years."""
+    from collections import defaultdict
+    from datetime import datetime as dt
+
+    years = defaultdict(lambda: {
+        'sessions': [],
+        'money_change': 0,
+        'xp_by_skill': defaultdict(int),
+        'bundles_completed': 0,
+        'days_played': 0
+    })
+
+    for entry in entries:
+        timestamp = entry.get('detected_at')
+        if not timestamp:
+            continue
+
+        date = dt.fromisoformat(timestamp)
+        key = str(date.year)
+
+        years[key]['sessions'].append(entry['session_id'])
+        years[key]['money_change'] += entry.get('financial', {}).get('change', 0)
+        years[key]['bundles_completed'] += entry.get('changes_detail', {}).get('bundles_completed', 0)
+        years[key]['days_played'] += entry.get('game_progress', {}).get('days_played', 0)
+
+        for skill, data in entry.get('changes_detail', {}).get('skill_changes', {}).items():
+            years[key]['xp_by_skill'][skill] += data.get('xp_gained', 0)
+
+    result = []
+    for key in sorted(years.keys()):
+        data = years[key]
+        result.append({
+            'period': key,
+            'sessions_count': len(data['sessions']),
+            'money_change': data['money_change'],
+            'xp_by_skill': dict(data['xp_by_skill']),
+            'total_xp': sum(data['xp_by_skill'].values()),
+            'bundles_completed': data['bundles_completed'],
+            'days_played': data['days_played']
+        })
+
+    return result
+
+def get_game_date_range(entries):
+    """Get earliest and latest game dates from entries."""
+    if not entries:
+        return None
+
+    dates = []
+    for entry in entries:
+        end_parsed = entry.get('game_progress', {}).get('end_parsed')
+        if not end_parsed:
+            # Fall back to parsing the human-readable string
+            end_str = entry.get('game_progress', {}).get('end')
+            if end_str:
+                end_parsed = parse_game_date(end_str)
+        if end_parsed:
+            dates.append(end_parsed)
+
+    if not dates:
+        return None
+
+    # Sort by year, season, day
+    season_order = {'spring': 0, 'summer': 1, 'fall': 2, 'winter': 3}
+    sorted_dates = sorted(dates, key=lambda d: (d['year'], season_order.get(d['season'], 0), d['day']))
+
+    return {
+        'earliest': sorted_dates[0],
+        'latest': sorted_dates[-1]
+    }
+
+def get_real_date_range(entries):
+    """Get earliest and latest real dates from entries."""
+    if not entries:
+        return None
+
+    timestamps = [entry.get('detected_at') for entry in entries if entry.get('detected_at')]
+
+    if not timestamps:
+        return None
+
+    return {
+        'earliest': min(timestamps),
+        'latest': max(timestamps)
+    }
+
+def generate_rollups_file():
+    """Generate diary_rollups.json from current diary.json."""
+    ROLLUPS_PATH = Path(r'C:\opt\stardew\diary_rollups.json')
+
+    if not DIARY_PATH.exists():
+        print("diary.json not found - cannot generate rollups")
+        return False
+
+    with open(DIARY_PATH, 'r') as f:
+        diary = json.load(f)
+
+    entries = diary.get('entries', [])
+
+    if not entries:
+        print("No entries in diary.json - skipping rollups generation")
+        return False
+
+    print(f"Generating rollups from {len(entries)} diary entries...")
+    rollups = compute_time_rollups(entries)
+
+    with open(ROLLUPS_PATH, 'w') as f:
+        json.dump(rollups, f, indent=2)
+
+    print(f"[OK] Generated diary_rollups.json:")
+    print(f"  - Game weeks: {len(rollups['game_time']['by_week'])}")
+    print(f"  - Game seasons: {len(rollups['game_time']['by_season'])}")
+    print(f"  - Game years: {len(rollups['game_time']['by_year'])}")
+    print(f"  - Real weeks: {len(rollups['real_time']['by_week'])}")
+    print(f"  - Real months: {len(rollups['real_time']['by_month'])}")
+    print(f"  - Real years: {len(rollups['real_time']['by_year'])}")
+
+    return True
+
 if __name__ == '__main__':
     result = track_session()
     print(f"\nStatus: {result['status']}")
     if result['status'] == 'session_recorded':
         print(f"Diary entry created successfully")
+        # Generate rollups after recording session
+        generate_rollups_file()
     sys.exit(0 if result['status'] != 'error' else 1)
