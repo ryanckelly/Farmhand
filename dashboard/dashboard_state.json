@@ -1,6 +1,6 @@
 {
-  "generated_at": "2025-11-08T19:52:09.751732",
-  "game_date": "Winter 20, Year 2",
+  "generated_at": "2025-11-08T23:26:51.348906",
+  "game_date": "Winter 23, Year 2",
   "unlocks": {
     "community_center": {
       "completed": 30,
@@ -8,9 +8,9 @@
       "percent": 0.967741935483871
     },
     "museum": {
-      "donated": 72,
+      "donated": 75,
       "total": 95,
-      "percent": 0.7578947368421053
+      "percent": 0.7894736842105263
     },
     "cooking": {
       "known": 0,
@@ -28,9 +28,9 @@
       "percent": 0.8
     },
     "golden_walnuts": {
-      "found": 9,
+      "found": 23,
       "total": 130,
-      "percent": 0.06923076923076923
+      "percent": 0.17692307692307693
     },
     "skull_cavern_depth": {
       "deepest": 125,
@@ -39,21 +39,21 @@
     }
   },
   "financials": {
-    "current_balance": 487473,
-    "daily_average": -32106,
-    "weekly_trend": -7.540890570430734,
+    "current_balance": 435500,
+    "daily_average": -656,
+    "weekly_trend": -0.9757038401750244,
     "best_day": {
       "amount": 231464,
       "date": "Fall 16, Year 2"
     },
     "sparkline_data": [
-      -5.053745381256299,
       -0.01744858731758295,
       0.32730563953271374,
       -0.215354756839473,
       -0.19366998842981376,
       1.0,
-      -0.04118613070578136
+      -0.04118613070578136,
+      -0.9698988541783301
     ]
   },
   "momentum_3session": {
@@ -62,7 +62,7 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+1584/session)"
+        "description": "High XP gains (+1836/session)"
       }
     ],
     "cold_streaks": [
@@ -70,6 +70,11 @@
         "category": "Bundles",
         "icon": "[COLD]",
         "description": "No bundle progress in 3 sessions"
+      },
+      {
+        "category": "Money",
+        "icon": "[COLD]",
+        "description": "Net losses (-198g/session)"
       }
     ],
     "rising_trends": [],
@@ -87,7 +92,7 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+1825/session)"
+        "description": "High XP gains (+1911/session)"
       }
     ],
     "cold_streaks": [
@@ -99,7 +104,12 @@
       {
         "category": "Money",
         "icon": "[COLD]",
-        "description": "Net losses (-32,106g/session)"
+        "description": "Net losses (-844g/session)"
+      },
+      {
+        "category": "Social",
+        "icon": "[COLD]",
+        "description": "No relationship progress"
       }
     ],
     "rising_trends": [],

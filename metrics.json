@@ -383,14 +383,30 @@
         "luck": 0
       },
       "bundles_complete": 30
+    },
+    {
+      "date": "2025-11-08T23:26:50.538422",
+      "game_date": "Winter 23, Year 2",
+      "money": 435500,
+      "total_earned": 2715078,
+      "animals": 35,
+      "skills": {
+        "farming": 10,
+        "fishing": 10,
+        "foraging": 10,
+        "mining": 10,
+        "combat": 8,
+        "luck": 0
+      },
+      "bundles_complete": 30
     }
   ],
   "trends": {
-    "daily_income_avg": -2207,
-    "money_growth_rate": -0.0045070249959157
+    "daily_income_avg": -51973,
+    "money_growth_rate": -0.10661718700317761
   },
   "meta": {
     "tracking_started": "2024-01-15",
-    "total_snapshots": 24
+    "total_snapshots": 25
   }
 }
