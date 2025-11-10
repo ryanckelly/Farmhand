@@ -1,14 +1,15 @@
 # Stardew Valley Goals
 
 ## Short-term Goals (This Season - Winter Year 2)
-- [ ] Upgrade remaining tools to Iridium (Axe, Hoe, Watering Can)
-- [ ] Reach Combat Level 10 (currently 8, 7,385/15,000 XP)
+- [ ] Complete Robin's Project
+- [ ] Reach Combat Level 10 (currently 8, 9,930/15,000 XP - need 5,070 more)
+- [ ] Collect Golden Walnuts for Ginger Island farm unlock (have 12, found 23, spent 11)
 
 ## Medium-term Goals (This Year - Year 2)
 - [ ] Max out greenhouse with Ancient Fruit
-- [ ] Push deeper into Skull Cavern (best: floor 39)
 - [ ] Unlock Club Card (500+ kills in Adventurer's Guild)
 - [ ] Complete The Missing Bundle (Abandoned JojaMart)
+- [ ] Unlock Ginger Island farm (requires spending walnuts on various island unlocks)
 
 ## Long-term Goals (Ultimate Objectives)
 - [ ] Achieve Perfection rating (100%)
@@ -46,4 +47,4 @@
 - Update this file as you complete goals or add new ones
 - Goals should be strategic objectives, not tactical tasks
 - Claude will convert these into specific daily recommendations
-- Last updated: Winter 13, Year 2 (2.5M lifetime earnings, all skills maxed)
+- Last updated: Winter 23, Year 2 (2.7M lifetime earnings, 4/5 skills maxed, Combat 8)
