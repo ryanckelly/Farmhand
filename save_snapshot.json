@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-11-11T00:43:22.874756",
+  "timestamp": "2025-11-11T01:44:14.727721",
   "save_path": "C:\\Users\\ryanc\\AppData\\Roaming\\StardewValley\\Saves\\ryfarm_419564418\\ryfarm_419564418",
   "game_date": {
     "season": "spring",
@@ -6113,5 +6113,512 @@
       "note": "Not yet implemented - requires monster kill stat parsing"
     },
     "total_percent": 32.2
+  },
+  "unlockables_status": {
+    "Calico Desert": {
+      "name": "Calico Desert",
+      "category": "Map Access",
+      "completion_percent": 0,
+      "completed_steps": 0,
+      "total_steps": 1,
+      "next_step": "Complete Vault bundles OR buy Joja bus repair",
+      "hints": [
+        "Complete Vault bundles at Community Center",
+        "OR purchase Joja bus repair for 40,000g"
+      ]
+    },
+    "Skull Cavern": {
+      "name": "Skull Cavern",
+      "category": "Map Access",
+      "completion_percent": 50,
+      "completed_steps": 1,
+      "total_steps": 2,
+      "next_step": "Unlock Calico Desert",
+      "hints": [
+        "Reach bottom of the Mines (level 120)",
+        "Sandy sells bombs at the Desert Trader"
+      ]
+    },
+    "Ginger Island": {
+      "name": "Ginger Island",
+      "category": "Map Access",
+      "completion_percent": 0,
+      "completed_steps": 0,
+      "total_steps": 2,
+      "next_step": "Complete Community Center OR Joja route",
+      "hints": [
+        "Get quest from Willy after CC completion",
+        "Need 200 Hardwood, 5 Iridium Bars, 5 Battery Packs"
+      ]
+    },
+    "Railroad & Spa": {
+      "name": "Railroad & Spa",
+      "category": "Map Access",
+      "completion_percent": 100,
+      "completed_steps": 1,
+      "total_steps": 1,
+      "next_step": "Complete!",
+      "hints": [
+        "Automatically unlocks Summer 3, Year 1"
+      ]
+    },
+    "Secret Woods": {
+      "name": "Secret Woods",
+      "category": "Map Access",
+      "completion_percent": 0,
+      "completed_steps": 0,
+      "total_steps": 1,
+      "next_step": "Upgrade Axe to Steel or better",
+      "hints": [
+        "Upgrade Axe to Steel (Clint's shop)",
+        "Break large log in southwest Cindersap Forest"
+      ]
+    },
+    "Sewers & Krobus Shop": {
+      "name": "Sewers & Krobus Shop",
+      "category": "Map Access",
+      "completion_percent": 100,
+      "completed_steps": 1,
+      "total_steps": 1,
+      "next_step": "Complete!",
+      "hints": [
+        "Donate 60 artifacts/minerals to Gunther",
+        "Key unlocks sewer grate south of town"
+      ]
+    },
+    "Quarry & Quarry Mine": {
+      "name": "Quarry & Quarry Mine",
+      "category": "Map Access",
+      "completion_percent": 0,
+      "completed_steps": 0,
+      "total_steps": 1,
+      "next_step": "Complete Crafts Room bundles",
+      "hints": [
+        "Complete all 6 Crafts Room bundles",
+        "Bridge repairs automatically"
+      ]
+    },
+    "Casino (Club Card)": {
+      "name": "Casino (Club Card)",
+      "category": "Progression",
+      "completion_percent": 0,
+      "completed_steps": 0,
+      "total_steps": 1,
+      "next_step": "Complete 'Mysterious Qi' questline",
+      "hints": [
+        "Receive secret quest from mysterious note",
+        "Place battery pack in lockbox at train station"
+      ]
+    },
+    "Mastery Cave": {
+      "name": "Mastery Cave",
+      "category": "Progression",
+      "completion_percent": 80,
+      "completed_steps": 4,
+      "total_steps": 5,
+      "next_step": "Combat Level 10",
+      "hints": [
+        "Max all 5 skills to level 10",
+        "Cave unlocks north of train station"
+      ]
+    },
+    "Dwarf Merchant": {
+      "name": "Dwarf Merchant",
+      "category": "Shops",
+      "completion_percent": 0,
+      "completed_steps": 0,
+      "total_steps": 4,
+      "next_step": "Find Dwarf Scroll I",
+      "hints": [
+        "Donate all 4 Dwarf Scrolls to Museum",
+        "Found by tilling dirt spots in Mines or killing enemies"
+      ]
+    },
+    "Wizard Tower (Junimo Language)": {
+      "name": "Wizard Tower (Junimo Language)",
+      "category": "Progression",
+      "completion_percent": 0,
+      "completed_steps": 0,
+      "total_steps": 1,
+      "next_step": "Complete 'Meet the Wizard' quest",
+      "hints": [
+        "Receive letter from Mayor Lewis",
+        "Visit Community Center to trigger quest"
+      ]
+    },
+    "Movie Theater": {
+      "name": "Movie Theater",
+      "category": "Buildings",
+      "completion_percent": 0,
+      "completed_steps": 0,
+      "total_steps": 1,
+      "next_step": "Complete Community Center OR Joja Warehouse",
+      "hints": [
+        "Movie theater replaces Joja Mart after completion"
+      ]
+    },
+    "Mutant Bug Lair": {
+      "name": "Mutant Bug Lair",
+      "category": "Map Access",
+      "completion_percent": 66,
+      "completed_steps": 2,
+      "total_steps": 3,
+      "next_step": "Befriend Krobus (2+ hearts)",
+      "hints": [
+        "Talk to Krobus in Sewers",
+        "Complete questline to receive Dark Talisman"
+      ]
+    },
+    "Witch's Swamp": {
+      "name": "Witch's Swamp",
+      "category": "Map Access",
+      "completion_percent": 25,
+      "completed_steps": 1,
+      "total_steps": 4,
+      "next_step": "Unlock Mutant Bug Lair",
+      "hints": [
+        "Complete Dark Talisman quest first",
+        "Enter Bug Lair to find Magic Ink",
+        "Return to Wizard"
+      ]
+    },
+    "Witch's Hut": {
+      "name": "Witch's Hut",
+      "category": "Buildings",
+      "completion_percent": 0,
+      "completed_steps": 0,
+      "total_steps": 1,
+      "next_step": "Reach Witch's Swamp",
+      "hints": [
+        "Located inside Witch's Swamp",
+        "Offers statue respecs and child management"
+      ]
+    },
+    "Community Center": {
+      "name": "Community Center",
+      "category": "Progression",
+      "completion_percent": 0,
+      "completed_steps": 0,
+      "total_steps": 31,
+      "next_step": "Complete all 31 bundles",
+      "hints": [
+        "Check current progress in save_snapshot.json",
+        "Track bundle readiness in diary.json"
+      ]
+    },
+    "Greenhouse": {
+      "name": "Greenhouse",
+      "category": "Buildings",
+      "completion_percent": 0,
+      "completed_steps": 0,
+      "total_steps": 1,
+      "next_step": "Complete Pantry bundles OR Joja greenhouse upgrade",
+      "hints": [
+        "Complete all 6 Pantry bundles",
+        "Junimos repair greenhouse overnight"
+      ]
+    },
+    "Beach Bridge (East Beach)": {
+      "name": "Beach Bridge (East Beach)",
+      "category": "Map Access",
+      "completion_percent": 0,
+      "completed_steps": 0,
+      "total_steps": 1,
+      "next_step": "Collect 300 wood",
+      "hints": [
+        "Gather 300 wood",
+        "Repair broken bridge on beach (east side)"
+      ]
+    },
+    "Island Farmhouse (Upgrade 1)": {
+      "name": "Island Farmhouse (Upgrade 1)",
+      "category": "Island Features",
+      "completion_percent": 50,
+      "completed_steps": 1,
+      "total_steps": 2,
+      "next_step": "Unlock Ginger Island",
+      "hints": [
+        "Talk to parrot at farmhouse ruins",
+        "Spend 20 Golden Walnuts"
+      ]
+    },
+    "Island Farm (Upgrade 2)": {
+      "name": "Island Farm (Upgrade 2)",
+      "category": "Island Features",
+      "completion_percent": 50,
+      "completed_steps": 1,
+      "total_steps": 2,
+      "next_step": "Unlock Island Farmhouse",
+      "hints": [
+        "Complete farmhouse upgrade first",
+        "Spend 20 more walnuts to unlock farm"
+      ]
+    },
+    "Parrot Express": {
+      "name": "Parrot Express",
+      "category": "Island Features",
+      "completion_percent": 50,
+      "completed_steps": 1,
+      "total_steps": 2,
+      "next_step": "Unlock Ginger Island",
+      "hints": [
+        "Find parrot huts around the island",
+        "Spend 10 walnuts for fast travel"
+      ]
+    },
+    "Volcano Dungeon (Interior)": {
+      "name": "Volcano Dungeon (Interior)",
+      "category": "Island Features",
+      "completion_percent": 50,
+      "completed_steps": 1,
+      "total_steps": 2,
+      "next_step": "Reach Volcano entrance",
+      "hints": [
+        "Navigate to north side of island",
+        "Pay 1 walnut to open gate"
+      ]
+    },
+    "Volcano Forge Room": {
+      "name": "Volcano Forge Room",
+      "category": "Island Features",
+      "completion_percent": 0,
+      "completed_steps": 0,
+      "total_steps": 1,
+      "next_step": "Reach floor 10 of Volcano Dungeon",
+      "hints": [
+        "Descend through Volcano Dungeon",
+        "Forge room at floor 10"
+      ]
+    },
+    "Island Trader": {
+      "name": "Island Trader",
+      "category": "Island Features",
+      "completion_percent": 50,
+      "completed_steps": 1,
+      "total_steps": 2,
+      "next_step": "Unlock Ginger Island",
+      "hints": [
+        "Find trader hut on island",
+        "Spend 10 walnuts"
+      ]
+    },
+    "Resort Rebuild": {
+      "name": "Resort Rebuild",
+      "category": "Island Features",
+      "completion_percent": 50,
+      "completed_steps": 1,
+      "total_steps": 2,
+      "next_step": "Unlock Ginger Island",
+      "hints": [
+        "Talk to parrot at resort ruins",
+        "Spend 20 walnuts"
+      ]
+    },
+    "Professor Snail's Tent": {
+      "name": "Professor Snail's Tent",
+      "category": "Island Features",
+      "completion_percent": 0,
+      "completed_steps": 0,
+      "total_steps": 1,
+      "next_step": "Free Professor Snail from boulder",
+      "hints": [
+        "Use bombs or upgraded pickaxe",
+        "Boulder near volcano entrance"
+      ]
+    },
+    "Island Field Office": {
+      "name": "Island Field Office",
+      "category": "Island Features",
+      "completion_percent": 0,
+      "completed_steps": 0,
+      "total_steps": 2,
+      "next_step": "Free Professor Snail",
+      "hints": [
+        "Rescue Professor Snail first",
+        "Dig up fossils with hoe"
+      ]
+    },
+    "Qi's Walnut Room": {
+      "name": "Qi's Walnut Room",
+      "category": "Island Features",
+      "completion_percent": 0,
+      "completed_steps": 0,
+      "total_steps": 1,
+      "next_step": "Collect 100 Golden Walnuts",
+      "hints": [
+        "Find 100 of 130 total walnuts",
+        "Door unlocks automatically"
+      ]
+    },
+    "Pirate Cove": {
+      "name": "Pirate Cove",
+      "category": "Island Features",
+      "completion_percent": 50,
+      "completed_steps": 1,
+      "total_steps": 2,
+      "next_step": "Unlock Ginger Island",
+      "hints": [
+        "Southeast beach area",
+        "Spend 20 walnuts"
+      ]
+    },
+    "Island Obsidian Shortcut": {
+      "name": "Island Obsidian Shortcut",
+      "category": "Island Features",
+      "completion_percent": 50,
+      "completed_steps": 1,
+      "total_steps": 2,
+      "next_step": "Unlock Island Farm",
+      "hints": [
+        "Unlock farm first",
+        "Bridge between farm and volcano"
+      ]
+    },
+    "Leo's Return to Town": {
+      "name": "Leo's Return to Town",
+      "category": "Progression",
+      "completion_percent": 0,
+      "completed_steps": 0,
+      "total_steps": 2,
+      "next_step": "Befriend Leo (6+ hearts)",
+      "hints": [
+        "Talk to Leo daily",
+        "Give him gifts",
+        "Complete island quests"
+      ]
+    },
+    "Museum Collection (60 Items)": {
+      "name": "Museum Collection (60 Items)",
+      "category": "Progression",
+      "completion_percent": 1,
+      "completed_steps": 1,
+      "total_steps": 60,
+      "next_step": "Complete!",
+      "hints": [
+        "Rewards Rusty Key",
+        "Find artifacts and minerals"
+      ]
+    },
+    "Museum Collection (95 Items)": {
+      "name": "Museum Collection (95 Items)",
+      "category": "Progression",
+      "completion_percent": 0,
+      "completed_steps": 0,
+      "total_steps": 95,
+      "next_step": "Donate all 95 items to Museum",
+      "hints": [
+        "Complete entire collection",
+        "Stardrop reward at 95 items"
+      ]
+    },
+    "Combat Level 10": {
+      "name": "Combat Level 10",
+      "category": "Skills",
+      "completion_percent": 0,
+      "completed_steps": 0,
+      "total_steps": 1,
+      "next_step": "Reach Combat Level 10",
+      "hints": [
+        "Kill monsters in Mines or Skull Cavern",
+        "Need 15,000 total Combat XP"
+      ]
+    },
+    "Fishing Level 10": {
+      "name": "Fishing Level 10",
+      "category": "Skills",
+      "completion_percent": 100,
+      "completed_steps": 1,
+      "total_steps": 1,
+      "next_step": "Complete!",
+      "hints": [
+        "Catch fish to gain XP",
+        "Need 15,000 total Fishing XP"
+      ]
+    },
+    "Farming Level 10": {
+      "name": "Farming Level 10",
+      "category": "Skills",
+      "completion_percent": 100,
+      "completed_steps": 1,
+      "total_steps": 1,
+      "next_step": "Complete!",
+      "hints": [
+        "Harvest crops, milk animals",
+        "Need 15,000 total Farming XP"
+      ]
+    },
+    "Mining Level 10": {
+      "name": "Mining Level 10",
+      "category": "Skills",
+      "completion_percent": 100,
+      "completed_steps": 1,
+      "total_steps": 1,
+      "next_step": "Complete!",
+      "hints": [
+        "Break rocks and find ore",
+        "Need 15,000 total Mining XP"
+      ]
+    },
+    "Foraging Level 10": {
+      "name": "Foraging Level 10",
+      "category": "Skills",
+      "completion_percent": 100,
+      "completed_steps": 1,
+      "total_steps": 1,
+      "next_step": "Complete!",
+      "hints": [
+        "Chop trees, collect forage items",
+        "Need 15,000 total Foraging XP"
+      ]
+    },
+    "Cooking Recipes (All 74)": {
+      "name": "Cooking Recipes (All 74)",
+      "category": "Collection",
+      "completion_percent": 0,
+      "completed_steps": 0,
+      "total_steps": 74,
+      "next_step": "Learn all 74 cooking recipes",
+      "hints": [
+        "Buy from shops, watch TV, befriend NPCs",
+        "Check Queen of Sauce reruns"
+      ]
+    },
+    "Friendships (8+ Hearts)": {
+      "name": "Friendships (8+ Hearts)",
+      "category": "Social",
+      "completion_percent": 0,
+      "completed_steps": 0,
+      "total_steps": 32,
+      "next_step": "Reach 8+ hearts with all 32 NPCs",
+      "hints": [
+        "Talk daily and give gifts",
+        "Some require bouquets (10 hearts)",
+        "Max hearts vary by NPC"
+      ]
+    },
+    "Golden Walnuts (100)": {
+      "name": "Golden Walnuts (100)",
+      "category": "Island Features",
+      "completion_percent": 0,
+      "completed_steps": 0,
+      "total_steps": 100,
+      "next_step": "Find 100 Golden Walnuts",
+      "hints": [
+        "Unlock Qi's Walnut Room",
+        "130 total walnuts available"
+      ]
+    },
+    "Golden Walnuts (130 All)": {
+      "name": "Golden Walnuts (130 All)",
+      "category": "Island Features",
+      "completion_percent": 0,
+      "completed_steps": 0,
+      "total_steps": 130,
+      "next_step": "Find all 130 Golden Walnuts",
+      "hints": [
+        "Check parrot hints",
+        "Some require puzzles and secrets"
+      ]
+    }
   }
 }

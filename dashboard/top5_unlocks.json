@@ -1,0 +1,36 @@
+{
+  "selected_at": "2025-11-11T01:45:00",
+  "reasoning": "Combat Level 10 is critical (only 3,734 XP needed, unlocks Mastery Cave). The Missing Bundle is 20% ready and blocks CC completion. Ginger Island boat repair is the critical blocker for 10+ island unlockables (all showing 50% since they depend on it). Golden Walnuts progress toward perfection and island progression. Museum Collection provides steady long-term goal.",
+  "unlocks": [
+    {
+      "name": "Combat Level 10",
+      "completion_percent": 75,
+      "next_step": "Gain 3,734 more Combat XP (currently 11,266/15,000)",
+      "category": "Skills"
+    },
+    {
+      "name": "Community Center",
+      "completion_percent": 97,
+      "next_step": "Complete The Missing Bundle (20% ready - need Dinosaur Egg + Gold Ancient Fruit)",
+      "category": "Progression"
+    },
+    {
+      "name": "Ginger Island",
+      "completion_percent": 50,
+      "next_step": "Repair Willy's boat (200 Hardwood, 5 Iridium Bars, 5 Battery Packs)",
+      "category": "Map Access"
+    },
+    {
+      "name": "Golden Walnuts (100)",
+      "completion_percent": 31,
+      "next_step": "Find 69 more Golden Walnuts (currently 31/100 to unlock Qi's Room)",
+      "category": "Island Features"
+    },
+    {
+      "name": "Museum Collection (95 Items)",
+      "completion_percent": 79,
+      "next_step": "Donate 20 more artifacts/minerals (currently 75/95 for Stardrop)",
+      "category": "Progression"
+    }
+  ]
+}
