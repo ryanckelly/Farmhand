@@ -826,17 +826,9 @@ class DashboardGenerator:
             categories.sort(key=lambda x: x[1])
             for name, pct, value in categories:
                 bar = r.progress_bar(pct)
-                # Add emoji indicators
-                if pct == 0:
-                    icon = "❌"
-                elif pct < 0.5:
-                    icon = "⚠️ "
-                elif pct < 1.0:
-                    icon = "📈"
-                else:
-                    icon = "✅"
-
-                line = f"{icon} {name:16} {bar} {value:>8}"
+                # Format with consistent alignment like UNLOCKS PROGRESS section
+                # Use 18 characters for label to match other sections
+                line = f"{name:18}{bar} {value:>8}"
                 lines.append(r.box_line(line))
 
             lines.append(r.empty_line())
