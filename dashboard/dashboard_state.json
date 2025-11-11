@@ -1,6 +1,6 @@
 {
-  "generated_at": "2025-11-10T23:36:26.172012",
-  "game_date": "Spring 2, Year 3",
+  "generated_at": "2025-11-10T23:53:45.584763",
+  "game_date": "Spring 3, Year 3",
   "unlocks": {
     "community_center": {
       "completed": 30,
@@ -78,21 +78,21 @@
     }
   },
   "financials": {
-    "current_balance": 487147,
-    "daily_average": -32,
-    "weekly_trend": -0.9985494671739082,
+    "current_balance": 487347,
+    "daily_average": 6480,
+    "weekly_trend": -9.775727826675695,
     "best_day": {
       "amount": 231464,
       "date": "Fall 16, Year 2"
     },
     "sparkline_data": [
-      -0.6363001958863859,
       -0.09894711067580803,
       1.0,
       0.152705680705191,
       0.302179236043095,
       -0.2630386875612145,
-      -0.46059010773751224
+      -0.46059010773751224,
+      0.002448579823702253
     ]
   },
   "momentum_3session": {
@@ -101,7 +101,7 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+1510/session)"
+        "description": "High XP gains (+1419/session)"
       }
     ],
     "cold_streaks": [
@@ -113,7 +113,12 @@
       {
         "category": "Money",
         "icon": "[COLD]",
-        "description": "Net losses (-11,474g/session)"
+        "description": "Net losses (-19,635g/session)"
+      },
+      {
+        "category": "Social",
+        "icon": "[COLD]",
+        "description": "No relationship progress"
       }
     ],
     "rising_trends": [],
@@ -131,7 +136,7 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+1577/session)"
+        "description": "High XP gains (+1394/session)"
       }
     ],
     "cold_streaks": [
@@ -139,16 +144,6 @@
         "category": "Bundles",
         "icon": "[COLD]",
         "description": "No bundle progress in 7 sessions"
-      },
-      {
-        "category": "Money",
-        "icon": "[COLD]",
-        "description": "Net losses (-46g/session)"
-      },
-      {
-        "category": "Social",
-        "icon": "[COLD]",
-        "description": "No relationship progress"
       }
     ],
     "rising_trends": [
@@ -164,6 +159,11 @@
       }
     ],
     "stalled_areas": [
+      {
+        "category": "Money",
+        "icon": "[STALLED]",
+        "description": "Low income (7,406g/session)"
+      },
       {
         "category": "Museum",
         "icon": "[STALLED]",

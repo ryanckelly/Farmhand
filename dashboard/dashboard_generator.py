@@ -822,9 +822,9 @@ class DashboardGenerator:
             monsters_pct = monsters.get('count', 0) / monsters.get('total', 1) if monsters.get('total', 1) > 0 else 0
             categories.append(('Monster Slayer', monsters_pct, f"{monsters.get('count', 0)}/{monsters.get('total', 12)}"))
 
-            # Sort by completion (lowest first) and display top 5
+            # Sort by completion (lowest first) and display all
             categories.sort(key=lambda x: x[1])
-            for name, pct, value in categories[:5]:
+            for name, pct, value in categories:
                 bar = r.progress_bar(pct)
                 # Add emoji indicators
                 if pct == 0:
