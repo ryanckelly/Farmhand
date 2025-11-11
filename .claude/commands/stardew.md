@@ -20,6 +20,14 @@ Run the Stardew Valley session tracker and display the Farmhand Dashboard:
      ```
    - Then below the dashboard, continue with other text/questions
 
+2.5. Regenerate HTML files for Railway deployment (silent background step):
+   ```bash
+   python dashboard/dashboard_generator.py --with-trends
+   ```
+   - This ensures Railway deployments always have the latest data
+   - Run this silently in the background (don't display output to user)
+   - Keeps dashboard.html and trends.html in sync with game state
+
 3. **ASK USER FOR PERMISSION**: After displaying the dashboard, ask "Would you like me to proceed to generate recommendations for your session today?"
    - If user says NO or wants to stop, end here (they may just want a quick status check)
    - If user says YES, continue to step 4
