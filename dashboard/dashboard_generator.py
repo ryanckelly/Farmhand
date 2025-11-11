@@ -1651,13 +1651,34 @@ class DashboardGenerator:
                 }}
             }});
 
-            // Apply default filter on page load
-            const defaultValue = quickFilter.value;
-            console.log('Applying default filter:', defaultValue);
-            if (!isNaN(defaultValue) || defaultValue === 'all') {{
-                const count = defaultValue === 'all' ? maxSessions : parseInt(defaultValue);
-                filterChartsByCount(count);
-            }}
+            // Apply default filter after charts are loaded
+            const applyDefaultFilter = () => {{
+                const defaultValue = quickFilter.value;
+                console.log('Applying default filter:', defaultValue);
+                if (!isNaN(defaultValue) || defaultValue === 'all') {{
+                    const count = defaultValue === 'all' ? maxSessions : parseInt(defaultValue);
+                    filterChartsByCount(count);
+                }}
+            }};
+
+            // Wait for charts to be created before applying default filter
+            const checkCharts = setInterval(() => {{
+                // Check if at least one chart exists (they're created by chart_renderer.js)
+                if (typeof window.moneyChart !== 'undefined') {{
+                    clearInterval(checkCharts);
+                    console.log('Charts loaded, applying default filter');
+                    applyDefaultFilter();
+                }}
+            }}, 100);
+
+            // Fallback: apply filter after 2 seconds even if charts aren't detected
+            setTimeout(() => {{
+                clearInterval(checkCharts);
+                if (typeof window.moneyChart === 'undefined') {{
+                    console.warn('Charts not detected after 2s, applying filter anyway');
+                }}
+                applyDefaultFilter();
+            }}, 2000);
         }}
 
         /**
