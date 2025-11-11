@@ -1027,22 +1027,19 @@ class DashboardGenerator:
         }}
         .dashboard-container {{
             margin: 0 auto;
-            max-width: 800px;
-            width: 95%;
+            /* Dynamically size to content width, but don't exceed viewport */
+            width: fit-content;
+            max-width: 95vw;
+            min-width: 320px;
             padding: 20px;
             box-sizing: border-box;
             border: 3px solid #00ff00;
             border-radius: 8px;
-            font-size: clamp(10px, 2.5vw, 14px);
+            font-size: 14px; /* Will be dynamically adjusted by JavaScript */
             line-height: 1.6;
-            white-space: pre-wrap;
-            word-wrap: break-word;
+            white-space: pre;
+            overflow-x: auto;
             text-align: left;
-        }}
-        @media (max-width: 768px) {{
-            .dashboard-container {{
-                font-size: clamp(8px, 3vw, 12px);
-            }}
         }}
         .header {{
             color: #ffd700;
@@ -1070,6 +1067,46 @@ class DashboardGenerator:
 <body>
     {nav_html}
     <div class="dashboard-container">{html_content}</div>
+
+<script>
+    // Dynamically adjust font size to prevent wrapping
+    function adjustFontSize() {{
+        const container = document.querySelector('.dashboard-container');
+        if (!container) return;
+
+        let fontSize = 14; // Start at 14px
+        const minFontSize = 8; // Don't go below 8px
+        const maxFontSize = 14; // Don't go above 14px
+
+        container.style.fontSize = fontSize + 'px';
+
+        // Check if content is wrapping (scrollWidth > clientWidth means horizontal overflow)
+        while (container.scrollWidth > container.clientWidth && fontSize > minFontSize) {{
+            fontSize -= 0.5;
+            container.style.fontSize = fontSize + 'px';
+        }}
+
+        // If we have extra space, try to increase font size (up to max)
+        while (container.scrollWidth <= container.clientWidth && fontSize < maxFontSize) {{
+            fontSize += 0.5;
+            container.style.fontSize = fontSize + 'px';
+            // If this made it overflow, roll back
+            if (container.scrollWidth > container.clientWidth) {{
+                fontSize -= 0.5;
+                container.style.fontSize = fontSize + 'px';
+                break;
+            }}
+        }}
+
+        console.log('Dashboard font size adjusted to:', fontSize + 'px');
+    }}
+
+    // Run on page load
+    window.addEventListener('load', adjustFontSize);
+
+    // Re-adjust on window resize
+    window.addEventListener('resize', adjustFontSize);
+</script>
 </body>
 </html>"""
 
@@ -1174,22 +1211,19 @@ class DashboardGenerator:
         }}
         .dashboard-container {{
             margin: 0 auto 20px auto;
-            max-width: 800px;
-            width: 95%;
+            /* Dynamically size to content width, but don't exceed viewport */
+            width: fit-content;
+            max-width: 95vw;
+            min-width: 320px;
             padding: 20px;
             box-sizing: border-box;
             border: 3px solid #00ff00;
             border-radius: 8px;
-            font-size: clamp(10px, 2.5vw, 14px);
+            font-size: 14px; /* Will be dynamically adjusted by JavaScript */
             line-height: 1.6;
-            white-space: pre-wrap;
-            word-wrap: break-word;
+            white-space: pre;
+            overflow-x: auto;
             text-align: center;
-        }}
-        @media (max-width: 768px) {{
-            .dashboard-container {{
-                font-size: clamp(8px, 3vw, 12px);
-            }}
         }}
         .filter-container {{
             max-width: 800px;
@@ -2212,6 +2246,46 @@ class DashboardGenerator:
     </script>
     <script src="chart_config.js"></script>
     <script src="chart_renderer.js"></script>
+
+    <script>
+        // Dynamically adjust font size to prevent wrapping
+        function adjustFontSize() {{
+            const container = document.querySelector('.dashboard-container');
+            if (!container) return;
+
+            let fontSize = 14; // Start at 14px
+            const minFontSize = 8; // Don't go below 8px
+            const maxFontSize = 14; // Don't go above 14px
+
+            container.style.fontSize = fontSize + 'px';
+
+            // Check if content is wrapping (scrollWidth > clientWidth means horizontal overflow)
+            while (container.scrollWidth > container.clientWidth && fontSize > minFontSize) {{
+                fontSize -= 0.5;
+                container.style.fontSize = fontSize + 'px';
+            }}
+
+            // If we have extra space, try to increase font size (up to max)
+            while (container.scrollWidth <= container.clientWidth && fontSize < maxFontSize) {{
+                fontSize += 0.5;
+                container.style.fontSize = fontSize + 'px';
+                // If this made it overflow, roll back
+                if (container.scrollWidth > container.clientWidth) {{
+                    fontSize -= 0.5;
+                    container.style.fontSize = fontSize + 'px';
+                    break;
+                }}
+            }}
+
+            console.log('Dashboard font size adjusted to:', fontSize + 'px');
+        }}
+
+        // Run on page load
+        window.addEventListener('load', adjustFontSize);
+
+        // Re-adjust on window resize
+        window.addEventListener('resize', adjustFontSize);
+    </script>
 </body>
 </html>"""
         else:
@@ -2260,22 +2334,19 @@ class DashboardGenerator:
         }}
         .dashboard-container {{
             margin: 0 auto;
-            max-width: 800px;
-            width: 95%;
+            /* Dynamically size to content width, but don't exceed viewport */
+            width: fit-content;
+            max-width: 95vw;
+            min-width: 320px;
             padding: 20px;
             box-sizing: border-box;
             border: 3px solid #00ff00;
             border-radius: 8px;
-            font-size: clamp(10px, 2.5vw, 14px);
+            font-size: 14px; /* Will be dynamically adjusted by JavaScript */
             line-height: 1.6;
-            white-space: pre-wrap;
-            word-wrap: break-word;
+            white-space: pre;
+            overflow-x: auto;
             text-align: center;
-        }}
-        @media (max-width: 768px) {{
-            .dashboard-container {{
-                font-size: clamp(8px, 3vw, 12px);
-            }}
         }}
         .chart-container {{
             text-align: center;
@@ -2311,6 +2382,46 @@ class DashboardGenerator:
     <div class="chart-container">
         <img src="stardew_bundles_money.png" alt="Bundle and Money Trends" class="chart-image">
     </div>
+
+<script>
+    // Dynamically adjust font size to prevent wrapping
+    function adjustFontSize() {{
+        const container = document.querySelector('.dashboard-container');
+        if (!container) return;
+
+        let fontSize = 14; // Start at 14px
+        const minFontSize = 8; // Don't go below 8px
+        const maxFontSize = 14; // Don't go above 14px
+
+        container.style.fontSize = fontSize + 'px';
+
+        // Check if content is wrapping (scrollWidth > clientWidth means horizontal overflow)
+        while (container.scrollWidth > container.clientWidth && fontSize > minFontSize) {{
+            fontSize -= 0.5;
+            container.style.fontSize = fontSize + 'px';
+        }}
+
+        // If we have extra space, try to increase font size (up to max)
+        while (container.scrollWidth <= container.clientWidth && fontSize < maxFontSize) {{
+            fontSize += 0.5;
+            container.style.fontSize = fontSize + 'px';
+            // If this made it overflow, roll back
+            if (container.scrollWidth > container.clientWidth) {{
+                fontSize -= 0.5;
+                container.style.fontSize = fontSize + 'px';
+                break;
+            }}
+        }}
+
+        console.log('Trends dashboard font size adjusted to:', fontSize + 'px');
+    }}
+
+    // Run on page load
+    window.addEventListener('load', adjustFontSize);
+
+    // Re-adjust on window resize
+    window.addEventListener('resize', adjustFontSize);
+</script>
 </body>
 </html>"""
 
