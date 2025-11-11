@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-11-10T20:30:15.525689",
+  "generated_at": "2025-11-10T22:57:03.773954",
   "game_date": "Spring 1, Year 3",
   "unlocks": {
     "community_center": {
@@ -38,35 +38,42 @@
       "milestone_200": false
     },
     "perfection": {
-      "overall_percent": 0,
+      "overall_percent": 32.0,
       "obelisks": {
         "count": 0,
-        "total": 4
+        "total": 4,
+        "details": {
+          "Earth Obelisk": 0,
+          "Water Obelisk": 0,
+          "Desert Obelisk": 0,
+          "Island Obelisk": 0
+        }
       },
       "golden_clock": false,
       "produce_shipped": {
-        "count": 0,
+        "count": 148,
         "total": 154
       },
       "fish_caught": {
-        "count": 0,
+        "count": 49,
         "total": 72
       },
       "recipes_cooked": {
-        "count": 0,
+        "count": 3,
         "total": 81
       },
       "recipes_crafted": {
-        "count": 0,
+        "count": 49,
         "total": 149
       },
       "stardrops_found": {
-        "count": 0,
+        "count": 5,
         "total": 7
       },
       "monster_goals": {
         "count": 0,
-        "total": 12
+        "total": 12,
+        "note": "Not yet implemented - requires monster kill stat parsing"
       }
     }
   },

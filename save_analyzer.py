@@ -986,7 +986,8 @@ def get_produce_shipped(root):
     unique_shipped = set()
 
     for item in shipped_items:
-        item_id = get_text(item, './/key/int', None)
+        # Item IDs stored as strings in the XML
+        item_id = get_text(item, './/key/string', None)
         if item_id:
             unique_shipped.add(item_id)
 
@@ -1003,7 +1004,8 @@ def get_fish_caught(root):
     unique_fish = set()
 
     for fish in fish_caught:
-        fish_id = get_text(fish, './/key/int', None)
+        # Fish IDs stored as strings in the XML
+        fish_id = get_text(fish, './/key/string', None)
         if fish_id:
             unique_fish.add(fish_id)
 

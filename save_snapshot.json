@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-11-10T20:11:02.147611",
+  "timestamp": "2025-11-10T22:56:56.625482",
   "save_path": "C:\\Users\\ryanc\\AppData\\Roaming\\StardewValley\\Saves\\ryfarm_419564418\\ryfarm_419564418",
   "game_date": {
     "season": "spring",
@@ -4117,5 +4117,44 @@
       "item_count": 3
     }
   ],
-  "weather_tomorrow": "unknown"
+  "weather_tomorrow": "unknown",
+  "perfection": {
+    "obelisks": {
+      "count": 0,
+      "total": 4,
+      "details": {
+        "Earth Obelisk": 0,
+        "Water Obelisk": 0,
+        "Desert Obelisk": 0,
+        "Island Obelisk": 0
+      }
+    },
+    "golden_clock": false,
+    "produce_shipped": {
+      "count": 148,
+      "total": 154
+    },
+    "fish_caught": {
+      "count": 49,
+      "total": 72
+    },
+    "recipes_cooked": {
+      "count": 3,
+      "total": 81
+    },
+    "recipes_crafted": {
+      "count": 49,
+      "total": 149
+    },
+    "stardrops_found": {
+      "count": 5,
+      "total": 7
+    },
+    "monster_goals": {
+      "count": 0,
+      "total": 12,
+      "note": "Not yet implemented - requires monster kill stat parsing"
+    },
+    "total_percent": 32.0
+  }
 }
