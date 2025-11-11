@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-11-10T20:11:05.888743",
+  "generated_at": "2025-11-10T20:30:15.525689",
   "game_date": "Spring 1, Year 3",
   "unlocks": {
     "community_center": {
@@ -36,6 +36,38 @@
       "deepest": 125,
       "milestone_100": true,
       "milestone_200": false
+    },
+    "perfection": {
+      "overall_percent": 0,
+      "obelisks": {
+        "count": 0,
+        "total": 4
+      },
+      "golden_clock": false,
+      "produce_shipped": {
+        "count": 0,
+        "total": 154
+      },
+      "fish_caught": {
+        "count": 0,
+        "total": 72
+      },
+      "recipes_cooked": {
+        "count": 0,
+        "total": 81
+      },
+      "recipes_crafted": {
+        "count": 0,
+        "total": 149
+      },
+      "stardrops_found": {
+        "count": 0,
+        "total": 7
+      },
+      "monster_goals": {
+        "count": 0,
+        "total": 12
+      }
     }
   },
   "financials": {

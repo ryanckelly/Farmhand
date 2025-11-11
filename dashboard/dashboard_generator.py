@@ -28,12 +28,12 @@ class ASCIIRenderer:
     @staticmethod
     def progress_bar(percent, width=20):
         """
-        Generate ASCII progress bar using simple ASCII characters.
-        Example: [============........]  60%
+        Generate ASCII progress bar using block characters.
+        Example: [████████████░░░░░░░░]  60%
         """
         filled = int(percent * width)
         empty = width - filled
-        bar = '=' * filled + '.' * empty
+        bar = '█' * filled + '░' * empty
         return f"[{bar}] {int(percent * 100):>3}%"
 
     @staticmethod
@@ -486,6 +486,20 @@ class DashboardGenerator:
             'milestone_200': skull_depth >= 200
         }
 
+        # Perfection tracking (100% completion)
+        perfection = self.snapshot.get('perfection', {})
+        unlocks['perfection'] = {
+            'overall_percent': perfection.get('total_percent', 0),
+            'obelisks': perfection.get('obelisks', {'count': 0, 'total': 4}),
+            'golden_clock': perfection.get('golden_clock', False),
+            'produce_shipped': perfection.get('produce_shipped', {'count': 0, 'total': 154}),
+            'fish_caught': perfection.get('fish_caught', {'count': 0, 'total': 72}),
+            'recipes_cooked': perfection.get('recipes_cooked', {'count': 0, 'total': 81}),
+            'recipes_crafted': perfection.get('recipes_crafted', {'count': 0, 'total': 149}),
+            'stardrops_found': perfection.get('stardrops_found', {'count': 0, 'total': 7}),
+            'monster_goals': perfection.get('monster_goals', {'count': 0, 'total': 12})
+        }
+
         return unlocks
 
     def extract_financials(self):
@@ -753,6 +767,80 @@ class DashboardGenerator:
 
         lines.append(r.empty_line())
 
+        # PERFECTION SECTION
+        perfection = unlocks.get('perfection', {})
+        if perfection:
+            lines.append(r.box_line("PERFECTION TRACKER"))
+            lines.append(r.box_line("─" * 18))
+
+            # Overall percentage
+            overall = perfection.get('overall_percent', 0)
+            bar = r.progress_bar(overall / 100)  # Convert to 0-1 range
+            lines.append(r.box_line(f"Overall Progress  {bar}"))
+            lines.append(r.box_line(""))
+
+            # Individual categories (show top priorities - lowest completion first)
+            categories = []
+
+            # Obelisks
+            obelisks = perfection.get('obelisks', {})
+            obelisks_pct = obelisks.get('count', 0) / obelisks.get('total', 1) if obelisks.get('total', 1) > 0 else 0
+            categories.append(('Obelisks Built', obelisks_pct, f"{obelisks.get('count', 0)}/{obelisks.get('total', 4)}"))
+
+            # Golden Clock
+            has_clock = perfection.get('golden_clock', False)
+            clock_pct = 1.0 if has_clock else 0.0
+            categories.append(('Golden Clock', clock_pct, 'Yes' if has_clock else 'No'))
+
+            # Produce Shipped
+            produce = perfection.get('produce_shipped', {})
+            produce_pct = produce.get('count', 0) / produce.get('total', 1) if produce.get('total', 1) > 0 else 0
+            categories.append(('Produce Shipped', produce_pct, f"{produce.get('count', 0)}/{produce.get('total', 154)}"))
+
+            # Fish Caught
+            fish = perfection.get('fish_caught', {})
+            fish_pct = fish.get('count', 0) / fish.get('total', 1) if fish.get('total', 1) > 0 else 0
+            categories.append(('Fish Caught', fish_pct, f"{fish.get('count', 0)}/{fish.get('total', 72)}"))
+
+            # Recipes Cooked
+            cooked = perfection.get('recipes_cooked', {})
+            cooked_pct = cooked.get('count', 0) / cooked.get('total', 1) if cooked.get('total', 1) > 0 else 0
+            categories.append(('Recipes Cooked', cooked_pct, f"{cooked.get('count', 0)}/{cooked.get('total', 81)}"))
+
+            # Recipes Crafted
+            crafted = perfection.get('recipes_crafted', {})
+            crafted_pct = crafted.get('count', 0) / crafted.get('total', 1) if crafted.get('total', 1) > 0 else 0
+            categories.append(('Recipes Crafted', crafted_pct, f"{crafted.get('count', 0)}/{crafted.get('total', 149)}"))
+
+            # Stardrops Found
+            stardrops = perfection.get('stardrops_found', {})
+            stardrops_pct = stardrops.get('count', 0) / stardrops.get('total', 1) if stardrops.get('total', 1) > 0 else 0
+            categories.append(('Stardrops Found', stardrops_pct, f"{stardrops.get('count', 0)}/{stardrops.get('total', 7)}"))
+
+            # Monster Slayer
+            monsters = perfection.get('monster_goals', {})
+            monsters_pct = monsters.get('count', 0) / monsters.get('total', 1) if monsters.get('total', 1) > 0 else 0
+            categories.append(('Monster Slayer', monsters_pct, f"{monsters.get('count', 0)}/{monsters.get('total', 12)}"))
+
+            # Sort by completion (lowest first) and display top 5
+            categories.sort(key=lambda x: x[1])
+            for name, pct, value in categories[:5]:
+                bar = r.progress_bar(pct)
+                # Add emoji indicators
+                if pct == 0:
+                    icon = "❌"
+                elif pct < 0.5:
+                    icon = "⚠️ "
+                elif pct < 1.0:
+                    icon = "📈"
+                else:
+                    icon = "✅"
+
+                line = f"{icon} {name:16} {bar} {value:>8}"
+                lines.append(r.box_line(line))
+
+            lines.append(r.empty_line())
+
         # FINANCIALS SECTION
         lines.append(r.box_line("FINANCIAL TRENDS"))
         lines.append(r.box_line("─" * 16))
@@ -839,12 +927,29 @@ class DashboardGenerator:
         # Footer
         lines.append(r.box_bottom())
 
-        # If colored, prepend GREEN to each line and append RESET at the very end
+        # Join lines first
+        output = '\n'.join(lines)
+
+        # If colored (terminal mode), strip box characters and add color codes
         if colored:
-            lines = [GREEN + line for line in lines]
-            return '\n'.join(lines) + RESET
+            # Remove box drawing characters for cleaner terminal display
+            box_chars = ['╔', '╗', '╚', '╝', '║', '╠', '╣']
+            for char in box_chars:
+                output = output.replace(char, '')
+
+            # Clean up lines and add spacing
+            output_lines = output.split('\n')
+            cleaned_lines = []
+            for line in output_lines:
+                # Strip leading/trailing whitespace but preserve indentation structure
+                line = line.rstrip()
+                if line:  # Skip completely empty lines from removed borders
+                    cleaned_lines.append(line)
+
+            output = '\n'.join(cleaned_lines)
+            return GREEN + output + RESET
         else:
-            return '\n'.join(lines)
+            return output
 
     def render_navigation(self, current_page='dashboard'):
         """Render vintage terminal-style navigation."""

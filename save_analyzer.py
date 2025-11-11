@@ -190,6 +190,9 @@ def analyze_save():
         # Weather tomorrow
         state['weather_tomorrow'] = get_text(root, './/weatherForTomorrow', 'unknown')
 
+        # Perfection tracking (100% completion metrics)
+        state['perfection'] = get_perfection_data(root)
+
         return state
 
     except Exception as e:
@@ -908,6 +911,240 @@ def get_detailed_bundle_info(root):
         traceback.print_exc()
 
     return bundle_data
+
+
+def get_perfection_data(root):
+    """
+    Extract all perfection-related metrics from save file.
+    Tracks progress toward 100% game completion (Perfection Tracker).
+    """
+    perfection = {}
+
+    # 1. Farm buildings (obelisks and golden clock)
+    perfection['obelisks'] = get_obelisks_on_farm(root)
+    perfection['golden_clock'] = get_golden_clock(root)
+
+    # 2. Shipping achievements
+    perfection['produce_shipped'] = get_produce_shipped(root)
+
+    # 3. Fish caught
+    perfection['fish_caught'] = get_fish_caught(root)
+
+    # 4. Recipes
+    perfection['recipes_cooked'] = get_recipes_cooked(root)
+    perfection['recipes_crafted'] = get_recipes_crafted(root)
+
+    # 5. Stardrops found
+    perfection['stardrops_found'] = get_stardrops_found(root)
+
+    # 6. Monster Slayer goals
+    perfection['monster_goals'] = get_monster_slayer_goals(root)
+
+    # Calculate overall perfection percentage
+    perfection['total_percent'] = calculate_perfection_score(perfection)
+
+    return perfection
+
+
+def get_obelisks_on_farm(root):
+    """Count obelisks built on the farm."""
+    buildings = root.findall('.//Building')
+    obelisk_types = ['Earth Obelisk', 'Water Obelisk', 'Desert Obelisk', 'Island Obelisk']
+
+    obelisks_built = {}
+    for obelisk_name in obelisk_types:
+        obelisks_built[obelisk_name] = 0
+
+    for building in buildings:
+        building_type = get_text(building, './/buildingType', '')
+        if building_type in obelisk_types:
+            obelisks_built[building_type] += 1
+
+    return {
+        'count': sum(obelisks_built.values()),
+        'total': 4,
+        'details': obelisks_built
+    }
+
+
+def get_golden_clock(root):
+    """Check if Golden Clock is built on the farm."""
+    buildings = root.findall('.//Building')
+
+    for building in buildings:
+        building_type = get_text(building, './/buildingType', '')
+        if building_type == 'Gold Clock':
+            return True
+
+    return False
+
+
+def get_produce_shipped(root):
+    """Count unique items shipped (for Shipping Collection achievement)."""
+    # Check basicShipped dictionary
+    shipped_items = root.findall('.//player/basicShipped/item')
+    unique_shipped = set()
+
+    for item in shipped_items:
+        item_id = get_text(item, './/key/int', None)
+        if item_id:
+            unique_shipped.add(item_id)
+
+    return {
+        'count': len(unique_shipped),
+        'total': 154  # Total unique items for full shipping collection
+    }
+
+
+def get_fish_caught(root):
+    """Count unique fish species caught."""
+    # Fish are tracked in stats or a dedicated fishCaught collection
+    fish_caught = root.findall('.//player/fishCaught/item')
+    unique_fish = set()
+
+    for fish in fish_caught:
+        fish_id = get_text(fish, './/key/int', None)
+        if fish_id:
+            unique_fish.add(fish_id)
+
+    return {
+        'count': len(unique_fish),
+        'total': 72  # Total unique fish species in game
+    }
+
+
+def get_recipes_cooked(root):
+    """Count unique recipes actually cooked (not just known)."""
+    recipes_cooked = root.findall('.//player/recipesCooked/item')
+    cooked_count = 0
+
+    for recipe in recipes_cooked:
+        times_cooked = int(get_text(recipe, './/value/int', 0))
+        if times_cooked > 0:
+            cooked_count += 1
+
+    return {
+        'count': cooked_count,
+        'total': 81  # Total cooking recipes (as of 1.6)
+    }
+
+
+def get_recipes_crafted(root):
+    """Count unique recipes crafted at least once."""
+    recipes_crafted = root.findall('.//player/craftingRecipes/item')
+    crafted_count = 0
+
+    for recipe in recipes_crafted:
+        recipe_name = get_text(recipe, './/key/string', '')
+        times_crafted = int(get_text(recipe, './/value/int', 0))
+
+        # Exclude Wedding Ring (doesn't count toward perfection)
+        if times_crafted > 0 and recipe_name != 'Wedding Ring':
+            crafted_count += 1
+
+    return {
+        'count': crafted_count,
+        'total': 149  # Total crafting recipes (excluding Wedding Ring)
+    }
+
+
+def get_stardrops_found(root):
+    """Count stardrops found (tracks via multiple sources)."""
+    stardrop_count = 0
+
+    # Check mail flags for stardrops
+    mail_received = [m.text for m in root.findall('.//player/mailReceived/string') if m.text]
+
+    stardrop_flags = [
+        'CF_Fair',        # Stardew Valley Fair (purchase with star tokens)
+        'CF_Fish',        # Master Angler (catch all fish)
+        'CF_Mines',       # Floor 100 mines
+        'CF_Sewer',       # Krobus shop
+        'CF_Spouse',      # Spouse gift
+        'CF_Statue',      # Secret Woods statue
+        'museumComplete'  # Museum completion reward
+    ]
+
+    for flag in stardrop_flags:
+        if flag in mail_received:
+            stardrop_count += 1
+
+    return {
+        'count': stardrop_count,
+        'total': 7  # Total stardrops in game
+    }
+
+
+def get_monster_slayer_goals(root):
+    """Count completed Monster Slayer goals from Adventure Guild."""
+    # Monster goals tracked in stats or adventure guild completion flags
+    # This is complex - need to check specific monster kill counts vs goals
+
+    # For now, return placeholder (this requires detailed monster kill tracking)
+    # TODO: Implement full monster goal tracking when needed
+    return {
+        'count': 0,
+        'total': 12,  # Total monster slayer categories
+        'note': 'Not yet implemented - requires monster kill stat parsing'
+    }
+
+
+def calculate_perfection_score(perfection):
+    """
+    Calculate overall perfection percentage based on all categories.
+
+    Perfection weights (adds up to 100%):
+    - Produce Shipped: 15%
+    - Obelisks: 4%
+    - Golden Clock: 10%
+    - Monster Slayer: 10%
+    - Great Friends: 11% (tracked elsewhere)
+    - Skills Maxed: 5% (tracked elsewhere)
+    - Stardrops: 10%
+    - Cooking Recipes: 10%
+    - Crafting Recipes: 10%
+    - Fish Caught: 10%
+    - Golden Walnuts: 5% (tracked elsewhere)
+    """
+    score = 0.0
+
+    # Produce shipped (15%)
+    if perfection['produce_shipped']['total'] > 0:
+        score += (perfection['produce_shipped']['count'] / perfection['produce_shipped']['total']) * 15
+
+    # Obelisks (4%)
+    if perfection['obelisks']['total'] > 0:
+        score += (perfection['obelisks']['count'] / perfection['obelisks']['total']) * 4
+
+    # Golden Clock (10%)
+    if perfection['golden_clock']:
+        score += 10
+
+    # Monster Slayer (10%)
+    if perfection['monster_goals']['total'] > 0:
+        score += (perfection['monster_goals']['count'] / perfection['monster_goals']['total']) * 10
+
+    # Stardrops (10%)
+    if perfection['stardrops_found']['total'] > 0:
+        score += (perfection['stardrops_found']['count'] / perfection['stardrops_found']['total']) * 10
+
+    # Cooking (10%)
+    if perfection['recipes_cooked']['total'] > 0:
+        score += (perfection['recipes_cooked']['count'] / perfection['recipes_cooked']['total']) * 10
+
+    # Crafting (10%)
+    if perfection['recipes_crafted']['total'] > 0:
+        score += (perfection['recipes_crafted']['count'] / perfection['recipes_crafted']['total']) * 10
+
+    # Fish (10%)
+    if perfection['fish_caught']['total'] > 0:
+        score += (perfection['fish_caught']['count'] / perfection['fish_caught']['total']) * 10
+
+    # Note: Skills (5%), Friendships (11%), and Golden Walnuts (5%) tracked elsewhere
+    # This returns partial score (up to 79%)
+
+    return round(score, 1)
+
 
 if __name__ == '__main__':
     # Test the analyzer

@@ -181,6 +181,22 @@ def calculate_changes(old_state, new_state):
     new_skull_depth = new_state.get('unlocks', {}).get('skull_cavern_level', 0)
     changes['skull_cavern_depth_change'] = new_skull_depth - old_skull_depth
 
+    # Perfection tracking
+    old_perfection = old_state.get('perfection', {})
+    new_perfection = new_state.get('perfection', {})
+
+    changes['perfection_changes'] = {
+        'overall_percent_change': new_perfection.get('total_percent', 0) - old_perfection.get('total_percent', 0),
+        'obelisks_built': new_perfection.get('obelisks', {}).get('count', 0) - old_perfection.get('obelisks', {}).get('count', 0),
+        'golden_clock_acquired': new_perfection.get('golden_clock', False) and not old_perfection.get('golden_clock', False),
+        'produce_shipped_change': new_perfection.get('produce_shipped', {}).get('count', 0) - old_perfection.get('produce_shipped', {}).get('count', 0),
+        'fish_caught_change': new_perfection.get('fish_caught', {}).get('count', 0) - old_perfection.get('fish_caught', {}).get('count', 0),
+        'recipes_cooked_change': new_perfection.get('recipes_cooked', {}).get('count', 0) - old_perfection.get('recipes_cooked', {}).get('count', 0),
+        'recipes_crafted_change': new_perfection.get('recipes_crafted', {}).get('count', 0) - old_perfection.get('recipes_crafted', {}).get('count', 0),
+        'stardrops_found_change': new_perfection.get('stardrops_found', {}).get('count', 0) - old_perfection.get('stardrops_found', {}).get('count', 0),
+        'monster_goals_completed': new_perfection.get('monster_goals', {}).get('count', 0) - old_perfection.get('monster_goals', {}).get('count', 0)
+    }
+
     return changes
 
 def calculate_days_passed(old_date, new_date):
@@ -314,6 +330,37 @@ def generate_diary_entry(changes, old_state, new_state, bundle_readiness=None):
     if changes['days_passed'] > 0:
         accomplishments.append(f"Progressed {changes['days_passed']} in-game day(s)")
 
+    # Perfection accomplishments
+    perfection = changes.get('perfection_changes', {})
+
+    if perfection.get('golden_clock_acquired'):
+        accomplishments.append("Built the Golden Clock! (10% toward Perfection)")
+
+    if perfection.get('obelisks_built', 0) > 0:
+        accomplishments.append(f"Built {perfection['obelisks_built']} obelisk(s)")
+
+    if perfection.get('stardrops_found_change', 0) > 0:
+        accomplishments.append(f"Found {perfection['stardrops_found_change']} stardrop(s)")
+
+    if perfection.get('recipes_cooked_change', 0) > 0:
+        accomplishments.append(f"Cooked {perfection['recipes_cooked_change']} new recipe(s)")
+
+    if perfection.get('recipes_crafted_change', 0) > 0:
+        accomplishments.append(f"Crafted {perfection['recipes_crafted_change']} new item(s)")
+
+    if perfection.get('fish_caught_change', 0) > 0:
+        accomplishments.append(f"Caught {perfection['fish_caught_change']} new fish species")
+
+    if perfection.get('produce_shipped_change', 0) > 0:
+        accomplishments.append(f"Shipped {perfection['produce_shipped_change']} new item type(s)")
+
+    if perfection.get('monster_goals_completed', 0) > 0:
+        accomplishments.append(f"Completed {perfection['monster_goals_completed']} Monster Slayer goal(s)")
+
+    # Overall perfection progress
+    if perfection.get('overall_percent_change', 0) > 0:
+        accomplishments.append(f"Perfection: +{perfection['overall_percent_change']:.1f}%")
+
     entry['key_accomplishments'] = accomplishments
     entry['changes_detail'] = changes
 
@@ -343,6 +390,20 @@ def update_metrics(state):
     with open(METRICS_PATH, 'r') as f:
         metrics = json.load(f)
 
+    # Extract perfection data
+    perfection = state.get('perfection', {})
+    perfection_snapshot = {
+        'overall_percent': perfection.get('total_percent', 0),
+        'obelisks': perfection.get('obelisks', {}).get('count', 0),
+        'golden_clock': perfection.get('golden_clock', False),
+        'produce_shipped': perfection.get('produce_shipped', {}).get('count', 0),
+        'fish_caught': perfection.get('fish_caught', {}).get('count', 0),
+        'recipes_cooked': perfection.get('recipes_cooked', {}).get('count', 0),
+        'recipes_crafted': perfection.get('recipes_crafted', {}).get('count', 0),
+        'stardrops_found': perfection.get('stardrops_found', {}).get('count', 0),
+        'monster_goals': perfection.get('monster_goals', {}).get('count', 0)
+    }
+
     snapshot = {
         'date': datetime.now().isoformat(),
         'game_date': state['game_date_str'],
@@ -350,7 +411,8 @@ def update_metrics(state):
         'total_earned': state['total_earned'],
         'animals': state['animals']['total'],
         'skills': {k: v['level'] for k, v in state['skills'].items()},
-        'bundles_complete': state.get('bundles', {}).get('complete_count', 0)
+        'bundles_complete': state.get('bundles', {}).get('complete_count', 0),
+        'perfection': perfection_snapshot
     }
 
     metrics['snapshots'].append(snapshot)
