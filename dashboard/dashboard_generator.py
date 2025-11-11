@@ -754,8 +754,9 @@ class DashboardGenerator:
 
             # Overall percentage
             overall = perfection.get('overall_percent', 0)
-            bar = r.progress_bar(overall / 100)  # Convert to 0-1 range
-            lines.append(r.box_line(f"Overall Progress  {bar}"))
+            bar = r.progress_bar(overall / 100, width=14)  # Convert to 0-1 range
+            name_short = "Overall Progress".ljust(24)
+            lines.append(r.box_line(f"{name_short}{bar}"))
             lines.append(r.box_line(""))
 
             # Individual categories (show top priorities - lowest completion first)
@@ -804,10 +805,10 @@ class DashboardGenerator:
             # Sort by completion (lowest first) and display all
             categories.sort(key=lambda x: x[1])
             for name, pct, value in categories:
-                bar = r.progress_bar(pct)
-                # Format with consistent alignment like UNLOCKS PROGRESS section
-                # Use 18 characters for label to match other sections
-                line = f"{name:18}{bar} {value:>8}"
+                bar = r.progress_bar(pct, width=14)
+                # Format with consistent alignment - 24 chars for name to match Top 5 Active Unlocks
+                name_short = name[:24].ljust(24)
+                line = f"{name_short}{bar} {value:>8}"
                 lines.append(r.box_line(line))
 
             lines.append(r.empty_line())
