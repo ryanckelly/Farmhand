@@ -3,8 +3,8 @@
  * Initializes all Chart.js charts with diary data
  */
 
-// Global chart instances
-const chartInstances = {
+// Global chart instances (expose to window for cross-script access)
+window.chartInstances = {
     money: null,
     xpBySkill: null,
     totalXP: null,
@@ -12,6 +12,9 @@ const chartInstances = {
     bundles: null,
     cumulativeMoney: null
 };
+
+// Alias for backward compatibility
+const chartInstances = window.chartInstances;
 
 // Global data storage
 let fullChartData = null;

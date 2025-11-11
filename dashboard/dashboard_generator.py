@@ -1663,8 +1663,8 @@ class DashboardGenerator:
 
             // Wait for charts to be created before applying default filter
             const checkCharts = setInterval(() => {{
-                // Check if chartInstances exists and has at least one chart
-                if (typeof chartInstances !== 'undefined' && chartInstances.money !== null) {{
+                // Check if chartInstances exists on window and has at least one chart
+                if (window.chartInstances && window.chartInstances.money !== null) {{
                     clearInterval(checkCharts);
                     console.log('Charts loaded, applying default filter');
                     applyDefaultFilter();
@@ -1674,7 +1674,7 @@ class DashboardGenerator:
             // Fallback: apply filter after 2 seconds even if charts aren't detected
             setTimeout(() => {{
                 clearInterval(checkCharts);
-                if (typeof chartInstances === 'undefined' || chartInstances.money === null) {{
+                if (!window.chartInstances || window.chartInstances.money === null) {{
                     console.warn('Charts not detected after 2s, applying filter anyway');
                 }}
                 applyDefaultFilter();
