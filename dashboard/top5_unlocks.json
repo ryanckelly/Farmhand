@@ -1,12 +1,18 @@
 {
-  "selected_at": "2025-11-11T01:45:00",
-  "reasoning": "Combat Level 10 is critical (only 3,734 XP needed, unlocks Mastery Cave). The Missing Bundle is 20% ready and blocks CC completion. Ginger Island boat repair is the critical blocker for 10+ island unlockables (all showing 50% since they depend on it). Golden Walnuts progress toward perfection and island progression. Museum Collection provides steady long-term goal.",
+  "selected_at": "2025-11-11T02:05:00",
+  "reasoning": "Combat Level 10 is the immediate priority (3,734 XP needed) and unlocks Mastery Cave. The Missing Bundle is 20% ready and blocks CC completion. Volcano Dungeon Interior is newly accessible now that island access is confirmed. Golden Walnuts and Museum Collection provide steady long-term perfection goals.",
   "unlocks": [
     {
       "name": "Combat Level 10",
-      "completion_percent": 75,
+      "completion_percent": 0,
       "next_step": "Gain 3,734 more Combat XP (currently 11,266/15,000)",
       "category": "Skills"
+    },
+    {
+      "name": "Mastery Cave",
+      "completion_percent": 80,
+      "next_step": "Reach Combat Level 10 (only remaining skill)",
+      "category": "Progression"
     },
     {
       "name": "Community Center",
@@ -15,15 +21,9 @@
       "category": "Progression"
     },
     {
-      "name": "Ginger Island",
+      "name": "Volcano Dungeon (Interior)",
       "completion_percent": 50,
-      "next_step": "Repair Willy's boat (200 Hardwood, 5 Iridium Bars, 5 Battery Packs)",
-      "category": "Map Access"
-    },
-    {
-      "name": "Golden Walnuts (100)",
-      "completion_percent": 31,
-      "next_step": "Find 69 more Golden Walnuts (currently 31/100 to unlock Qi's Room)",
+      "next_step": "Navigate to volcano entrance on Ginger Island",
       "category": "Island Features"
     },
     {
