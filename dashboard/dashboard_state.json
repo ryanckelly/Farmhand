@@ -1,6 +1,6 @@
 {
-  "generated_at": "2025-11-11T13:20:24.136682",
-  "game_date": "Spring 6, Year 3",
+  "generated_at": "2025-11-11T16:02:01.063357",
+  "game_date": "Spring 9, Year 3",
   "unlocks": {
     "community_center": {
       "completed": 30,
@@ -28,9 +28,9 @@
       "percent": 0.8
     },
     "golden_walnuts": {
-      "found": 31,
+      "found": 39,
       "total": 130,
-      "percent": 0.23846153846153847
+      "percent": 0.3
     },
     "skull_cavern_depth": {
       "deepest": 125,
@@ -38,7 +38,7 @@
       "milestone_200": false
     },
     "perfection": {
-      "overall_percent": 32.2,
+      "overall_percent": 32.4,
       "obelisks": {
         "count": 0,
         "total": 4,
@@ -51,7 +51,7 @@
       },
       "golden_clock": false,
       "produce_shipped": {
-        "count": 148,
+        "count": 150,
         "total": 154
       },
       "fish_caught": {
@@ -78,26 +78,32 @@
     }
   },
   "financials": {
-    "current_balance": 551613,
-    "daily_average": 4723,
-    "weekly_trend": -0.16777590729358338,
+    "current_balance": 578022,
+    "daily_average": 3529,
+    "weekly_trend": -0.7116077669550377,
     "best_day": {
       "amount": 231464,
       "date": "Fall 16, Year 2"
     },
     "sparkline_data": [
-      0.2178994444638552,
-      0.4311868907445582,
       -0.3753362915341882,
       -0.6572272107892806,
       0.003493938017539569,
       1.0,
-      0.12270710317598965
+      0.12270710317598965,
+      0.16996261486321232,
+      0.2913944306628
     ]
   },
   "momentum_3session": {
     "window_size": 3,
-    "hot_streaks": [],
+    "hot_streaks": [
+      {
+        "category": "Skills",
+        "icon": "[HOT]",
+        "description": "High XP gains (+2284/session)"
+      }
+    ],
     "cold_streaks": [
       {
         "category": "Bundles",
@@ -125,7 +131,7 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+1144/session)"
+        "description": "High XP gains (+1671/session)"
       }
     ],
     "cold_streaks": [
@@ -133,20 +139,19 @@
         "category": "Bundles",
         "icon": "[COLD]",
         "description": "No bundle progress in 7 sessions"
-      }
-    ],
-    "rising_trends": [
+      },
       {
-        "category": "Friendship",
-        "icon": "[RISING]",
-        "description": "Abigail (13 hearts)"
+        "category": "Social",
+        "icon": "[COLD]",
+        "description": "No relationship progress"
       }
     ],
+    "rising_trends": [],
     "stalled_areas": [
       {
         "category": "Money",
         "icon": "[STALLED]",
-        "description": "Low income (6,073g/session)"
+        "description": "Low income (4,538g/session)"
       },
       {
         "category": "Museum",
