@@ -1,6 +1,6 @@
 {
-  "generated_at": "2025-11-09T21:43:37.179187",
-  "game_date": "Winter 24, Year 2",
+  "generated_at": "2025-11-10T20:11:05.888743",
+  "game_date": "Spring 1, Year 3",
   "unlocks": {
     "community_center": {
       "completed": 30,
@@ -28,9 +28,9 @@
       "percent": 0.8
     },
     "golden_walnuts": {
-      "found": 28,
+      "found": 31,
       "total": 130,
-      "percent": 0.2153846153846154
+      "percent": 0.23846153846153847
     },
     "skull_cavern_depth": {
       "deepest": 125,
@@ -39,21 +39,21 @@
     }
   },
   "financials": {
-    "current_balance": 427418,
-    "daily_average": -1450,
-    "weekly_trend": -0.9400959932455996,
+    "current_balance": 524768,
+    "daily_average": 3508,
+    "weekly_trend": -1.2888685815900613,
     "best_day": {
       "amount": 231464,
       "date": "Fall 16, Year 2"
     },
     "sparkline_data": [
-      0.32730563953271374,
-      -0.215354756839473,
-      -0.19366998842981376,
+      -0.027020078354554358,
+      -0.6363001958863859,
+      -0.09894711067580803,
       1.0,
-      -0.04118613070578136,
-      -0.9698988541783301,
-      -0.15082297615048706
+      0.152705680705191,
+      0.302179236043095,
+      -0.2630386875612145
     ]
   },
   "momentum_3session": {
@@ -62,7 +62,7 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+1500/session)"
+        "description": "High XP gains (+1065/session)"
       }
     ],
     "cold_streaks": [
@@ -70,21 +70,21 @@
         "category": "Bundles",
         "icon": "[COLD]",
         "description": "No bundle progress in 3 sessions"
-      },
-      {
-        "category": "Money",
-        "icon": "[COLD]",
-        "description": "Net losses (-20,754g/session)"
       }
     ],
     "rising_trends": [
       {
-        "category": "Combat",
+        "category": "Friendship",
         "icon": "[RISING]",
-        "description": "Combat leveling up (gained 1 levels)"
+        "description": "Abigail (13 hearts)"
       }
     ],
     "stalled_areas": [
+      {
+        "category": "Money",
+        "icon": "[STALLED]",
+        "description": "Low income (5,223g/session)"
+      },
       {
         "category": "Museum",
         "icon": "[STALLED]",
@@ -98,7 +98,7 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+1273/session)"
+        "description": "High XP gains (+1251/session)"
       }
     ],
     "cold_streaks": [
@@ -106,11 +106,6 @@
         "category": "Bundles",
         "icon": "[COLD]",
         "description": "No bundle progress in 7 sessions"
-      },
-      {
-        "category": "Money",
-        "icon": "[COLD]",
-        "description": "Net losses (-1,865g/session)"
       }
     ],
     "rising_trends": [
@@ -118,9 +113,19 @@
         "category": "Combat",
         "icon": "[RISING]",
         "description": "Combat leveling up (gained 1 levels)"
+      },
+      {
+        "category": "Friendship",
+        "icon": "[RISING]",
+        "description": "Abigail (13 hearts)"
       }
     ],
     "stalled_areas": [
+      {
+        "category": "Money",
+        "icon": "[STALLED]",
+        "description": "Low income (5,012g/session)"
+      },
       {
         "category": "Museum",
         "icon": "[STALLED]",
