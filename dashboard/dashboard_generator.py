@@ -731,10 +731,10 @@ class DashboardGenerator:
             for unlock in top5_unlocks[:5]:  # Ensure max 5
                 name = unlock['name']
                 pct = unlock['completion_percent']
-                bar = r.progress_bar(pct / 100)
+                bar = r.progress_bar(pct / 100, width=14)
 
-                # Truncate name to 18 chars for consistent alignment
-                name_short = name[:18].ljust(18)
+                # Truncate name to 24 chars for consistent alignment
+                name_short = name[:24].ljust(24)
                 line = f"{name_short}{bar} {pct:3d}%"
                 lines.append(r.box_line(line))
         else:
