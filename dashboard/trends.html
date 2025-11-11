@@ -315,7 +315,7 @@
     </div>
 
     <div class="dashboard-container">TRENDS &amp; ANALYTICS
-Generated: 2025-11-11 13:22:46 | Spring 6, Year 3
+Generated: 2025-11-11 13:41:11 | Spring 6, Year 3
 
 Session-by-session analysis of your farm progress</div>
 
@@ -673,6 +673,14 @@ Session-by-session analysis of your farm progress</div>
                         break;
                 }
             });
+
+            // Apply default filter on page load
+            const defaultValue = quickFilter.value;
+            console.log('Applying default filter:', defaultValue);
+            if (!isNaN(defaultValue) || defaultValue === 'all') {
+                const count = defaultValue === 'all' ? maxSessions : parseInt(defaultValue);
+                filterChartsByCount(count);
+            }
         }
 
         /**

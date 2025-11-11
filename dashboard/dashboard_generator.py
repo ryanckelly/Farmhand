@@ -1650,6 +1650,14 @@ class DashboardGenerator:
                         break;
                 }}
             }});
+
+            // Apply default filter on page load
+            const defaultValue = quickFilter.value;
+            console.log('Applying default filter:', defaultValue);
+            if (!isNaN(defaultValue) || defaultValue === 'all') {{
+                const count = defaultValue === 'all' ? maxSessions : parseInt(defaultValue);
+                filterChartsByCount(count);
+            }}
         }}
 
         /**
