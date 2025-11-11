@@ -479,14 +479,41 @@
         "luck": 0
       },
       "bundles_complete": 30
+    },
+    {
+      "date": "2025-11-10T23:36:20.578088",
+      "game_date": "Spring 2, Year 3",
+      "money": 487147,
+      "total_earned": 2921780,
+      "animals": 36,
+      "skills": {
+        "farming": 10,
+        "fishing": 10,
+        "foraging": 10,
+        "mining": 10,
+        "combat": 9,
+        "luck": 0
+      },
+      "bundles_complete": 30,
+      "perfection": {
+        "overall_percent": 32.2,
+        "obelisks": 0,
+        "golden_clock": false,
+        "produce_shipped": 148,
+        "fish_caught": 49,
+        "recipes_cooked": 3,
+        "recipes_crafted": 51,
+        "stardrops_found": 5,
+        "monster_goals": 0
+      }
     }
   ],
   "trends": {
-    "daily_income_avg": -21485,
-    "money_growth_rate": -0.03933159177157837
+    "daily_income_avg": -37621,
+    "money_growth_rate": -0.0716907280931764
   },
   "meta": {
     "tracking_started": "2024-01-15",
-    "total_snapshots": 30
+    "total_snapshots": 31
   }
 }
