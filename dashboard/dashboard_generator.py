@@ -412,10 +412,10 @@ class DashboardGenerator:
         """Extract unlock completion percentages."""
         unlocks = {}
 
-        # Community Center bundles
+        # Community Center bundles (30 bundles total, excluding The Missing Bundle)
         bundles = self.snapshot.get('bundles', {})
         complete = bundles.get('complete_count', 0)
-        total = bundles.get('total_count', 31)
+        total = bundles.get('total_count', 30)
         unlocks['community_center'] = {
             'completed': complete,
             'total': total,

@@ -1,11 +1,11 @@
 {
-  "generated_at": "2025-11-11T01:58:53.704955",
+  "generated_at": "2025-11-11T02:13:07.542013",
   "game_date": "Spring 6, Year 3",
   "unlocks": {
     "community_center": {
       "completed": 30,
-      "total": 31,
-      "percent": 0.967741935483871
+      "total": 30,
+      "percent": 1.0
     },
     "museum": {
       "donated": 75,

@@ -92,7 +92,8 @@ When this project is opened:
 2. **Community Center Completion**
    - Check `bundles.bundle_reward_flags` for `ccIsComplete` flag
    - **If ccIsComplete is present, Community Center is DONE**
-   - Bundle count alone is insufficient (30/31 vs 31/31)
+   - CC requires 30 bundles (not 31) - The Missing Bundle (ID 36) is post-CC content
+   - Bundle count shows 30/30 when complete
    - Also check `completed_rooms` list
 
 3. **Professions**

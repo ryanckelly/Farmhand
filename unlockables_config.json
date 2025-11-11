@@ -267,16 +267,16 @@
     },
     "Community Center": {
       "category": "Progression",
-      "total_steps": 31,
+      "total_steps": 1,
       "prerequisites": [
         {
-          "name": "Complete all 31 bundles",
-          "check_method": "bundle_count",
-          "check_params": {"total": 31}
+          "name": "Complete all Community Center bundles (30 bundles)",
+          "check_method": "flag",
+          "check_params": {"flag_name": "ccIsComplete"}
         }
       ],
       "completion_check": "cc_complete",
-      "hints": ["Check current progress in save_snapshot.json", "Track bundle readiness in diary.json"]
+      "hints": ["Complete 30 bundles (6 rooms) to unlock", "The Missing Bundle is separate post-CC content"]
     },
     "Greenhouse": {
       "category": "Buildings",
@@ -551,65 +551,90 @@
     },
     "Combat Level 10": {
       "category": "Skills",
-      "total_steps": 1,
+      "total_steps": 10,
       "prerequisites": [
-        {
-          "name": "Reach Combat Level 10",
-          "check_method": "skill_level",
-          "check_params": {"skill": "combat", "level": 10}
-        }
+        {"name": "Reach Combat Level 1", "check_method": "skill_level", "check_params": {"skill": "combat", "level": 1}},
+        {"name": "Reach Combat Level 2", "check_method": "skill_level", "check_params": {"skill": "combat", "level": 2}},
+        {"name": "Reach Combat Level 3", "check_method": "skill_level", "check_params": {"skill": "combat", "level": 3}},
+        {"name": "Reach Combat Level 4", "check_method": "skill_level", "check_params": {"skill": "combat", "level": 4}},
+        {"name": "Reach Combat Level 5", "check_method": "skill_level", "check_params": {"skill": "combat", "level": 5}},
+        {"name": "Reach Combat Level 6", "check_method": "skill_level", "check_params": {"skill": "combat", "level": 6}},
+        {"name": "Reach Combat Level 7", "check_method": "skill_level", "check_params": {"skill": "combat", "level": 7}},
+        {"name": "Reach Combat Level 8", "check_method": "skill_level", "check_params": {"skill": "combat", "level": 8}},
+        {"name": "Reach Combat Level 9", "check_method": "skill_level", "check_params": {"skill": "combat", "level": 9}},
+        {"name": "Reach Combat Level 10", "check_method": "skill_level", "check_params": {"skill": "combat", "level": 10}}
       ],
       "completion_check": "combat_10",
       "hints": ["Kill monsters in Mines or Skull Cavern", "Need 15,000 total Combat XP"]
     },
     "Fishing Level 10": {
       "category": "Skills",
-      "total_steps": 1,
+      "total_steps": 10,
       "prerequisites": [
-        {
-          "name": "Reach Fishing Level 10",
-          "check_method": "skill_level",
-          "check_params": {"skill": "fishing", "level": 10}
-        }
+        {"name": "Reach Fishing Level 1", "check_method": "skill_level", "check_params": {"skill": "fishing", "level": 1}},
+        {"name": "Reach Fishing Level 2", "check_method": "skill_level", "check_params": {"skill": "fishing", "level": 2}},
+        {"name": "Reach Fishing Level 3", "check_method": "skill_level", "check_params": {"skill": "fishing", "level": 3}},
+        {"name": "Reach Fishing Level 4", "check_method": "skill_level", "check_params": {"skill": "fishing", "level": 4}},
+        {"name": "Reach Fishing Level 5", "check_method": "skill_level", "check_params": {"skill": "fishing", "level": 5}},
+        {"name": "Reach Fishing Level 6", "check_method": "skill_level", "check_params": {"skill": "fishing", "level": 6}},
+        {"name": "Reach Fishing Level 7", "check_method": "skill_level", "check_params": {"skill": "fishing", "level": 7}},
+        {"name": "Reach Fishing Level 8", "check_method": "skill_level", "check_params": {"skill": "fishing", "level": 8}},
+        {"name": "Reach Fishing Level 9", "check_method": "skill_level", "check_params": {"skill": "fishing", "level": 9}},
+        {"name": "Reach Fishing Level 10", "check_method": "skill_level", "check_params": {"skill": "fishing", "level": 10}}
       ],
       "completion_check": "fishing_10",
       "hints": ["Catch fish to gain XP", "Need 15,000 total Fishing XP"]
     },
     "Farming Level 10": {
       "category": "Skills",
-      "total_steps": 1,
+      "total_steps": 10,
       "prerequisites": [
-        {
-          "name": "Reach Farming Level 10",
-          "check_method": "skill_level",
-          "check_params": {"skill": "farming", "level": 10}
-        }
+        {"name": "Reach Farming Level 1", "check_method": "skill_level", "check_params": {"skill": "farming", "level": 1}},
+        {"name": "Reach Farming Level 2", "check_method": "skill_level", "check_params": {"skill": "farming", "level": 2}},
+        {"name": "Reach Farming Level 3", "check_method": "skill_level", "check_params": {"skill": "farming", "level": 3}},
+        {"name": "Reach Farming Level 4", "check_method": "skill_level", "check_params": {"skill": "farming", "level": 4}},
+        {"name": "Reach Farming Level 5", "check_method": "skill_level", "check_params": {"skill": "farming", "level": 5}},
+        {"name": "Reach Farming Level 6", "check_method": "skill_level", "check_params": {"skill": "farming", "level": 6}},
+        {"name": "Reach Farming Level 7", "check_method": "skill_level", "check_params": {"skill": "farming", "level": 7}},
+        {"name": "Reach Farming Level 8", "check_method": "skill_level", "check_params": {"skill": "farming", "level": 8}},
+        {"name": "Reach Farming Level 9", "check_method": "skill_level", "check_params": {"skill": "farming", "level": 9}},
+        {"name": "Reach Farming Level 10", "check_method": "skill_level", "check_params": {"skill": "farming", "level": 10}}
       ],
       "completion_check": "farming_10",
       "hints": ["Harvest crops, milk animals", "Need 15,000 total Farming XP"]
     },
     "Mining Level 10": {
       "category": "Skills",
-      "total_steps": 1,
+      "total_steps": 10,
       "prerequisites": [
-        {
-          "name": "Reach Mining Level 10",
-          "check_method": "skill_level",
-          "check_params": {"skill": "mining", "level": 10}
-        }
+        {"name": "Reach Mining Level 1", "check_method": "skill_level", "check_params": {"skill": "mining", "level": 1}},
+        {"name": "Reach Mining Level 2", "check_method": "skill_level", "check_params": {"skill": "mining", "level": 2}},
+        {"name": "Reach Mining Level 3", "check_method": "skill_level", "check_params": {"skill": "mining", "level": 3}},
+        {"name": "Reach Mining Level 4", "check_method": "skill_level", "check_params": {"skill": "mining", "level": 4}},
+        {"name": "Reach Mining Level 5", "check_method": "skill_level", "check_params": {"skill": "mining", "level": 5}},
+        {"name": "Reach Mining Level 6", "check_method": "skill_level", "check_params": {"skill": "mining", "level": 6}},
+        {"name": "Reach Mining Level 7", "check_method": "skill_level", "check_params": {"skill": "mining", "level": 7}},
+        {"name": "Reach Mining Level 8", "check_method": "skill_level", "check_params": {"skill": "mining", "level": 8}},
+        {"name": "Reach Mining Level 9", "check_method": "skill_level", "check_params": {"skill": "mining", "level": 9}},
+        {"name": "Reach Mining Level 10", "check_method": "skill_level", "check_params": {"skill": "mining", "level": 10}}
       ],
       "completion_check": "mining_10",
       "hints": ["Break rocks and find ore", "Need 15,000 total Mining XP"]
     },
     "Foraging Level 10": {
       "category": "Skills",
-      "total_steps": 1,
+      "total_steps": 10,
       "prerequisites": [
-        {
-          "name": "Reach Foraging Level 10",
-          "check_method": "skill_level",
-          "check_params": {"skill": "foraging", "level": 10}
-        }
+        {"name": "Reach Foraging Level 1", "check_method": "skill_level", "check_params": {"skill": "foraging", "level": 1}},
+        {"name": "Reach Foraging Level 2", "check_method": "skill_level", "check_params": {"skill": "foraging", "level": 2}},
+        {"name": "Reach Foraging Level 3", "check_method": "skill_level", "check_params": {"skill": "foraging", "level": 3}},
+        {"name": "Reach Foraging Level 4", "check_method": "skill_level", "check_params": {"skill": "foraging", "level": 4}},
+        {"name": "Reach Foraging Level 5", "check_method": "skill_level", "check_params": {"skill": "foraging", "level": 5}},
+        {"name": "Reach Foraging Level 6", "check_method": "skill_level", "check_params": {"skill": "foraging", "level": 6}},
+        {"name": "Reach Foraging Level 7", "check_method": "skill_level", "check_params": {"skill": "foraging", "level": 7}},
+        {"name": "Reach Foraging Level 8", "check_method": "skill_level", "check_params": {"skill": "foraging", "level": 8}},
+        {"name": "Reach Foraging Level 9", "check_method": "skill_level", "check_params": {"skill": "foraging", "level": 9}},
+        {"name": "Reach Foraging Level 10", "check_method": "skill_level", "check_params": {"skill": "foraging", "level": 10}}
       ],
       "completion_check": "foraging_10",
       "hints": ["Chop trees, collect forage items", "Need 15,000 total Foraging XP"]

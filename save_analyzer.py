@@ -797,7 +797,6 @@ def get_detailed_bundle_info(root):
             return bundle_data
 
         bundles = cc.findall('.//bundles/item')
-        bundle_data['total_count'] = len(bundles)
 
         # Track bundle IDs to detect remixed bundles
         all_bundle_ids = []
@@ -897,6 +896,9 @@ def get_detailed_bundle_info(root):
                         })
 
                     bundle_data['incomplete_bundles'].append(bundle_info)
+
+        # Calculate total bundle count (exclude The Missing Bundle - ID 36, which is post-CC content)
+        bundle_data['total_count'] = len([bid for bid in all_bundle_ids if bid != 36])
 
         # Detect remixed bundles by checking for unknown IDs
         standard_bundle_ids = list(range(0, 11)) + list(range(15, 18)) + list(range(20, 26)) + [31]

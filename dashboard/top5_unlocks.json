@@ -1,11 +1,11 @@
 {
-  "selected_at": "2025-11-11T02:05:00",
-  "reasoning": "Combat Level 10 is the immediate priority (3,734 XP needed) and unlocks Mastery Cave. The Missing Bundle is 20% ready and blocks CC completion. Volcano Dungeon Interior is newly accessible now that island access is confirmed. Golden Walnuts and Museum Collection provide steady long-term perfection goals.",
+  "selected_at": "2025-11-11T03:15:00",
+  "reasoning": "Combat Level 10 (90%) is the immediate priority and unlocks Mastery Cave (80%). Volcano Dungeon Interior (50%) is newly accessible for walnut farming. Golden Walnuts (31/100) and Museum Collection (75/95) are medium-term goals aligned with island unlocks and perfection tracking.",
   "unlocks": [
     {
       "name": "Combat Level 10",
-      "completion_percent": 0,
-      "next_step": "Gain 3,734 more Combat XP (currently 11,266/15,000)",
+      "completion_percent": 90,
+      "next_step": "Gain 1,734 more Combat XP (currently 11,266/15,000 for level 10)",
       "category": "Skills"
     },
     {
@@ -15,15 +15,15 @@
       "category": "Progression"
     },
     {
-      "name": "Community Center",
-      "completion_percent": 97,
-      "next_step": "Complete The Missing Bundle (20% ready - need Dinosaur Egg + Gold Ancient Fruit)",
-      "category": "Progression"
-    },
-    {
       "name": "Volcano Dungeon (Interior)",
       "completion_percent": 50,
       "next_step": "Navigate to volcano entrance on Ginger Island",
+      "category": "Island Features"
+    },
+    {
+      "name": "Golden Walnuts (100)",
+      "completion_percent": 31,
+      "next_step": "Find 69 more Golden Walnuts (currently 31/100)",
       "category": "Island Features"
     },
     {

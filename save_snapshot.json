@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-11-11T01:55:23.850468",
+  "timestamp": "2025-11-11T02:11:05.814314",
   "save_path": "C:\\Users\\ryanc\\AppData\\Roaming\\StardewValley\\Saves\\ryfarm_419564418\\ryfarm_419564418",
   "game_date": {
     "season": "spring",
@@ -382,7 +382,7 @@
   },
   "bundles": {
     "complete_count": 30,
-    "total_count": 31,
+    "total_count": 30,
     "incomplete_bundles": [
       {
         "id": 36,
@@ -6297,13 +6297,13 @@
     "Community Center": {
       "name": "Community Center",
       "category": "Progression",
-      "completion_percent": 0,
-      "completed_steps": 0,
-      "total_steps": 31,
-      "next_step": "Complete all 31 bundles",
+      "completion_percent": 100,
+      "completed_steps": 1,
+      "total_steps": 1,
+      "next_step": "Complete!",
       "hints": [
-        "Check current progress in save_snapshot.json",
-        "Track bundle readiness in diary.json"
+        "Complete 30 bundles (6 rooms) to unlock",
+        "The Missing Bundle is separate post-CC content"
       ]
     },
     "Greenhouse": {
@@ -6514,9 +6514,9 @@
     "Combat Level 10": {
       "name": "Combat Level 10",
       "category": "Skills",
-      "completion_percent": 0,
-      "completed_steps": 0,
-      "total_steps": 1,
+      "completion_percent": 90,
+      "completed_steps": 9,
+      "total_steps": 10,
       "next_step": "Reach Combat Level 10",
       "hints": [
         "Kill monsters in Mines or Skull Cavern",
@@ -6527,8 +6527,8 @@
       "name": "Fishing Level 10",
       "category": "Skills",
       "completion_percent": 100,
-      "completed_steps": 1,
-      "total_steps": 1,
+      "completed_steps": 10,
+      "total_steps": 10,
       "next_step": "Complete!",
       "hints": [
         "Catch fish to gain XP",
@@ -6539,8 +6539,8 @@
       "name": "Farming Level 10",
       "category": "Skills",
       "completion_percent": 100,
-      "completed_steps": 1,
-      "total_steps": 1,
+      "completed_steps": 10,
+      "total_steps": 10,
       "next_step": "Complete!",
       "hints": [
         "Harvest crops, milk animals",
@@ -6551,8 +6551,8 @@
       "name": "Mining Level 10",
       "category": "Skills",
       "completion_percent": 100,
-      "completed_steps": 1,
-      "total_steps": 1,
+      "completed_steps": 10,
+      "total_steps": 10,
       "next_step": "Complete!",
       "hints": [
         "Break rocks and find ore",
@@ -6563,8 +6563,8 @@
       "name": "Foraging Level 10",
       "category": "Skills",
       "completion_percent": 100,
-      "completed_steps": 1,
-      "total_steps": 1,
+      "completed_steps": 10,
+      "total_steps": 10,
       "next_step": "Complete!",
       "hints": [
         "Chop trees, collect forage items",

@@ -41,22 +41,24 @@ This document catalogs common data interpretation errors discovered during devel
 - Read `bundles_complete: 30` and assumed Community Center was incomplete (30/31)
 - Overlooked `ccIsComplete` flag in `bundle_reward_flags` array
 - Gave incorrect recommendations about completing "The Missing Bundle"
+- Did not realize CC only requires 30 bundles (The Missing Bundle is post-CC content)
 
 **Root Cause:**
 - Focused on numerical count without checking completion flags
 - Did not verify against multiple data sources
+- Confused The Missing Bundle (ID 36, post-CC) with CC requirement bundles
 
 **How to Avoid:**
 ```python
-# WRONG: Only checking count
+# WRONG: Assuming CC requires 31 bundles
 if bundles_complete < 31:
     print("Community Center incomplete")
 
-# RIGHT: Check completion flags first
+# RIGHT: Check completion flags first (CC requires 30 bundles, not 31)
 if 'ccIsComplete' in bundle_reward_flags:
     print("Community Center COMPLETE")
-elif bundles_complete < total_bundles:
-    print(f"Community Center incomplete: {bundles_complete}/{total_bundles}")
+elif bundles_complete < 30:  # CC requires 30 bundles
+    print(f"Community Center incomplete: {bundles_complete}/30")
 ```
 
 **Fix Applied:**
