@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-11-11T01:44:14.727721",
+  "timestamp": "2025-11-11T01:55:23.850468",
   "save_path": "C:\\Users\\ryanc\\AppData\\Roaming\\StardewValley\\Saves\\ryfarm_419564418\\ryfarm_419564418",
   "game_date": {
     "season": "spring",
@@ -84,7 +84,7 @@
     "town_key": false,
     "special_charm": false,
     "desert_bridge_fixed": true,
-    "boat_to_island_fixed": false,
+    "boat_to_island_fixed": true,
     "golden_walnuts": 0,
     "golden_walnuts_found": 31,
     "deepest_mine_level": 245,
@@ -6118,10 +6118,10 @@
     "Calico Desert": {
       "name": "Calico Desert",
       "category": "Map Access",
-      "completion_percent": 0,
-      "completed_steps": 0,
+      "completion_percent": 100,
+      "completed_steps": 1,
       "total_steps": 1,
-      "next_step": "Complete Vault bundles OR buy Joja bus repair",
+      "next_step": "Complete!",
       "hints": [
         "Complete Vault bundles at Community Center",
         "OR purchase Joja bus repair for 40,000g"
@@ -6130,10 +6130,10 @@
     "Skull Cavern": {
       "name": "Skull Cavern",
       "category": "Map Access",
-      "completion_percent": 50,
-      "completed_steps": 1,
+      "completion_percent": 100,
+      "completed_steps": 2,
       "total_steps": 2,
-      "next_step": "Unlock Calico Desert",
+      "next_step": "Complete!",
       "hints": [
         "Reach bottom of the Mines (level 120)",
         "Sandy sells bombs at the Desert Trader"
@@ -6142,10 +6142,10 @@
     "Ginger Island": {
       "name": "Ginger Island",
       "category": "Map Access",
-      "completion_percent": 0,
-      "completed_steps": 0,
+      "completion_percent": 100,
+      "completed_steps": 2,
       "total_steps": 2,
-      "next_step": "Complete Community Center OR Joja route",
+      "next_step": "Complete!",
       "hints": [
         "Get quest from Willy after CC completion",
         "Need 200 Hardwood, 5 Iridium Bars, 5 Battery Packs"
@@ -6249,10 +6249,10 @@
     "Movie Theater": {
       "name": "Movie Theater",
       "category": "Buildings",
-      "completion_percent": 0,
-      "completed_steps": 0,
+      "completion_percent": 100,
+      "completed_steps": 1,
       "total_steps": 1,
-      "next_step": "Complete Community Center OR Joja Warehouse",
+      "next_step": "Complete!",
       "hints": [
         "Movie theater replaces Joja Mart after completion"
       ]
@@ -6333,10 +6333,10 @@
     "Island Farmhouse (Upgrade 1)": {
       "name": "Island Farmhouse (Upgrade 1)",
       "category": "Island Features",
-      "completion_percent": 50,
-      "completed_steps": 1,
+      "completion_percent": 100,
+      "completed_steps": 2,
       "total_steps": 2,
-      "next_step": "Unlock Ginger Island",
+      "next_step": "Complete!",
       "hints": [
         "Talk to parrot at farmhouse ruins",
         "Spend 20 Golden Walnuts"
@@ -6345,10 +6345,10 @@
     "Island Farm (Upgrade 2)": {
       "name": "Island Farm (Upgrade 2)",
       "category": "Island Features",
-      "completion_percent": 50,
-      "completed_steps": 1,
+      "completion_percent": 100,
+      "completed_steps": 2,
       "total_steps": 2,
-      "next_step": "Unlock Island Farmhouse",
+      "next_step": "Complete!",
       "hints": [
         "Complete farmhouse upgrade first",
         "Spend 20 more walnuts to unlock farm"
@@ -6357,10 +6357,10 @@
     "Parrot Express": {
       "name": "Parrot Express",
       "category": "Island Features",
-      "completion_percent": 50,
-      "completed_steps": 1,
+      "completion_percent": 100,
+      "completed_steps": 2,
       "total_steps": 2,
-      "next_step": "Unlock Ginger Island",
+      "next_step": "Complete!",
       "hints": [
         "Find parrot huts around the island",
         "Spend 10 walnuts for fast travel"
@@ -6393,10 +6393,10 @@
     "Island Trader": {
       "name": "Island Trader",
       "category": "Island Features",
-      "completion_percent": 50,
-      "completed_steps": 1,
+      "completion_percent": 100,
+      "completed_steps": 2,
       "total_steps": 2,
-      "next_step": "Unlock Ginger Island",
+      "next_step": "Complete!",
       "hints": [
         "Find trader hut on island",
         "Spend 10 walnuts"
@@ -6405,10 +6405,10 @@
     "Resort Rebuild": {
       "name": "Resort Rebuild",
       "category": "Island Features",
-      "completion_percent": 50,
-      "completed_steps": 1,
+      "completion_percent": 100,
+      "completed_steps": 2,
       "total_steps": 2,
-      "next_step": "Unlock Ginger Island",
+      "next_step": "Complete!",
       "hints": [
         "Talk to parrot at resort ruins",
         "Spend 20 walnuts"
@@ -6453,10 +6453,10 @@
     "Pirate Cove": {
       "name": "Pirate Cove",
       "category": "Island Features",
-      "completion_percent": 50,
-      "completed_steps": 1,
+      "completion_percent": 100,
+      "completed_steps": 2,
       "total_steps": 2,
-      "next_step": "Unlock Ginger Island",
+      "next_step": "Complete!",
       "hints": [
         "Southeast beach area",
         "Spend 20 walnuts"
@@ -6465,10 +6465,10 @@
     "Island Obsidian Shortcut": {
       "name": "Island Obsidian Shortcut",
       "category": "Island Features",
-      "completion_percent": 50,
-      "completed_steps": 1,
+      "completion_percent": 100,
+      "completed_steps": 2,
       "total_steps": 2,
-      "next_step": "Unlock Island Farm",
+      "next_step": "Complete!",
       "hints": [
         "Unlock farm first",
         "Bridge between farm and volcano"

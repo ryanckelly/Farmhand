@@ -87,7 +87,7 @@ def analyze_save():
             'town_key': 'HasTownKey' in mail_received or get_text(root, './/player/hasTownKey', 'false') == 'true',
             'special_charm': get_text(root, './/player/hasSpecialCharm', 'false') == 'true',
             'desert_bridge_fixed': get_text(root, './/bridgeFixed', 'false') == 'true',
-            'boat_to_island_fixed': get_text(root, './/boatFixed', 'false') == 'true',
+            'boat_to_island_fixed': 'willyBoatFixed' in mail_received or get_text(root, './/boatFixed', 'false') == 'true',
             'golden_walnuts': int(get_text(root, './/goldenWalnuts', 0)),
             'golden_walnuts_found': int(get_text(root, './/goldenWalnutsFound', 0)),
             'deepest_mine_level': deepest_level,
@@ -1394,10 +1394,11 @@ def get_all_unlockables_status(root):
     mail_received = [mail.text for mail in root.findall('.//mailReceived/string')]
 
     # Build save state with proper unlock checks
+    # Note: Bundle reward flags are stored in mailReceived, not bundleRewards
     save_state = {
         'bundles': {
             'complete_count': len([b for b in root.findall('.//bundlesComplete/boolean') if b.text == 'true']),
-            'bundle_reward_flags': [flag.text for flag in root.findall('.//bundleRewards/item/string') if flag.text],
+            'bundle_reward_flags': mail_received,  # Bundle flags are in mailReceived
             'completed_rooms': get_room_completion_state(root)
         },
         'unlocks': {
@@ -1410,7 +1411,7 @@ def get_all_unlockables_status(root):
             'town_key': 'HasTownKey' in mail_received or get_text(root, './/player/hasTownKey', 'false') == 'true',
             'special_charm': get_text(root, './/player/hasSpecialCharm', 'false') == 'true',
             'can_read_junimo_text': get_text(root, './/player/canReadJunimoText', 'false') == 'true',
-            'boat_to_island_fixed': get_text(root, './/boatFixed', 'false') == 'true',
+            'boat_to_island_fixed': 'willyBoatFixed' in mail_received or get_text(root, './/boatFixed', 'false') == 'true',
             'golden_walnuts_found': int(get_text(root, './/goldenWalnutsFound', '0')),
             'golden_walnuts': int(get_text(root, './/goldenWalnuts', '0'))
         },
