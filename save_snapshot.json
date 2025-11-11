@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-11-11T02:11:05.814314",
+  "timestamp": "2025-11-11T13:19:40.491940",
   "save_path": "C:\\Users\\ryanc\\AppData\\Roaming\\StardewValley\\Saves\\ryfarm_419564418\\ryfarm_419564418",
   "game_date": {
     "season": "spring",
@@ -6234,8 +6234,8 @@
         "Found by tilling dirt spots in Mines or killing enemies"
       ]
     },
-    "Wizard Tower (Junimo Language)": {
-      "name": "Wizard Tower (Junimo Language)",
+    "Wizard Tower (Junimo)": {
+      "name": "Wizard Tower (Junimo)",
       "category": "Progression",
       "completion_percent": 0,
       "completed_steps": 0,
@@ -6318,8 +6318,8 @@
         "Junimos repair greenhouse overnight"
       ]
     },
-    "Beach Bridge (East Beach)": {
-      "name": "Beach Bridge (East Beach)",
+    "Beach Bridge": {
+      "name": "Beach Bridge",
       "category": "Map Access",
       "completion_percent": 0,
       "completed_steps": 0,
@@ -6330,8 +6330,8 @@
         "Repair broken bridge on beach (east side)"
       ]
     },
-    "Island Farmhouse (Upgrade 1)": {
-      "name": "Island Farmhouse (Upgrade 1)",
+    "Island Farmhouse": {
+      "name": "Island Farmhouse",
       "category": "Island Features",
       "completion_percent": 100,
       "completed_steps": 2,
@@ -6366,8 +6366,8 @@
         "Spend 10 walnuts for fast travel"
       ]
     },
-    "Volcano Dungeon (Interior)": {
-      "name": "Volcano Dungeon (Interior)",
+    "Volcano Dungeon": {
+      "name": "Volcano Dungeon",
       "category": "Island Features",
       "completion_percent": 50,
       "completed_steps": 1,
@@ -6487,8 +6487,8 @@
         "Complete island quests"
       ]
     },
-    "Museum Collection (60 Items)": {
-      "name": "Museum Collection (60 Items)",
+    "Museum Collection (60)": {
+      "name": "Museum Collection (60)",
       "category": "Progression",
       "completion_percent": 1,
       "completed_steps": 1,
@@ -6499,8 +6499,8 @@
         "Find artifacts and minerals"
       ]
     },
-    "Museum Collection (95 Items)": {
-      "name": "Museum Collection (95 Items)",
+    "Museum Collection (95)": {
+      "name": "Museum Collection (95)",
       "category": "Progression",
       "completion_percent": 0,
       "completed_steps": 0,

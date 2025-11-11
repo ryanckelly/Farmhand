@@ -1,6 +1,6 @@
 {
   "selected_at": "2025-11-11T03:15:00",
-  "reasoning": "Combat Level 10 (90%) is the immediate priority and unlocks Mastery Cave (80%). Volcano Dungeon Interior (50%) is newly accessible for walnut farming. Golden Walnuts (31/100) and Museum Collection (75/95) are medium-term goals aligned with island unlocks and perfection tracking.",
+  "reasoning": "Combat Level 10 (90%) is the immediate priority and unlocks Mastery Cave (80%). Volcano Dungeon (50%) is newly accessible for walnut farming. Golden Walnuts (31/100) and Museum Collection (75/95) are medium-term goals aligned with island unlocks and perfection tracking.",
   "unlocks": [
     {
       "name": "Combat Level 10",
@@ -15,7 +15,7 @@
       "category": "Progression"
     },
     {
-      "name": "Volcano Dungeon (Interior)",
+      "name": "Volcano Dungeon",
       "completion_percent": 50,
       "next_step": "Navigate to volcano entrance on Ginger Island",
       "category": "Island Features"
@@ -27,7 +27,7 @@
       "category": "Island Features"
     },
     {
-      "name": "Museum Collection (95 Items)",
+      "name": "Museum Collection (95)",
       "completion_percent": 79,
       "next_step": "Donate 20 more artifacts/minerals (currently 75/95 for Stardrop)",
       "category": "Progression"

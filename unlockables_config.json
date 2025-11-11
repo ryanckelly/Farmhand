@@ -175,7 +175,7 @@
       "completion_check": "can_trade_with_dwarf",
       "hints": ["Donate all 4 Dwarf Scrolls to Museum", "Found by tilling dirt spots in Mines or killing enemies"]
     },
-    "Wizard Tower (Junimo Language)": {
+    "Wizard Tower (Junimo)": {
       "category": "Progression",
       "total_steps": 1,
       "prerequisites": [
@@ -291,7 +291,7 @@
       "completion_check": "pantry_complete",
       "hints": ["Complete all 6 Pantry bundles", "Junimos repair greenhouse overnight"]
     },
-    "Beach Bridge (East Beach)": {
+    "Beach Bridge": {
       "category": "Map Access",
       "total_steps": 1,
       "prerequisites": [
@@ -304,7 +304,7 @@
       "completion_check": "bridge_fixed",
       "hints": ["Gather 300 wood", "Repair broken bridge on beach (east side)"]
     },
-    "Island Farmhouse (Upgrade 1)": {
+    "Island Farmhouse": {
       "category": "Island Features",
       "total_steps": 2,
       "prerequisites": [
@@ -329,7 +329,7 @@
         {
           "name": "Unlock Island Farmhouse",
           "check_method": "unlockable",
-          "check_params": {"unlockable_name": "Island Farmhouse (Upgrade 1)"}
+          "check_params": {"unlockable_name": "Island Farmhouse"}
         },
         {
           "name": "Spend 20 more Golden Walnuts",
@@ -358,7 +358,7 @@
       "completion_check": "parrot_express",
       "hints": ["Find parrot huts around the island", "Spend 10 walnuts for fast travel"]
     },
-    "Volcano Dungeon (Interior)": {
+    "Volcano Dungeon": {
       "category": "Island Features",
       "total_steps": 2,
       "prerequisites": [
@@ -523,7 +523,7 @@
       "completion_check": "leo_moved",
       "hints": ["Talk to Leo daily", "Give him gifts", "Complete island quests"]
     },
-    "Museum Collection (60 Items)": {
+    "Museum Collection (60)": {
       "category": "Progression",
       "total_steps": 60,
       "prerequisites": [
@@ -536,7 +536,7 @@
       "completion_check": "museum_60",
       "hints": ["Rewards Rusty Key", "Find artifacts and minerals"]
     },
-    "Museum Collection (95 Items)": {
+    "Museum Collection (95)": {
       "category": "Progression",
       "total_steps": 95,
       "prerequisites": [
