@@ -1,6 +1,6 @@
 {
-  "generated_at": "2025-11-10T23:53:45.584763",
-  "game_date": "Spring 3, Year 3",
+  "generated_at": "2025-11-11T00:43:28.364843",
+  "game_date": "Spring 6, Year 3",
   "unlocks": {
     "community_center": {
       "completed": 30,
@@ -78,42 +78,31 @@
     }
   },
   "financials": {
-    "current_balance": 487347,
-    "daily_average": 6480,
-    "weekly_trend": -9.775727826675695,
+    "current_balance": 551613,
+    "daily_average": 4723,
+    "weekly_trend": -0.16777590729358338,
     "best_day": {
       "amount": 231464,
       "date": "Fall 16, Year 2"
     },
     "sparkline_data": [
-      -0.09894711067580803,
+      0.2178994444638552,
+      0.4311868907445582,
+      -0.3753362915341882,
+      -0.6572272107892806,
+      0.003493938017539569,
       1.0,
-      0.152705680705191,
-      0.302179236043095,
-      -0.2630386875612145,
-      -0.46059010773751224,
-      0.002448579823702253
+      0.12270710317598965
     ]
   },
   "momentum_3session": {
     "window_size": 3,
-    "hot_streaks": [
-      {
-        "category": "Skills",
-        "icon": "[HOT]",
-        "description": "High XP gains (+1419/session)"
-      }
-    ],
+    "hot_streaks": [],
     "cold_streaks": [
       {
         "category": "Bundles",
         "icon": "[COLD]",
         "description": "No bundle progress in 3 sessions"
-      },
-      {
-        "category": "Money",
-        "icon": "[COLD]",
-        "description": "Net losses (-19,635g/session)"
       },
       {
         "category": "Social",
@@ -136,7 +125,7 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+1394/session)"
+        "description": "High XP gains (+1144/session)"
       }
     ],
     "cold_streaks": [
@@ -148,11 +137,6 @@
     ],
     "rising_trends": [
       {
-        "category": "Combat",
-        "icon": "[RISING]",
-        "description": "Combat leveling up (gained 1 levels)"
-      },
-      {
         "category": "Friendship",
         "icon": "[RISING]",
         "description": "Abigail (13 hearts)"
@@ -162,7 +146,7 @@
       {
         "category": "Money",
         "icon": "[STALLED]",
-        "description": "Low income (7,406g/session)"
+        "description": "Low income (6,073g/session)"
       },
       {
         "category": "Museum",
