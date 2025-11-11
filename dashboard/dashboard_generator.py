@@ -717,57 +717,36 @@ class DashboardGenerator:
         lines.append(r.separator())
         lines.append(r.empty_line())
 
-        # UNLOCKS SECTION
-        lines.append(r.box_line("UNLOCKS PROGRESS"))
-        lines.append(r.box_line("─" * 16))
+        # TOP 5 ACTIVE UNLOCKS SECTION
+        lines.append(r.box_line("TOP 5 ACTIVE UNLOCKS"))
+        lines.append(r.box_line("─" * 20))
 
-        unlocks = state['unlocks']
+        # Try to load Claude's top 5 selection
+        top5_path = Path(__file__).parent / 'top5_unlocks.json'
+        if top5_path.exists():
+            with open(top5_path, 'r', encoding='utf-8') as f:
+                top5_data = json.load(f)
+                top5_unlocks = top5_data.get('unlocks', [])
 
-        # Community Center
-        cc = unlocks['community_center']
-        bar = r.progress_bar(cc['percent'])
-        line = f"Community Center  {bar} ({cc['completed']}/{cc['total']})"
-        lines.append(r.box_line(line))
+            for unlock in top5_unlocks[:5]:  # Ensure max 5
+                name = unlock['name']
+                pct = unlock['completion_percent']
+                bar = r.progress_bar(pct / 100)
 
-        # Museum
-        mus = unlocks['museum']
-        bar = r.progress_bar(mus['percent'])
-        line = f"Museum Collection {bar} ({mus['donated']}/{mus['total']})"
-        lines.append(r.box_line(line))
-
-        # Cooking
-        cook = unlocks['cooking']
-        bar = r.progress_bar(cook['percent'])
-        line = f"Cooking Recipes   {bar} ({cook['known']}/{cook['total']})"
-        lines.append(r.box_line(line))
-
-        # Friendships
-        friends = unlocks['friendships_8plus']
-        bar = r.progress_bar(friends['percent'])
-        line = f"Max Friendships   {bar} ({friends['count']}/{friends['total']})"
-        lines.append(r.box_line(line))
-
-        # Skills
-        skills = unlocks['skills_maxed']
-        bar = r.progress_bar(skills['percent'])
-        line = f"Master Skills     {bar} ({skills['count']}/{skills['total']})"
-        lines.append(r.box_line(line))
-
-        # Golden Walnuts
-        walnuts = unlocks['golden_walnuts']
-        bar = r.progress_bar(walnuts['percent'])
-        line = f"Golden Walnuts    {bar} ({walnuts['found']}/{walnuts['total']})"
-        lines.append(r.box_line(line))
-
-        # Skull Cavern
-        skull = unlocks['skull_cavern_depth']
-        milestone = "✓ 200+" if skull['milestone_200'] else "✓ 100+" if skull['milestone_100'] else ""
-        line = f"Skull Cavern      Floor {skull['deepest']} {milestone}".strip()
-        lines.append(r.box_line(line))
+                # Truncate name to 18 chars for consistent alignment
+                name_short = name[:18].ljust(18)
+                line = f"{name_short}{bar} {pct:3d}%"
+                lines.append(r.box_line(line))
+        else:
+            # Placeholder when top5_unlocks.json doesn't exist yet
+            lines.append(r.box_line("Awaiting /stardew command..."))
+            lines.append(r.box_line("Claude will select top 5"))
+            lines.append(r.box_line("most relevant unlocks"))
 
         lines.append(r.empty_line())
 
         # PERFECTION SECTION
+        unlocks = state['unlocks']  # Get unlocks data for perfection tracker
         perfection = unlocks.get('perfection', {})
         if perfection:
             lines.append(r.box_line("PERFECTION TRACKER"))

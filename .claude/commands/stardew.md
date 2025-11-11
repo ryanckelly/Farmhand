@@ -37,8 +37,40 @@ Run the Stardew Valley session tracker and display the Farmhand Dashboard:
    - `diary.json` - Recent play sessions and bundle readiness
    - `goals.md` - Current strategic objectives
    - `metrics.json` - Trends and growth patterns
+   - `save_snapshot.json` - Full save state including unlockables_status
 
-5. **VALIDATE recommendations using a subagent** (see CLAUDE.md for details):
+5. **SELECT TOP 5 ACTIVE UNLOCKS** (manual Claude decision):
+   - Review all 45+ unlockables in `save_snapshot.json['unlockables_status']`
+   - Analyze each unlockable's:
+     - `completion_percent` (0-100%)
+     - `next_step` (what needs to be done)
+     - `category` (Map Access, Progression, Island Features, etc.)
+   - Select the 5 most relevant unlockables based on:
+     - **Proximity to completion** (80%+ = high priority)
+     - **Goal alignment** (matches goals.md objectives)
+     - **Recent activity** (worked on in last 3 sessions from diary.json)
+     - **Dependency chains** (unlocks that block other progress)
+     - **Player intent** (inferred from play patterns)
+   - Write selection to `dashboard/top5_unlocks.json`:
+     ```json
+     {
+       "selected_at": "<timestamp>",
+       "reasoning": "Brief explanation of why these 5 were chosen",
+       "unlocks": [
+         {
+           "name": "Combat Level 10",
+           "completion_percent": 0,
+           "next_step": "Reach Combat Level 10",
+           "category": "Skills"
+         },
+         ...4 more
+       ]
+     }
+     ```
+   - **IMPORTANT**: Always select exactly 5 unlockables, even if some are 0% or 100%
+   - Include mix of: near-completion (for motivation), long-term (for planning), blockers (for strategy)
+
+6. **VALIDATE recommendations using a subagent** (see CLAUDE.md for details):
    - Launch validation subagent BEFORE presenting strategy
    - **Use haiku model for fast validation** (set model="haiku")
    - Verify Community Center completion status
@@ -46,11 +78,12 @@ Run the Stardew Valley session tracker and display the Farmhand Dashboard:
    - Cross-check goals.md against save_snapshot.json data
    - Correct any errors found before presenting to user
 
-6. Provide customized session strategy including:
-   - Progress review from dashboard_state.json (unlocks, financials, momentum)
+7. Provide customized session strategy including:
+   - **Top 5 Active Unlocks review**: Explain why each was selected and tactical approach
+   - Progress review from dashboard_state.json (financials, momentum)
    - **Highlight momentum insights**: hot streaks to maintain, cold streaks to address
    - **Bundle readiness check**: what can be completed RIGHT NOW from diary.json
-   - Tactical recommendations aligned with goals.md
+   - Tactical recommendations aligned with goals.md and selected unlocks
    - Economic analysis and projections
    - Time-sensitive opportunities (birthdays, festivals, last planting days)
-   - Specific action items for today's play session
+   - Specific action items for today's play session (prioritize top 5 unlocks)

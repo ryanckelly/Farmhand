@@ -1,0 +1,685 @@
+{
+  "unlockables": {
+    "Calico Desert": {
+      "category": "Map Access",
+      "total_steps": 1,
+      "prerequisites": [
+        {
+          "name": "Complete Vault bundles OR buy Joja bus repair",
+          "check_method": "flag",
+          "check_params": {"flag_name": "ccVault", "alt_flag": "jojaBusRepair"}
+        }
+      ],
+      "completion_check": "desert_unlocked",
+      "hints": ["Complete Vault bundles at Community Center", "OR purchase Joja bus repair for 40,000g"]
+    },
+    "Skull Cavern": {
+      "category": "Map Access",
+      "total_steps": 2,
+      "prerequisites": [
+        {
+          "name": "Unlock Calico Desert",
+          "check_method": "unlockable",
+          "check_params": {"unlockable_name": "Calico Desert"}
+        },
+        {
+          "name": "Obtain Skull Key (level 120 in Mines)",
+          "check_method": "save_field",
+          "check_params": {"field": "unlocks.skull_key"}
+        }
+      ],
+      "completion_check": "skull_key",
+      "hints": ["Reach bottom of the Mines (level 120)", "Sandy sells bombs at the Desert Trader"]
+    },
+    "Ginger Island": {
+      "category": "Map Access",
+      "total_steps": 2,
+      "prerequisites": [
+        {
+          "name": "Complete Community Center OR Joja route",
+          "check_method": "flag",
+          "check_params": {"flag_name": "ccIsComplete", "alt_flag": "JojaMember"}
+        },
+        {
+          "name": "Repair Willy's boat (200 Hardwood, 5 Iridium Bars, 5 Battery Packs)",
+          "check_method": "save_field",
+          "check_params": {"field": "unlocks.boat_to_island_fixed"}
+        }
+      ],
+      "completion_check": "boat_to_island_fixed",
+      "hints": ["Get quest from Willy after CC completion", "Need 200 Hardwood, 5 Iridium Bars, 5 Battery Packs"]
+    },
+    "Railroad & Spa": {
+      "category": "Map Access",
+      "total_steps": 1,
+      "prerequisites": [
+        {
+          "name": "Wait for earthquake (Summer 3, Year 1)",
+          "check_method": "game_date",
+          "check_params": {"min_season": "summer", "min_day": 3, "min_year": 1}
+        }
+      ],
+      "completion_check": "date_passed",
+      "hints": ["Automatically unlocks Summer 3, Year 1"]
+    },
+    "Secret Woods": {
+      "category": "Map Access",
+      "total_steps": 1,
+      "prerequisites": [
+        {
+          "name": "Upgrade Axe to Steel or better",
+          "check_method": "tool_level",
+          "check_params": {"tool": "axe", "min_level": 2}
+        }
+      ],
+      "completion_check": "tool_level",
+      "hints": ["Upgrade Axe to Steel (Clint's shop)", "Break large log in southwest Cindersap Forest"]
+    },
+    "Sewers & Krobus Shop": {
+      "category": "Map Access",
+      "total_steps": 1,
+      "prerequisites": [
+        {
+          "name": "Donate 60 items to Museum for Rusty Key",
+          "check_method": "save_field",
+          "check_params": {"field": "unlocks.rusty_key"}
+        }
+      ],
+      "completion_check": "rusty_key",
+      "hints": ["Donate 60 artifacts/minerals to Gunther", "Key unlocks sewer grate south of town"]
+    },
+    "Quarry & Quarry Mine": {
+      "category": "Map Access",
+      "total_steps": 1,
+      "prerequisites": [
+        {
+          "name": "Complete Crafts Room bundles",
+          "check_method": "room_complete",
+          "check_params": {"room_name": "Crafts Room"}
+        }
+      ],
+      "completion_check": "crafts_room_complete",
+      "hints": ["Complete all 6 Crafts Room bundles", "Bridge repairs automatically"]
+    },
+    "Casino (Club Card)": {
+      "category": "Progression",
+      "total_steps": 1,
+      "prerequisites": [
+        {
+          "name": "Complete 'Mysterious Qi' questline",
+          "check_method": "save_field",
+          "check_params": {"field": "unlocks.club_card"}
+        }
+      ],
+      "completion_check": "club_card",
+      "hints": ["Receive secret quest from mysterious note", "Place battery pack in lockbox at train station"]
+    },
+    "Mastery Cave": {
+      "category": "Progression",
+      "total_steps": 5,
+      "prerequisites": [
+        {
+          "name": "Farming Level 10",
+          "check_method": "skill_level",
+          "check_params": {"skill": "farming", "level": 10}
+        },
+        {
+          "name": "Fishing Level 10",
+          "check_method": "skill_level",
+          "check_params": {"skill": "fishing", "level": 10}
+        },
+        {
+          "name": "Foraging Level 10",
+          "check_method": "skill_level",
+          "check_params": {"skill": "foraging", "level": 10}
+        },
+        {
+          "name": "Mining Level 10",
+          "check_method": "skill_level",
+          "check_params": {"skill": "mining", "level": 10}
+        },
+        {
+          "name": "Combat Level 10",
+          "check_method": "skill_level",
+          "check_params": {"skill": "combat", "level": 10}
+        }
+      ],
+      "completion_check": "all_skills_maxed",
+      "hints": ["Max all 5 skills to level 10", "Cave unlocks north of train station"]
+    },
+    "Dwarf Merchant": {
+      "category": "Shops",
+      "total_steps": 4,
+      "prerequisites": [
+        {
+          "name": "Find Dwarf Scroll I",
+          "check_method": "museum_item",
+          "check_params": {"item_id": "96"}
+        },
+        {
+          "name": "Find Dwarf Scroll II",
+          "check_method": "museum_item",
+          "check_params": {"item_id": "97"}
+        },
+        {
+          "name": "Find Dwarf Scroll III",
+          "check_method": "museum_item",
+          "check_params": {"item_id": "98"}
+        },
+        {
+          "name": "Find Dwarf Scroll IV",
+          "check_method": "museum_item",
+          "check_params": {"item_id": "99"}
+        }
+      ],
+      "completion_check": "can_trade_with_dwarf",
+      "hints": ["Donate all 4 Dwarf Scrolls to Museum", "Found by tilling dirt spots in Mines or killing enemies"]
+    },
+    "Wizard Tower (Junimo Language)": {
+      "category": "Progression",
+      "total_steps": 1,
+      "prerequisites": [
+        {
+          "name": "Complete 'Meet the Wizard' quest",
+          "check_method": "save_field",
+          "check_params": {"field": "unlocks.can_read_junimo_text"}
+        }
+      ],
+      "completion_check": "can_read_junimo_text",
+      "hints": ["Receive letter from Mayor Lewis", "Visit Community Center to trigger quest"]
+    },
+    "Movie Theater": {
+      "category": "Buildings",
+      "total_steps": 1,
+      "prerequisites": [
+        {
+          "name": "Complete Community Center OR Joja Warehouse",
+          "check_method": "flag",
+          "check_params": {"flag_name": "ccIsComplete", "alt_flag": "JojaMember"}
+        }
+      ],
+      "completion_check": "cc_or_joja_complete",
+      "hints": ["Movie theater replaces Joja Mart after completion"]
+    },
+    "Mutant Bug Lair": {
+      "category": "Map Access",
+      "total_steps": 3,
+      "prerequisites": [
+        {
+          "name": "Unlock Sewers (60 museum donations)",
+          "check_method": "save_field",
+          "check_params": {"field": "unlocks.rusty_key"}
+        },
+        {
+          "name": "Befriend Krobus (2+ hearts)",
+          "check_method": "friendship",
+          "check_params": {"npc": "Krobus", "min_hearts": 2}
+        },
+        {
+          "name": "Complete Krobus questline for Dark Talisman",
+          "check_method": "save_field",
+          "check_params": {"field": "unlocks.dark_talisman"}
+        }
+      ],
+      "completion_check": "dark_talisman",
+      "hints": ["Talk to Krobus in Sewers", "Complete questline to receive Dark Talisman"]
+    },
+    "Witch's Swamp": {
+      "category": "Map Access",
+      "total_steps": 4,
+      "prerequisites": [
+        {
+          "name": "Unlock Mutant Bug Lair",
+          "check_method": "unlockable",
+          "check_params": {"unlockable_name": "Mutant Bug Lair"}
+        },
+        {
+          "name": "Complete Wizard questline",
+          "check_method": "friendship",
+          "check_params": {"npc": "Wizard", "min_hearts": 4}
+        },
+        {
+          "name": "Obtain Magic Ink",
+          "check_method": "save_field",
+          "check_params": {"field": "unlocks.magic_ink"}
+        },
+        {
+          "name": "Give Magic Ink to Wizard",
+          "check_method": "quest_complete",
+          "check_params": {"quest_name": "Magic Ink"}
+        }
+      ],
+      "completion_check": "magic_ink",
+      "hints": ["Complete Dark Talisman quest first", "Enter Bug Lair to find Magic Ink", "Return to Wizard"]
+    },
+    "Witch's Hut": {
+      "category": "Buildings",
+      "total_steps": 1,
+      "prerequisites": [
+        {
+          "name": "Reach Witch's Swamp",
+          "check_method": "unlockable",
+          "check_params": {"unlockable_name": "Witch's Swamp"}
+        }
+      ],
+      "completion_check": "witchs_swamp",
+      "hints": ["Located inside Witch's Swamp", "Offers statue respecs and child management"]
+    },
+    "Community Center": {
+      "category": "Progression",
+      "total_steps": 31,
+      "prerequisites": [
+        {
+          "name": "Complete all 31 bundles",
+          "check_method": "bundle_count",
+          "check_params": {"total": 31}
+        }
+      ],
+      "completion_check": "cc_complete",
+      "hints": ["Check current progress in save_snapshot.json", "Track bundle readiness in diary.json"]
+    },
+    "Greenhouse": {
+      "category": "Buildings",
+      "total_steps": 1,
+      "prerequisites": [
+        {
+          "name": "Complete Pantry bundles OR Joja greenhouse upgrade",
+          "check_method": "room_complete",
+          "check_params": {"room_name": "Pantry"}
+        }
+      ],
+      "completion_check": "pantry_complete",
+      "hints": ["Complete all 6 Pantry bundles", "Junimos repair greenhouse overnight"]
+    },
+    "Beach Bridge (East Beach)": {
+      "category": "Map Access",
+      "total_steps": 1,
+      "prerequisites": [
+        {
+          "name": "Collect 300 wood",
+          "check_method": "inventory_count",
+          "check_params": {"item_id": "388", "count": 300}
+        }
+      ],
+      "completion_check": "bridge_fixed",
+      "hints": ["Gather 300 wood", "Repair broken bridge on beach (east side)"]
+    },
+    "Island Farmhouse (Upgrade 1)": {
+      "category": "Island Features",
+      "total_steps": 2,
+      "prerequisites": [
+        {
+          "name": "Unlock Ginger Island",
+          "check_method": "unlockable",
+          "check_params": {"unlockable_name": "Ginger Island"}
+        },
+        {
+          "name": "Spend 20 Golden Walnuts",
+          "check_method": "walnuts_spent",
+          "check_params": {"count": 20, "unlock_flag": "island_farmhouse_1"}
+        }
+      ],
+      "completion_check": "island_farmhouse_1",
+      "hints": ["Talk to parrot at farmhouse ruins", "Spend 20 Golden Walnuts"]
+    },
+    "Island Farm (Upgrade 2)": {
+      "category": "Island Features",
+      "total_steps": 2,
+      "prerequisites": [
+        {
+          "name": "Unlock Island Farmhouse",
+          "check_method": "unlockable",
+          "check_params": {"unlockable_name": "Island Farmhouse (Upgrade 1)"}
+        },
+        {
+          "name": "Spend 20 more Golden Walnuts",
+          "check_method": "walnuts_spent",
+          "check_params": {"count": 20, "unlock_flag": "island_farm"}
+        }
+      ],
+      "completion_check": "island_farm",
+      "hints": ["Complete farmhouse upgrade first", "Spend 20 more walnuts to unlock farm"]
+    },
+    "Parrot Express": {
+      "category": "Island Features",
+      "total_steps": 2,
+      "prerequisites": [
+        {
+          "name": "Unlock Ginger Island",
+          "check_method": "unlockable",
+          "check_params": {"unlockable_name": "Ginger Island"}
+        },
+        {
+          "name": "Spend 10 Golden Walnuts",
+          "check_method": "walnuts_spent",
+          "check_params": {"count": 10, "unlock_flag": "parrot_express"}
+        }
+      ],
+      "completion_check": "parrot_express",
+      "hints": ["Find parrot huts around the island", "Spend 10 walnuts for fast travel"]
+    },
+    "Volcano Dungeon (Interior)": {
+      "category": "Island Features",
+      "total_steps": 2,
+      "prerequisites": [
+        {
+          "name": "Reach Volcano entrance",
+          "check_method": "location_visited",
+          "check_params": {"location": "VolcanoEntrance"}
+        },
+        {
+          "name": "Spend 1 Golden Walnut at gate",
+          "check_method": "walnuts_spent",
+          "check_params": {"count": 1, "unlock_flag": "volcano_gate"}
+        }
+      ],
+      "completion_check": "volcano_unlocked",
+      "hints": ["Navigate to north side of island", "Pay 1 walnut to open gate"]
+    },
+    "Volcano Forge Room": {
+      "category": "Island Features",
+      "total_steps": 1,
+      "prerequisites": [
+        {
+          "name": "Reach floor 10 of Volcano Dungeon",
+          "check_method": "deepest_floor",
+          "check_params": {"location": "VolcanoDungeon", "floor": 10}
+        }
+      ],
+      "completion_check": "volcano_floor_10",
+      "hints": ["Descend through Volcano Dungeon", "Forge room at floor 10"]
+    },
+    "Island Trader": {
+      "category": "Island Features",
+      "total_steps": 2,
+      "prerequisites": [
+        {
+          "name": "Unlock Ginger Island",
+          "check_method": "unlockable",
+          "check_params": {"unlockable_name": "Ginger Island"}
+        },
+        {
+          "name": "Spend 10 Golden Walnuts",
+          "check_method": "walnuts_spent",
+          "check_params": {"count": 10, "unlock_flag": "island_trader"}
+        }
+      ],
+      "completion_check": "island_trader",
+      "hints": ["Find trader hut on island", "Spend 10 walnuts"]
+    },
+    "Resort Rebuild": {
+      "category": "Island Features",
+      "total_steps": 2,
+      "prerequisites": [
+        {
+          "name": "Unlock Ginger Island",
+          "check_method": "unlockable",
+          "check_params": {"unlockable_name": "Ginger Island"}
+        },
+        {
+          "name": "Spend 20 Golden Walnuts",
+          "check_method": "walnuts_spent",
+          "check_params": {"count": 20, "unlock_flag": "resort"}
+        }
+      ],
+      "completion_check": "resort",
+      "hints": ["Talk to parrot at resort ruins", "Spend 20 walnuts"]
+    },
+    "Professor Snail's Tent": {
+      "category": "Island Features",
+      "total_steps": 1,
+      "prerequisites": [
+        {
+          "name": "Free Professor Snail from boulder",
+          "check_method": "event_seen",
+          "check_params": {"event_id": "6497421"}
+        }
+      ],
+      "completion_check": "snail_freed",
+      "hints": ["Use bombs or upgraded pickaxe", "Boulder near volcano entrance"]
+    },
+    "Island Field Office": {
+      "category": "Island Features",
+      "total_steps": 2,
+      "prerequisites": [
+        {
+          "name": "Free Professor Snail",
+          "check_method": "unlockable",
+          "check_params": {"unlockable_name": "Professor Snail's Tent"}
+        },
+        {
+          "name": "Donate fossils",
+          "check_method": "field_office_donations",
+          "check_params": {"min_fossils": 1}
+        }
+      ],
+      "completion_check": "field_office",
+      "hints": ["Rescue Professor Snail first", "Dig up fossils with hoe"]
+    },
+    "Qi's Walnut Room": {
+      "category": "Island Features",
+      "total_steps": 1,
+      "prerequisites": [
+        {
+          "name": "Collect 100 Golden Walnuts",
+          "check_method": "walnuts_found",
+          "check_params": {"count": 100}
+        }
+      ],
+      "completion_check": "100_walnuts",
+      "hints": ["Find 100 of 130 total walnuts", "Door unlocks automatically"]
+    },
+    "Pirate Cove": {
+      "category": "Island Features",
+      "total_steps": 2,
+      "prerequisites": [
+        {
+          "name": "Unlock Ginger Island",
+          "check_method": "unlockable",
+          "check_params": {"unlockable_name": "Ginger Island"}
+        },
+        {
+          "name": "Spend 20 Golden Walnuts",
+          "check_method": "walnuts_spent",
+          "check_params": {"count": 20, "unlock_flag": "pirate_cove"}
+        }
+      ],
+      "completion_check": "pirate_cove",
+      "hints": ["Southeast beach area", "Spend 20 walnuts"]
+    },
+    "Island Obsidian Shortcut": {
+      "category": "Island Features",
+      "total_steps": 2,
+      "prerequisites": [
+        {
+          "name": "Unlock Island Farm",
+          "check_method": "unlockable",
+          "check_params": {"unlockable_name": "Island Farm (Upgrade 2)"}
+        },
+        {
+          "name": "Spend 5 Golden Walnuts",
+          "check_method": "walnuts_spent",
+          "check_params": {"count": 5, "unlock_flag": "obsidian_shortcut"}
+        }
+      ],
+      "completion_check": "obsidian_shortcut",
+      "hints": ["Unlock farm first", "Bridge between farm and volcano"]
+    },
+    "Leo's Return to Town": {
+      "category": "Progression",
+      "total_steps": 2,
+      "prerequisites": [
+        {
+          "name": "Befriend Leo (6+ hearts)",
+          "check_method": "friendship",
+          "check_params": {"npc": "Leo", "min_hearts": 6}
+        },
+        {
+          "name": "Complete Leo questline",
+          "check_method": "event_seen",
+          "check_params": {"event_id": "6497423"}
+        }
+      ],
+      "completion_check": "leo_moved",
+      "hints": ["Talk to Leo daily", "Give him gifts", "Complete island quests"]
+    },
+    "Museum Collection (60 Items)": {
+      "category": "Progression",
+      "total_steps": 60,
+      "prerequisites": [
+        {
+          "name": "Donate 60 items to Museum",
+          "check_method": "museum_count",
+          "check_params": {"count": 60}
+        }
+      ],
+      "completion_check": "museum_60",
+      "hints": ["Rewards Rusty Key", "Find artifacts and minerals"]
+    },
+    "Museum Collection (95 Items)": {
+      "category": "Progression",
+      "total_steps": 95,
+      "prerequisites": [
+        {
+          "name": "Donate all 95 items to Museum",
+          "check_method": "museum_count",
+          "check_params": {"count": 95}
+        }
+      ],
+      "completion_check": "museum_complete",
+      "hints": ["Complete entire collection", "Stardrop reward at 95 items"]
+    },
+    "Combat Level 10": {
+      "category": "Skills",
+      "total_steps": 1,
+      "prerequisites": [
+        {
+          "name": "Reach Combat Level 10",
+          "check_method": "skill_level",
+          "check_params": {"skill": "combat", "level": 10}
+        }
+      ],
+      "completion_check": "combat_10",
+      "hints": ["Kill monsters in Mines or Skull Cavern", "Need 15,000 total Combat XP"]
+    },
+    "Fishing Level 10": {
+      "category": "Skills",
+      "total_steps": 1,
+      "prerequisites": [
+        {
+          "name": "Reach Fishing Level 10",
+          "check_method": "skill_level",
+          "check_params": {"skill": "fishing", "level": 10}
+        }
+      ],
+      "completion_check": "fishing_10",
+      "hints": ["Catch fish to gain XP", "Need 15,000 total Fishing XP"]
+    },
+    "Farming Level 10": {
+      "category": "Skills",
+      "total_steps": 1,
+      "prerequisites": [
+        {
+          "name": "Reach Farming Level 10",
+          "check_method": "skill_level",
+          "check_params": {"skill": "farming", "level": 10}
+        }
+      ],
+      "completion_check": "farming_10",
+      "hints": ["Harvest crops, milk animals", "Need 15,000 total Farming XP"]
+    },
+    "Mining Level 10": {
+      "category": "Skills",
+      "total_steps": 1,
+      "prerequisites": [
+        {
+          "name": "Reach Mining Level 10",
+          "check_method": "skill_level",
+          "check_params": {"skill": "mining", "level": 10}
+        }
+      ],
+      "completion_check": "mining_10",
+      "hints": ["Break rocks and find ore", "Need 15,000 total Mining XP"]
+    },
+    "Foraging Level 10": {
+      "category": "Skills",
+      "total_steps": 1,
+      "prerequisites": [
+        {
+          "name": "Reach Foraging Level 10",
+          "check_method": "skill_level",
+          "check_params": {"skill": "foraging", "level": 10}
+        }
+      ],
+      "completion_check": "foraging_10",
+      "hints": ["Chop trees, collect forage items", "Need 15,000 total Foraging XP"]
+    },
+    "Cooking Recipes (All 74)": {
+      "category": "Collection",
+      "total_steps": 74,
+      "prerequisites": [
+        {
+          "name": "Learn all 74 cooking recipes",
+          "check_method": "recipes_known",
+          "check_params": {"type": "cooking", "count": 74}
+        }
+      ],
+      "completion_check": "all_cooking",
+      "hints": ["Buy from shops, watch TV, befriend NPCs", "Check Queen of Sauce reruns"]
+    },
+    "Friendships (8+ Hearts)": {
+      "category": "Social",
+      "total_steps": 32,
+      "prerequisites": [
+        {
+          "name": "Reach 8+ hearts with all 32 NPCs",
+          "check_method": "friendships_count",
+          "check_params": {"min_hearts": 8, "count": 32}
+        }
+      ],
+      "completion_check": "all_friendships_8",
+      "hints": ["Talk daily and give gifts", "Some require bouquets (10 hearts)", "Max hearts vary by NPC"]
+    },
+    "Golden Walnuts (100)": {
+      "category": "Island Features",
+      "total_steps": 100,
+      "prerequisites": [
+        {
+          "name": "Find 100 Golden Walnuts",
+          "check_method": "walnuts_found",
+          "check_params": {"count": 100}
+        }
+      ],
+      "completion_check": "100_walnuts",
+      "hints": ["Unlock Qi's Walnut Room", "130 total walnuts available"]
+    },
+    "Golden Walnuts (130 All)": {
+      "category": "Island Features",
+      "total_steps": 130,
+      "prerequisites": [
+        {
+          "name": "Find all 130 Golden Walnuts",
+          "check_method": "walnuts_found",
+          "check_params": {"count": 130}
+        }
+      ],
+      "completion_check": "all_walnuts",
+      "hints": ["Check parrot hints", "Some require puzzles and secrets"]
+    }
+  },
+  "categories": [
+    "Map Access",
+    "Progression",
+    "Island Features",
+    "Buildings",
+    "Skills",
+    "Collection",
+    "Social",
+    "Shops"
+  ],
+  "metadata": {
+    "version": "1.0",
+    "total_unlockables": 45,
+    "description": "Comprehensive unlockable tracking configuration for Stardew Valley companion system"
+  }
+}

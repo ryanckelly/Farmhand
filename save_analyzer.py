@@ -193,6 +193,9 @@ def analyze_save():
         # Perfection tracking (100% completion metrics)
         state['perfection'] = get_perfection_data(root)
 
+        # Unlockables tracking (all 45+ unlockables with completion %)
+        state['unlockables_status'] = get_all_unlockables_status(root)
+
         return state
 
     except Exception as e:
@@ -1146,6 +1149,311 @@ def calculate_perfection_score(perfection):
     # This returns partial score (up to 79%)
 
     return round(score, 1)
+
+
+def load_unlockables_config():
+    """Load unlockables configuration from JSON file."""
+    config_path = Path(__file__).parent / 'unlockables_config.json'
+    with open(config_path, 'r', encoding='utf-8') as f:
+        return json.load(f)
+
+
+def check_prerequisite(prereq, save_state, all_unlockables_status=None):
+    """
+    Check if a single prerequisite is met.
+
+    Args:
+        prereq: Prerequisite dict with 'check_method' and 'check_params'
+        save_state: Full save state dict
+        all_unlockables_status: Dict of other unlockables (for dependency checks)
+
+    Returns:
+        bool: True if prerequisite is met
+    """
+    method = prereq['check_method']
+    params = prereq['check_params']
+
+    if method == 'flag':
+        # Check bundle reward flags or quest flags
+        flags = save_state.get('bundles', {}).get('bundle_reward_flags', [])
+        primary_flag = params['flag_name']
+        alt_flag = params.get('alt_flag')
+        return primary_flag in flags or (alt_flag and alt_flag in flags)
+
+    elif method == 'save_field':
+        # Check specific field in save state (supports nested paths with dots)
+        field_path = params['field'].split('.')
+        value = save_state
+        for key in field_path:
+            value = value.get(key, {})
+            if value == {}:
+                return False
+        return bool(value)
+
+    elif method == 'unlockable':
+        # Check if another unlockable is complete
+        if all_unlockables_status is None:
+            return False
+        unlock_name = params['unlockable_name']
+        return all_unlockables_status.get(unlock_name, {}).get('completion_percent', 0) == 100
+
+    elif method == 'game_date':
+        # Check if game date has passed minimum
+        current_date = save_state.get('date', {})
+        season_order = ['spring', 'summer', 'fall', 'winter']
+        current_season_idx = season_order.index(current_date.get('season', 'spring').lower())
+        min_season_idx = season_order.index(params.get('min_season', 'spring').lower())
+
+        if current_date.get('year', 1) > params.get('min_year', 1):
+            return True
+        elif current_date.get('year', 1) == params.get('min_year', 1):
+            if current_season_idx > min_season_idx:
+                return True
+            elif current_season_idx == min_season_idx:
+                return current_date.get('day', 1) >= params.get('min_day', 1)
+        return False
+
+    elif method == 'tool_level':
+        # Check tool upgrade level
+        tools = save_state.get('tools', {})
+        tool_name = params['tool']
+        tool_level = tools.get(f'{tool_name}_level', 0)
+        return tool_level >= params['min_level']
+
+    elif method == 'room_complete':
+        # Check if Community Center room is complete
+        bundles = save_state.get('bundles', {})
+        completed_rooms = bundles.get('completed_rooms', [])
+        return params['room_name'] in completed_rooms
+
+    elif method == 'skill_level':
+        # Check skill level
+        skills = save_state.get('skills', {})
+        skill_name = params['skill']
+        skill_level = skills.get(skill_name, {}).get('level', 0)
+        return skill_level >= params['level']
+
+    elif method == 'museum_item':
+        # Check if specific item donated to museum
+        museum = save_state.get('museum', {})
+        donated_items = museum.get('donated_items', [])
+        return params['item_id'] in donated_items
+
+    elif method == 'friendship':
+        # Check NPC heart level
+        friendships = save_state.get('friendships', {})
+        npc = params['npc']
+        hearts = friendships.get(npc, {}).get('hearts', 0)
+        return hearts >= params['min_hearts']
+
+    elif method == 'quest_complete':
+        # Check if quest is complete
+        quests = save_state.get('completed_quests', [])
+        return params['quest_name'] in quests
+
+    elif method == 'bundle_count':
+        # Check number of bundles completed
+        bundles = save_state.get('bundles', {})
+        complete_count = bundles.get('complete_count', 0)
+        return complete_count >= params['total']
+
+    elif method == 'inventory_count':
+        # Check if player has enough of an item
+        inventory = save_state.get('inventory', [])
+        item_id = str(params['item_id'])
+        total_count = sum(
+            item.get('quantity', 0)
+            for item in inventory
+            if str(item.get('id')) == item_id
+        )
+        return total_count >= params['count']
+
+    elif method == 'walnuts_spent':
+        # Check if specific walnut unlock is purchased
+        # This is a placeholder - actual implementation would check specific unlock flags
+        walnuts_found = save_state.get('unlocks', {}).get('golden_walnuts_found', 0)
+        return walnuts_found >= params['count']
+
+    elif method == 'walnuts_found':
+        # Check total walnuts found
+        walnuts_found = save_state.get('unlocks', {}).get('golden_walnuts_found', 0)
+        return walnuts_found >= params['count']
+
+    elif method == 'location_visited':
+        # Check if location has been visited
+        # Placeholder - would need to parse location visit data
+        return False
+
+    elif method == 'deepest_floor':
+        # Check deepest floor reached in a location
+        if params['location'] == 'VolcanoDungeon':
+            # Placeholder - would need to parse volcano depth
+            return False
+        return False
+
+    elif method == 'event_seen':
+        # Check if event ID has been seen
+        events = save_state.get('events_seen', [])
+        return params['event_id'] in events
+
+    elif method == 'field_office_donations':
+        # Check fossil donations
+        # Placeholder - would need to parse field office data
+        return False
+
+    elif method == 'museum_count':
+        # Check total museum donations
+        museum = save_state.get('museum', {})
+        donated_count = museum.get('total_donated', 0)
+        return donated_count >= params['count']
+
+    elif method == 'recipes_known':
+        # Check recipes learned
+        # Placeholder - would need to parse recipe data
+        return False
+
+    elif method == 'friendships_count':
+        # Check number of friendships at certain heart level
+        friendships = save_state.get('friendships', {})
+        count = sum(
+            1 for npc_data in friendships.values()
+            if npc_data.get('hearts', 0) >= params['min_hearts']
+        )
+        return count >= params['count']
+
+    return False
+
+
+def calculate_unlockable_progress(unlock_name, config, save_state, all_unlockables_status=None):
+    """
+    Calculate completion percentage for a single unlockable.
+
+    Args:
+        unlock_name: Name of the unlockable
+        config: Unlockable config dict
+        save_state: Full save state dict
+        all_unlockables_status: Dict of other unlockables (for dependencies)
+
+    Returns:
+        dict: {
+            'name': str,
+            'category': str,
+            'completion_percent': int (0-100),
+            'completed_steps': int,
+            'total_steps': int,
+            'next_step': str (hint for next action),
+            'hints': list of str
+        }
+    """
+    total_steps = config['total_steps']
+    prerequisites = config['prerequisites']
+
+    completed_steps = 0
+    next_step = None
+
+    # Check each prerequisite
+    for i, prereq in enumerate(prerequisites):
+        if check_prerequisite(prereq, save_state, all_unlockables_status):
+            completed_steps += 1
+        elif next_step is None:
+            # First incomplete step is the next action
+            next_step = prereq['name']
+
+    # Calculate percentage
+    completion_percent = int((completed_steps / total_steps) * 100) if total_steps > 0 else 0
+
+    # Get hints
+    hints = config.get('hints', [])
+
+    return {
+        'name': unlock_name,
+        'category': config['category'],
+        'completion_percent': completion_percent,
+        'completed_steps': completed_steps,
+        'total_steps': total_steps,
+        'next_step': next_step or 'Complete!',
+        'hints': hints
+    }
+
+
+def get_all_unlockables_status(root):
+    """
+    Get completion status for all unlockables.
+
+    Args:
+        root: XML root element from save file
+
+    Returns:
+        dict: Unlockable name -> status dict
+    """
+    # Load config
+    config_data = load_unlockables_config()
+    unlockables_config = config_data['unlockables']
+
+    # Get mail received (used for unlock checks)
+    mail_received = [mail.text for mail in root.findall('.//mailReceived/string')]
+
+    # Build save state with proper unlock checks
+    save_state = {
+        'bundles': {
+            'complete_count': len([b for b in root.findall('.//bundlesComplete/boolean') if b.text == 'true']),
+            'bundle_reward_flags': [flag.text for flag in root.findall('.//bundleRewards/item/string') if flag.text],
+            'completed_rooms': get_room_completion_state(root)
+        },
+        'unlocks': {
+            'skull_key': 'HasSkullKey' in mail_received or get_text(root, './/player/hasSkullKey', 'false') == 'true',
+            'club_card': 'HasClubCard' in mail_received or get_text(root, './/player/hasClubCard', 'false') == 'true',
+            'rusty_key': 'HasRustyKey' in mail_received or get_text(root, './/player/hasRustyKey', 'false') == 'true',
+            'sewer_opened': 'OpenedSewer' in mail_received,
+            'dark_talisman': 'HasDarkTalisman' in mail_received or get_text(root, './/player/hasDarkTalisman', 'false') == 'true',
+            'magic_ink': 'HasMagicInk' in mail_received or get_text(root, './/player/hasMagicInk', 'false') == 'true',
+            'town_key': 'HasTownKey' in mail_received or get_text(root, './/player/hasTownKey', 'false') == 'true',
+            'special_charm': get_text(root, './/player/hasSpecialCharm', 'false') == 'true',
+            'can_read_junimo_text': get_text(root, './/player/canReadJunimoText', 'false') == 'true',
+            'boat_to_island_fixed': get_text(root, './/boatFixed', 'false') == 'true',
+            'golden_walnuts_found': int(get_text(root, './/goldenWalnutsFound', '0')),
+            'golden_walnuts': int(get_text(root, './/goldenWalnuts', '0'))
+        },
+        'skills': {
+            'farming': {'level': int(get_text(root, './/player/farmingLevel', '0'))},
+            'fishing': {'level': int(get_text(root, './/player/fishingLevel', '0'))},
+            'foraging': {'level': int(get_text(root, './/player/foragingLevel', '0'))},
+            'mining': {'level': int(get_text(root, './/player/miningLevel', '0'))},
+            'combat': {'level': int(get_text(root, './/player/combatLevel', '0'))}
+        },
+        'tools': {},
+        'museum': get_museum_donations(root),
+        'friendships': {},
+        'date': {
+            'season': get_text(root, './/currentSeason', 'spring'),
+            'day': int(get_text(root, './/dayOfMonth', '1')),
+            'year': int(get_text(root, './/year', '1'))
+        },
+        'inventory': get_player_inventory(root),
+        'completed_quests': [],
+        'events_seen': []
+    }
+
+    # Calculate status for all unlockables (two passes to handle dependencies)
+    all_status = {}
+
+    # First pass: calculate unlockables without dependencies
+    for unlock_name, unlock_config in unlockables_config.items():
+        status = calculate_unlockable_progress(unlock_name, unlock_config, save_state, all_status)
+        all_status[unlock_name] = status
+
+    # Second pass: recalculate unlockables that depend on others
+    for unlock_name, unlock_config in unlockables_config.items():
+        # Check if this unlockable has dependencies on other unlockables
+        has_deps = any(
+            prereq['check_method'] == 'unlockable'
+            for prereq in unlock_config['prerequisites']
+        )
+        if has_deps:
+            status = calculate_unlockable_progress(unlock_name, unlock_config, save_state, all_status)
+            all_status[unlock_name] = status
+
+    return all_status
 
 
 if __name__ == '__main__':
