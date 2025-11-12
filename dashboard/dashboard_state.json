@@ -1,6 +1,6 @@
 {
-  "generated_at": "2025-11-11T20:29:33.255968",
-  "game_date": "Spring 11, Year 3",
+  "generated_at": "2025-11-11T22:36:37.813875",
+  "game_date": "Spring 13, Year 3",
   "unlocks": {
     "community_center": {
       "completed": 30,
@@ -23,14 +23,14 @@
       "percent": 0.03125
     },
     "skills_maxed": {
-      "count": 4,
+      "count": 5,
       "total": 5,
-      "percent": 0.8
+      "percent": 1.0
     },
     "golden_walnuts": {
-      "found": 39,
+      "found": 40,
       "total": 130,
-      "percent": 0.3
+      "percent": 0.3076923076923077
     },
     "skull_cavern_depth": {
       "deepest": 125,
@@ -38,7 +38,7 @@
       "milestone_200": false
     },
     "perfection": {
-      "overall_percent": 32.4,
+      "overall_percent": 32.7,
       "obelisks": {
         "count": 0,
         "total": 4,
@@ -51,7 +51,7 @@
       },
       "golden_clock": false,
       "produce_shipped": {
-        "count": 150,
+        "count": 152,
         "total": 154
       },
       "fish_caught": {
@@ -63,7 +63,7 @@
         "total": 81
       },
       "recipes_crafted": {
-        "count": 51,
+        "count": 53,
         "total": 149
       },
       "stardrops_found": {
@@ -78,21 +78,21 @@
     }
   },
   "financials": {
-    "current_balance": 522007,
-    "daily_average": 3873,
-    "weekly_trend": -107.93251533742331,
+    "current_balance": 579527,
+    "daily_average": 4367,
+    "weekly_trend": -0.7018204163146171,
     "best_day": {
       "amount": 231464,
       "date": "Fall 16, Year 2"
     },
     "sparkline_data": [
-      0.003493938017539569,
-      1.0,
-      0.12270710317598965,
-      0.16996261486321232,
-      0.2913944306628,
-      -1.3501275287376402,
-      0.37156283847524546
+      0.17890983188996434,
+      0.247809475292919,
+      0.4248599083036169,
+      -1.9685175751400916,
+      0.54174732552216,
+      0.4651044319918492,
+      1.0
     ]
   },
   "momentum_3session": {
@@ -101,7 +101,7 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+4771/session)"
+        "description": "High XP gains (+2841/session)"
       }
     ],
     "cold_streaks": [
@@ -111,17 +111,18 @@
         "description": "No bundle progress in 3 sessions"
       },
       {
-        "category": "Money",
-        "icon": "[COLD]",
-        "description": "Net losses (-13,111g/session)"
-      },
-      {
         "category": "Social",
         "icon": "[COLD]",
         "description": "No relationship progress"
       }
     ],
-    "rising_trends": [],
+    "rising_trends": [
+      {
+        "category": "Combat",
+        "icon": "[RISING]",
+        "description": "Combat leveling up (gained 1 levels)"
+      }
+    ],
     "stalled_areas": [
       {
         "category": "Museum",
@@ -136,7 +137,7 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+2562/session)"
+        "description": "High XP gains (+3056/session)"
       }
     ],
     "cold_streaks": [
@@ -151,12 +152,18 @@
         "description": "No relationship progress"
       }
     ],
-    "rising_trends": [],
+    "rising_trends": [
+      {
+        "category": "Combat",
+        "icon": "[RISING]",
+        "description": "Combat leveling up (gained 1 levels)"
+      }
+    ],
     "stalled_areas": [
       {
         "category": "Money",
         "icon": "[STALLED]",
-        "description": "Low income (4,980g/session)"
+        "description": "Low income (4,991g/session)"
       },
       {
         "category": "Museum",

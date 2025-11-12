@@ -695,14 +695,68 @@
         "stardrops_found": 5,
         "monster_goals": 0
       }
+    },
+    {
+      "date": "2025-11-11T22:10:27.102162",
+      "game_date": "Spring 12, Year 3",
+      "money": 540267,
+      "total_earned": 3129225,
+      "animals": 36,
+      "skills": {
+        "farming": 10,
+        "fishing": 10,
+        "foraging": 10,
+        "mining": 10,
+        "combat": 10,
+        "luck": 0
+      },
+      "bundles_complete": 30,
+      "perfection": {
+        "overall_percent": 32.4,
+        "obelisks": 0,
+        "golden_clock": false,
+        "produce_shipped": 150,
+        "fish_caught": 49,
+        "recipes_cooked": 3,
+        "recipes_crafted": 52,
+        "stardrops_found": 5,
+        "monster_goals": 0
+      }
+    },
+    {
+      "date": "2025-11-11T22:36:33.826987",
+      "game_date": "Spring 13, Year 3",
+      "money": 579527,
+      "total_earned": 3170685,
+      "animals": 36,
+      "skills": {
+        "farming": 10,
+        "fishing": 10,
+        "foraging": 10,
+        "mining": 10,
+        "combat": 10,
+        "luck": 0
+      },
+      "bundles_complete": 30,
+      "perfection": {
+        "overall_percent": 32.7,
+        "obelisks": 0,
+        "golden_clock": false,
+        "produce_shipped": 152,
+        "fish_caught": 49,
+        "recipes_cooked": 3,
+        "recipes_crafted": 53,
+        "stardrops_found": 5,
+        "monster_goals": 0
+      }
     }
   ],
   "trends": {
-    "daily_income_avg": 21269,
-    "money_growth_rate": 0.04247530644768322
+    "daily_income_avg": 39260,
+    "money_growth_rate": 0.07266777352679324
   },
   "meta": {
     "tracking_started": "2024-01-15",
-    "total_snapshots": 38
+    "total_snapshots": 40
   }
 }
