@@ -1,35 +1,35 @@
 {
-  "selected_at": "2025-11-11T03:15:00",
-  "reasoning": "Combat Level 10 (90%) is the immediate priority and unlocks Mastery Cave (80%). Volcano Dungeon (50%) is newly accessible for walnut farming. Golden Walnuts (31/100) and Museum Collection (75/95) are medium-term goals aligned with island unlocks and perfection tracking.",
+  "selected_at": "2025-11-11T22:55:13.008378",
+  "reasoning": "Combat Level 10 COMPLETE! Mastery Cave now unlocked. Focusing on Volcano Dungeon for walnut farming, Golden Walnuts for Qi Room unlock, and Museum Collection approaching completion.",
   "unlocks": [
     {
       "name": "Combat Level 10",
-      "completion_percent": 90,
-      "next_step": "Gain 1,734 more Combat XP (currently 11,266/15,000 for level 10)",
+      "completion_percent": 100,
+      "next_step": "Complete!",
       "category": "Skills"
     },
     {
       "name": "Mastery Cave",
-      "completion_percent": 80,
-      "next_step": "Reach Combat Level 10 (only remaining skill)",
+      "completion_percent": 100,
+      "next_step": "Complete!",
       "category": "Progression"
     },
     {
       "name": "Volcano Dungeon",
       "completion_percent": 50,
-      "next_step": "Navigate to volcano entrance on Ginger Island",
+      "next_step": "Reach Volcano entrance",
       "category": "Island Features"
     },
     {
       "name": "Golden Walnuts (100)",
-      "completion_percent": 31,
-      "next_step": "Find 69 more Golden Walnuts (currently 31/100)",
+      "completion_percent": 0,
+      "next_step": "Find 100 Golden Walnuts",
       "category": "Island Features"
     },
     {
       "name": "Museum Collection (95)",
-      "completion_percent": 79,
-      "next_step": "Donate 20 more artifacts/minerals (currently 75/95 for Stardrop)",
+      "completion_percent": 0,
+      "next_step": "Donate all 95 items to Museum",
       "category": "Progression"
     }
   ]
