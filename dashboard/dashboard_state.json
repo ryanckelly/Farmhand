@@ -1,6 +1,6 @@
 {
-  "generated_at": "2025-11-11T16:02:01.063357",
-  "game_date": "Spring 9, Year 3",
+  "generated_at": "2025-11-11T20:29:33.255968",
+  "game_date": "Spring 11, Year 3",
   "unlocks": {
     "community_center": {
       "completed": 30,
@@ -78,21 +78,21 @@
     }
   },
   "financials": {
-    "current_balance": 578022,
-    "daily_average": 3529,
-    "weekly_trend": -0.7116077669550377,
+    "current_balance": 522007,
+    "daily_average": 3873,
+    "weekly_trend": -107.93251533742331,
     "best_day": {
       "amount": 231464,
       "date": "Fall 16, Year 2"
     },
     "sparkline_data": [
-      -0.3753362915341882,
-      -0.6572272107892806,
       0.003493938017539569,
       1.0,
       0.12270710317598965,
       0.16996261486321232,
-      0.2913944306628
+      0.2913944306628,
+      -1.3501275287376402,
+      0.37156283847524546
     ]
   },
   "momentum_3session": {
@@ -101,7 +101,7 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+2284/session)"
+        "description": "High XP gains (+4771/session)"
       }
     ],
     "cold_streaks": [
@@ -109,6 +109,11 @@
         "category": "Bundles",
         "icon": "[COLD]",
         "description": "No bundle progress in 3 sessions"
+      },
+      {
+        "category": "Money",
+        "icon": "[COLD]",
+        "description": "Net losses (-13,111g/session)"
       },
       {
         "category": "Social",
@@ -131,7 +136,7 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+1671/session)"
+        "description": "High XP gains (+2562/session)"
       }
     ],
     "cold_streaks": [
@@ -151,7 +156,7 @@
       {
         "category": "Money",
         "icon": "[STALLED]",
-        "description": "Low income (4,538g/session)"
+        "description": "Low income (4,980g/session)"
       },
       {
         "category": "Museum",
