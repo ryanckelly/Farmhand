@@ -290,6 +290,8 @@ def parse_page_data(html: str, page_title: str, categories: list[str]) -> dict[s
         return parse_bundle_data(soup, page_title)
     elif page_type == "fish":
         return parse_fish_data(soup, page_title)
+    elif page_type == "recipe":
+        return parse_recipe_data(soup, page_title)
     else:
         # Generic item parsing
         return parse_generic_item(soup, page_title, page_type)
@@ -319,6 +321,8 @@ def detect_page_type(categories: list[str], page_title: str = "") -> str:
         return "bundle"
     elif any("fish" in c for c in cat_lower):
         return "fish"
+    elif any("recipe" in c or "cooking" in c or "craftable" in c for c in cat_lower):
+        return "recipe"
     elif any("artifact" in c for c in cat_lower):
         return "artifact"
     elif any("mineral" in c for c in cat_lower):
@@ -418,17 +422,25 @@ def parse_npc_data(soup: BeautifulSoup, page_title: str) -> dict[str, Any]:
 
     Extracts:
     - Birthday
-    - Loved gifts
-    - Liked gifts
-    - Hated gifts
+    - Marriageable status (boolean)
+    - Address/residence
+    - Family members
+    - Gift preferences (loved, liked, neutral, disliked, hated)
+    - Heart events (heart level, title, trigger conditions)
     """
     data = {
         "type": "npc",
         "name": page_title,
     }
 
-    # Find birthday in infobox
+    # Find birthday and other info in infobox
     infobox = soup.find("table", class_="infobox")
+    if not infobox:
+        # Try first table on page
+        tables = soup.find_all("table")
+        if tables:
+            infobox = tables[0]
+
     if infobox:
         for row in infobox.find_all("tr"):
             cells = row.find_all(["th", "td"])
@@ -438,6 +450,13 @@ def parse_npc_data(soup: BeautifulSoup, page_title: str) -> dict[str, Any]:
 
                 if "birthday" in key:
                     data["birthday"] = value
+                elif "marriage" in key:
+                    # Check if this NPC is marriageable
+                    data["marriageable"] = "yes" in value.lower()
+                elif "address" in key or "lives in" in key:
+                    data["address"] = value
+                elif "family" in key:
+                    data["family"] = value
 
     # Extract gift preferences
     # Wiki has sections like "Love", "Like", etc. as h3 headers
@@ -475,7 +494,94 @@ def parse_npc_data(soup: BeautifulSoup, page_title: str) -> dict[str, Any]:
                     data[f"{gift_type}_gifts"] = gifts
                 break
 
+    # Extract heart events
+    heart_events = parse_heart_events(soup)
+    if heart_events:
+        data["heart_events"] = heart_events
+
     return data
+
+
+def parse_heart_events(soup: BeautifulSoup) -> list[dict]:
+    """
+    Extract heart event information from NPC pages.
+
+    Returns list of events with:
+    - heart_level (2, 4, 6, 8, 10, 14)
+    - title (event heading)
+    - trigger (if available)
+    """
+    events = []
+
+    # Find "Heart Events" or "Events" section
+    for h2 in soup.find_all(['h2', 'span'], class_=['mw-headline']):
+        h2_text = h2.get_text(strip=True).lower()
+        if 'heart event' in h2_text or (h2_text == 'events' and h2.name == 'span'):
+            # Find all h3 subheadings (individual events)
+            # Get parent of the span (which is the h2)
+            if h2.name == 'span':
+                header = h2.parent
+            else:
+                header = h2
+
+            # Find next h2 to know when to stop
+            next_h2 = header.find_next(['h2'])
+
+            # Find all h3 headers between this h2 and the next h2
+            current = header.find_next(['h3', 'span'], class_=['mw-headline'])
+
+            while current:
+                # Stop if we've reached the next h2 section
+                if next_h2:
+                    # Check if current is after next_h2 in document order
+                    if current.parent and next_h2.parent:
+                        try:
+                            if list(soup.descendants).index(current) >= list(soup.descendants).index(next_h2):
+                                break
+                        except:
+                            break
+
+                event_title = current.get_text(strip=True)
+
+                # Extract heart level from title
+                # Formats: "Two Hearts", "Four Hearts", "Six Hearts", etc.
+                match = re.search(r'(\w+)\s+Heart', event_title, re.IGNORECASE)
+                if match:
+                    heart_word = match.group(1).lower()
+                    heart_map = {
+                        'two': 2, 'four': 4, 'six': 6, 'eight': 8,
+                        'ten': 10, 'fourteen': 14
+                    }
+                    heart_level = heart_map.get(heart_word)
+
+                    if heart_level:
+                        event_data = {
+                            "heart_level": heart_level,
+                            "title": event_title
+                        }
+
+                        # Try to get trigger information from first paragraph after heading
+                        if current.parent:
+                            next_p = current.parent.find_next('p')
+                            if next_p:
+                                trigger_text = next_p.get_text(strip=True)
+                                # Only include if it's short (likely a trigger description)
+                                if len(trigger_text) < 200:
+                                    event_data["trigger"] = trigger_text
+
+                        events.append(event_data)
+
+                # Find next h3
+                current = current.find_next(['h3', 'span'], class_=['mw-headline'])
+                if not current or current.name != 'span':
+                    break
+                # Make sure we're still looking at h3 headers
+                if current.parent.name != 'h3':
+                    break
+
+            break  # Found the events section, stop searching
+
+    return events
 
 
 def parse_bundle_data(soup: BeautifulSoup, page_title: str) -> dict[str, Any]:
@@ -622,6 +728,105 @@ def parse_fish_data(soup: BeautifulSoup, page_title: str) -> dict[str, Any]:
     return data
 
 
+def parse_recipe_data(soup: BeautifulSoup, page_title: str) -> dict[str, Any]:
+    """
+    Extract structured data for cooking and crafting recipes.
+
+    Extracts:
+    - Recipe type (cooking or crafting)
+    - Ingredients with quantities
+    - Buff effects (cooking only)
+    - Energy/health restoration
+    - Source/unlock method
+    - Sell price
+    """
+    data = {
+        "type": "recipe",
+        "name": page_title,
+    }
+
+    # Get main infobox
+    infobox = soup.find("table", class_="infobox")
+    if not infobox:
+        tables = soup.find_all("table")
+        if tables:
+            infobox = tables[0]
+
+    if infobox:
+        for row in infobox.find_all("tr"):
+            cells = row.find_all(["th", "td"])
+            if len(cells) >= 2:
+                key = cells[0].get_text(strip=True).lower()
+                value = cells[1].get_text(strip=True)
+
+                # Parse specific fields
+                if "source" in key and "recipe" not in key:
+                    # Determine if cooking or crafting
+                    if "cooking" in value.lower():
+                        data["recipe_type"] = "cooking"
+                    elif "crafting" in value.lower():
+                        data["recipe_type"] = "crafting"
+                    data["source"] = value
+
+                elif "recipe source" in key:
+                    # How to unlock the recipe
+                    data["unlock_source"] = value
+
+                elif "ingredient" in key:
+                    # Parse ingredients format: "Wood(50)Coal(1)Fiber(20)"
+                    ingredients = []
+
+                    # Find all text in the cell
+                    ing_text = cells[1].get_text(strip=True)
+
+                    # Pattern: ItemName(Quantity)
+                    # Split by looking for patterns like "ItemName(number)"
+                    matches = re.findall(r'([A-Za-z\s]+)\((\d+)\)', ing_text)
+
+                    for item_name, quantity in matches:
+                        ingredients.append({
+                            "item": item_name.strip(),
+                            "quantity": int(quantity)
+                        })
+
+                    if ingredients:
+                        data["ingredients"] = ingredients
+
+                elif "buff" in key and "duration" not in key:
+                    # Buff effects (e.g., "Speed(+1)")
+                    data["buff"] = value
+
+                elif "buff duration" in key:
+                    data["buff_duration"] = value
+
+                elif "energy" in key and "health" in key:
+                    # Extract numeric values from format like "7533"
+                    # First 2-3 digits are energy, rest are health
+                    numbers = re.findall(r'(\d+)', value)
+                    if numbers and len(numbers[0]) >= 3:
+                        # Try to split: "7533" -> 75 energy, 33 health
+                        full_num = numbers[0]
+                        if len(full_num) == 4:
+                            data["energy"] = int(full_num[:2])
+                            data["health"] = int(full_num[2:])
+                        elif len(full_num) >= 3:
+                            # Split at midpoint
+                            mid = len(full_num) // 2
+                            data["energy"] = int(full_num[:mid])
+                            data["health"] = int(full_num[mid:])
+
+                elif "sell" in key and "price" in key:
+                    # Clean price
+                    value_clean = value.replace(',', '')
+                    match = re.search(r'(\d+)g', value_clean)
+                    if match:
+                        data["sell_price"] = int(match.group(1))
+                    elif "cannot be sold" in value.lower():
+                        data["sell_price"] = None
+
+    return data
+
+
 def parse_generic_item(soup: BeautifulSoup, page_title: str, item_type: str) -> dict[str, Any]:
     """
     Generic parser for items that don't fit other categories.
@@ -663,6 +868,20 @@ def parse_generic_item(soup: BeautifulSoup, page_title: str, item_type: str) -> 
                             data[clean_key] = int(match.group(1))
                         else:
                             data[clean_key] = value
+
+                    # Special handling for monster stats - convert to integers
+                    elif clean_key in ['base_hp', 'base_damage', 'base_def', 'speed', 'xp']:
+                        # Convert numeric strings to integers
+                        if value.isdigit():
+                            data[clean_key] = int(value)
+                        else:
+                            # Try to extract number if there's extra text
+                            match = re.search(r'(\d+)', value)
+                            if match:
+                                data[clean_key] = int(match.group(1))
+                            else:
+                                data[clean_key] = value
+
                     else:
                         data[clean_key] = value
 
@@ -718,7 +937,7 @@ async def list_tools() -> list[Tool]:
         ),
         Tool(
             name="get_page_data",
-            description="Extract structured data from a specific Stardew Valley Wiki page. Returns structured JSON data. Best for: crops (seasons, growth time), fish (location, time, weather), NPCs (gift preferences), bundles (requirements), animals (costs, produce), monsters (stats, drops), and items (prices, sources). NOT recommended for: festivals, achievements, skills, or seasonal overview pages (use search_wiki instead for these).",
+            description="Extract structured data from a specific Stardew Valley Wiki page. Returns structured JSON data. Best for: crops (seasons, growth time), fish (location, time, weather), NPCs (gift preferences, heart events, marriageable status, address, family), bundles (requirements), recipes (ingredients, buffs, energy), animals (costs, produce), monsters (stats, drops), and items (prices, sources). NOT recommended for: festivals, achievements, skills, or seasonal overview pages (use search_wiki instead for these).",
             inputSchema={
                 "type": "object",
                 "properties": {

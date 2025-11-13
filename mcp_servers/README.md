@@ -10,7 +10,7 @@ This MCP server provides two powerful tools for Claude Code:
 
 When you ask Claude questions about Stardew Valley, it can now search the wiki, extract structured data (crop growth times, NPC gift preferences, bundle requirements, etc.), and provide accurate answers.
 
-## Current Features (Phase 1 ✅)
+## Current Features (Phase 1 & 2 ✅)
 
 ### Fully Supported Categories
 
@@ -19,21 +19,22 @@ When you ask Claude questions about Stardew Valley, it can now search the wiki, 
 | **Crops** | Seasons, growth time, regrowth, sell prices | "How long do strawberries take to grow?" |
 | **Fish** | Location, time, seasons, weather, difficulty | "Where can I catch a salmon?" |
 | **Bundles** | Required items, quantities | "What do I need for the Spring Crops Bundle?" |
-| **NPCs** | Loved/liked/disliked/hated gifts, birthday | "What gifts does Sebastian love?" |
+| **NPCs** | Gift preferences, heart events, marriageable status, address, family, birthday | "What are Sebastian's heart events?" |
+| **Recipes** | Ingredients, buffs, energy/health, unlock source, recipe type | "What ingredients does Algae Soup need?" |
 | **Animals** | Building required, purchase price, produce | "How much does a cow cost?" |
 | **Items** | Source, sell/purchase prices | "Where do I get hardwood?" |
-| **Monsters** | HP, damage, defense, drops, locations | "What do skeletons drop?" |
+| **Monsters** | HP, damage, defense, speed, XP, drops, locations | "What are skeleton stats?" |
 
 ### Coverage Statistics
-- **7 major categories** with excellent data extraction
+- **8 major categories** with excellent data extraction
 - **461 wiki categories** discovered (167 content categories)
 - **2,003 content pages** in the wiki
-- **Automatic page type detection** (crops, fish, NPCs, bundles, etc.)
+- **Automatic page type detection** (crops, fish, NPCs, bundles, recipes, etc.)
 
 ### Smart Tool Selection
 The tools include guidance to help Claude choose the right one:
 - **Use `search_wiki`** for: finding pages, festivals, achievements, general info
-- **Use `get_page_data`** for: crops, fish, NPCs, bundles, animals, items, monsters
+- **Use `get_page_data`** for: crops, fish, NPCs, bundles, recipes, animals, items, monsters
 
 ## Architecture
 
@@ -195,22 +196,47 @@ mcp_servers/
 **Festivals** - Minimal extraction (informational pages)
 **Achievements** - Basic data only
 
+## Phase 2 Enhancements (New! ✨)
+
+### Recipe Parser
+- **Type detection**: Automatically distinguishes cooking vs. crafting recipes
+- **Ingredients**: Parses concatenated format (e.g., "Wood(50)Coal(1)Fiber(20)")
+- **Buffs & effects**: Extracts buff names, duration, energy/health restoration
+- **Unlock sources**: How to obtain the recipe
+- **Example**: Algae Soup → `{"ingredients": [{"item": "Green Algae", "quantity": 4}], "energy": 75, "health": 33}`
+
+### Enhanced NPC Parser
+- **Marriageable status**: Boolean field indicating marriage candidates
+- **Address/residence**: Where the NPC lives
+- **Family members**: Parents, siblings, spouse, children
+- **Heart events**: Automatically extracts all heart events (2, 4, 6, 8, 10, 14 hearts)
+  - Event titles and heart level requirements
+  - Trigger conditions (when available)
+- **Example**: Sebastian → `{"marriageable": true, "address": "24 Mountain Road", "heart_events": [{"heart_level": 2, "title": "Two Hearts"}, ...]}`
+
+### Monster Stats Enhancement
+- **Integer conversion**: Stats (HP, damage, defense, speed, XP) now returned as integers instead of strings
+- **Cleaner data**: `{"base_hp": 140}` instead of `{"base_hp": "140"}`
+- **Example**: Skeleton → `{"base_hp": 140, "base_damage": 10, "xp": 8}`
+
 ## Roadmap
 
 See `roadmap.md` for the complete development plan.
 
-### Phase 2 (Next - High Priority)
-- [ ] Recipe parser (ingredients, buffs, energy)
-- [ ] Enhanced NPC parser (schedules, heart events)
-- [ ] Standardized monster parser
-- [ ] Skills & professions parser
+### Phase 2 (Complete ✅)
+- [x] Recipe parser (ingredients, buffs, energy)
+- [x] Enhanced NPC parser (heart events, marriageable status, address, family)
+- [x] Standardized monster parser (integer stats conversion)
+- [ ] Skills & professions parser (deferred to Phase 3)
 
-### Phase 3 (Medium Priority)
+### Phase 3 (Next - Medium Priority)
+- [ ] Skills & professions parser (deferred from Phase 2)
 - [ ] Quest parser (requirements, rewards)
 - [ ] Achievement tracker
 - [ ] Collections parser (museum, fishing, cooking)
 - [ ] Building enhancements
 - [ ] Location shop inventory
+- [ ] **Comprehensive parser QA testing** (adversarial test cases, edge cases, final validation)
 
 ### Phase 4 (Production Ready)
 - [ ] Comprehensive error handling
@@ -324,4 +350,4 @@ This is a learning project built collaboratively. The code is heavily commented 
 
 ---
 
-**Status**: Phase 1 Complete ✅ | Ready for Phase 2 Development
+**Status**: Phase 1 & 2 Complete ✅ | Ready for Phase 3 Development
