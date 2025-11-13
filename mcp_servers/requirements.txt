@@ -1,0 +1,11 @@
+# Dependencies for Stardew Valley Wiki MCP Server
+
+# MCP Python SDK - Provides the Server and protocol implementation
+mcp>=1.0.0
+
+# HTTP library for making API requests to the wiki
+requests>=2.31.0
+
+# HTML parsing for extracting table data
+beautifulsoup4>=4.12.0
+lxml>=4.9.0
