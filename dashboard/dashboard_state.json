@@ -1,6 +1,6 @@
 {
-  "generated_at": "2025-11-12T23:31:20.540248",
-  "game_date": "Spring 13, Year 3",
+  "generated_at": "2025-11-12T23:33:11.432066",
+  "game_date": "Spring 17, Year 3",
   "unlocks": {
     "community_center": {
       "completed": 30,
@@ -78,20 +78,20 @@
     }
   },
   "financials": {
-    "current_balance": 579527,
-    "daily_average": 4367,
-    "weekly_trend": -0.7018204163146171,
+    "current_balance": 809835,
+    "daily_average": 23474,
+    "weekly_trend": 5.07366811713513,
     "best_day": {
       "amount": 231464,
       "date": "Fall 16, Year 2"
     },
     "sparkline_data": [
-      0.17890983188996434,
-      0.247809475292919,
-      0.4248599083036169,
-      -1.9685175751400916,
-      0.54174732552216,
-      0.4651044319918492,
+      0.04224343053649895,
+      0.07242475293954183,
+      -0.3355680219532105,
+      0.09235024402105008,
+      0.07928513121558955,
+      0.17046737412508467,
       1.0
     ]
   },
@@ -101,7 +101,12 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+2841/session)"
+        "description": "High XP gains (+4057/session)"
+      },
+      {
+        "category": "Money",
+        "icon": "[HOT]",
+        "description": "Strong earnings (+95,942g/session)"
       }
     ],
     "cold_streaks": [
@@ -137,7 +142,7 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+3056/session)"
+        "description": "High XP gains (+4120/session)"
       }
     ],
     "cold_streaks": [
@@ -160,11 +165,6 @@
       }
     ],
     "stalled_areas": [
-      {
-        "category": "Money",
-        "icon": "[STALLED]",
-        "description": "Low income (4,991g/session)"
-      },
       {
         "category": "Museum",
         "icon": "[STALLED]",

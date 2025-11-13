@@ -1,36 +1,36 @@
 {
-  "selected_at": "2025-11-11T22:55:13.008378",
-  "reasoning": "Combat Level 10 COMPLETE! Mastery Cave now unlocked. Focusing on Volcano Dungeon for walnut farming, Golden Walnuts for Qi Room unlock, and Museum Collection approaching completion.",
+  "selected_at": "2025-11-12T23:33:00.000000",
+  "reasoning": "Selected based on goal alignment (goals.md), recent activity (earned 230k gold), and strategic value. Focus on: (1) Mastery Cave (short-term goal, all skills maxed), (2) Golden Walnuts progress toward Qi's Room unlock (medium-term goal), (3) Museum completion for Perfection tracker (long-term goal), (4) Volcano Forge for endgame tools, (5) Cooking for Perfection %.",
   "unlocks": [
-    {
-      "name": "Combat Level 10",
-      "completion_percent": 100,
-      "next_step": "Complete!",
-      "category": "Skills"
-    },
     {
       "name": "Mastery Cave",
       "completion_percent": 100,
-      "next_step": "Complete!",
+      "next_step": "Complete\\!",
       "category": "Progression"
     },
     {
-      "name": "Volcano Dungeon",
-      "completion_percent": 50,
-      "next_step": "Reach Volcano entrance",
-      "category": "Island Features"
-    },
-    {
       "name": "Golden Walnuts (100)",
-      "completion_percent": 0,
-      "next_step": "Find 100 Golden Walnuts",
+      "completion_percent": 40,
+      "next_step": "Find 100 Golden Walnuts (currently 40/100)",
       "category": "Island Features"
     },
     {
       "name": "Museum Collection (95)",
-      "completion_percent": 0,
-      "next_step": "Donate all 95 items to Museum",
+      "completion_percent": 79,
+      "next_step": "Donate all 95 items (currently 75/95)",
       "category": "Progression"
+    },
+    {
+      "name": "Volcano Forge Room",
+      "completion_percent": 0,
+      "next_step": "Reach floor 10 of Volcano Dungeon",
+      "category": "Island Features"
+    },
+    {
+      "name": "Cooking Recipes (All 74)",
+      "completion_percent": 0,
+      "next_step": "Learn all 74 cooking recipes (currently 0/74)",
+      "category": "Collection"
     }
   ]
 }
