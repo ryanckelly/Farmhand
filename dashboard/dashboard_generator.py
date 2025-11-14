@@ -1118,7 +1118,7 @@ class DashboardGenerator:
             diary_data = json.dumps(self.diary)
 
             # Load rollup data if available
-            rollups_path = Path(r'C:\opt\stardew\diary_rollups.json')
+            rollups_path = self.base_path / 'diary_rollups.json'
             if rollups_path.exists():
                 with open(rollups_path, 'r') as f:
                     rollups_data = json.load(f)
