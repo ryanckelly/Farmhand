@@ -188,7 +188,7 @@ def load_bundle_definitions():
 
 ## Next Steps
 
-**Current Status**: All critical issues resolved! System is production-ready.
+**Current Status**: Phase 2 complete! Ready to begin Phase 3.
 
 **Recommended Next Features** (by priority):
 
@@ -197,12 +197,17 @@ def load_bundle_definitions():
    - Show "You have X in storage" messages
    - Suggest bundles that can be completed immediately
 
-2. **Seasonal Alerts** (Phase 4)
+2. **Bundle Progress Visualization** (Phase 3)
+   - ASCII/text-based progress display
+   - Completion percentages
+   - Highlight closest-to-completion bundles
+
+3. **Seasonal Alerts** (Phase 4)
    - Last day to plant seasonal crops
    - Upcoming festivals
    - NPC birthdays this week
 
-3. **XNB Data Extraction** (Phase 4)
+4. **XNB Data Extraction** (Phase 4)
    - Auto-extract bundle definitions from game files
    - Keep definitions current with game patches
    - Support modded bundles automatically

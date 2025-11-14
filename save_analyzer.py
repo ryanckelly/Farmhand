@@ -1225,8 +1225,12 @@ def check_prerequisite(prereq, save_state, all_unlockables_status=None):
     elif method == 'room_complete':
         # Check if Community Center room is complete
         bundles = save_state.get('bundles', {})
-        completed_rooms = bundles.get('completed_rooms', [])
-        return params['room_name'] in completed_rooms
+        flags = bundles.get('bundle_reward_flags', [])
+        # Convert room name to flag format (e.g., "Pantry" -> "ccPantry")
+        room_name = params['room_name']
+        # Remove spaces and add "cc" prefix
+        room_flag = 'cc' + room_name.replace(' ', '')
+        return room_flag in flags
 
     elif method == 'skill_level':
         # Check skill level
@@ -1361,6 +1365,42 @@ def calculate_unlockable_progress(unlock_name, config, save_state, all_unlockabl
             # First incomplete step is the next action
             next_step = prereq['name']
 
+    # Special handling for count-based unlocks (e.g., Golden Walnuts, Museum Collection)
+    # If there's a single prerequisite with a count check, calculate actual progress
+    if len(prerequisites) == 1 and total_steps > 1:
+        prereq = prerequisites[0]
+        method = prereq.get('check_method')
+        params = prereq.get('check_params', {})
+
+        # Count-based methods that support progressive tracking
+        count_methods = {
+            'walnuts_found': ('unlocks', 'golden_walnuts_found'),
+            'museum_count': ('museum', 'total_donated'),
+        }
+
+        if method in count_methods:
+            field_path = count_methods[method]
+            if field_path:
+                current_value = save_state
+                for key in field_path:
+                    current_value = current_value.get(key, 0)
+                target_value = params.get('count', total_steps)
+                completed_steps = min(current_value, target_value)
+                if current_value < target_value:
+                    next_step = f"{prereq['name']} ({current_value}/{target_value})"
+
+        elif method == 'friendships_count':
+            # Special case: count NPCs with min_hearts or more
+            friendships = save_state.get('friendships', {})
+            current_value = sum(
+                1 for npc_data in friendships.values()
+                if npc_data.get('hearts', 0) >= params.get('min_hearts', 8)
+            )
+            target_value = params.get('count', total_steps)
+            completed_steps = min(current_value, target_value)
+            if current_value < target_value:
+                next_step = f"{prereq['name']} ({current_value}/{target_value})"
+
     # Calculate percentage
     completion_percent = int((completed_steps / total_steps) * 100) if total_steps > 0 else 0
 
@@ -1397,11 +1437,12 @@ def get_all_unlockables_status(root):
 
     # Build save state with proper unlock checks
     # Note: Bundle reward flags are stored in mailReceived, not bundleRewards
+    room_state = get_room_completion_state(root)
     save_state = {
         'bundles': {
             'complete_count': len([b for b in root.findall('.//bundlesComplete/boolean') if b.text == 'true']),
             'bundle_reward_flags': mail_received,  # Bundle flags are in mailReceived
-            'completed_rooms': get_room_completion_state(root)
+            'completed_rooms': room_state['completed_rooms']  # Extract just the list
         },
         'unlocks': {
             'skull_key': 'HasSkullKey' in mail_received or get_text(root, './/player/hasSkullKey', 'false') == 'true',

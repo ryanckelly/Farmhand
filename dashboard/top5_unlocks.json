@@ -1,36 +1,36 @@
 {
-  "selected_at": "2025-11-12T23:33:00.000000",
-  "reasoning": "Selected based on goal alignment (goals.md), recent activity (earned 230k gold), and strategic value. Focus on: (1) Mastery Cave (short-term goal, all skills maxed), (2) Golden Walnuts progress toward Qi's Room unlock (medium-term goal), (3) Museum completion for Perfection tracker (long-term goal), (4) Volcano Forge for endgame tools, (5) Cooking for Perfection %.",
+  "selected_at": "2025-11-13T00:00:00Z",
+  "reasoning": "Selected based on goals.md priorities: Golden Walnuts (goal: 100), Museum collection completion (83% - close to reward), Professor Snail unlock (needed for Field Office and Island content), Casino access (QoL unlock), and Secret Woods (basic upgrade still missing)",
   "unlocks": [
     {
-      "name": "Mastery Cave",
-      "completion_percent": 100,
-      "next_step": "Complete\\!",
-      "category": "Progression"
-    },
-    {
       "name": "Golden Walnuts (100)",
-      "completion_percent": 40,
-      "next_step": "Find 100 Golden Walnuts (currently 40/100)",
+      "completion_percent": 48,
+      "next_step": "Find 100 Golden Walnuts (48/100)",
       "category": "Island Features"
     },
     {
       "name": "Museum Collection (95)",
-      "completion_percent": 79,
-      "next_step": "Donate all 95 items (currently 75/95)",
+      "completion_percent": 83,
+      "next_step": "Donate all 95 items to Museum (79/95)",
       "category": "Progression"
     },
     {
-      "name": "Volcano Forge Room",
+      "name": "Professor Snail's Tent",
       "completion_percent": 0,
-      "next_step": "Reach floor 10 of Volcano Dungeon",
+      "next_step": "Free Professor Snail from boulder",
       "category": "Island Features"
     },
     {
-      "name": "Cooking Recipes (All 74)",
+      "name": "Mutant Bug Lair",
+      "completion_percent": 66,
+      "next_step": "Befriend Krobus (2+ hearts)",
+      "category": "Map Access"
+    },
+    {
+      "name": "Casino (Club Card)",
       "completion_percent": 0,
-      "next_step": "Learn all 74 cooking recipes (currently 0/74)",
-      "category": "Collection"
+      "next_step": "Complete 'Mysterious Qi' questline",
+      "category": "Progression"
     }
   ]
 }

@@ -5,12 +5,19 @@ A comprehensive Model Context Protocol (MCP) server that allows Claude to search
 ## What is This?
 
 This MCP server provides two powerful tools for Claude Code:
-1. **`search_wiki`** - Search for pages by keyword
+1. **`search_wiki`** - Search for pages with **intelligent natural language query preprocessing**
 2. **`get_page_data`** - Extract structured data from specific pages
+
+### Smart Search (NEW in Phase 3.7)
+The `search_wiki` tool now includes intelligent query preprocessing that converts natural language queries into optimized search terms:
+- "what does sebastian like" → Finds Sebastian's gift preferences
+- "spring birthdays" → Finds the Calendar page
+- "crops in summer" → Finds Summer Crops page
+- **95.8% query success rate** with automatic fallback strategies
 
 When you ask Claude questions about Stardew Valley, it can now search the wiki, extract structured data (crop growth times, NPC gift preferences, bundle requirements, etc.), and provide accurate answers.
 
-## Current Features (Phase 1 & 2 ✅)
+## Current Features (Phase 1, 2, 3 ✅ Complete)
 
 ### Fully Supported Categories
 
@@ -20,13 +27,17 @@ When you ask Claude questions about Stardew Valley, it can now search the wiki, 
 | **Fish** | Location, time, seasons, weather, difficulty | "Where can I catch a salmon?" |
 | **Bundles** | Required items, quantities | "What do I need for the Spring Crops Bundle?" |
 | **NPCs** | Gift preferences, heart events, marriageable status, address, family, birthday | "What are Sebastian's heart events?" |
-| **Recipes** | Ingredients, buffs, energy/health, unlock source, recipe type | "What ingredients does Algae Soup need?" |
+| **Recipes** | Ingredients, buffs, energy/health, unlock source, recipe type, **processing times & products** (for machines) | "What can I make in a Keg?" |
+| **Skills** | Level progression (1-10), crafting recipes unlocked, profession choices (levels 5 & 10) | "What professions can I choose for Farming?" |
+| **Quests** | Quest name, description, provider, requirements, rewards, timeframe (Story Quests, Special Orders, Qi's Orders) | "What are all the story quests?" |
+| **Achievements** | Achievement name, description/requirements, unlocks (49 achievements total) | "What achievements are there?" |
 | **Animals** | Building required, purchase price, produce | "How much does a cow cost?" |
 | **Items** | Source, sell/purchase prices | "Where do I get hardwood?" |
 | **Monsters** | HP, damage, defense, speed, XP, drops, locations | "What are skeleton stats?" |
+| **Collections** | Item lists (artifacts, minerals) with descriptions, sell prices, locations | "What artifacts can I find?" |
 
 ### Coverage Statistics
-- **8 major categories** with excellent data extraction
+- **12 major categories** with excellent data extraction
 - **461 wiki categories** discovered (167 content categories)
 - **2,003 content pages** in the wiki
 - **Automatic page type detection** (crops, fish, NPCs, bundles, recipes, etc.)
@@ -229,14 +240,15 @@ See `roadmap.md` for the complete development plan.
 - [x] Standardized monster parser (integer stats conversion)
 - [ ] Skills & professions parser (deferred to Phase 3)
 
-### Phase 3 (Next - Medium Priority)
-- [ ] Skills & professions parser (deferred from Phase 2)
-- [ ] Quest parser (requirements, rewards)
-- [ ] Achievement tracker
-- [ ] Collections parser (museum, fishing, cooking)
-- [ ] Building enhancements
-- [ ] Location shop inventory
-- [ ] **Comprehensive parser QA testing** (adversarial test cases, edge cases, final validation)
+### Phase 3 (Complete ✅)
+- [x] Skills & professions parser (5 skills with profession trees)
+- [x] Quest parser (82 quests: Story, Special Orders, Qi)
+- [x] Achievement tracker (49 achievements)
+- [x] Collections parser (Artifacts, Minerals)
+- [x] Building enhancements (Processing machines with products/times)
+- [x] **Comprehensive parser QA testing** (94.7% pass rate, 36/38 tests)
+- [ ] Location shop inventory (deferred to Phase 4)
+- [ ] Search query preprocessing (optional enhancement)
 
 ### Phase 4 (Production Ready)
 - [ ] Comprehensive error handling

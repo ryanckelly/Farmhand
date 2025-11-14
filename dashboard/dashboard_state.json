@@ -1,16 +1,16 @@
 {
-  "generated_at": "2025-11-12T23:33:11.432066",
-  "game_date": "Spring 17, Year 3",
+  "generated_at": "2025-11-13T22:37:26.896597",
+  "game_date": "Spring 23, Year 3",
   "unlocks": {
     "community_center": {
-      "completed": 30,
+      "completed": 31,
       "total": 30,
-      "percent": 1.0
+      "percent": 1.0333333333333334
     },
     "museum": {
-      "donated": 75,
+      "donated": 79,
       "total": 95,
-      "percent": 0.7894736842105263
+      "percent": 0.8315789473684211
     },
     "cooking": {
       "known": 0,
@@ -28,9 +28,9 @@
       "percent": 1.0
     },
     "golden_walnuts": {
-      "found": 40,
+      "found": 48,
       "total": 130,
-      "percent": 0.3076923076923077
+      "percent": 0.36923076923076925
     },
     "skull_cavern_depth": {
       "deepest": 125,
@@ -38,7 +38,7 @@
       "milestone_200": false
     },
     "perfection": {
-      "overall_percent": 32.7,
+      "overall_percent": 32.9,
       "obelisks": {
         "count": 0,
         "total": 4,
@@ -51,7 +51,7 @@
       },
       "golden_clock": false,
       "produce_shipped": {
-        "count": 152,
+        "count": 154,
         "total": 154
       },
       "fish_caught": {
@@ -63,7 +63,7 @@
         "total": 81
       },
       "recipes_crafted": {
-        "count": 53,
+        "count": 54,
         "total": 149
       },
       "stardrops_found": {
@@ -78,21 +78,21 @@
     }
   },
   "financials": {
-    "current_balance": 809835,
-    "daily_average": 23474,
-    "weekly_trend": 5.07366811713513,
+    "current_balance": 987168,
+    "daily_average": 37417,
+    "weekly_trend": -21.242613399916774,
     "best_day": {
       "amount": 231464,
       "date": "Fall 16, Year 2"
     },
     "sparkline_data": [
-      0.04224343053649895,
-      0.07242475293954183,
-      -0.3355680219532105,
       0.09235024402105008,
       0.07928513121558955,
       0.17046737412508467,
-      1.0
+      1.0,
+      0.09991402817097104,
+      0.1896764332980183,
+      0.48039147576289143
     ]
   },
   "momentum_3session": {
@@ -101,31 +101,20 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+4057/session)"
+        "description": "High XP gains (+3763/session)"
       },
       {
         "category": "Money",
         "icon": "[HOT]",
-        "description": "Strong earnings (+95,942g/session)"
+        "description": "Strong earnings (+59,111g/session)"
       }
     ],
-    "cold_streaks": [
-      {
-        "category": "Bundles",
-        "icon": "[COLD]",
-        "description": "No bundle progress in 3 sessions"
-      },
-      {
-        "category": "Social",
-        "icon": "[COLD]",
-        "description": "No relationship progress"
-      }
-    ],
+    "cold_streaks": [],
     "rising_trends": [
       {
-        "category": "Combat",
+        "category": "Bundles",
         "icon": "[RISING]",
-        "description": "Combat leveling up (gained 1 levels)"
+        "description": "Bundle momentum building (0->1)"
       }
     ],
     "stalled_areas": [
@@ -142,15 +131,15 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+4120/session)"
+        "description": "High XP gains (+3935/session)"
+      },
+      {
+        "category": "Money",
+        "icon": "[HOT]",
+        "description": "Strong earnings (+69,490g/session)"
       }
     ],
     "cold_streaks": [
-      {
-        "category": "Bundles",
-        "icon": "[COLD]",
-        "description": "No bundle progress in 7 sessions"
-      },
       {
         "category": "Social",
         "icon": "[COLD]",
@@ -158,6 +147,11 @@
       }
     ],
     "rising_trends": [
+      {
+        "category": "Bundles",
+        "icon": "[RISING]",
+        "description": "Bundle momentum building (0->1)"
+      },
       {
         "category": "Combat",
         "icon": "[RISING]",
