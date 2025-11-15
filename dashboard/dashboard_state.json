@@ -1,6 +1,6 @@
 {
-  "generated_at": "2025-11-15T12:50:00.433539",
-  "game_date": "Spring 25, Year 3",
+  "generated_at": "2025-11-15T13:07:03.450701",
+  "game_date": "Spring 26, Year 3",
   "unlocks": {
     "community_center": {
       "completed": 31,
@@ -78,21 +78,21 @@
     }
   },
   "financials": {
-    "current_balance": 1397206,
-    "daily_average": 65918,
-    "weekly_trend": 15.193102796674225,
+    "current_balance": 1454099,
+    "daily_average": 67274,
+    "weekly_trend": 24.032114030568437,
     "best_day": {
       "amount": 357539,
       "date": "Spring 24, Year 3"
     },
     "sparkline_data": [
-      0.10980620295967712,
       0.6441479111369669,
       0.06435941253961107,
       0.12217967830082872,
       0.30944316564067137,
       1.0,
-      0.14683433135965587
+      0.14683433135965587,
+      0.1591238997703747
     ]
   },
   "momentum_3session": {
@@ -101,16 +101,33 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+5891/session)"
+        "description": "High XP gains (+4769/session)"
       },
       {
         "category": "Money",
         "icon": "[HOT]",
-        "description": "Strong earnings (+173,558g/session)"
+        "description": "Strong earnings (+155,643g/session)"
       }
     ],
-    "cold_streaks": [],
-    "rising_trends": [],
+    "cold_streaks": [
+      {
+        "category": "Bundles",
+        "icon": "[COLD]",
+        "description": "No bundle progress in 3 sessions"
+      },
+      {
+        "category": "Social",
+        "icon": "[COLD]",
+        "description": "No relationship progress"
+      }
+    ],
+    "rising_trends": [
+      {
+        "category": "Friendship",
+        "icon": "[RISING]",
+        "description": "Abigail (14 hearts)"
+      }
+    ],
     "stalled_areas": [
       {
         "category": "Museum",
@@ -125,12 +142,12 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+4681/session)"
+        "description": "High XP gains (+4761/session)"
       },
       {
         "category": "Money",
         "icon": "[HOT]",
-        "description": "Strong earnings (+122,419g/session)"
+        "description": "Strong earnings (+124,938g/session)"
       }
     ],
     "cold_streaks": [
@@ -145,6 +162,11 @@
         "category": "Bundles",
         "icon": "[RISING]",
         "description": "Bundle momentum building (0->1)"
+      },
+      {
+        "category": "Friendship",
+        "icon": "[RISING]",
+        "description": "Abigail (14 hearts)"
       }
     ],
     "stalled_areas": [
