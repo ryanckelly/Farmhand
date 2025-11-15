@@ -1,6 +1,6 @@
 {
-  "generated_at": "2025-11-15T13:25:53.235353",
-  "game_date": "Spring 27, Year 3",
+  "generated_at": "2025-11-15T19:51:06.056949",
+  "game_date": "Summer 2, Year 3",
   "unlocks": {
     "community_center": {
       "completed": 31,
@@ -28,9 +28,9 @@
       "percent": 1.0
     },
     "golden_walnuts": {
-      "found": 51,
+      "found": 52,
       "total": 130,
-      "percent": 0.3923076923076923
+      "percent": 0.4
     },
     "skull_cavern_depth": {
       "deepest": 125,
@@ -38,7 +38,7 @@
       "milestone_200": false
     },
     "perfection": {
-      "overall_percent": 33.0,
+      "overall_percent": 33.1,
       "obelisks": {
         "count": 0,
         "total": 4,
@@ -51,7 +51,7 @@
       },
       "golden_clock": false,
       "produce_shipped": {
-        "count": 155,
+        "count": 156,
         "total": 154
       },
       "fish_caught": {
@@ -78,21 +78,21 @@
     }
   },
   "financials": {
-    "current_balance": 1507137,
-    "daily_average": 69730,
-    "weekly_trend": 1.700397332527825,
+    "current_balance": 1588777,
+    "daily_average": 64749,
+    "weekly_trend": 1.3860231551583209,
     "best_day": {
       "amount": 357539,
       "date": "Spring 24, Year 3"
     },
     "sparkline_data": [
-      0.06435941253961107,
-      0.12217967830082872,
       0.30944316564067137,
       1.0,
       0.14683433135965587,
       0.1591238997703747,
-      0.14834185920976453
+      0.14834185920976453,
+      0.17073102514690705,
+      0.057607701537454654
     ]
   },
   "momentum_3session": {
@@ -101,12 +101,12 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+2464/session)"
+        "description": "High XP gains (+2625/session)"
       },
       {
         "category": "Money",
         "icon": "[HOT]",
-        "description": "Strong earnings (+54,143g/session)"
+        "description": "Strong earnings (+44,892g/session)"
       }
     ],
     "cold_streaks": [
@@ -121,13 +121,7 @@
         "description": "No relationship progress"
       }
     ],
-    "rising_trends": [
-      {
-        "category": "Friendship",
-        "icon": "[RISING]",
-        "description": "Abigail (14 hearts)"
-      }
-    ],
+    "rising_trends": [],
     "stalled_areas": [
       {
         "category": "Museum",
@@ -142,12 +136,12 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+4159/session)"
+        "description": "High XP gains (+4145/session)"
       },
       {
         "category": "Money",
         "icon": "[HOT]",
-        "description": "Strong earnings (+99,614g/session)"
+        "description": "Strong earnings (+101,749g/session)"
       }
     ],
     "cold_streaks": [
