@@ -2,9 +2,9 @@
 
 ## Short-term Goals (This Season - Spring Year 3)
 - [ ] Visit Mastery Cave and unlock first mastery (all 5 skills now maxed!)
-- [ ] Reach 50 Golden Walnuts (currently 40/130 found)
+- [ ] Reach 50 Golden Walnuts (currently 48/130 found - 2 away!)
 - [ ] Complete The Missing Bundle (need 5 Gold Ancient Fruit)
-- [ ] Get 3+ NPCs to 8 hearts for recipes/events
+- [ ] Get 3+ NPCs to 8 hearts for recipes/events (currently 1/32)
 
 ## Medium-term Goals (This Year - Year 3)
 - [ ] Max out greenhouse with Ancient Fruit
@@ -14,10 +14,10 @@
 - [ ] Unlock Ginger Island farm (requires spending walnuts on various island unlocks)
 
 ## Long-term Goals (Ultimate Objectives)
-- [ ] Achieve Perfection rating (currently 32.7%, up from 32.4%)
-- [ ] Reach 10 million lifetime earnings (currently 3.1M)
+- [ ] Achieve Perfection rating (currently 32.9%, up from 32.7%)
+- [ ] Reach 10 million lifetime earnings (currently 3.9M)
 - [ ] Complete all achievements and collections
-- [ ] Ship all 154 produce types (currently 152/154 - 98% complete!)
+- [x] Ship all 154 produce types (154/154 - 100% complete!) ✓
 - [x] Find all Dwarf Scrolls (all 4 found - can trade with Dwarf)
 
 ## Completed Goals
@@ -40,6 +40,7 @@
 - [x] Switch to Botanist profession (iridium truffles)
 - [x] Establish passive income ~10,000g/day
 - [x] Unlock Ginger Island (repair Willy's boat) - completed Fall 26, Year 2
+- [x] Ship all 154 produce types (100% complete) - completed Spring 23, Year 3
 
 ---
 
@@ -52,4 +53,4 @@
 - Update this file as you complete goals or add new ones
 - Goals should be strategic objectives, not tactical tasks
 - Claude will convert these into specific daily recommendations
-- Last updated: Spring 13, Year 3 (3.1M lifetime earnings, 5/5 skills maxed, 579k gold balance)
+- Last updated: Spring 23, Year 3 (3.9M lifetime earnings, 5/5 skills maxed, 987k gold balance, 32.9% perfection)

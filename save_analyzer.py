@@ -76,6 +76,14 @@ def analyze_save():
         # Get mail flags for more reliable unlock detection
         mail_received = [m.text for m in root.findall('.//player/mailReceived/string') if m.text]
 
+        # Parse location visit tracking from previousActiveDialogueEvents
+        # This tracks things like volcano floor visits
+        dialogue_events = []
+        for item in root.findall('.//previousActiveDialogueEvents/item'):
+            key_elem = item.find('key/string')
+            if key_elem is not None and key_elem.text:
+                dialogue_events.append(key_elem.text)
+
         deepest_level = int(get_text(root, './/player/deepestMineLevel', 0))
         state['unlocks'] = {
             'skull_key': 'HasSkullKey' in mail_received or get_text(root, './/player/hasSkullKey', 'false') == 'true',
@@ -93,7 +101,8 @@ def analyze_save():
             'deepest_mine_level': deepest_level,
             'mines_completed': deepest_level >= 120,
             'skull_cavern_level': max(0, deepest_level - 120) if deepest_level > 120 else 0,
-            'can_read_junimo_text': get_text(root, './/player/canReadJunimoText', 'false') == 'true'
+            'can_read_junimo_text': get_text(root, './/player/canReadJunimoText', 'false') == 'true',
+            'dialogue_events': dialogue_events
         }
 
         # Animals - only count animals that are in buildings on the farm
@@ -1293,7 +1302,18 @@ def check_prerequisite(prereq, save_state, all_unlockables_status=None):
     elif method == 'deepest_floor':
         # Check deepest floor reached in a location
         if params['location'] == 'VolcanoDungeon':
-            # Placeholder - would need to parse volcano depth
+            # Volcano floors are tracked as firstVisit_VolcanoDungeon0 through firstVisit_VolcanoDungeon9
+            # Floor 10 (the forge) is at index 9 (zero-indexed)
+            required_floor = params.get('floor', 10)
+            # Convert floor number to zero-indexed (floor 10 = index 9)
+            floor_index = required_floor - 1
+
+            # Check if the player has visited this floor or higher
+            dialogue_events = save_state.get('unlocks', {}).get('dialogue_events', [])
+            for floor_idx in range(floor_index, 10):  # Check from required floor to max floor (9)
+                visit_key = f'firstVisit_VolcanoDungeon{floor_idx}'
+                if visit_key in dialogue_events:
+                    return True
             return False
         return False
 
@@ -1435,6 +1455,13 @@ def get_all_unlockables_status(root):
     # Get mail received (used for unlock checks)
     mail_received = [mail.text for mail in root.findall('.//mailReceived/string')]
 
+    # Parse location visit tracking from previousActiveDialogueEvents
+    dialogue_events = []
+    for item in root.findall('.//previousActiveDialogueEvents/item'):
+        key_elem = item.find('key/string')
+        if key_elem is not None and key_elem.text:
+            dialogue_events.append(key_elem.text)
+
     # Build save state with proper unlock checks
     # Note: Bundle reward flags are stored in mailReceived, not bundleRewards
     room_state = get_room_completion_state(root)
@@ -1456,7 +1483,8 @@ def get_all_unlockables_status(root):
             'can_read_junimo_text': get_text(root, './/player/canReadJunimoText', 'false') == 'true',
             'boat_to_island_fixed': 'willyBoatFixed' in mail_received or get_text(root, './/boatFixed', 'false') == 'true',
             'golden_walnuts_found': int(get_text(root, './/goldenWalnutsFound', '0')),
-            'golden_walnuts': int(get_text(root, './/goldenWalnuts', '0'))
+            'golden_walnuts': int(get_text(root, './/goldenWalnuts', '0')),
+            'dialogue_events': dialogue_events
         },
         'skills': {
             'farming': {'level': int(get_text(root, './/player/farmingLevel', '0'))},

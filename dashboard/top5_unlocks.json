@@ -1,6 +1,6 @@
 {
-  "selected_at": "2025-11-13T00:00:00Z",
-  "reasoning": "Selected based on goals.md priorities: Golden Walnuts (goal: 100), Museum collection completion (83% - close to reward), Professor Snail unlock (needed for Field Office and Island content), Casino access (QoL unlock), and Secret Woods (basic upgrade still missing)",
+  "selected_at": "2025-11-15T00:00:00",
+  "reasoning": "Selected based on goals.md alignment, completion proximity, and strategic value. Prioritized Golden Walnuts (only 2 away from 50 target), Museum Collection (nearly complete at 83%), Volcano Forge (island progression), and two key social/island unlocks that create dependency chains for endgame content.",
   "unlocks": [
     {
       "name": "Golden Walnuts (100)",
@@ -15,21 +15,21 @@
       "category": "Progression"
     },
     {
-      "name": "Professor Snail's Tent",
-      "completion_percent": 0,
-      "next_step": "Free Professor Snail from boulder",
+      "name": "Volcano Forge Room",
+      "completion_percent": 100,
+      "next_step": "Complete!",
       "category": "Island Features"
     },
     {
-      "name": "Mutant Bug Lair",
-      "completion_percent": 66,
-      "next_step": "Befriend Krobus (2+ hearts)",
-      "category": "Map Access"
+      "name": "Friendships (8+ Hearts)",
+      "completion_percent": 0,
+      "next_step": "Reach 8+ hearts with all 32 NPCs (0/32)",
+      "category": "Social"
     },
     {
-      "name": "Casino (Club Card)",
+      "name": "Leo's Return to Town",
       "completion_percent": 0,
-      "next_step": "Complete 'Mysterious Qi' questline",
+      "next_step": "Befriend Leo (6+ hearts)",
       "category": "Progression"
     }
   ]
