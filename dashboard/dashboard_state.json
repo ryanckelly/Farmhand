@@ -1,6 +1,6 @@
 {
-  "generated_at": "2025-11-15T12:22:40.460580",
-  "game_date": "Spring 23, Year 3",
+  "generated_at": "2025-11-15T12:50:00.433539",
+  "game_date": "Spring 25, Year 3",
   "unlocks": {
     "community_center": {
       "completed": 31,
@@ -38,7 +38,7 @@
       "milestone_200": false
     },
     "perfection": {
-      "overall_percent": 32.9,
+      "overall_percent": 33.0,
       "obelisks": {
         "count": 0,
         "total": 4,
@@ -51,7 +51,7 @@
       },
       "golden_clock": false,
       "produce_shipped": {
-        "count": 154,
+        "count": 155,
         "total": 154
       },
       "fish_caught": {
@@ -78,21 +78,21 @@
     }
   },
   "financials": {
-    "current_balance": 987168,
-    "daily_average": 37417,
-    "weekly_trend": -21.242613399916774,
+    "current_balance": 1397206,
+    "daily_average": 65918,
+    "weekly_trend": 15.193102796674225,
     "best_day": {
-      "amount": 231464,
-      "date": "Fall 16, Year 2"
+      "amount": 357539,
+      "date": "Spring 24, Year 3"
     },
     "sparkline_data": [
-      0.09235024402105008,
-      0.07928513121558955,
-      0.17046737412508467,
+      0.10980620295967712,
+      0.6441479111369669,
+      0.06435941253961107,
+      0.12217967830082872,
+      0.30944316564067137,
       1.0,
-      0.09991402817097104,
-      0.1896764332980183,
-      0.48039147576289143
+      0.14683433135965587
     ]
   },
   "momentum_3session": {
@@ -101,22 +101,16 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+3763/session)"
+        "description": "High XP gains (+5891/session)"
       },
       {
         "category": "Money",
         "icon": "[HOT]",
-        "description": "Strong earnings (+59,111g/session)"
+        "description": "Strong earnings (+173,558g/session)"
       }
     ],
     "cold_streaks": [],
-    "rising_trends": [
-      {
-        "category": "Bundles",
-        "icon": "[RISING]",
-        "description": "Bundle momentum building (0->1)"
-      }
-    ],
+    "rising_trends": [],
     "stalled_areas": [
       {
         "category": "Museum",
@@ -131,12 +125,12 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+3935/session)"
+        "description": "High XP gains (+4681/session)"
       },
       {
         "category": "Money",
         "icon": "[HOT]",
-        "description": "Strong earnings (+69,490g/session)"
+        "description": "Strong earnings (+122,419g/session)"
       }
     ],
     "cold_streaks": [
@@ -151,11 +145,6 @@
         "category": "Bundles",
         "icon": "[RISING]",
         "description": "Bundle momentum building (0->1)"
-      },
-      {
-        "category": "Combat",
-        "icon": "[RISING]",
-        "description": "Combat leveling up (gained 1 levels)"
       }
     ],
     "stalled_areas": [

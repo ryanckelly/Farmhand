@@ -1,6 +1,6 @@
 {
-  "selected_at": "2025-11-15T00:00:00",
-  "reasoning": "Selected based on goals.md alignment, completion proximity, and strategic value. Prioritized Golden Walnuts (only 2 away from 50 target), Museum Collection (nearly complete at 83%), Volcano Forge (island progression), and two key social/island unlocks that create dependency chains for endgame content.",
+  "selected_at": "2025-11-15T13:00:00",
+  "reasoning": "Selected based on goals.md priorities and completion proximity. Prioritized Golden Walnuts (2 away from 50 goal!), Museum Collection (83%, near Stardrop), Mutant Bug Lair (66%, blocks Witch's Swamp), and two strategic progression unlocks for island content and social goals.",
   "unlocks": [
     {
       "name": "Golden Walnuts (100)",
@@ -15,9 +15,15 @@
       "category": "Progression"
     },
     {
-      "name": "Volcano Forge Room",
-      "completion_percent": 100,
-      "next_step": "Complete!",
+      "name": "Mutant Bug Lair",
+      "completion_percent": 66,
+      "next_step": "Befriend Krobus (2+ hearts)",
+      "category": "Map Access"
+    },
+    {
+      "name": "Volcano Dungeon",
+      "completion_percent": 50,
+      "next_step": "Reach Volcano entrance",
       "category": "Island Features"
     },
     {
@@ -25,12 +31,6 @@
       "completion_percent": 0,
       "next_step": "Reach 8+ hearts with all 32 NPCs (0/32)",
       "category": "Social"
-    },
-    {
-      "name": "Leo's Return to Town",
-      "completion_percent": 0,
-      "next_step": "Befriend Leo (6+ hearts)",
-      "category": "Progression"
     }
   ]
 }
