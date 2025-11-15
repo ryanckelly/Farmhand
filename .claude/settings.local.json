@@ -94,9 +94,22 @@
       "Bash(git commit:*)",
       "Bash(git push)",
       "Bash(cmd /c:*)",
-      "mcp__playwright__browser_select_option"
+      "mcp__playwright__browser_select_option",
+      "WebFetch(domain:www.mediawiki.org)",
+      "mcp__stardew-wiki__search_wiki",
+      "Bash(=4.12.0 lxml)",
+      "Bash(=4.9.0)",
+      "mcp__stardew-wiki__get_page_data",
+      "Bash(curl:*)",
+      "Bash(temp_output.txt)",
+      "Bash(temp_unlocks.json)",
+      "Bash(git rm:*)"
     ],
     "deny": [],
     "ask": []
-  }
+  },
+  "enabledMcpjsonServers": [
+    "playwright",
+    "stardew-wiki"
+  ]
 }
