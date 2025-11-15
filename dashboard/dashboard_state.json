@@ -1,6 +1,6 @@
 {
-  "generated_at": "2025-11-15T13:07:03.450701",
-  "game_date": "Spring 26, Year 3",
+  "generated_at": "2025-11-15T13:25:53.235353",
+  "game_date": "Spring 27, Year 3",
   "unlocks": {
     "community_center": {
       "completed": 31,
@@ -28,9 +28,9 @@
       "percent": 1.0
     },
     "golden_walnuts": {
-      "found": 48,
+      "found": 51,
       "total": 130,
-      "percent": 0.36923076923076925
+      "percent": 0.3923076923076923
     },
     "skull_cavern_depth": {
       "deepest": 125,
@@ -78,21 +78,21 @@
     }
   },
   "financials": {
-    "current_balance": 1454099,
-    "daily_average": 67274,
-    "weekly_trend": 24.032114030568437,
+    "current_balance": 1507137,
+    "daily_average": 69730,
+    "weekly_trend": 1.700397332527825,
     "best_day": {
       "amount": 357539,
       "date": "Spring 24, Year 3"
     },
     "sparkline_data": [
-      0.6441479111369669,
       0.06435941253961107,
       0.12217967830082872,
       0.30944316564067137,
       1.0,
       0.14683433135965587,
-      0.1591238997703747
+      0.1591238997703747,
+      0.14834185920976453
     ]
   },
   "momentum_3session": {
@@ -101,12 +101,12 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+4769/session)"
+        "description": "High XP gains (+2464/session)"
       },
       {
         "category": "Money",
         "icon": "[HOT]",
-        "description": "Strong earnings (+155,643g/session)"
+        "description": "Strong earnings (+54,143g/session)"
       }
     ],
     "cold_streaks": [
@@ -142,12 +142,12 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+4761/session)"
+        "description": "High XP gains (+4159/session)"
       },
       {
         "category": "Money",
         "icon": "[HOT]",
-        "description": "Strong earnings (+124,938g/session)"
+        "description": "Strong earnings (+99,614g/session)"
       }
     ],
     "cold_streaks": [
@@ -158,11 +158,6 @@
       }
     ],
     "rising_trends": [
-      {
-        "category": "Bundles",
-        "icon": "[RISING]",
-        "description": "Bundle momentum building (0->1)"
-      },
       {
         "category": "Friendship",
         "icon": "[RISING]",

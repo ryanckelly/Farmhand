@@ -1,11 +1,11 @@
 {
-  "selected_at": "2025-11-15T13:15:00",
-  "reasoning": "Selected based on goals.md priorities and completion proximity. Prioritized Golden Walnuts (2 away from 50 goal), Museum Collection (83%, near Stardrop), Mutant Bug Lair (66%, blocks Witch's Swamp), Volcano Dungeon (50%, island progression), and social goals alignment.",
+  "selected_at": "2025-11-15T13:30:00",
+  "reasoning": "Selected based on goals.md priorities and current progress. Prioritized Golden Walnuts (51, just passed 50 goal!), Museum Collection (83%, near Stardrop), Mutant Bug Lair (66%, blocks Witch's Swamp), Professor Snail (0%, easy quick-win), and Qi's Walnut Room (51%, future goal at 100).",
   "unlocks": [
     {
       "name": "Golden Walnuts (100)",
-      "completion_percent": 48,
-      "next_step": "Find 100 Golden Walnuts (48/100)",
+      "completion_percent": 51,
+      "next_step": "Find 100 Golden Walnuts (51/100)",
       "category": "Island Features"
     },
     {
@@ -21,16 +21,16 @@
       "category": "Map Access"
     },
     {
-      "name": "Volcano Dungeon",
-      "completion_percent": 50,
-      "next_step": "Reach Volcano entrance",
+      "name": "Professor Snail's Tent",
+      "completion_percent": 0,
+      "next_step": "Free Professor Snail from boulder",
       "category": "Island Features"
     },
     {
-      "name": "Friendships (8+ Hearts)",
-      "completion_percent": 0,
-      "next_step": "Reach 8+ hearts with all 32 NPCs (0/32)",
-      "category": "Social"
+      "name": "Qi's Walnut Room",
+      "completion_percent": 51,
+      "next_step": "Collect 100 Golden Walnuts",
+      "category": "Island Features"
     }
   ]
 }
