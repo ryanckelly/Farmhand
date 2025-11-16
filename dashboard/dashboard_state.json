@@ -1,6 +1,6 @@
 {
-  "generated_at": "2025-11-16T16:48:29.597253",
-  "game_date": "Summer 11, Year 3",
+  "generated_at": "2025-11-16T17:12:31.221088",
+  "game_date": "Summer 12, Year 3",
   "unlocks": {
     "community_center": {
       "completed": 31,
@@ -79,21 +79,21 @@
     }
   },
   "financials": {
-    "current_balance": 1993572,
-    "daily_average": 42597,
-    "weekly_trend": -0.30407415230255597,
+    "current_balance": 2074109,
+    "daily_average": 44286,
+    "weekly_trend": -0.2910703749948546,
     "best_day": {
       "amount": 357539,
       "date": "Spring 24, Year 3"
     },
     "sparkline_data": [
-      0.17884412869559752,
       0.16672586957546798,
       0.19188972541376545,
       0.0647470254467724,
       0.19321314618927118,
       0.0792669317699574,
-      1.0
+      1.0,
+      0.2531694512990585
     ]
   },
   "momentum_3session": {
@@ -102,12 +102,17 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+14851/session)"
+        "description": "High XP gains (+5183/session)"
       },
       {
         "category": "Money",
         "icon": "[HOT]",
-        "description": "Strong earnings (+134,931g/session)"
+        "description": "Strong earnings (+141,289g/session)"
+      },
+      {
+        "category": "Social",
+        "icon": "[HOT]",
+        "description": "Strong relationships (+382 pts/session)"
       }
     ],
     "cold_streaks": [
@@ -115,11 +120,6 @@
         "category": "Bundles",
         "icon": "[COLD]",
         "description": "No bundle progress in 3 sessions"
-      },
-      {
-        "category": "Social",
-        "icon": "[COLD]",
-        "description": "No relationship progress"
       }
     ],
     "rising_trends": [],
@@ -137,12 +137,12 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+7984/session)"
+        "description": "High XP gains (+7704/session)"
       },
       {
         "category": "Money",
         "icon": "[HOT]",
-        "description": "Strong earnings (+85,195g/session)"
+        "description": "Strong earnings (+88,572g/session)"
       }
     ],
     "cold_streaks": [
@@ -150,20 +150,9 @@
         "category": "Bundles",
         "icon": "[COLD]",
         "description": "No bundle progress in 7 sessions"
-      },
-      {
-        "category": "Social",
-        "icon": "[COLD]",
-        "description": "No relationship progress"
       }
     ],
-    "rising_trends": [
-      {
-        "category": "Friendship",
-        "icon": "[RISING]",
-        "description": "Abigail (14 hearts)"
-      }
-    ],
+    "rising_trends": [],
     "stalled_areas": [
       {
         "category": "Museum",
