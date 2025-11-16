@@ -1,6 +1,6 @@
 {
-  "generated_at": "2025-11-15T20:08:00.570090",
-  "game_date": "Summer 2, Year 3",
+  "generated_at": "2025-11-16T13:15:09.764388",
+  "game_date": "Summer 9, Year 3",
   "unlocks": {
     "community_center": {
       "completed": 31,
@@ -28,17 +28,17 @@
       "percent": 1.0
     },
     "golden_walnuts": {
-      "found": 52,
+      "found": 57,
       "total": 130,
-      "percent": 0.4
+      "percent": 0.43846153846153846
     },
     "skull_cavern_depth": {
-      "deepest": 125,
+      "deepest": 135,
       "milestone_100": true,
       "milestone_200": false
     },
     "perfection": {
-      "overall_percent": 17.9,
+      "overall_percent": 18.1,
       "obelisks": {
         "count": 0,
         "total": 4,
@@ -53,8 +53,7 @@
       "produce_shipped": {
         "count": 0,
         "total": 145,
-        "complete": false,
-        "note": "Check Collections tab in-game for actual progress"
+        "complete": false
       },
       "fish_caught": {
         "count": 49,
@@ -65,7 +64,7 @@
         "total": 81
       },
       "recipes_crafted": {
-        "count": 54,
+        "count": 56,
         "total": 149
       },
       "stardrops_found": {
@@ -80,21 +79,21 @@
     }
   },
   "financials": {
-    "current_balance": 1588777,
-    "daily_average": 64749,
-    "weekly_trend": 1.3860231551583209,
+    "current_balance": 1650241,
+    "daily_average": 47362,
+    "weekly_trend": 0.3631416647821887,
     "best_day": {
       "amount": 357539,
       "date": "Spring 24, Year 3"
     },
     "sparkline_data": [
-      0.30944316564067137,
       1.0,
       0.14683433135965587,
       0.1591238997703747,
       0.14834185920976453,
       0.17073102514690705,
-      0.057607701537454654
+      0.057607701537454654,
+      0.17190851907064683
     ]
   },
   "momentum_3session": {
@@ -103,12 +102,12 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+2625/session)"
+        "description": "High XP gains (+11622/session)"
       },
       {
         "category": "Money",
         "icon": "[HOT]",
-        "description": "Strong earnings (+44,892g/session)"
+        "description": "Strong earnings (+47,701g/session)"
       }
     ],
     "cold_streaks": [
@@ -138,15 +137,20 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+4145/session)"
+        "description": "High XP gains (+7527/session)"
       },
       {
         "category": "Money",
         "icon": "[HOT]",
-        "description": "Strong earnings (+101,749g/session)"
+        "description": "Strong earnings (+94,724g/session)"
       }
     ],
     "cold_streaks": [
+      {
+        "category": "Bundles",
+        "icon": "[COLD]",
+        "description": "No bundle progress in 7 sessions"
+      },
       {
         "category": "Social",
         "icon": "[COLD]",
