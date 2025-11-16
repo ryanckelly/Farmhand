@@ -1,6 +1,6 @@
 {
-  "generated_at": "2025-11-16T17:34:32.836165",
-  "game_date": "Summer 13, Year 3",
+  "generated_at": "2025-11-16T17:49:34.450378",
+  "game_date": "Summer 14, Year 3",
   "unlocks": {
     "community_center": {
       "completed": 31,
@@ -79,21 +79,21 @@
     }
   },
   "financials": {
-    "current_balance": 2142143,
-    "daily_average": 45357,
-    "weekly_trend": -0.08933862228991177,
+    "current_balance": 1803332,
+    "daily_average": 18088,
+    "weekly_trend": -0.6802106253756797,
     "best_day": {
       "amount": 357539,
       "date": "Spring 24, Year 3"
     },
     "sparkline_data": [
-      0.19188972541376545,
       0.0647470254467724,
       0.19321314618927118,
       0.0792669317699574,
       1.0,
       0.2531694512990585,
-      0.21386605472863587
+      0.21386605472863587,
+      -1.0650582336576395
     ]
   },
   "momentum_3session": {
@@ -102,17 +102,12 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+4859/session)"
-      },
-      {
-        "category": "Money",
-        "icon": "[HOT]",
-        "description": "Strong earnings (+155,562g/session)"
+        "description": "High XP gains (+1567/session)"
       },
       {
         "category": "Social",
         "icon": "[HOT]",
-        "description": "Strong relationships (+389 pts/session)"
+        "description": "Strong relationships (+390 pts/session)"
       }
     ],
     "cold_streaks": [
@@ -120,6 +115,11 @@
         "category": "Bundles",
         "icon": "[COLD]",
         "description": "No bundle progress in 3 sessions"
+      },
+      {
+        "category": "Money",
+        "icon": "[COLD]",
+        "description": "Net losses (-63,413g/session)"
       }
     ],
     "rising_trends": [],
@@ -137,12 +137,7 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+7606/session)"
-      },
-      {
-        "category": "Money",
-        "icon": "[HOT]",
-        "description": "Strong earnings (+90,715g/session)"
+        "description": "High XP gains (+7191/session)"
       }
     ],
     "cold_streaks": [
