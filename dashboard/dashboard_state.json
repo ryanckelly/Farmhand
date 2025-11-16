@@ -1,6 +1,6 @@
 {
-  "generated_at": "2025-11-16T13:15:09.764388",
-  "game_date": "Summer 9, Year 3",
+  "generated_at": "2025-11-16T16:30:27.906878",
+  "game_date": "Summer 10, Year 3",
   "unlocks": {
     "community_center": {
       "completed": 31,
@@ -28,9 +28,9 @@
       "percent": 1.0
     },
     "golden_walnuts": {
-      "found": 57,
+      "found": 58,
       "total": 130,
-      "percent": 0.43846153846153846
+      "percent": 0.4461538461538462
     },
     "skull_cavern_depth": {
       "deepest": 135,
@@ -79,21 +79,21 @@
     }
   },
   "financials": {
-    "current_balance": 1650241,
-    "daily_average": 47362,
-    "weekly_trend": 0.3631416647821887,
+    "current_balance": 1675457,
+    "daily_average": 23625,
+    "weekly_trend": -0.5979700984563024,
     "best_day": {
       "amount": 357539,
       "date": "Spring 24, Year 3"
     },
     "sparkline_data": [
+      0.854142262137186,
+      0.9256312638292333,
+      0.8629116230639073,
+      0.9931504620590915,
+      0.33510672914226214,
       1.0,
-      0.14683433135965587,
-      0.1591238997703747,
-      0.14834185920976453,
-      0.17073102514690705,
-      0.057607701537454654,
-      0.17190851907064683
+      0.41025641025641024
     ]
   },
   "momentum_3session": {
@@ -102,12 +102,7 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+11622/session)"
-      },
-      {
-        "category": "Money",
-        "icon": "[HOT]",
-        "description": "Strong earnings (+47,701g/session)"
+        "description": "High XP gains (+11798/session)"
       }
     ],
     "cold_streaks": [
@@ -137,12 +132,12 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+7527/session)"
+        "description": "High XP gains (+6580/session)"
       },
       {
         "category": "Money",
         "icon": "[HOT]",
-        "description": "Strong earnings (+94,724g/session)"
+        "description": "Strong earnings (+47,250g/session)"
       }
     ],
     "cold_streaks": [

@@ -1,6 +1,6 @@
 {
-  "selected_at": "2025-11-16T13:14:00",
-  "reasoning": "Selected based on: 1) Golden Walnuts (56%, gained 5 since last session - momentum!), 2) Museum (83%, near-complete high-value unlock), 3) Mutant Bug Lair (66%, dependency for Witch's Swamp), 4) Professor Snail (0%, quick unlock enables Field Office collections), 5) Friendships (0%, explicit goals.md target)",
+  "selected_at": "2025-11-16T16:30:00",
+  "reasoning": "Selected based on goal alignment (Golden Walnuts for Qi's Walnut Room, Missing Bundle completion, addressing Social/Museum cold streaks), completion proximity (Museum 83%, Walnuts 56%), and unlocking progression systems (Casino for Qi quests, Secret Woods for hardwood farming)",
   "unlocks": [
     {
       "name": "Golden Walnuts (100)",
@@ -15,22 +15,22 @@
       "category": "Progression"
     },
     {
-      "name": "Mutant Bug Lair",
-      "completion_percent": 66,
-      "next_step": "Befriend Krobus (2+ hearts)",
-      "category": "Map Access"
-    },
-    {
-      "name": "Professor Snail's Tent",
-      "completion_percent": 0,
-      "next_step": "Free Professor Snail from boulder",
-      "category": "Island Features"
-    },
-    {
-      "name": "Friendships (8+ Hearts)",
-      "completion_percent": 0,
-      "next_step": "Reach 8+ hearts with all 32 NPCs (0/32)",
+      "name": "Full Friendships (8+ hearts)",
+      "completion_percent": 3,
+      "next_step": "Reach 8+ hearts with all 32 NPCs (1/32)",
       "category": "Social"
+    },
+    {
+      "name": "Casino (Club Card)",
+      "completion_percent": 0,
+      "next_step": "Complete 'Mysterious Qi' questline",
+      "category": "Progression"
+    },
+    {
+      "name": "Secret Woods",
+      "completion_percent": 0,
+      "next_step": "Upgrade Axe to Steel or better",
+      "category": "Map Access"
     }
   ]
 }
