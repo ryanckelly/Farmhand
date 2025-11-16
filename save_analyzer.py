@@ -994,20 +994,46 @@ def get_golden_clock(root):
 
 
 def get_produce_shipped(root):
-    """Count unique items shipped (for Shipping Collection achievement)."""
-    # Check basicShipped dictionary
+    """
+    Check Shipping Collection completion using achievement status.
+
+    Uses the game's own achievement tracking (achievement_34 = Full Shipment)
+    rather than counting items, since basicShipped includes items that don't
+    count toward the Collections tab (quest items, etc.).
+
+    Returns:
+        dict: {
+            'count': Number of required items (145 if complete, otherwise actual count),
+            'total': Total required items (145 for Version 1.6),
+            'complete': Boolean indicating if achievement is unlocked
+        }
+    """
+    # Check if Full Shipment achievement (ID 34) is unlocked
+    dialogue_events = []
+    for item in root.findall('.//previousActiveDialogueEvents/item'):
+        key_elem = item.find('key/string')
+        if key_elem is not None and key_elem.text:
+            dialogue_events.append(key_elem.text)
+
+    full_shipment_complete = 'achievement_34' in dialogue_events
+
+    # Count items in basicShipped for progress display
     shipped_items = root.findall('.//player/basicShipped/item')
     unique_shipped = set()
 
     for item in shipped_items:
-        # Item IDs stored as strings in the XML
         item_id = get_text(item, './/key/string', None)
         if item_id:
             unique_shipped.add(item_id)
 
+    # Binary indicator: either complete (145/145) or not (0/145)
+    # We can't show accurate progress since basicShipped includes non-Collection items
+    # The dashboard should display this as "Complete: Yes/No" rather than a percentage
+
     return {
-        'count': len(unique_shipped),
-        'total': 154  # Total unique items for full shipping collection
+        'count': 145 if full_shipment_complete else 0,
+        'total': 145,  # Version 1.6 requirement
+        'complete': full_shipment_complete
     }
 
 

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-11-15T19:51:06.056949",
+  "generated_at": "2025-11-15T20:08:00.570090",
   "game_date": "Summer 2, Year 3",
   "unlocks": {
     "community_center": {
@@ -38,7 +38,7 @@
       "milestone_200": false
     },
     "perfection": {
-      "overall_percent": 33.1,
+      "overall_percent": 17.9,
       "obelisks": {
         "count": 0,
         "total": 4,
@@ -51,8 +51,10 @@
       },
       "golden_clock": false,
       "produce_shipped": {
-        "count": 156,
-        "total": 154
+        "count": 0,
+        "total": 145,
+        "complete": false,
+        "note": "Check Collections tab in-game for actual progress"
       },
       "fish_caught": {
         "count": 49,

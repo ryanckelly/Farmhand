@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-11-15T19:50:28.071897",
+  "timestamp": "2025-11-15T20:08:00.350081",
   "save_path": "C:\\Users\\ryanc\\AppData\\Roaming\\StardewValley\\Saves\\ryfarm_419564418\\ryfarm_419564418",
   "game_date": {
     "season": "summer",
@@ -6880,8 +6880,10 @@
     },
     "golden_clock": false,
     "produce_shipped": {
-      "count": 156,
-      "total": 154
+      "count": 0,
+      "total": 145,
+      "complete": false,
+      "note": "Check Collections tab in-game for actual progress"
     },
     "fish_caught": {
       "count": 49,
@@ -6904,7 +6906,7 @@
       "total": 12,
       "note": "Not yet implemented - requires monster kill stat parsing"
     },
-    "total_percent": 33.1
+    "total_percent": 17.9
   },
   "unlockables_status": {
     "Calico Desert": {
