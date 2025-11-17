@@ -194,17 +194,17 @@
       },
       {
         "period": "Y3W3-Summer",
-        "sessions_count": 1,
-        "money_change": 61616,
+        "sessions_count": 2,
+        "money_change": 133771,
         "xp_by_skill": {
-          "farming": 2920,
+          "farming": 3223,
           "fishing": 60,
-          "foraging": 325,
-          "mining": 10
+          "foraging": 623,
+          "mining": 160
         },
-        "total_xp": 3315,
+        "total_xp": 4066,
         "bundles_completed": 0,
-        "days_played": 1
+        "days_played": 2
       },
       {
         "period": "Y3W4-Spring",
@@ -270,18 +270,18 @@
       },
       {
         "period": "Summer Y3",
-        "sessions_count": 9,
-        "money_change": 357811,
+        "sessions_count": 10,
+        "money_change": 429966,
         "xp_by_skill": {
-          "farming": 41753,
+          "farming": 42056,
           "fishing": 818,
-          "foraging": 4747,
-          "mining": 7959,
+          "foraging": 5045,
+          "mining": 8109,
           "combat": 1652
         },
-        "total_xp": 56929,
+        "total_xp": 57680,
         "bundles_completed": 0,
-        "days_played": 16
+        "days_played": 17
       }
     ],
     "by_year": [
@@ -302,18 +302,18 @@
       },
       {
         "period": "Year 3",
-        "sessions_count": 28,
-        "money_change": 1318695,
+        "sessions_count": 29,
+        "money_change": 1390850,
         "xp_by_skill": {
-          "farming": 83692,
-          "foraging": 10745,
-          "mining": 16337,
+          "farming": 83995,
+          "foraging": 11043,
+          "mining": 16487,
           "fishing": 1897,
           "combat": 7347
         },
-        "total_xp": 120018,
+        "total_xp": 120769,
         "bundles_completed": 1,
-        "days_played": 43
+        "days_played": 44
       }
     ]
   },
@@ -351,58 +351,58 @@
       },
       {
         "period": "2025-W46",
-        "sessions_count": 31,
-        "money_change": 1437530,
+        "sessions_count": 32,
+        "money_change": 1509685,
         "xp_by_skill": {
-          "farming": 84410,
+          "farming": 84713,
           "fishing": 2165,
-          "foraging": 11612,
-          "mining": 17625,
+          "foraging": 11910,
+          "mining": 17775,
           "combat": 8155
         },
-        "total_xp": 123967,
+        "total_xp": 124718,
         "bundles_completed": 1,
-        "days_played": 47
+        "days_played": 48
       }
     ],
     "by_month": [
       {
         "period": "2025-11",
-        "sessions_count": 57,
-        "money_change": 1738040,
+        "sessions_count": 58,
+        "money_change": 1810195,
         "xp_by_skill": {
-          "farming": 105154,
-          "foraging": 18556,
-          "mining": 30176,
+          "farming": 105457,
+          "foraging": 18854,
+          "mining": 30326,
           "combat": 12526,
           "fishing": 8051
         },
-        "total_xp": 174463,
+        "total_xp": 175214,
         "bundles_completed": 30,
-        "days_played": 90
+        "days_played": 91
       }
     ],
     "by_year": [
       {
         "period": "2025",
-        "sessions_count": 57,
-        "money_change": 1738040,
+        "sessions_count": 58,
+        "money_change": 1810195,
         "xp_by_skill": {
-          "farming": 105154,
-          "foraging": 18556,
-          "mining": 30176,
+          "farming": 105457,
+          "foraging": 18854,
+          "mining": 30326,
           "combat": 12526,
           "fishing": 8051
         },
-        "total_xp": 174463,
+        "total_xp": 175214,
         "bundles_completed": 30,
-        "days_played": 90
+        "days_played": 91
       }
     ]
   },
   "meta": {
-    "total_entries": 57,
-    "generated_at": "2025-11-16T21:01:36.018630",
+    "total_entries": 58,
+    "generated_at": "2025-11-16T21:23:37.668621",
     "game_date_range": {
       "earliest": {
         "season": "fall",
@@ -411,13 +411,13 @@
       },
       "latest": {
         "season": "summer",
-        "day": 15,
+        "day": 16,
         "year": 3
       }
     },
     "real_date_range": {
       "earliest": "2025-11-01T11:26:24.877454",
-      "latest": "2025-11-16T21:01:35.972749"
+      "latest": "2025-11-16T21:23:37.623329"
     }
   }
 }
