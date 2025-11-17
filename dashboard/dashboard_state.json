@@ -1,6 +1,6 @@
 {
-  "generated_at": "2025-11-16T21:23:53.076867",
-  "game_date": "Summer 16, Year 3",
+  "generated_at": "2025-11-16T21:46:54.872897",
+  "game_date": "Summer 17, Year 3",
   "unlocks": {
     "community_center": {
       "completed": 31,
@@ -79,21 +79,21 @@
     }
   },
   "financials": {
-    "current_balance": 1937103,
-    "daily_average": 40980,
-    "weekly_trend": -0.5673749345848798,
+    "current_balance": 2005483,
+    "daily_average": 47146,
+    "weekly_trend": -0.0021889644746787822,
     "best_day": {
       "amount": 357539,
       "date": "Spring 24, Year 3"
     },
     "sparkline_data": [
-      0.0792669317699574,
       1.0,
       0.2531694512990585,
       0.21386605472863587,
       -1.0650582336576395,
       0.19369096081605708,
-      0.22682048944564073
+      0.22682048944564073,
+      0.21495371170803013
     ]
   },
   "momentum_3session": {
@@ -102,7 +102,12 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+1477/session)"
+        "description": "High XP gains (+2117/session)"
+      },
+      {
+        "category": "Money",
+        "icon": "[HOT]",
+        "description": "Strong earnings (+67,383g/session)"
       }
     ],
     "cold_streaks": [
@@ -110,11 +115,6 @@
         "category": "Bundles",
         "icon": "[COLD]",
         "description": "No bundle progress in 3 sessions"
-      },
-      {
-        "category": "Money",
-        "icon": "[COLD]",
-        "description": "Net losses (-68,346g/session)"
       }
     ],
     "rising_trends": [],
@@ -132,17 +132,17 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+3259/session)"
+        "description": "High XP gains (+3042/session)"
       },
       {
         "category": "Money",
         "icon": "[HOT]",
-        "description": "Strong earnings (+40,980g/session)"
+        "description": "Strong earnings (+47,146g/session)"
       },
       {
         "category": "Social",
         "icon": "[HOT]",
-        "description": "Strong relationships (+240 pts/session)"
+        "description": "Strong relationships (+242 pts/session)"
       }
     ],
     "cold_streaks": [
