@@ -1,6 +1,6 @@
 {
-  "generated_at": "2025-11-16T17:49:34.450378",
-  "game_date": "Summer 14, Year 3",
+  "generated_at": "2025-11-16T21:01:36.093502",
+  "game_date": "Summer 15, Year 3",
   "unlocks": {
     "community_center": {
       "completed": 31,
@@ -8,9 +8,9 @@
       "percent": 1.0333333333333334
     },
     "museum": {
-      "donated": 79,
+      "donated": 83,
       "total": 95,
-      "percent": 0.8315789473684211
+      "percent": 0.8736842105263158
     },
     "cooking": {
       "known": 0,
@@ -28,9 +28,9 @@
       "percent": 1.0
     },
     "golden_walnuts": {
-      "found": 58,
+      "found": 59,
       "total": 130,
-      "percent": 0.4461538461538462
+      "percent": 0.45384615384615384
     },
     "skull_cavern_depth": {
       "deepest": 135,
@@ -79,21 +79,21 @@
     }
   },
   "financials": {
-    "current_balance": 1803332,
-    "daily_average": 18088,
-    "weekly_trend": -0.6802106253756797,
+    "current_balance": 1864948,
+    "daily_average": 21243,
+    "weekly_trend": -0.6122538950673011,
     "best_day": {
       "amount": 357539,
       "date": "Spring 24, Year 3"
     },
     "sparkline_data": [
-      0.0647470254467724,
       0.19321314618927118,
       0.0792669317699574,
       1.0,
       0.2531694512990585,
       0.21386605472863587,
-      -1.0650582336576395
+      -1.0650582336576395,
+      0.19369096081605708
     ]
   },
   "momentum_3session": {
@@ -102,12 +102,7 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+1567/session)"
-      },
-      {
-        "category": "Social",
-        "icon": "[HOT]",
-        "description": "Strong relationships (+390 pts/session)"
+        "description": "High XP gains (+2171/session)"
       }
     ],
     "cold_streaks": [
@@ -119,7 +114,7 @@
       {
         "category": "Money",
         "icon": "[COLD]",
-        "description": "Net losses (-63,413g/session)"
+        "description": "Net losses (-69,720g/session)"
       }
     ],
     "rising_trends": [],
@@ -137,7 +132,7 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+7191/session)"
+        "description": "High XP gains (+7510/session)"
       }
     ],
     "cold_streaks": [
