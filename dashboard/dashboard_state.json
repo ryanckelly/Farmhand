@@ -1,6 +1,6 @@
 {
-  "generated_at": "2025-11-22T10:26:27.504064",
-  "game_date": "Summer 22, Year 3",
+  "generated_at": "2025-11-22T11:08:29.582302",
+  "game_date": "Summer 23, Year 3",
   "unlocks": {
     "community_center": {
       "completed": 31,
@@ -38,7 +38,7 @@
       "milestone_200": false
     },
     "perfection": {
-      "overall_percent": 20.0,
+      "overall_percent": 20.3,
       "obelisks": {
         "count": 1,
         "total": 4,
@@ -56,7 +56,7 @@
         "complete": false
       },
       "fish_caught": {
-        "count": 55,
+        "count": 56,
         "total": 72
       },
       "recipes_cooked": {
@@ -64,7 +64,7 @@
         "total": 81
       },
       "recipes_crafted": {
-        "count": 57,
+        "count": 59,
         "total": 149
       },
       "stardrops_found": {
@@ -79,21 +79,21 @@
     }
   },
   "financials": {
-    "current_balance": 1504734,
-    "daily_average": -70823,
-    "weekly_trend": -2.0037842162121304,
+    "current_balance": 1566152,
+    "daily_average": -26353,
+    "weekly_trend": -2.0086242090222495,
     "best_day": {
       "amount": 357539,
       "date": "Spring 24, Year 3"
     },
     "sparkline_data": [
-      -4.695599750537038,
       0.8539394359365255,
       1.0,
       0.9476820733143926,
       -5.03563162635992,
       0.2022590257085441,
-      -2.1065345436906657
+      -2.1065345436906657,
+      0.8511953433580487
     ]
   },
   "momentum_3session": {
@@ -102,7 +102,12 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+9174/session)"
+        "description": "High XP gains (+4112/session)"
+      },
+      {
+        "category": "Social",
+        "icon": "[HOT]",
+        "description": "Strong relationships (+345 pts/session)"
       }
     ],
     "cold_streaks": [
@@ -114,12 +119,7 @@
       {
         "category": "Money",
         "icon": "[COLD]",
-        "description": "Net losses (-166,916g/session)"
-      },
-      {
-        "category": "Social",
-        "icon": "[COLD]",
-        "description": "No relationship progress"
+        "description": "Net losses (-25,328g/session)"
       }
     ],
     "rising_trends": [],
@@ -137,7 +137,12 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+4891/session)"
+        "description": "High XP gains (+5001/session)"
+      },
+      {
+        "category": "Social",
+        "icon": "[HOT]",
+        "description": "Strong relationships (+224 pts/session)"
       }
     ],
     "cold_streaks": [
@@ -149,7 +154,7 @@
       {
         "category": "Money",
         "icon": "[COLD]",
-        "description": "Net losses (-91,058g/session)"
+        "description": "Net losses (-33,882g/session)"
       }
     ],
     "rising_trends": [],
