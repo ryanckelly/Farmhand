@@ -1,6 +1,6 @@
 {
-  "generated_at": "2025-11-22T10:00:25.213585",
-  "game_date": "Summer 21, Year 3",
+  "generated_at": "2025-11-22T10:26:27.504064",
+  "game_date": "Summer 22, Year 3",
   "unlocks": {
     "community_center": {
       "completed": 31,
@@ -33,7 +33,7 @@
       "percent": 0.45384615384615384
     },
     "skull_cavern_depth": {
-      "deepest": 135,
+      "deepest": 155,
       "milestone_100": true,
       "milestone_200": false
     },
@@ -79,21 +79,21 @@
     }
   },
   "financials": {
-    "current_balance": 1656731,
-    "daily_average": -46375,
-    "weekly_trend": -1.673179464847341,
+    "current_balance": 1504734,
+    "daily_average": -70823,
+    "weekly_trend": -2.0037842162121304,
     "best_day": {
       "amount": 357539,
       "date": "Spring 24, Year 3"
     },
     "sparkline_data": [
-      0.9428868408287714,
       -4.695599750537038,
       0.8539394359365255,
       1.0,
       0.9476820733143926,
       -5.03563162635992,
-      0.2022590257085441
+      0.2022590257085441,
+      -2.1065345436906657
     ]
   },
   "momentum_3session": {
@@ -102,7 +102,7 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+7068/session)"
+        "description": "High XP gains (+9174/session)"
       }
     ],
     "cold_streaks": [
@@ -114,7 +114,7 @@
       {
         "category": "Money",
         "icon": "[COLD]",
-        "description": "Net losses (-93,457g/session)"
+        "description": "Net losses (-166,916g/session)"
       },
       {
         "category": "Social",
@@ -137,7 +137,7 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+4067/session)"
+        "description": "High XP gains (+4891/session)"
       }
     ],
     "cold_streaks": [
@@ -149,7 +149,7 @@
       {
         "category": "Money",
         "icon": "[COLD]",
-        "description": "Net losses (-59,625g/session)"
+        "description": "Net losses (-91,058g/session)"
       }
     ],
     "rising_trends": [],

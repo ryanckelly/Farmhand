@@ -1316,14 +1316,41 @@
         "stardrops_found": 5,
         "monster_goals": 0
       }
+    },
+    {
+      "date": "2025-11-22T10:26:27.395235",
+      "game_date": "Summer 22, Year 3",
+      "money": 1504734,
+      "total_earned": 6350222,
+      "animals": 35,
+      "skills": {
+        "farming": 10,
+        "fishing": 10,
+        "foraging": 10,
+        "mining": 10,
+        "combat": 10,
+        "luck": 0
+      },
+      "bundles_complete": 31,
+      "perfection": {
+        "overall_percent": 20.0,
+        "obelisks": 1,
+        "golden_clock": false,
+        "produce_shipped": 0,
+        "fish_caught": 55,
+        "recipes_cooked": 3,
+        "recipes_crafted": 57,
+        "stardrops_found": 5,
+        "monster_goals": 0
+      }
     }
   ],
   "trends": {
-    "daily_income_avg": 14594,
-    "money_growth_rate": 0.008887200032640395
+    "daily_income_avg": -151997,
+    "money_growth_rate": -0.09174512941449155
   },
   "meta": {
     "tracking_started": "2024-01-15",
-    "total_snapshots": 61
+    "total_snapshots": 62
   }
 }
