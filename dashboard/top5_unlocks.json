@@ -1,30 +1,30 @@
 {
-  "selected_at": "2025-11-16T16:30:00",
-  "reasoning": "Selected based on goal alignment (Golden Walnuts for Qi's Walnut Room, Missing Bundle completion, addressing Social/Museum cold streaks), completion proximity (Museum 83%, Walnuts 56%), and unlocking progression systems (Casino for Qi quests, Secret Woods for hardwood farming)",
+  "selected_at": "2025-11-22T09:30:00",
+  "reasoning": "Selected based on obelisk building momentum (just built 1 obelisk, 1.7% perfection gain), goals.md priorities for remaining 3 obelisks, and strategic progression. Mixed near-completion (Museum 87%, Golden Walnuts 59%) with critical easy wins (Beach Bridge, Secret Woods) and Island unlocks (Professor Snail blocks Field Office).",
   "unlocks": [
     {
+      "name": "Museum Collection (95)",
+      "completion_percent": 87,
+      "next_step": "Donate all 95 items to Museum (83/95)",
+      "category": "Progression"
+    },
+    {
       "name": "Golden Walnuts (100)",
-      "completion_percent": 56,
-      "next_step": "Find 100 Golden Walnuts (57/100)",
+      "completion_percent": 59,
+      "next_step": "Find 100 Golden Walnuts (59/100)",
       "category": "Island Features"
     },
     {
-      "name": "Museum Collection (95)",
-      "completion_percent": 83,
-      "next_step": "Donate all 95 items to Museum (79/95)",
-      "category": "Progression"
-    },
-    {
-      "name": "Full Friendships (8+ hearts)",
-      "completion_percent": 3,
-      "next_step": "Reach 8+ hearts with all 32 NPCs (1/32)",
-      "category": "Social"
-    },
-    {
-      "name": "Casino (Club Card)",
+      "name": "Professor Snail's Tent",
       "completion_percent": 0,
-      "next_step": "Complete 'Mysterious Qi' questline",
-      "category": "Progression"
+      "next_step": "Free Professor Snail from boulder",
+      "category": "Island Features"
+    },
+    {
+      "name": "Beach Bridge",
+      "completion_percent": 0,
+      "next_step": "Collect 300 wood",
+      "category": "Map Access"
     },
     {
       "name": "Secret Woods",

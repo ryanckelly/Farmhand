@@ -1,6 +1,6 @@
 {
-  "generated_at": "2025-11-16T21:47:39.309767",
-  "game_date": "Summer 17, Year 3",
+  "generated_at": "2025-11-22T10:00:25.213585",
+  "game_date": "Summer 21, Year 3",
   "unlocks": {
     "community_center": {
       "completed": 31,
@@ -38,12 +38,12 @@
       "milestone_200": false
     },
     "perfection": {
-      "overall_percent": 18.1,
+      "overall_percent": 20.0,
       "obelisks": {
-        "count": 0,
+        "count": 1,
         "total": 4,
         "details": {
-          "Earth Obelisk": 0,
+          "Earth Obelisk": 1,
           "Water Obelisk": 0,
           "Desert Obelisk": 0,
           "Island Obelisk": 0
@@ -56,7 +56,7 @@
         "complete": false
       },
       "fish_caught": {
-        "count": 49,
+        "count": 55,
         "total": 72
       },
       "recipes_cooked": {
@@ -79,21 +79,21 @@
     }
   },
   "financials": {
-    "current_balance": 2005483,
-    "daily_average": 47146,
-    "weekly_trend": -0.0021889644746787822,
+    "current_balance": 1656731,
+    "daily_average": -46375,
+    "weekly_trend": -1.673179464847341,
     "best_day": {
       "amount": 357539,
       "date": "Spring 24, Year 3"
     },
     "sparkline_data": [
+      0.9428868408287714,
+      -4.695599750537038,
+      0.8539394359365255,
       1.0,
-      0.2531694512990585,
-      0.21386605472863587,
-      -1.0650582336576395,
-      0.19369096081605708,
-      0.22682048944564073,
-      0.21495371170803013
+      0.9476820733143926,
+      -5.03563162635992,
+      0.2022590257085441
     ]
   },
   "momentum_3session": {
@@ -102,12 +102,7 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+2117/session)"
-      },
-      {
-        "category": "Money",
-        "icon": "[HOT]",
-        "description": "Strong earnings (+67,383g/session)"
+        "description": "High XP gains (+7068/session)"
       }
     ],
     "cold_streaks": [
@@ -115,6 +110,16 @@
         "category": "Bundles",
         "icon": "[COLD]",
         "description": "No bundle progress in 3 sessions"
+      },
+      {
+        "category": "Money",
+        "icon": "[COLD]",
+        "description": "Net losses (-93,457g/session)"
+      },
+      {
+        "category": "Social",
+        "icon": "[COLD]",
+        "description": "No relationship progress"
       }
     ],
     "rising_trends": [],
@@ -132,17 +137,7 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+3042/session)"
-      },
-      {
-        "category": "Money",
-        "icon": "[HOT]",
-        "description": "Strong earnings (+47,146g/session)"
-      },
-      {
-        "category": "Social",
-        "icon": "[HOT]",
-        "description": "Strong relationships (+242 pts/session)"
+        "description": "High XP gains (+4067/session)"
       }
     ],
     "cold_streaks": [
@@ -150,6 +145,11 @@
         "category": "Bundles",
         "icon": "[COLD]",
         "description": "No bundle progress in 7 sessions"
+      },
+      {
+        "category": "Money",
+        "icon": "[COLD]",
+        "description": "Net losses (-59,625g/session)"
       }
     ],
     "rising_trends": [],
