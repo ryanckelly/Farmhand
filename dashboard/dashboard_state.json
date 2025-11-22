@@ -1,6 +1,6 @@
 {
-  "generated_at": "2025-11-22T14:40:45.133325",
-  "game_date": "Summer 25, Year 3",
+  "generated_at": "2025-11-22T15:07:46.876321",
+  "game_date": "Summer 26, Year 3",
   "unlocks": {
     "community_center": {
       "completed": 31,
@@ -79,20 +79,20 @@
     }
   },
   "financials": {
-    "current_balance": 1845946,
-    "daily_average": -10128,
-    "weekly_trend": -1.3177730058355586,
+    "current_balance": 2166758,
+    "daily_average": 17919,
+    "weekly_trend": -0.5113263803457909,
     "best_day": {
       "amount": 357539,
       "date": "Spring 24, Year 3"
     },
     "sparkline_data": [
-      0.41658797511925577,
-      -2.213594244043304,
-      0.08891027945145391,
-      -0.9260035456888202,
-      0.37417373875218557,
-      0.7045746696478071,
+      -1.132582322357019,
+      0.04549081705173123,
+      -0.4737883869680685,
+      0.1914454571524756,
+      0.36049461990199866,
+      0.5116485667618418,
       1.0
     ]
   },
@@ -102,17 +102,17 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+4575/session)"
+        "description": "High XP gains (+5752/session)"
       },
       {
         "category": "Money",
         "icon": "[HOT]",
-        "description": "Strong earnings (+113,737g/session)"
+        "description": "Strong earnings (+200,202g/session)"
       },
       {
         "category": "Social",
         "icon": "[HOT]",
-        "description": "Strong relationships (+667 pts/session)"
+        "description": "Strong relationships (+308 pts/session)"
       }
     ],
     "cold_streaks": [
@@ -137,12 +137,12 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+6219/session)"
+        "description": "High XP gains (+6559/session)"
       },
       {
         "category": "Social",
         "icon": "[HOT]",
-        "description": "Strong relationships (+280 pts/session)"
+        "description": "Strong relationships (+277 pts/session)"
       }
     ],
     "cold_streaks": [
@@ -150,11 +150,6 @@
         "category": "Bundles",
         "icon": "[COLD]",
         "description": "No bundle progress in 7 sessions"
-      },
-      {
-        "category": "Money",
-        "icon": "[COLD]",
-        "description": "Net losses (-13,022g/session)"
       }
     ],
     "rising_trends": [],
