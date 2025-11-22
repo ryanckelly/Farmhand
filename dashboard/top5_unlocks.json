@@ -1,13 +1,7 @@
 {
-  "selected_at": "2025-11-22T09:30:00",
-  "reasoning": "Selected based on obelisk building momentum (just built 1 obelisk, 1.7% perfection gain), goals.md priorities for remaining 3 obelisks, and strategic progression. Mixed near-completion (Museum 87%, Golden Walnuts 59%) with critical easy wins (Beach Bridge, Secret Woods) and Island unlocks (Professor Snail blocks Field Office).",
+  "selected_at": "2025-11-22T13:55:00",
+  "reasoning": "Selected based on: (1) High-value perfection progress (Golden Walnuts 59%, Museum 87%), (2) Goal alignment with obelisks/perfection, (3) Recent activity (Dwarf gifting surge to 5 hearts, Skull Cavern runs, Willy 3 hearts), (4) Blocking issues (Beach Bridge, Professor Snail), (5) Mix of near-complete and long-term goals",
   "unlocks": [
-    {
-      "name": "Museum Collection (95)",
-      "completion_percent": 87,
-      "next_step": "Donate all 95 items to Museum (83/95)",
-      "category": "Progression"
-    },
     {
       "name": "Golden Walnuts (100)",
       "completion_percent": 59,
@@ -15,10 +9,10 @@
       "category": "Island Features"
     },
     {
-      "name": "Professor Snail's Tent",
-      "completion_percent": 0,
-      "next_step": "Free Professor Snail from boulder",
-      "category": "Island Features"
+      "name": "Museum Collection (95)",
+      "completion_percent": 87,
+      "next_step": "Donate all 95 items to Museum (83/95)",
+      "category": "Progression"
     },
     {
       "name": "Beach Bridge",
@@ -27,10 +21,16 @@
       "category": "Map Access"
     },
     {
-      "name": "Secret Woods",
+      "name": "Professor Snail's Tent",
       "completion_percent": 0,
-      "next_step": "Upgrade Axe to Steel or better",
-      "category": "Map Access"
+      "next_step": "Free Professor Snail from boulder",
+      "category": "Island Features"
+    },
+    {
+      "name": "Volcano Dungeon",
+      "completion_percent": 50,
+      "next_step": "Reach Volcano entrance",
+      "category": "Island Features"
     }
   ]
 }
