@@ -1,6 +1,6 @@
 {
-  "generated_at": "2025-11-22T20:22:20.531863",
-  "game_date": "Fall 2, Year 3",
+  "generated_at": "2025-11-22T20:41:22.779354",
+  "game_date": "Fall 3, Year 3",
   "unlocks": {
     "community_center": {
       "completed": 31,
@@ -79,21 +79,21 @@
     }
   },
   "financials": {
-    "current_balance": 245794,
-    "daily_average": -157367,
-    "weekly_trend": 0.9750897775211834,
+    "current_balance": 260560,
+    "daily_average": -163199,
+    "weekly_trend": 4.504646260224303,
     "best_day": {
       "amount": 357539,
       "date": "Spring 24, Year 3"
     },
     "sparkline_data": [
-      0.1914454571524756,
       0.36049461990199866,
       0.5116485667618418,
       1.0,
       -6.121052205029737,
       0.35486515467002483,
-      -0.22163136042292683
+      -0.22163136042292683,
+      0.046026956597633506
     ]
   },
   "momentum_3session": {
@@ -102,7 +102,7 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+3026/session)"
+        "description": "High XP gains (+3723/session)"
       }
     ],
     "cold_streaks": [
@@ -110,16 +110,6 @@
         "category": "Bundles",
         "icon": "[COLD]",
         "description": "No bundle progress in 3 sessions"
-      },
-      {
-        "category": "Money",
-        "icon": "[COLD]",
-        "description": "Net losses (-640,321g/session)"
-      },
-      {
-        "category": "Social",
-        "icon": "[COLD]",
-        "description": "No relationship progress"
       }
     ],
     "rising_trends": [],
@@ -137,12 +127,12 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+3924/session)"
+        "description": "High XP gains (+4386/session)"
       },
       {
         "category": "Social",
         "icon": "[HOT]",
-        "description": "Strong relationships (+262 pts/session)"
+        "description": "Strong relationships (+208 pts/session)"
       }
     ],
     "cold_streaks": [
@@ -154,7 +144,7 @@
       {
         "category": "Money",
         "icon": "[COLD]",
-        "description": "Net losses (-179,848g/session)"
+        "description": "Net losses (-186,513g/session)"
       }
     ],
     "rising_trends": [],
