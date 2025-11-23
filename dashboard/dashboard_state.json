@@ -1,6 +1,6 @@
 {
-  "generated_at": "2025-11-22T15:36:48.619568",
-  "game_date": "Summer 27, Year 3",
+  "generated_at": "2025-11-22T20:02:18.681526",
+  "game_date": "Fall 1, Year 3",
   "unlocks": {
     "community_center": {
       "completed": 31,
@@ -79,21 +79,21 @@
     }
   },
   "financials": {
-    "current_balance": 203051,
-    "daily_average": -205583,
-    "weekly_trend": 3.094885256164013,
+    "current_balance": 316896,
+    "daily_average": -167479,
+    "weekly_trend": 2.2101236768588666,
     "best_day": {
       "amount": 357539,
       "date": "Spring 24, Year 3"
     },
     "sparkline_data": [
-      0.04549081705173123,
       -0.4737883869680685,
       0.1914454571524756,
       0.36049461990199866,
       0.5116485667618418,
       1.0,
-      -6.121052205029737
+      -6.121052205029737,
+      0.35486515467002483
     ]
   },
   "momentum_3session": {
@@ -102,12 +102,7 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+4605/session)"
-      },
-      {
-        "category": "Social",
-        "icon": "[HOT]",
-        "description": "Strong relationships (+312 pts/session)"
+        "description": "High XP gains (+4169/session)"
       }
     ],
     "cold_streaks": [
@@ -119,7 +114,12 @@
       {
         "category": "Money",
         "icon": "[COLD]",
-        "description": "Net losses (-492,917g/session)"
+        "description": "Net losses (-509,683g/session)"
+      },
+      {
+        "category": "Social",
+        "icon": "[COLD]",
+        "description": "No relationship progress"
       }
     ],
     "rising_trends": [],
@@ -137,12 +137,12 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+4553/session)"
+        "description": "High XP gains (+4976/session)"
       },
       {
         "category": "Social",
         "icon": "[HOT]",
-        "description": "Strong relationships (+276 pts/session)"
+        "description": "Strong relationships (+271 pts/session)"
       }
     ],
     "cold_streaks": [
@@ -154,7 +154,7 @@
       {
         "category": "Money",
         "icon": "[COLD]",
-        "description": "Net losses (-205,583g/session)"
+        "description": "Net losses (-191,405g/session)"
       }
     ],
     "rising_trends": [],

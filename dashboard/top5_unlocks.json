@@ -1,18 +1,18 @@
 {
-  "selected_at": "2025-11-22T13:55:00",
-  "reasoning": "Selected based on: (1) High-value perfection progress (Golden Walnuts 59%, Museum 87%), (2) Goal alignment with obelisks/perfection, (3) Recent activity (Dwarf gifting surge to 5 hearts, Skull Cavern runs, Willy 3 hearts), (4) Blocking issues (Beach Bridge, Professor Snail), (5) Mix of near-complete and long-term goals",
+  "selected_at": "2025-11-22",
+  "reasoning": "Selected based on proximity to completion (Museum 87%, Walnuts 73%), goal alignment (Qi Room is a medium-term goal), quick wins (Beach Bridge, Secret Woods axe upgrade), and strategic progression blocker (Professor Snail unlocks Field Office and fossil collection)",
   "unlocks": [
-    {
-      "name": "Golden Walnuts (100)",
-      "completion_percent": 59,
-      "next_step": "Find 100 Golden Walnuts (59/100)",
-      "category": "Island Features"
-    },
     {
       "name": "Museum Collection (95)",
       "completion_percent": 87,
       "next_step": "Donate all 95 items to Museum (83/95)",
       "category": "Progression"
+    },
+    {
+      "name": "Golden Walnuts (100)",
+      "completion_percent": 73,
+      "next_step": "Find 100 Golden Walnuts (73/100)",
+      "category": "Island Features"
     },
     {
       "name": "Beach Bridge",
@@ -21,15 +21,15 @@
       "category": "Map Access"
     },
     {
-      "name": "Professor Snail's Tent",
+      "name": "Secret Woods",
       "completion_percent": 0,
-      "next_step": "Free Professor Snail from boulder",
-      "category": "Island Features"
+      "next_step": "Upgrade Axe to Steel or better",
+      "category": "Map Access"
     },
     {
-      "name": "Volcano Dungeon",
-      "completion_percent": 50,
-      "next_step": "Reach Volcano entrance",
+      "name": "Professor Snail Tent",
+      "completion_percent": 0,
+      "next_step": "Free Professor Snail from boulder",
       "category": "Island Features"
     }
   ]

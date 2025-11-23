@@ -1,35 +1,35 @@
 {
-  "timestamp": "2025-11-22T15:36:48.338446",
+  "timestamp": "2025-11-22T20:02:18.396800",
   "save_path": "C:\\Users\\ryanc\\AppData\\Roaming\\StardewValley\\Saves\\ryfarm_419564418\\ryfarm_419564418",
   "game_date": {
-    "season": "summer",
-    "day": 27,
+    "season": "fall",
+    "day": 1,
     "year": 3
   },
-  "game_date_str": "Summer 27, Year 3",
-  "money": 203051,
-  "total_earned": 7228564,
-  "play_time": 288608176,
+  "game_date_str": "Fall 1, Year 3",
+  "money": 316896,
+  "total_earned": 7344909,
+  "play_time": 290849968,
   "skills": {
     "farming": {
       "level": 10,
-      "xp": 191806
+      "xp": 194765
     },
     "fishing": {
       "level": 10,
-      "xp": 21469
+      "xp": 21509
     },
     "foraging": {
       "level": 10,
-      "xp": 41024
+      "xp": 41285
     },
     "mining": {
       "level": 10,
-      "xp": 55043
+      "xp": 56646
     },
     "combat": {
       "level": 10,
-      "xp": 19606
+      "xp": 20303
     },
     "luck": {
       "level": 0,
@@ -53,14 +53,6 @@
       "level": 4,
       "tier": "Iridium"
     },
-    "Iridium Hoe": {
-      "level": 4,
-      "tier": "Iridium"
-    },
-    "Advanced Iridium Rod": {
-      "level": null,
-      "tier": "Advanced Iridium Rod"
-    },
     "Iridium Axe": {
       "level": 4,
       "tier": "Iridium"
@@ -68,6 +60,14 @@
     "Iridium Watering Can": {
       "level": 4,
       "tier": "Iridium"
+    },
+    "Iridium Hoe": {
+      "level": 4,
+      "tier": "Iridium"
+    },
+    "Advanced Iridium Rod": {
+      "level": null,
+      "tier": "Advanced Iridium Rod"
     }
   },
   "house_upgrade": {
@@ -705,8 +705,8 @@
       "Duck": 1,
       "Void Chicken": 1,
       "Pig": 12,
-      "Goat": 6,
       "White Cow": 5,
+      "Goat": 6,
       "Brown Cow": 1
     },
     "by_building": [
@@ -724,96 +724,96 @@
       }
     ],
     "production_ready": 12,
-    "average_happiness": 224,
-    "average_friendship": 931,
+    "average_happiness": 216,
+    "average_friendship": 933,
     "details": [
+      {
+        "name": "Zusa",
+        "type": "Rabbit",
+        "age": 79,
+        "happiness": 135,
+        "friendship": 968,
+        "has_produce_ready": false,
+        "building": "Deluxe Coop"
+      },
       {
         "name": "Brase",
         "type": "Rabbit",
-        "age": 38,
-        "happiness": 135,
-        "friendship": 335,
+        "age": 40,
+        "happiness": 55,
+        "friendship": 317,
         "has_produce_ready": false,
         "building": "Deluxe Coop"
       },
       {
-        "name": "Mepono",
+        "name": "Trime",
         "type": "Rabbit",
-        "age": 77,
-        "happiness": 215,
-        "friendship": 919,
-        "has_produce_ready": false,
-        "building": "Deluxe Coop"
-      },
-      {
-        "name": "Birda",
-        "type": "Rabbit",
-        "age": 122,
-        "happiness": 215,
-        "friendship": 995,
-        "has_produce_ready": false,
-        "building": "Deluxe Coop"
-      },
-      {
-        "name": "Troki",
-        "type": "Rabbit",
-        "age": 107,
-        "happiness": 215,
-        "friendship": 995,
+        "age": 40,
+        "happiness": 220,
+        "friendship": 418,
         "has_produce_ready": false,
         "building": "Deluxe Coop"
       },
       {
         "name": "Nilly",
         "type": "Dinosaur",
-        "age": 56,
-        "happiness": 211,
-        "friendship": 677,
-        "has_produce_ready": false,
-        "building": "Deluxe Coop"
-      },
-      {
-        "name": "Zusa",
-        "type": "Rabbit",
-        "age": 77,
-        "happiness": 215,
-        "friendship": 980,
-        "has_produce_ready": false,
-        "building": "Deluxe Coop"
-      },
-      {
-        "name": "Sella",
-        "type": "Rabbit",
-        "age": 38,
-        "happiness": 215,
-        "friendship": 455,
+        "age": 58,
+        "happiness": 206,
+        "friendship": 685,
         "has_produce_ready": false,
         "building": "Deluxe Coop"
       },
       {
         "name": "Freku",
         "type": "Duck",
-        "age": 112,
-        "happiness": 215,
-        "friendship": 995,
+        "age": 114,
+        "happiness": 220,
+        "friendship": 1000,
         "has_produce_ready": false,
         "building": "Deluxe Coop"
       },
       {
-        "name": "Brene",
+        "name": "Sella",
         "type": "Rabbit",
-        "age": 77,
-        "happiness": 215,
-        "friendship": 995,
+        "age": 40,
+        "happiness": 220,
+        "friendship": 462,
         "has_produce_ready": false,
         "building": "Deluxe Coop"
       },
       {
         "name": "666",
         "type": "Void Chicken",
-        "age": 96,
-        "happiness": 215,
-        "friendship": 995,
+        "age": 98,
+        "happiness": 135,
+        "friendship": 983,
+        "has_produce_ready": false,
+        "building": "Deluxe Coop"
+      },
+      {
+        "name": "Mepono",
+        "type": "Rabbit",
+        "age": 79,
+        "happiness": 135,
+        "friendship": 907,
+        "has_produce_ready": false,
+        "building": "Deluxe Coop"
+      },
+      {
+        "name": "Brene",
+        "type": "Rabbit",
+        "age": 79,
+        "happiness": 220,
+        "friendship": 1000,
+        "has_produce_ready": false,
+        "building": "Deluxe Coop"
+      },
+      {
+        "name": "Troki",
+        "type": "Rabbit",
+        "age": 109,
+        "happiness": 220,
+        "friendship": 1000,
         "has_produce_ready": false,
         "building": "Deluxe Coop"
       }
@@ -840,23 +840,23 @@
   },
   "friendships": {
     "Lewis": {
-      "points": 673,
+      "points": 669,
       "hearts": 2
     },
     "Robin": {
-      "points": 1460,
+      "points": 1456,
       "hearts": 5
     },
     "Abigail": {
-      "points": 3749,
+      "points": 3730,
       "hearts": 14
     },
     "Pierre": {
-      "points": 322,
+      "points": 318,
       "hearts": 1
     },
     "Marnie": {
-      "points": 346,
+      "points": 342,
       "hearts": 1
     },
     "Harvey": {
@@ -864,19 +864,19 @@
       "hearts": 0
     },
     "Leah": {
-      "points": 104,
+      "points": 100,
       "hearts": 0
     },
     "Gus": {
-      "points": 870,
+      "points": 866,
       "hearts": 3
     },
     "Evelyn": {
-      "points": 346,
+      "points": 342,
       "hearts": 1
     },
     "George": {
-      "points": 421,
+      "points": 417,
       "hearts": 1
     },
     "Penny": {
@@ -884,7 +884,7 @@
       "hearts": 0
     },
     "Sam": {
-      "points": 2,
+      "points": 0,
       "hearts": 0
     },
     "Shane": {
@@ -892,11 +892,11 @@
       "hearts": 0
     },
     "Pam": {
-      "points": 646,
+      "points": 642,
       "hearts": 2
     },
     "Clint": {
-      "points": 477,
+      "points": 473,
       "hearts": 1
     },
     "Alex": {
@@ -908,7 +908,7 @@
       "hearts": 0
     },
     "Elliott": {
-      "points": 36,
+      "points": 32,
       "hearts": 0
     },
     "Haley": {
@@ -916,35 +916,35 @@
       "hearts": 0
     },
     "Jodi": {
-      "points": 414,
+      "points": 410,
       "hearts": 1
     },
     "Vincent": {
-      "points": 368,
+      "points": 364,
       "hearts": 1
     },
     "Jas": {
-      "points": 344,
+      "points": 340,
       "hearts": 1
     },
     "Willy": {
-      "points": 1815,
+      "points": 1811,
       "hearts": 7
     },
     "Emily": {
-      "points": 408,
+      "points": 404,
       "hearts": 1
     },
     "Demetrius": {
-      "points": 417,
+      "points": 413,
       "hearts": 1
     },
     "Linus": {
-      "points": 836,
+      "points": 832,
       "hearts": 3
     },
     "Caroline": {
-      "points": 344,
+      "points": 340,
       "hearts": 1
     },
     "Sebastian": {
@@ -952,19 +952,19 @@
       "hearts": 0
     },
     "Wizard": {
-      "points": 802,
+      "points": 798,
       "hearts": 3
     },
     "Dwarf": {
-      "points": 1340,
+      "points": 1347,
       "hearts": 5
     },
     "Kent": {
-      "points": 694,
+      "points": 690,
       "hearts": 2
     },
     "Krobus": {
-      "points": 610,
+      "points": 606,
       "hearts": 2
     },
     "Henchman": {
@@ -998,10 +998,10 @@
     "missing_items": [],
     "remixed_bundles_detected": true,
     "unknown_bundle_ids": [
-      11,
-      17,
+      15,
       16,
-      15
+      17,
+      11
     ],
     "completed_rooms": [],
     "bundle_reward_flags": [
@@ -1029,756 +1029,161 @@
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Unknown (260)",
-      "index": "260",
-      "phase": 5,
-      "days_in_phase": 0,
+      "days_in_phase": 2,
       "fully_grown": false
     },
     {
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 5,
-      "days_in_phase": 4,
+      "days_in_phase": 2,
       "fully_grown": false
     },
     {
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 5,
-      "days_in_phase": 4,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 5,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
       "fully_grown": false
     },
     {
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 4,
-      "days_in_phase": 0,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
+      "days_in_phase": 2,
       "fully_grown": false
     },
     {
       "name": "Corn",
       "index": "270",
       "phase": 5,
-      "days_in_phase": 1,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 4,
-      "days_in_phase": 0,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 4,
-      "days_in_phase": 0,
+      "days_in_phase": 3,
       "fully_grown": false
     },
     {
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 5,
-      "days_in_phase": 0,
+      "days_in_phase": 5,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 4,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 4,
+      "days_in_phase": 2,
       "fully_grown": false
     },
     {
       "name": "Corn",
       "index": "270",
       "phase": 5,
-      "days_in_phase": 1,
+      "days_in_phase": -1,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
       "fully_grown": false
     },
     {
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 4,
-      "days_in_phase": 0,
+      "days_in_phase": 2,
       "fully_grown": false
     },
     {
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 5,
-      "days_in_phase": 4,
+      "days_in_phase": 2,
       "fully_grown": false
     },
     {
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 5,
-      "days_in_phase": 0,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 0,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 0,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 3,
-      "days_in_phase": 1,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 4,
-      "days_in_phase": 0,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 0,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 4,
-      "days_in_phase": 0,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
+      "days_in_phase": 2,
       "fully_grown": false
     },
     {
@@ -1792,188 +1197,643 @@
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 5,
-      "days_in_phase": 4,
+      "days_in_phase": 2,
       "fully_grown": false
     },
     {
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 5,
-      "days_in_phase": 4,
+      "days_in_phase": 2,
       "fully_grown": false
     },
     {
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 4,
-      "days_in_phase": 0,
+      "days_in_phase": 2,
       "fully_grown": false
     },
     {
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 5,
-      "days_in_phase": 4,
+      "days_in_phase": 5,
       "fully_grown": false
     },
     {
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Hops",
-      "index": "304",
-      "phase": 5,
-      "days_in_phase": -2,
+      "days_in_phase": 2,
       "fully_grown": false
     },
     {
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 5,
-      "days_in_phase": 4,
+      "days_in_phase": 2,
       "fully_grown": false
     },
     {
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 5,
-      "days_in_phase": 4,
+      "days_in_phase": 2,
       "fully_grown": false
     },
     {
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 5,
-      "days_in_phase": 4,
+      "days_in_phase": 2,
       "fully_grown": false
     },
     {
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 5,
-      "days_in_phase": 4,
+      "days_in_phase": 2,
       "fully_grown": false
     },
     {
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 5,
-      "days_in_phase": 4,
+      "days_in_phase": 2,
       "fully_grown": false
     },
     {
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Unknown (260)",
-      "index": "260",
-      "phase": 5,
-      "days_in_phase": 0,
-      "fully_grown": false
-    },
-    {
-      "name": "Hops",
-      "index": "304",
-      "phase": 5,
-      "days_in_phase": -2,
+      "days_in_phase": 5,
       "fully_grown": false
     },
     {
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 5,
-      "days_in_phase": 4,
+      "days_in_phase": 2,
       "fully_grown": false
     },
     {
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 4,
-      "days_in_phase": 0,
+      "days_in_phase": 2,
       "fully_grown": false
     },
     {
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 5,
-      "days_in_phase": 4,
+      "days_in_phase": 2,
       "fully_grown": false
     },
     {
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 5,
-      "days_in_phase": 4,
+      "days_in_phase": 2,
       "fully_grown": false
     },
     {
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 5,
-      "days_in_phase": 4,
+      "days_in_phase": 2,
       "fully_grown": false
     },
     {
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 5,
-      "days_in_phase": 4,
+      "days_in_phase": 2,
       "fully_grown": false
     },
     {
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 5,
-      "days_in_phase": 0,
+      "days_in_phase": 2,
       "fully_grown": false
     },
     {
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
+      "days_in_phase": 2,
       "fully_grown": false
     },
     {
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 3,
+      "days_in_phase": 3,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 4,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 5,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 4,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Unknown (260)",
+      "index": "260",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 4,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Hops",
+      "index": "304",
+      "phase": 5,
       "days_in_phase": 1,
       "fully_grown": false
     },
@@ -1981,735 +1841,483 @@
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 5,
-      "days_in_phase": 4,
+      "days_in_phase": 2,
       "fully_grown": false
     },
     {
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 5,
-      "days_in_phase": 4,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Unknown (260)",
+      "index": "260",
+      "phase": 5,
+      "days_in_phase": -1,
       "fully_grown": false
     },
     {
       "name": "Hops",
       "index": "304",
       "phase": 5,
-      "days_in_phase": -2,
+      "days_in_phase": 1,
       "fully_grown": false
     },
     {
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 5,
-      "days_in_phase": 4,
+      "days_in_phase": 2,
       "fully_grown": false
     },
     {
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 0,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 0,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
+      "days_in_phase": 2,
       "fully_grown": false
     },
     {
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 4,
-      "days_in_phase": 0,
+      "days_in_phase": 2,
       "fully_grown": false
     },
     {
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 5,
-      "days_in_phase": 4,
+      "days_in_phase": 2,
       "fully_grown": false
     },
     {
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 5,
-      "days_in_phase": 0,
+      "days_in_phase": 2,
       "fully_grown": false
     },
     {
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 4,
-      "days_in_phase": 0,
+      "days_in_phase": 2,
       "fully_grown": false
     },
     {
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 5,
-      "days_in_phase": 4,
+      "days_in_phase": 2,
       "fully_grown": false
     },
     {
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 5,
-      "days_in_phase": 4,
+      "days_in_phase": 5,
       "fully_grown": false
     },
     {
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 5,
-      "days_in_phase": 4,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 3,
+      "days_in_phase": 3,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
       "fully_grown": false
     },
     {
       "name": "Hops",
       "index": "304",
       "phase": 5,
-      "days_in_phase": -2,
+      "days_in_phase": 1,
       "fully_grown": false
     },
     {
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 5,
-      "days_in_phase": 4,
+      "days_in_phase": 2,
       "fully_grown": false
     },
     {
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 5,
-      "days_in_phase": 4,
+      "days_in_phase": 2,
       "fully_grown": false
     },
     {
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 5,
-      "days_in_phase": 4,
+      "days_in_phase": 5,
       "fully_grown": false
     },
     {
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 5,
-      "days_in_phase": 4,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 5,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 4,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 5,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 4,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Hops",
+      "index": "304",
+      "phase": 5,
+      "days_in_phase": 1,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
       "fully_grown": false
     },
     {
       "name": "Corn",
       "index": "270",
       "phase": 5,
-      "days_in_phase": 1,
+      "days_in_phase": 3,
       "fully_grown": false
     },
     {
       "name": "Unknown (SummerSquash)",
       "index": "SummerSquash",
       "phase": 5,
-      "days_in_phase": -1,
+      "days_in_phase": 2,
       "fully_grown": false
     },
     {
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 5,
-      "days_in_phase": 4,
+      "days_in_phase": 2,
       "fully_grown": false
     },
     {
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 5,
-      "days_in_phase": 4,
+      "days_in_phase": 2,
       "fully_grown": false
     },
     {
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 5,
-      "days_in_phase": 4,
+      "days_in_phase": 2,
       "fully_grown": false
     },
     {
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 5,
-      "days_in_phase": 4,
+      "days_in_phase": 2,
       "fully_grown": false
     },
     {
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 5,
-      "days_in_phase": 4,
+      "days_in_phase": 2,
       "fully_grown": false
     },
     {
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 5,
-      "days_in_phase": 4,
+      "days_in_phase": 2,
       "fully_grown": false
     },
     {
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 5,
-      "days_in_phase": 4,
+      "days_in_phase": 2,
       "fully_grown": false
     },
     {
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 5,
-      "days_in_phase": 4,
+      "days_in_phase": 2,
       "fully_grown": false
     },
     {
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 5,
-      "days_in_phase": 4,
+      "days_in_phase": 2,
       "fully_grown": false
     },
     {
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 5,
-      "days_in_phase": 4,
+      "days_in_phase": 2,
       "fully_grown": false
     },
     {
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 5,
-      "days_in_phase": 4,
+      "days_in_phase": 2,
       "fully_grown": false
     },
     {
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 5,
-      "days_in_phase": 4,
+      "days_in_phase": 2,
       "fully_grown": false
     },
     {
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 5,
-      "days_in_phase": 4,
+      "days_in_phase": 2,
       "fully_grown": false
     },
     {
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 5,
-      "days_in_phase": 4,
+      "days_in_phase": 2,
       "fully_grown": false
     },
     {
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 5,
-      "days_in_phase": 4,
+      "days_in_phase": 2,
       "fully_grown": false
     },
     {
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 5,
-      "days_in_phase": 4,
+      "days_in_phase": 2,
       "fully_grown": false
     },
     {
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 5,
-      "days_in_phase": 4,
+      "days_in_phase": 2,
       "fully_grown": false
     },
     {
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 5,
-      "days_in_phase": 4,
+      "days_in_phase": 2,
       "fully_grown": false
     },
     {
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 5,
-      "days_in_phase": 4,
+      "days_in_phase": 2,
       "fully_grown": false
     },
     {
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 5,
-      "days_in_phase": 4,
+      "days_in_phase": 2,
       "fully_grown": false
     },
     {
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 2,
-      "days_in_phase": 1,
-      "fully_grown": false
-    },
-    {
-      "name": "Hops",
-      "index": "304",
-      "phase": 5,
-      "days_in_phase": -2,
-      "fully_grown": false
-    },
-    {
-      "name": "Hops",
-      "index": "304",
-      "phase": 5,
-      "days_in_phase": -2,
-      "fully_grown": false
-    },
-    {
-      "name": "Hops",
-      "index": "304",
-      "phase": 5,
-      "days_in_phase": -2,
-      "fully_grown": false
-    },
-    {
-      "name": "Hops",
-      "index": "304",
-      "phase": 5,
-      "days_in_phase": -2,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 4,
-      "days_in_phase": 0,
-      "fully_grown": false
-    },
-    {
-      "name": "Hops",
-      "index": "304",
-      "phase": 5,
-      "days_in_phase": -2,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 4,
-      "days_in_phase": 0,
-      "fully_grown": false
-    },
-    {
-      "name": "Hops",
-      "index": "304",
-      "phase": 5,
-      "days_in_phase": -2,
-      "fully_grown": false
-    },
-    {
-      "name": "Hops",
-      "index": "304",
-      "phase": 5,
-      "days_in_phase": -2,
-      "fully_grown": false
-    },
-    {
-      "name": "Hops",
-      "index": "304",
-      "phase": 5,
-      "days_in_phase": -2,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 4,
-      "days_in_phase": 0,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 4,
-      "days_in_phase": 0,
-      "fully_grown": false
-    },
-    {
-      "name": "Hops",
-      "index": "304",
-      "phase": 5,
-      "days_in_phase": -2,
-      "fully_grown": false
-    },
-    {
-      "name": "Hops",
-      "index": "304",
-      "phase": 5,
-      "days_in_phase": -2,
-      "fully_grown": false
-    },
-    {
-      "name": "Hops",
-      "index": "304",
-      "phase": 5,
-      "days_in_phase": -2,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 4,
-      "days_in_phase": 0,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 0,
-      "fully_grown": false
-    },
-    {
-      "name": "Hops",
-      "index": "304",
-      "phase": 5,
-      "days_in_phase": -2,
-      "fully_grown": false
-    },
-    {
-      "name": "Hops",
-      "index": "304",
-      "phase": 5,
-      "days_in_phase": -2,
-      "fully_grown": false
-    },
-    {
-      "name": "Hops",
-      "index": "304",
-      "phase": 5,
-      "days_in_phase": -2,
-      "fully_grown": false
-    },
-    {
-      "name": "Hops",
-      "index": "304",
-      "phase": 5,
-      "days_in_phase": -2,
-      "fully_grown": false
-    },
-    {
-      "name": "Hops",
-      "index": "304",
-      "phase": 5,
-      "days_in_phase": -2,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 4,
-      "days_in_phase": 0,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 4,
-      "days_in_phase": 0,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 4,
-      "days_in_phase": 0,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 4,
-      "days_in_phase": 0,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 4,
-      "days_in_phase": 0,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 0,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 0,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 4,
-      "days_in_phase": 0,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 4,
-      "days_in_phase": 0,
-      "fully_grown": false
-    },
-    {
-      "name": "Hops",
-      "index": "304",
-      "phase": 5,
-      "days_in_phase": -2,
-      "fully_grown": false
-    },
-    {
-      "name": "Hops",
-      "index": "304",
-      "phase": 5,
-      "days_in_phase": -2,
-      "fully_grown": false
-    },
-    {
-      "name": "Hops",
-      "index": "304",
-      "phase": 5,
-      "days_in_phase": -2,
-      "fully_grown": false
-    },
-    {
-      "name": "Hops",
-      "index": "304",
-      "phase": 5,
-      "days_in_phase": -2,
-      "fully_grown": false
-    },
-    {
-      "name": "Hops",
-      "index": "304",
-      "phase": 5,
-      "days_in_phase": -2,
-      "fully_grown": false
-    },
-    {
-      "name": "Hops",
-      "index": "304",
-      "phase": 5,
-      "days_in_phase": -2,
-      "fully_grown": false
-    },
-    {
-      "name": "Hops",
-      "index": "304",
-      "phase": 5,
-      "days_in_phase": -2,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 4,
-      "days_in_phase": 0,
-      "fully_grown": false
-    },
-    {
-      "name": "Hops",
-      "index": "304",
-      "phase": 5,
-      "days_in_phase": -2,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 0,
-      "fully_grown": false
-    },
-    {
-      "name": "Hops",
-      "index": "304",
-      "phase": 5,
-      "days_in_phase": -2,
-      "fully_grown": false
-    },
-    {
-      "name": "Hops",
-      "index": "304",
-      "phase": 5,
-      "days_in_phase": -2,
-      "fully_grown": false
-    },
-    {
-      "name": "Hops",
-      "index": "304",
-      "phase": 5,
-      "days_in_phase": -2,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 0,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 4,
-      "days_in_phase": 0,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 4,
-      "days_in_phase": 0,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 4,
-      "days_in_phase": 0,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 4,
-      "days_in_phase": 0,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 4,
-      "days_in_phase": 0,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 5,
-      "days_in_phase": 4,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 4,
-      "days_in_phase": 0,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 4,
-      "days_in_phase": 0,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 4,
-      "days_in_phase": 0,
-      "fully_grown": false
-    },
-    {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 4,
-      "days_in_phase": 0,
+      "days_in_phase": 2,
       "fully_grown": false
     },
     {
@@ -2720,38 +2328,430 @@
       "fully_grown": false
     },
     {
-      "name": "Ancient Fruit",
-      "index": "454",
-      "phase": 4,
-      "days_in_phase": 0,
+      "name": "Hops",
+      "index": "304",
+      "phase": 5,
+      "days_in_phase": 1,
+      "fully_grown": false
+    },
+    {
+      "name": "Hops",
+      "index": "304",
+      "phase": 5,
+      "days_in_phase": 1,
+      "fully_grown": false
+    },
+    {
+      "name": "Hops",
+      "index": "304",
+      "phase": 5,
+      "days_in_phase": 1,
+      "fully_grown": false
+    },
+    {
+      "name": "Hops",
+      "index": "304",
+      "phase": 5,
+      "days_in_phase": 1,
       "fully_grown": false
     },
     {
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 4,
-      "days_in_phase": 0,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Hops",
+      "index": "304",
+      "phase": 5,
+      "days_in_phase": 1,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 4,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Hops",
+      "index": "304",
+      "phase": 5,
+      "days_in_phase": 1,
+      "fully_grown": false
+    },
+    {
+      "name": "Hops",
+      "index": "304",
+      "phase": 5,
+      "days_in_phase": 1,
+      "fully_grown": false
+    },
+    {
+      "name": "Hops",
+      "index": "304",
+      "phase": 5,
+      "days_in_phase": 1,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 4,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 4,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Hops",
+      "index": "304",
+      "phase": 5,
+      "days_in_phase": 1,
+      "fully_grown": false
+    },
+    {
+      "name": "Hops",
+      "index": "304",
+      "phase": 5,
+      "days_in_phase": 1,
+      "fully_grown": false
+    },
+    {
+      "name": "Hops",
+      "index": "304",
+      "phase": 5,
+      "days_in_phase": 1,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 4,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 5,
+      "fully_grown": false
+    },
+    {
+      "name": "Hops",
+      "index": "304",
+      "phase": 5,
+      "days_in_phase": 1,
+      "fully_grown": false
+    },
+    {
+      "name": "Hops",
+      "index": "304",
+      "phase": 5,
+      "days_in_phase": 1,
+      "fully_grown": false
+    },
+    {
+      "name": "Hops",
+      "index": "304",
+      "phase": 5,
+      "days_in_phase": 1,
+      "fully_grown": false
+    },
+    {
+      "name": "Hops",
+      "index": "304",
+      "phase": 5,
+      "days_in_phase": 1,
+      "fully_grown": false
+    },
+    {
+      "name": "Hops",
+      "index": "304",
+      "phase": 5,
+      "days_in_phase": 1,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 4,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 4,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 4,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 4,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 4,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 5,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 5,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 4,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 4,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Hops",
+      "index": "304",
+      "phase": 5,
+      "days_in_phase": 1,
+      "fully_grown": false
+    },
+    {
+      "name": "Hops",
+      "index": "304",
+      "phase": 5,
+      "days_in_phase": 1,
+      "fully_grown": false
+    },
+    {
+      "name": "Hops",
+      "index": "304",
+      "phase": 5,
+      "days_in_phase": 1,
+      "fully_grown": false
+    },
+    {
+      "name": "Hops",
+      "index": "304",
+      "phase": 5,
+      "days_in_phase": -3,
+      "fully_grown": false
+    },
+    {
+      "name": "Hops",
+      "index": "304",
+      "phase": 5,
+      "days_in_phase": -3,
+      "fully_grown": false
+    },
+    {
+      "name": "Hops",
+      "index": "304",
+      "phase": 5,
+      "days_in_phase": 1,
+      "fully_grown": false
+    },
+    {
+      "name": "Hops",
+      "index": "304",
+      "phase": 5,
+      "days_in_phase": -3,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 4,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Hops",
+      "index": "304",
+      "phase": 5,
+      "days_in_phase": -3,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 5,
+      "fully_grown": false
+    },
+    {
+      "name": "Hops",
+      "index": "304",
+      "phase": 5,
+      "days_in_phase": -3,
+      "fully_grown": false
+    },
+    {
+      "name": "Hops",
+      "index": "304",
+      "phase": 5,
+      "days_in_phase": -3,
+      "fully_grown": false
+    },
+    {
+      "name": "Hops",
+      "index": "304",
+      "phase": 5,
+      "days_in_phase": -3,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 5,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 4,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 4,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 4,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 4,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 4,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 5,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 4,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 4,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 4,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 4,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 2,
+      "days_in_phase": 1,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 4,
+      "days_in_phase": 2,
+      "fully_grown": false
+    },
+    {
+      "name": "Ancient Fruit",
+      "index": "454",
+      "phase": 4,
+      "days_in_phase": 2,
       "fully_grown": false
     },
     {
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 3,
-      "days_in_phase": 1,
+      "days_in_phase": 3,
       "fully_grown": false
     },
     {
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 4,
-      "days_in_phase": 0,
+      "days_in_phase": 2,
       "fully_grown": false
     },
     {
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 4,
-      "days_in_phase": 0,
+      "days_in_phase": 2,
       "fully_grown": false
     },
     {
@@ -2765,21 +2765,21 @@
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 4,
-      "days_in_phase": 0,
+      "days_in_phase": 2,
       "fully_grown": false
     },
     {
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 3,
-      "days_in_phase": 1,
+      "days_in_phase": 3,
       "fully_grown": false
     },
     {
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 4,
-      "days_in_phase": 0,
+      "days_in_phase": 2,
       "fully_grown": false
     },
     {
@@ -2793,14 +2793,14 @@
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 4,
-      "days_in_phase": 0,
+      "days_in_phase": 2,
       "fully_grown": false
     },
     {
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 4,
-      "days_in_phase": 0,
+      "days_in_phase": 2,
       "fully_grown": false
     },
     {
@@ -2814,42 +2814,42 @@
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 4,
-      "days_in_phase": 0,
+      "days_in_phase": 2,
       "fully_grown": false
     },
     {
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 4,
-      "days_in_phase": 0,
+      "days_in_phase": 2,
       "fully_grown": false
     },
     {
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 4,
-      "days_in_phase": 0,
+      "days_in_phase": 2,
       "fully_grown": false
     },
     {
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 4,
-      "days_in_phase": 0,
+      "days_in_phase": 2,
       "fully_grown": false
     },
     {
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 4,
-      "days_in_phase": 0,
+      "days_in_phase": 2,
       "fully_grown": false
     },
     {
       "name": "Ancient Fruit",
       "index": "454",
       "phase": 4,
-      "days_in_phase": 0,
+      "days_in_phase": 2,
       "fully_grown": false
     }
   ],
@@ -3550,7 +3550,7 @@
     {
       "type": "Peach",
       "type_id": "631",
-      "days_until_mature": -100,
+      "days_until_mature": -102,
       "is_mature": true,
       "fruit_season": "all",
       "has_fruit": false
@@ -3558,7 +3558,7 @@
     {
       "type": "Apple",
       "type_id": "633",
-      "days_until_mature": -91,
+      "days_until_mature": -93,
       "is_mature": true,
       "fruit_season": "all",
       "has_fruit": false
@@ -3566,7 +3566,7 @@
     {
       "type": "Apricot",
       "type_id": "629",
-      "days_until_mature": -81,
+      "days_until_mature": -83,
       "is_mature": true,
       "fruit_season": "all",
       "has_fruit": false
@@ -3574,7 +3574,7 @@
     {
       "type": "Cherry",
       "type_id": "628",
-      "days_until_mature": -81,
+      "days_until_mature": -83,
       "is_mature": true,
       "fruit_season": "all",
       "has_fruit": false
@@ -3582,7 +3582,7 @@
     {
       "type": "Orange",
       "type_id": "630",
-      "days_until_mature": -81,
+      "days_until_mature": -83,
       "is_mature": true,
       "fruit_season": "all",
       "has_fruit": false
@@ -3590,7 +3590,7 @@
     {
       "type": "Pomegranate",
       "type_id": "632",
-      "days_until_mature": -81,
+      "days_until_mature": -83,
       "is_mature": true,
       "fruit_season": "all",
       "has_fruit": false
@@ -3598,7 +3598,7 @@
     {
       "type": "Banana",
       "type_id": "69",
-      "days_until_mature": 13,
+      "days_until_mature": 11,
       "is_mature": false,
       "fruit_season": "all",
       "has_fruit": false
@@ -3606,7 +3606,7 @@
     {
       "type": "Banana",
       "type_id": "69",
-      "days_until_mature": 13,
+      "days_until_mature": 11,
       "is_mature": false,
       "fruit_season": "all",
       "has_fruit": false
@@ -3617,8 +3617,8 @@
     "greenhouse_total": 115,
     "farm_by_type": {
       "Ancient Fruit": 223,
-      "Unknown (260)": 3,
       "Corn": 3,
+      "Unknown (260)": 3,
       "Hops": 31,
       "Unknown (SummerSquash)": 1
     },
@@ -4656,7 +4656,253 @@
           "contents": "Empty"
         },
         {
+          "type": "Lightning Rod",
+          "processing": false,
+          "minutes_remaining": 0,
+          "contents": "Empty"
+        },
+        {
+          "type": "Lightning Rod",
+          "processing": false,
+          "minutes_remaining": 0,
+          "contents": "Empty"
+        },
+        {
+          "type": "Lightning Rod",
+          "processing": false,
+          "minutes_remaining": 0,
+          "contents": "Empty"
+        },
+        {
+          "type": "Lightning Rod",
+          "processing": false,
+          "minutes_remaining": 0,
+          "contents": "Empty"
+        },
+        {
           "type": "Tapper",
+          "processing": false,
+          "minutes_remaining": 0,
+          "contents": "Empty"
+        },
+        {
+          "type": "Lightning Rod",
+          "processing": false,
+          "minutes_remaining": 0,
+          "contents": "Empty"
+        },
+        {
+          "type": "Lightning Rod",
+          "processing": false,
+          "minutes_remaining": 0,
+          "contents": "Empty"
+        },
+        {
+          "type": "Charcoal Kiln",
+          "processing": false,
+          "minutes_remaining": 0,
+          "contents": "Empty"
+        },
+        {
+          "type": "Lightning Rod",
+          "processing": false,
+          "minutes_remaining": 0,
+          "contents": "Empty"
+        },
+        {
+          "type": "Tapper",
+          "processing": false,
+          "minutes_remaining": 0,
+          "contents": "Empty"
+        },
+        {
+          "type": "Charcoal Kiln",
+          "processing": false,
+          "minutes_remaining": 0,
+          "contents": "Empty"
+        },
+        {
+          "type": "Lightning Rod",
+          "processing": false,
+          "minutes_remaining": 0,
+          "contents": "Empty"
+        },
+        {
+          "type": "Lightning Rod",
+          "processing": false,
+          "minutes_remaining": 0,
+          "contents": "Empty"
+        },
+        {
+          "type": "Charcoal Kiln",
+          "processing": false,
+          "minutes_remaining": 0,
+          "contents": "Empty"
+        },
+        {
+          "type": "Mushroom Log",
+          "processing": false,
+          "minutes_remaining": 0,
+          "contents": "Empty"
+        },
+        {
+          "type": "Mushroom Log",
+          "processing": false,
+          "minutes_remaining": 0,
+          "contents": "Empty"
+        },
+        {
+          "type": "Mushroom Log",
+          "processing": false,
+          "minutes_remaining": 0,
+          "contents": "Empty"
+        },
+        {
+          "type": "Mushroom Log",
+          "processing": false,
+          "minutes_remaining": 0,
+          "contents": "Empty"
+        },
+        {
+          "type": "Mushroom Log",
+          "processing": false,
+          "minutes_remaining": 0,
+          "contents": "Empty"
+        },
+        {
+          "type": "Mushroom Log",
+          "processing": false,
+          "minutes_remaining": 0,
+          "contents": "Empty"
+        },
+        {
+          "type": "Tapper",
+          "processing": false,
+          "minutes_remaining": 0,
+          "contents": "Empty"
+        },
+        {
+          "type": "Tapper",
+          "processing": false,
+          "minutes_remaining": 0,
+          "contents": "Empty"
+        },
+        {
+          "type": "Mushroom Log",
+          "processing": false,
+          "minutes_remaining": 0,
+          "contents": "Empty"
+        },
+        {
+          "type": "Mushroom Log",
+          "processing": false,
+          "minutes_remaining": 0,
+          "contents": "Empty"
+        },
+        {
+          "type": "Charcoal Kiln",
+          "processing": false,
+          "minutes_remaining": 0,
+          "contents": "Empty"
+        },
+        {
+          "type": "Tapper",
+          "processing": false,
+          "minutes_remaining": 0,
+          "contents": "Empty"
+        },
+        {
+          "type": "Mushroom Log",
+          "processing": false,
+          "minutes_remaining": 0,
+          "contents": "Empty"
+        },
+        {
+          "type": "Tapper",
+          "processing": false,
+          "minutes_remaining": 0,
+          "contents": "Empty"
+        },
+        {
+          "type": "Tapper",
+          "processing": false,
+          "minutes_remaining": 0,
+          "contents": "Empty"
+        },
+        {
+          "type": "Tapper",
+          "processing": false,
+          "minutes_remaining": 0,
+          "contents": "Empty"
+        },
+        {
+          "type": "Mushroom Log",
+          "processing": false,
+          "minutes_remaining": 0,
+          "contents": "Empty"
+        },
+        {
+          "type": "Mushroom Log",
+          "processing": false,
+          "minutes_remaining": 0,
+          "contents": "Empty"
+        },
+        {
+          "type": "Mushroom Log",
+          "processing": false,
+          "minutes_remaining": 0,
+          "contents": "Empty"
+        },
+        {
+          "type": "Tapper",
+          "processing": false,
+          "minutes_remaining": 0,
+          "contents": "Empty"
+        },
+        {
+          "type": "Tapper",
+          "processing": false,
+          "minutes_remaining": 0,
+          "contents": "Empty"
+        },
+        {
+          "type": "Tapper",
+          "processing": false,
+          "minutes_remaining": 0,
+          "contents": "Empty"
+        },
+        {
+          "type": "Tapper",
+          "processing": false,
+          "minutes_remaining": 0,
+          "contents": "Empty"
+        },
+        {
+          "type": "Tapper",
+          "processing": false,
+          "minutes_remaining": 0,
+          "contents": "Empty"
+        },
+        {
+          "type": "Tapper",
+          "processing": false,
+          "minutes_remaining": 0,
+          "contents": "Empty"
+        },
+        {
+          "type": "Wood Chipper",
+          "processing": false,
+          "minutes_remaining": 0,
+          "contents": "Empty"
+        },
+        {
+          "type": "Scarecrow",
+          "processing": false,
+          "minutes_remaining": 0,
+          "contents": "Empty"
+        },
+        {
+          "type": "Mushroom Log",
           "processing": false,
           "minutes_remaining": 0,
           "contents": "Empty"
@@ -4680,253 +4926,7 @@
           "contents": "Empty"
         },
         {
-          "type": "Mushroom Log",
-          "processing": false,
-          "minutes_remaining": 0,
-          "contents": "Empty"
-        },
-        {
-          "type": "Scarecrow",
-          "processing": false,
-          "minutes_remaining": 0,
-          "contents": "Empty"
-        },
-        {
-          "type": "Wood Chipper",
-          "processing": false,
-          "minutes_remaining": 0,
-          "contents": "Empty"
-        },
-        {
           "type": "Tapper",
-          "processing": false,
-          "minutes_remaining": 0,
-          "contents": "Empty"
-        },
-        {
-          "type": "Tapper",
-          "processing": false,
-          "minutes_remaining": 0,
-          "contents": "Empty"
-        },
-        {
-          "type": "Tapper",
-          "processing": false,
-          "minutes_remaining": 0,
-          "contents": "Empty"
-        },
-        {
-          "type": "Tapper",
-          "processing": false,
-          "minutes_remaining": 0,
-          "contents": "Empty"
-        },
-        {
-          "type": "Tapper",
-          "processing": false,
-          "minutes_remaining": 0,
-          "contents": "Empty"
-        },
-        {
-          "type": "Tapper",
-          "processing": false,
-          "minutes_remaining": 0,
-          "contents": "Empty"
-        },
-        {
-          "type": "Mushroom Log",
-          "processing": false,
-          "minutes_remaining": 0,
-          "contents": "Empty"
-        },
-        {
-          "type": "Mushroom Log",
-          "processing": false,
-          "minutes_remaining": 0,
-          "contents": "Empty"
-        },
-        {
-          "type": "Mushroom Log",
-          "processing": false,
-          "minutes_remaining": 0,
-          "contents": "Empty"
-        },
-        {
-          "type": "Tapper",
-          "processing": false,
-          "minutes_remaining": 0,
-          "contents": "Empty"
-        },
-        {
-          "type": "Tapper",
-          "processing": false,
-          "minutes_remaining": 0,
-          "contents": "Empty"
-        },
-        {
-          "type": "Tapper",
-          "processing": false,
-          "minutes_remaining": 0,
-          "contents": "Empty"
-        },
-        {
-          "type": "Mushroom Log",
-          "processing": false,
-          "minutes_remaining": 0,
-          "contents": "Empty"
-        },
-        {
-          "type": "Tapper",
-          "processing": false,
-          "minutes_remaining": 0,
-          "contents": "Empty"
-        },
-        {
-          "type": "Charcoal Kiln",
-          "processing": false,
-          "minutes_remaining": 0,
-          "contents": "Empty"
-        },
-        {
-          "type": "Mushroom Log",
-          "processing": false,
-          "minutes_remaining": 0,
-          "contents": "Empty"
-        },
-        {
-          "type": "Mushroom Log",
-          "processing": false,
-          "minutes_remaining": 0,
-          "contents": "Empty"
-        },
-        {
-          "type": "Tapper",
-          "processing": false,
-          "minutes_remaining": 0,
-          "contents": "Empty"
-        },
-        {
-          "type": "Tapper",
-          "processing": false,
-          "minutes_remaining": 0,
-          "contents": "Empty"
-        },
-        {
-          "type": "Mushroom Log",
-          "processing": false,
-          "minutes_remaining": 0,
-          "contents": "Empty"
-        },
-        {
-          "type": "Mushroom Log",
-          "processing": false,
-          "minutes_remaining": 0,
-          "contents": "Empty"
-        },
-        {
-          "type": "Mushroom Log",
-          "processing": false,
-          "minutes_remaining": 0,
-          "contents": "Empty"
-        },
-        {
-          "type": "Mushroom Log",
-          "processing": false,
-          "minutes_remaining": 0,
-          "contents": "Empty"
-        },
-        {
-          "type": "Mushroom Log",
-          "processing": false,
-          "minutes_remaining": 0,
-          "contents": "Empty"
-        },
-        {
-          "type": "Mushroom Log",
-          "processing": false,
-          "minutes_remaining": 0,
-          "contents": "Empty"
-        },
-        {
-          "type": "Charcoal Kiln",
-          "processing": false,
-          "minutes_remaining": 0,
-          "contents": "Empty"
-        },
-        {
-          "type": "Lightning Rod",
-          "processing": false,
-          "minutes_remaining": 0,
-          "contents": "Empty"
-        },
-        {
-          "type": "Lightning Rod",
-          "processing": false,
-          "minutes_remaining": 0,
-          "contents": "Empty"
-        },
-        {
-          "type": "Charcoal Kiln",
-          "processing": false,
-          "minutes_remaining": 0,
-          "contents": "Empty"
-        },
-        {
-          "type": "Tapper",
-          "processing": false,
-          "minutes_remaining": 0,
-          "contents": "Empty"
-        },
-        {
-          "type": "Lightning Rod",
-          "processing": false,
-          "minutes_remaining": 0,
-          "contents": "Empty"
-        },
-        {
-          "type": "Charcoal Kiln",
-          "processing": false,
-          "minutes_remaining": 0,
-          "contents": "Empty"
-        },
-        {
-          "type": "Lightning Rod",
-          "processing": false,
-          "minutes_remaining": 0,
-          "contents": "Empty"
-        },
-        {
-          "type": "Lightning Rod",
-          "processing": false,
-          "minutes_remaining": 0,
-          "contents": "Empty"
-        },
-        {
-          "type": "Tapper",
-          "processing": false,
-          "minutes_remaining": 0,
-          "contents": "Empty"
-        },
-        {
-          "type": "Lightning Rod",
-          "processing": false,
-          "minutes_remaining": 0,
-          "contents": "Empty"
-        },
-        {
-          "type": "Lightning Rod",
-          "processing": false,
-          "minutes_remaining": 0,
-          "contents": "Empty"
-        },
-        {
-          "type": "Lightning Rod",
-          "processing": false,
-          "minutes_remaining": 0,
-          "contents": "Empty"
-        },
-        {
-          "type": "Lightning Rod",
           "processing": false,
           "minutes_remaining": 0,
           "contents": "Empty"
@@ -4943,65 +4943,17 @@
       "Oil Maker": 9,
       "Keg": 138,
       "Cheese Press": 8,
+      "Lightning Rod": 9,
       "Tapper": 17,
-      "Mushroom Log": 13,
-      "Scarecrow": 1,
-      "Wood Chipper": 1,
       "Charcoal Kiln": 4,
-      "Lightning Rod": 9
+      "Mushroom Log": 13,
+      "Wood Chipper": 1,
+      "Scarecrow": 1
     }
   },
   "inventory": [
     {
       "slot": 0,
-      "id": "831",
-      "name": "Taro Tuber",
-      "quantity": 6,
-      "quality": 0,
-      "location": "inventory"
-    },
-    {
-      "slot": 1,
-      "id": "SportsCap",
-      "name": "Sports Cap",
-      "quantity": 1,
-      "quality": 0,
-      "location": "inventory"
-    },
-    {
-      "slot": 2,
-      "id": "162",
-      "name": "Lava Eel",
-      "quantity": 4,
-      "quality": 2,
-      "location": "inventory"
-    },
-    {
-      "slot": 3,
-      "id": "162",
-      "name": "Lava Eel",
-      "quantity": 1,
-      "quality": 1,
-      "location": "inventory"
-    },
-    {
-      "slot": 4,
-      "id": "171",
-      "name": "Broken CD",
-      "quantity": 2,
-      "quality": 0,
-      "location": "inventory"
-    },
-    {
-      "slot": 5,
-      "id": "172",
-      "name": "Soggy Newspaper",
-      "quantity": 1,
-      "quality": 0,
-      "location": "inventory"
-    },
-    {
-      "slot": 12,
       "id": "441",
       "name": "Master Slingshot",
       "quantity": 1,
@@ -5009,55 +4961,7 @@
       "location": "inventory"
     },
     {
-      "slot": 13,
-      "id": "ReturnScepter",
-      "name": "Return Scepter",
-      "quantity": 1,
-      "quality": 0,
-      "location": "inventory"
-    },
-    {
-      "slot": 14,
-      "id": "IridiumPickaxe",
-      "name": "Iridium Pickaxe",
-      "quantity": 1,
-      "quality": 0,
-      "location": "inventory"
-    },
-    {
-      "slot": 15,
-      "id": "IridiumHoe",
-      "name": "Iridium Hoe",
-      "quantity": 1,
-      "quality": 0,
-      "location": "inventory"
-    },
-    {
-      "slot": 16,
-      "id": "AdvancedIridiumRod",
-      "name": "Advanced Iridium Rod",
-      "quantity": 1,
-      "quality": 0,
-      "location": "inventory"
-    },
-    {
-      "slot": 17,
-      "id": "IridiumAxe",
-      "name": "Iridium Axe",
-      "quantity": 1,
-      "quality": 0,
-      "location": "inventory"
-    },
-    {
-      "slot": 18,
-      "id": "IridiumWateringCan",
-      "name": "Iridium Watering Can",
-      "quantity": 1,
-      "quality": 0,
-      "location": "inventory"
-    },
-    {
-      "slot": 19,
+      "slot": 1,
       "id": "66",
       "name": "Iridium Scythe",
       "quantity": 1,
@@ -5065,7 +4969,47 @@
       "location": "inventory"
     },
     {
-      "slot": 20,
+      "slot": 2,
+      "id": "IridiumPickaxe",
+      "name": "Iridium Pickaxe",
+      "quantity": 1,
+      "quality": 0,
+      "location": "inventory"
+    },
+    {
+      "slot": 3,
+      "id": "IridiumAxe",
+      "name": "Iridium Axe",
+      "quantity": 1,
+      "quality": 0,
+      "location": "inventory"
+    },
+    {
+      "slot": 4,
+      "id": "IridiumWateringCan",
+      "name": "Iridium Watering Can",
+      "quantity": 1,
+      "quality": 0,
+      "location": "inventory"
+    },
+    {
+      "slot": 5,
+      "id": "IridiumHoe",
+      "name": "Iridium Hoe",
+      "quantity": 1,
+      "quality": 0,
+      "location": "inventory"
+    },
+    {
+      "slot": 6,
+      "id": "14",
+      "name": "Advanced Iridium Rod",
+      "quantity": 1,
+      "quality": 0,
+      "location": "inventory"
+    },
+    {
+      "slot": 7,
       "id": "29",
       "name": "Galaxy Hammer",
       "quantity": 1,
@@ -5073,122 +5017,26 @@
       "location": "inventory"
     },
     {
-      "slot": 21,
-      "id": "749",
-      "name": "Omni Geode",
-      "quantity": 6,
-      "quality": 0,
-      "location": "inventory"
-    },
-    {
-      "slot": 22,
-      "id": "74",
-      "name": "Prismatic Shard",
+      "slot": 8,
+      "id": "ReturnScepter",
+      "name": "Return Scepter",
       "quantity": 1,
       "quality": 0,
       "location": "inventory"
     },
     {
-      "slot": 23,
-      "id": "64",
-      "name": "Ruby",
-      "quantity": 1,
-      "quality": 0,
-      "location": "inventory"
-    },
-    {
-      "slot": 24,
-      "id": "372",
-      "name": "Clam",
-      "quantity": 1,
-      "quality": 4,
-      "location": "inventory"
-    },
-    {
-      "slot": 25,
-      "id": "372",
-      "name": "Clam",
-      "quantity": 2,
-      "quality": 1,
-      "location": "inventory"
-    },
-    {
-      "slot": 26,
-      "id": "242",
-      "name": "Dish O' The Sea",
-      "quantity": 3,
-      "quality": 0,
-      "location": "inventory"
-    },
-    {
-      "slot": 27,
-      "id": "226",
-      "name": "Spicy Eel",
-      "quantity": 4,
-      "quality": 0,
-      "location": "inventory"
-    },
-    {
-      "slot": 28,
+      "slot": 9,
       "id": "253",
       "name": "Triple Shot Espresso",
-      "quantity": 94,
+      "quantity": 89,
       "quality": 0,
       "location": "inventory"
     },
     {
-      "slot": 29,
-      "id": "287",
-      "name": "Bomb",
-      "quantity": 125,
-      "quality": 0,
-      "location": "inventory"
-    },
-    {
-      "slot": 30,
-      "id": "288",
-      "name": "Mega Bomb",
-      "quantity": 48,
-      "quality": 0,
-      "location": "inventory"
-    },
-    {
-      "slot": 31,
-      "id": "881",
-      "name": "Bone Fragment",
-      "quantity": 1,
-      "quality": 0,
-      "location": "inventory"
-    },
-    {
-      "slot": 32,
-      "id": "848",
-      "name": "Cinder Shard",
-      "quantity": 14,
-      "quality": 0,
-      "location": "inventory"
-    },
-    {
-      "slot": 33,
+      "slot": 10,
       "id": "382",
       "name": "Coal",
-      "quantity": 118,
-      "quality": 0,
-      "location": "inventory"
-    },
-    {
-      "slot": 34,
-      "id": "424",
-      "name": "Cheese",
-      "quantity": 153,
-      "quality": 2,
-      "location": "inventory"
-    },
-    {
-      "slot": 35,
-      "id": "768",
-      "name": "Solar Essence",
-      "quantity": 10,
+      "quantity": 164,
       "quality": 0,
       "location": "inventory"
     }
@@ -5196,51 +5044,51 @@
   "chest_contents": [
     {
       "chest_number": 1,
-      "location": "Brase",
+      "location": "Zusa",
       "location_type": "Farm",
       "items": [
         {
-          "id": "107",
-          "name": "Dinosaur Egg",
-          "quantity": 2,
-          "quality": 1
-        },
-        {
-          "id": "442",
-          "name": "Duck Egg",
-          "quantity": 2,
-          "quality": 1
+          "id": "305",
+          "name": "Void Egg",
+          "quantity": 4,
+          "quality": 4
         },
         {
           "id": "305",
           "name": "Void Egg",
-          "quantity": 2,
-          "quality": 4
-        },
-        {
-          "id": "442",
-          "name": "Duck Egg",
-          "quantity": 2,
-          "quality": 4
+          "quantity": 3,
+          "quality": 2
         },
         {
           "id": "305",
           "name": "Void Egg",
           "quantity": 1,
-          "quality": 2
+          "quality": 1
+        },
+        {
+          "id": "440",
+          "name": "Wool",
+          "quantity": 1,
+          "quality": 0
+        },
+        {
+          "id": "442",
+          "name": "Duck Egg",
+          "quantity": 1,
+          "quality": 1
         }
       ],
       "item_count": 5
     },
     {
       "chest_number": 2,
-      "location": "Brase",
+      "location": "Zusa",
       "location_type": "Farm",
       "items": [
         {
           "id": "430",
           "name": "Truffle",
-          "quantity": 286,
+          "quantity": 304,
           "quality": 4
         }
       ],
@@ -5248,7 +5096,7 @@
     },
     {
       "chest_number": 3,
-      "location": "Brase",
+      "location": "Zusa",
       "location_type": "Farm",
       "items": [
         {
@@ -5262,7 +5110,7 @@
     },
     {
       "chest_number": 4,
-      "location": "Brase",
+      "location": "Zusa",
       "location_type": "Farm",
       "items": [
         {
@@ -5286,7 +5134,7 @@
         {
           "id": "186",
           "name": "Large Milk",
-          "quantity": 11,
+          "quantity": 3,
           "quality": 2
         }
       ],
@@ -5294,949 +5142,509 @@
     },
     {
       "chest_number": 5,
-      "location": "Brase",
+      "location": "Zusa",
       "location_type": "Farm",
       "items": [
         {
-          "id": "349",
-          "name": "Energy Tonic",
-          "quantity": 2,
-          "quality": 0
-        },
-        {
-          "id": "59",
-          "name": "Tent Kit",
-          "quantity": 4,
-          "quality": 0
-        },
-        {
-          "id": "727",
-          "name": "Chowder",
-          "quantity": 2,
-          "quality": 0
-        },
-        {
-          "id": "732",
-          "name": "Crab Cakes",
-          "quantity": 6,
-          "quality": 0
-        },
-        {
-          "id": "205",
-          "name": "Fried Mushroom",
-          "quantity": 2,
-          "quality": 0
-        },
-        {
-          "id": "773",
-          "name": "Life Elixir",
-          "quantity": 9,
-          "quality": 0
-        },
-        {
-          "id": "243",
-          "name": "Miner's Treat",
-          "quantity": 10,
-          "quality": 0
-        },
-        {
-          "id": "772",
-          "name": "Oil of Garlic",
-          "quantity": 2,
-          "quality": 0
-        },
-        {
-          "id": "195",
-          "name": "Omelet",
-          "quantity": 1,
-          "quality": 0
-        },
-        {
-          "id": "196",
-          "name": "Salad",
-          "quantity": 9,
-          "quality": 0
-        },
-        {
-          "id": "241",
-          "name": "Survival Burger",
-          "quantity": 5,
-          "quality": 0
-        },
-        {
-          "id": "200",
-          "name": "Vegetable Medley",
-          "quantity": 2,
-          "quality": 0
-        },
-        {
-          "id": "286",
-          "name": "Cherry Bomb",
-          "quantity": 3,
-          "quality": 0
-        },
-        {
-          "id": "80",
-          "name": "Carrot",
-          "quantity": 11,
-          "quality": 0
-        },
-        {
-          "id": "78",
-          "name": "Cave Carrot",
-          "quantity": 18,
-          "quality": 0
-        },
-        {
-          "id": "517",
-          "name": "Glow Ring",
-          "quantity": 1,
-          "quality": 0
-        },
-        {
-          "id": "221",
-          "name": "Pink Cake",
-          "quantity": 4,
-          "quality": 0
-        },
-        {
-          "id": "689",
-          "name": "Warp Totem: Mountains",
-          "quantity": 3,
-          "quality": 0
-        },
-        {
-          "id": "4",
-          "name": "Galaxy Sword",
-          "quantity": 1,
-          "quality": 0
-        }
-      ],
-      "item_count": 19
-    },
-    {
-      "chest_number": 6,
-      "location": "Brase",
-      "location_type": "Farm",
-      "items": [
-        {
-          "id": "171",
-          "name": "Broken CD",
-          "quantity": 6,
-          "quality": 0
-        },
-        {
-          "id": "169",
-          "name": "Driftwood",
-          "quantity": 4,
-          "quality": 0
-        },
-        {
-          "id": "170",
-          "name": "Broken Glasses",
-          "quantity": 2,
-          "quality": 0
-        },
-        {
-          "id": "167",
-          "name": "Joja Cola",
-          "quantity": 12,
-          "quality": 0
-        },
-        {
-          "id": "172",
-          "name": "Soggy Newspaper",
-          "quantity": 3,
-          "quality": 0
-        },
-        {
-          "id": "168",
-          "name": "Trash",
-          "quantity": 11,
-          "quality": 0
-        }
-      ],
-      "item_count": 6
-    },
-    {
-      "chest_number": 7,
-      "location": "Brase",
-      "location_type": "Farm",
-      "items": [
-        {
-          "id": "322",
-          "name": "Wood Fence",
-          "quantity": 4,
-          "quality": 0
-        },
-        {
-          "id": "325",
-          "name": "Gate",
-          "quantity": 2,
-          "quality": 0
-        },
-        {
-          "id": "407",
-          "name": "Gravel Path",
-          "quantity": 22,
-          "quality": 0
-        },
-        {
-          "id": "329",
-          "name": "Stone Floor",
-          "quantity": 45,
-          "quality": 0
-        },
-        {
-          "id": "323",
-          "name": "Stone Fence",
-          "quantity": 82,
-          "quality": 0
-        }
-      ],
-      "item_count": 5
-    },
-    {
-      "chest_number": 8,
-      "location": "Brase",
-      "location_type": "Farm",
-      "items": [
-        {
-          "id": "8",
-          "name": "Obsidian Edge",
-          "quantity": 1,
-          "quality": 0
-        },
-        {
-          "id": "45",
-          "name": "Wicked Kris",
-          "quantity": 1,
-          "quality": 0
-        },
-        {
-          "id": "767",
-          "name": "Bat Wing",
-          "quantity": 16,
-          "quality": 0
-        },
-        {
-          "id": "684",
-          "name": "Bug Meat",
-          "quantity": 30,
-          "quality": 0
-        },
-        {
-          "id": "766",
-          "name": "Slime",
-          "quantity": 81,
-          "quality": 0
-        },
-        {
-          "id": "768",
-          "name": "Solar Essence",
-          "quantity": 14,
-          "quality": 0
-        },
-        {
-          "id": "769",
-          "name": "Void Essence",
-          "quantity": 144,
-          "quality": 0
-        },
-        {
-          "id": "51",
-          "name": "Broken Trident",
-          "quantity": 1,
-          "quality": 0
-        },
-        {
-          "id": "133",
-          "name": "Cave Jelly",
-          "quantity": 4,
-          "quality": 0
-        },
-        {
-          "id": "18",
-          "name": "Burglar's Shank",
-          "quantity": 1,
-          "quality": 0
-        },
-        {
-          "id": "51",
-          "name": "Broken Trident",
-          "quantity": 1,
-          "quality": 0
-        },
-        {
-          "id": "14",
-          "name": "Neptune's Glaive",
-          "quantity": 1,
-          "quality": 0
-        },
-        {
-          "id": "26",
-          "name": "Lead Rod",
-          "quantity": 1,
-          "quality": 0
-        },
-        {
-          "id": "533",
-          "name": "Emerald Ring",
-          "quantity": 1,
-          "quality": 0
-        },
-        {
-          "id": "827",
-          "name": "Mummified Bat",
-          "quantity": 1,
-          "quality": 0
-        },
-        {
-          "id": "28",
-          "name": "The Slammer",
-          "quantity": 1,
-          "quality": 0
-        },
-        {
-          "id": "862",
-          "name": "Soul Sapper Ring",
-          "quantity": 1,
-          "quality": 0
-        },
-        {
-          "id": "861",
-          "name": "Protection Ring",
-          "quantity": 1,
-          "quality": 0
-        },
-        {
-          "id": "887",
-          "name": "Immunity Band",
-          "quantity": 1,
-          "quality": 0
-        }
-      ],
-      "item_count": 19
-    },
-    {
-      "chest_number": 9,
-      "location": "Brase",
-      "location_type": "Farm",
-      "items": [
-        {
-          "id": "531",
-          "name": "Aquamarine Ring",
-          "quantity": 1,
-          "quality": 0
-        },
-        {
-          "id": "122",
-          "name": "Dwarf Gadget",
-          "quantity": 1,
-          "quality": 0
-        },
-        {
-          "id": "373",
-          "name": "Golden Pumpkin",
-          "quantity": 3,
-          "quality": 0
-        },
-        {
-          "id": "797",
-          "name": "Pearl",
-          "quantity": 2,
-          "quality": 0
-        },
-        {
-          "id": "690",
-          "name": "Warp Totem: Beach",
-          "quantity": 3,
-          "quality": 0
-        },
-        {
-          "id": "787",
-          "name": "Battery Pack",
-          "quantity": 52,
-          "quality": 0
-        },
-        {
-          "id": "166",
-          "name": "Treasure Chest",
-          "quantity": 1,
-          "quality": 0
-        },
-        {
-          "id": "121",
-          "name": "Golden Animal Cracker",
-          "quantity": 1,
-          "quality": 0
-        },
-        {
-          "id": "872",
-          "name": "Fairy Dust",
-          "quantity": 5,
-          "quality": 0
-        }
-      ],
-      "item_count": 9
-    },
-    {
-      "chest_number": 10,
-      "location": "Brase",
-      "location_type": "Farm",
-      "items": [
-        {
-          "id": "IridiumRod",
-          "name": "Iridium Rod",
-          "quantity": 1,
-          "quality": 0
-        },
-        {
-          "id": "116",
-          "name": "Dried Starfish",
-          "quantity": 3,
-          "quality": 0
-        },
-        {
-          "id": "153",
-          "name": "Green Algae",
-          "quantity": 30,
-          "quality": 0
-        },
-        {
-          "id": "157",
-          "name": "White Algae",
-          "quantity": 25,
-          "quality": 0
-        },
-        {
-          "id": "132",
-          "name": "River Jelly",
-          "quantity": 2,
-          "quality": 0
-        },
-        {
-          "id": "134",
-          "name": "Sea Jelly",
-          "quantity": 4,
-          "quality": 0
-        },
-        {
-          "id": "152",
-          "name": "Seaweed",
-          "quantity": 35,
-          "quality": 0
-        },
-        {
-          "id": "705",
-          "name": "Albacore",
-          "quantity": 5,
-          "quality": 2
-        },
-        {
-          "id": "129",
-          "name": "Anchovy",
-          "quantity": 1,
-          "quality": 2
-        },
-        {
-          "id": "800",
-          "name": "Blobfish",
-          "quantity": 1,
-          "quality": 1
-        },
-        {
-          "id": "132",
-          "name": "Bream",
-          "quantity": 1,
-          "quality": 4
-        },
-        {
-          "id": "700",
-          "name": "Bullhead",
-          "quantity": 1,
-          "quality": 2
-        },
-        {
-          "id": "702",
-          "name": "Chub",
-          "quantity": 3,
-          "quality": 4
-        },
-        {
-          "id": "718",
-          "name": "Cockle",
-          "quantity": 3,
-          "quality": 1
-        },
-        {
-          "id": "717",
-          "name": "Crab",
-          "quantity": 1,
-          "quality": 0
-        },
-        {
-          "id": "716",
-          "name": "Crayfish",
-          "quantity": 1,
-          "quality": 0
-        },
-        {
-          "id": "704",
-          "name": "Dorado",
-          "quantity": 1,
-          "quality": 2
-        },
-        {
-          "id": "704",
-          "name": "Dorado",
-          "quantity": 1,
-          "quality": 0
-        },
-        {
-          "id": "708",
-          "name": "Halibut",
-          "quantity": 4,
-          "quality": 2
-        },
-        {
-          "id": "147",
-          "name": "Herring",
-          "quantity": 5,
-          "quality": 2
-        },
-        {
-          "id": "136",
-          "name": "Largemouth Bass",
-          "quantity": 1,
-          "quality": 2
-        },
-        {
-          "id": "269",
-          "name": "Midnight Carp",
-          "quantity": 1,
-          "quality": 0
-        },
-        {
-          "id": "798",
-          "name": "Midnight Squid",
-          "quantity": 1,
-          "quality": 2
-        },
-        {
-          "id": "719",
-          "name": "Mussel",
+          "id": "340",
+          "name": "Wild Honey",
           "quantity": 26,
           "quality": 0
         },
         {
-          "id": "141",
-          "name": "Perch",
-          "quantity": 1,
-          "quality": 2
-        },
-        {
-          "id": "722",
-          "name": "Periwinkle",
-          "quantity": 1,
+          "id": "433",
+          "name": "Coffee Bean",
+          "quantity": 404,
           "quality": 0
         },
         {
-          "id": "144",
-          "name": "Pike",
-          "quantity": 1,
-          "quality": 2
-        },
-        {
-          "id": "138",
-          "name": "Rainbow Trout",
-          "quantity": 9,
-          "quality": 4
-        },
-        {
-          "id": "146",
-          "name": "Red Mullet",
-          "quantity": 1,
-          "quality": 2
-        },
-        {
-          "id": "131",
-          "name": "Sardine",
-          "quantity": 2,
-          "quality": 4
-        },
-        {
-          "id": "154",
-          "name": "Sea Cucumber",
-          "quantity": 1,
-          "quality": 4
-        },
-        {
-          "id": "706",
-          "name": "Shad",
-          "quantity": 1,
-          "quality": 2
-        },
-        {
-          "id": "720",
-          "name": "Shrimp",
-          "quantity": 2,
-          "quality": 1
-        },
-        {
-          "id": "137",
-          "name": "Smallmouth Bass",
-          "quantity": 1,
-          "quality": 2
-        },
-        {
-          "id": "721",
-          "name": "Snail",
-          "quantity": 1,
-          "quality": 1
-        },
-        {
-          "id": "721",
-          "name": "Snail",
-          "quantity": 3,
-          "quality": 0
-        },
-        {
-          "id": "799",
-          "name": "Spook Fish",
-          "quantity": 1,
-          "quality": 1
-        },
-        {
-          "id": "151",
-          "name": "Squid",
-          "quantity": 4,
-          "quality": 2
-        },
-        {
-          "id": "145",
-          "name": "Sunfish",
-          "quantity": 2,
-          "quality": 2
-        },
-        {
-          "id": "155",
-          "name": "Super Cucumber",
-          "quantity": 2,
-          "quality": 2
-        },
-        {
-          "id": "699",
-          "name": "Tiger Trout",
-          "quantity": 1,
-          "quality": 1
-        },
-        {
-          "id": "701",
-          "name": "Tilapia",
-          "quantity": 1,
-          "quality": 2
-        },
-        {
-          "id": "130",
-          "name": "Tuna",
-          "quantity": 1,
-          "quality": 2
-        },
-        {
-          "id": "265",
-          "name": "Seafoam Pudding",
-          "quantity": 1,
-          "quality": 0
-        },
-        {
-          "id": "57",
-          "name": "Squid Bait",
-          "quantity": 7,
-          "quality": 0
-        },
-        {
-          "id": "57",
-          "name": "Rainbow Trout Bait",
-          "quantity": 6,
-          "quality": 0
-        },
-        {
-          "id": "14",
-          "name": "Deluxe Bait",
-          "quantity": 128,
-          "quality": 0
-        },
-        {
-          "id": "703",
-          "name": "Magnet",
-          "quantity": 4,
-          "quality": 0
-        },
-        {
-          "id": "774",
-          "name": "Wild Bait",
-          "quantity": 2,
-          "quality": 0
-        },
-        {
-          "id": "691",
-          "name": "Barbed Hook",
-          "quantity": 1,
-          "quality": 0
-        },
-        {
-          "id": "695",
-          "name": "Cork Bobber",
-          "quantity": 1,
-          "quality": 0
-        },
-        {
-          "id": "695",
-          "name": "Cork Bobber",
-          "quantity": 1,
-          "quality": 0
-        },
-        {
-          "id": "695",
-          "name": "Cork Bobber",
-          "quantity": 1,
-          "quality": 0
-        },
-        {
-          "id": "856",
-          "name": "Curiosity Lure",
-          "quantity": 1,
-          "quality": 0
-        },
-        {
-          "id": "56",
-          "name": "Sonar Bobber",
-          "quantity": 1,
-          "quality": 0
-        },
-        {
-          "id": "393",
-          "name": "Coral",
-          "quantity": 43,
-          "quality": 4
-        },
-        {
-          "id": "392",
-          "name": "Nautilus Shell",
-          "quantity": 8,
-          "quality": 4
-        },
-        {
-          "id": "394",
-          "name": "Rainbow Shell",
-          "quantity": 6,
-          "quality": 4
-        },
-        {
-          "id": "397",
-          "name": "Sea Urchin",
-          "quantity": 8,
-          "quality": 4
-        },
-        {
-          "id": "814",
-          "name": "Squid Ink",
-          "quantity": 1,
-          "quality": 0
-        }
-      ],
-      "item_count": 60
-    },
-    {
-      "chest_number": 11,
-      "location": "Brase",
-      "location_type": "Farm",
-      "items": [
-        {
-          "id": "466",
-          "name": "Deluxe Speed-Gro",
-          "quantity": 56,
-          "quality": 0
-        },
-        {
-          "id": "770",
-          "name": "Mixed Seeds",
-          "quantity": 1,
-          "quality": 0
-        },
-        {
-          "id": "831",
-          "name": "Taro Tuber",
-          "quantity": 6,
-          "quality": 0
-        }
-      ],
-      "item_count": 3
-    },
-    {
-      "chest_number": 12,
-      "location": "Brase",
-      "location_type": "Farm",
-      "items": [
-        {
-          "id": "38",
-          "name": "Moss",
-          "quantity": 330,
-          "quality": 0
-        },
-        {
-          "id": "725",
-          "name": "Oak Resin",
-          "quantity": 120,
-          "quality": 0
-        },
-        {
-          "id": "726",
-          "name": "Pine Tar",
-          "quantity": 29,
-          "quality": 0
-        },
-        {
-          "id": "309",
-          "name": "Acorn",
-          "quantity": 151,
-          "quality": 0
-        },
-        {
-          "id": "259",
-          "name": "Fiddlehead Fern",
-          "quantity": 47,
-          "quality": 0
-        },
-        {
-          "id": "92",
-          "name": "Sap",
-          "quantity": 980,
-          "quality": 0
-        },
-        {
-          "id": "92",
-          "name": "Sap",
+          "id": "433",
+          "name": "Coffee Bean",
           "quantity": 999,
           "quality": 0
         },
         {
-          "id": "39",
-          "name": "Mossy Seed",
-          "quantity": 7,
+          "id": "433",
+          "name": "Coffee Bean",
+          "quantity": 999,
           "quality": 0
         },
         {
-          "id": "724",
-          "name": "Maple Syrup",
-          "quantity": 6,
+          "id": "304",
+          "name": "Hops",
+          "quantity": 51,
+          "quality": 2
+        },
+        {
+          "id": "304",
+          "name": "Hops",
+          "quantity": 69,
+          "quality": 1
+        },
+        {
+          "id": "304",
+          "name": "Hops",
+          "quantity": 79,
           "quality": 0
         },
         {
-          "id": "311",
-          "name": "Pine Cone",
-          "quantity": 262,
+          "id": "262",
+          "name": "Wheat",
+          "quantity": 14,
+          "quality": 2
+        },
+        {
+          "id": "262",
+          "name": "Wheat",
+          "quantity": 20,
+          "quality": 1
+        },
+        {
+          "id": "262",
+          "name": "Wheat",
+          "quantity": 27,
           "quality": 0
         },
         {
-          "id": "310",
-          "name": "Maple Seed",
-          "quantity": 84,
+          "id": "454",
+          "name": "Ancient Fruit",
+          "quantity": 179,
+          "quality": 2
+        },
+        {
+          "id": "454",
+          "name": "Ancient Fruit",
+          "quantity": 34,
+          "quality": 1
+        },
+        {
+          "id": "454",
+          "name": "Ancient Fruit",
+          "quantity": 46,
           "quality": 0
         },
         {
-          "id": "292",
-          "name": "Mahogany Seed",
-          "quantity": 1,
+          "id": "268",
+          "name": "Starfruit",
+          "quantity": 18,
+          "quality": 2
+        },
+        {
+          "id": "268",
+          "name": "Starfruit",
+          "quantity": 57,
+          "quality": 1
+        },
+        {
+          "id": "268",
+          "name": "Starfruit",
+          "quantity": 59,
+          "quality": 0
+        },
+        {
+          "id": "815",
+          "name": "Tea Leaves",
+          "quantity": 2,
           "quality": 0
         }
       ],
-      "item_count": 12
+      "item_count": 17
     },
     {
-      "chest_number": 13,
-      "location": "Brase",
+      "chest_number": 6,
+      "location": "Zusa",
       "location_type": "Farm",
       "items": [
         {
-          "id": "621",
-          "name": "Quality Sprinkler",
+          "id": "63",
+          "name": "Raisins",
           "quantity": 1,
           "quality": 0
         },
         {
-          "id": "599",
-          "name": "Sprinkler",
-          "quantity": 3,
+          "id": "613",
+          "name": "Apple",
+          "quantity": 4,
           "quality": 0
         },
         {
-          "id": "369",
-          "name": "Quality Fertilizer",
-          "quantity": 37,
+          "id": "638",
+          "name": "Cherry",
+          "quantity": 10,
           "quality": 0
         },
         {
-          "id": "499",
-          "name": "Ancient Seeds",
-          "quantity": 7,
-          "quality": 0
-        },
-        {
-          "id": "473",
-          "name": "Bean Starter",
-          "quantity": 1,
-          "quality": 0
-        },
-        {
-          "id": "494",
-          "name": "Beet Seeds",
-          "quantity": 1,
-          "quality": 0
-        },
-        {
-          "id": "302",
-          "name": "Hops Starter",
-          "quantity": 19,
-          "quality": 0
-        },
-        {
-          "id": "8",
-          "name": "Mixed Flower Seeds",
-          "quantity": 83,
-          "quality": 0
-        },
-        {
-          "id": "85",
-          "name": "Summer Squash Seeds",
-          "quantity": 2,
-          "quality": 0
-        },
-        {
-          "id": "396",
-          "name": "Spice Berry",
-          "quantity": 3,
-          "quality": 4
-        },
-        {
-          "id": "402",
-          "name": "Sweet Pea",
-          "quantity": 2,
-          "quality": 4
+          "id": "398",
+          "name": "Grape",
+          "quantity": 4,
+          "quality": 2
         },
         {
           "id": "398",
           "name": "Grape",
           "quantity": 3,
+          "quality": 1
+        },
+        {
+          "id": "635",
+          "name": "Orange",
+          "quantity": 22,
+          "quality": 0
+        },
+        {
+          "id": "636",
+          "name": "Peach",
+          "quantity": 10,
+          "quality": 0
+        },
+        {
+          "id": "832",
+          "name": "Pineapple",
+          "quantity": 4,
+          "quality": 0
+        },
+        {
+          "id": "637",
+          "name": "Pomegranate",
+          "quantity": 19,
+          "quality": 0
+        },
+        {
+          "id": "400",
+          "name": "Strawberry",
+          "quantity": 21,
+          "quality": 1
+        },
+        {
+          "id": "400",
+          "name": "Strawberry",
+          "quantity": 4,
+          "quality": 0
+        },
+        {
+          "id": "281",
+          "name": "Chanterelle",
+          "quantity": 5,
+          "quality": 1
+        },
+        {
+          "id": "404",
+          "name": "Common Mushroom",
+          "quantity": 3,
+          "quality": 2
+        },
+        {
+          "id": "404",
+          "name": "Common Mushroom",
+          "quantity": 31,
+          "quality": 1
+        },
+        {
+          "id": "404",
+          "name": "Common Mushroom",
+          "quantity": 68,
+          "quality": 0
+        },
+        {
+          "id": "851",
+          "name": "Magma Cap",
+          "quantity": 1,
           "quality": 4
+        },
+        {
+          "id": "257",
+          "name": "Morel",
+          "quantity": 32,
+          "quality": 1
+        },
+        {
+          "id": "257",
+          "name": "Morel",
+          "quantity": 26,
+          "quality": 0
+        },
+        {
+          "id": "422",
+          "name": "Purple Mushroom",
+          "quantity": 2,
+          "quality": 1
+        },
+        {
+          "id": "422",
+          "name": "Purple Mushroom",
+          "quantity": 3,
+          "quality": 0
+        },
+        {
+          "id": "634",
+          "name": "Apricot",
+          "quantity": 18,
+          "quality": 0
+        },
+        {
+          "id": "281",
+          "name": "Chanterelle",
+          "quantity": 3,
+          "quality": 0
+        }
+      ],
+      "item_count": 22
+    },
+    {
+      "chest_number": 7,
+      "location": "Zusa",
+      "location_type": "Farm",
+      "items": [
+        {
+          "id": "390",
+          "name": "Stone",
+          "quantity": 999,
+          "quality": 0
+        },
+        {
+          "id": "390",
+          "name": "Stone",
+          "quantity": 999,
+          "quality": 0
+        },
+        {
+          "id": "390",
+          "name": "Stone",
+          "quantity": 999,
+          "quality": 0
+        },
+        {
+          "id": "390",
+          "name": "Stone",
+          "quantity": 995,
+          "quality": 0
+        },
+        {
+          "id": "881",
+          "name": "Bone Fragment",
+          "quantity": 149,
+          "quality": 0
+        },
+        {
+          "id": "771",
+          "name": "Fiber",
+          "quantity": 434,
+          "quality": 0
+        },
+        {
+          "id": "178",
+          "name": "Hay",
+          "quantity": 281,
+          "quality": 0
+        },
+        {
+          "id": "330",
+          "name": "Clay",
+          "quantity": 323,
+          "quality": 0
+        },
+        {
+          "id": "709",
+          "name": "Hardwood",
+          "quantity": 181,
+          "quality": 0
+        },
+        {
+          "id": "388",
+          "name": "Wood",
+          "quantity": 37,
+          "quality": 0
+        }
+      ],
+      "item_count": 10
+    },
+    {
+      "chest_number": 8,
+      "location": "Zusa",
+      "location_type": "Farm",
+      "items": [
+        {
+          "id": "68",
+          "name": "Stardrop Tea",
+          "quantity": 1,
+          "quality": 0
+        },
+        {
+          "id": "874",
+          "name": "Bug Steak",
+          "quantity": 1,
+          "quality": 0
+        },
+        {
+          "id": "446",
+          "name": "Rabbit's Foot",
+          "quantity": 7,
+          "quality": 4
+        },
+        {
+          "id": "446",
+          "name": "Rabbit's Foot",
+          "quantity": 4,
+          "quality": 2
+        },
+        {
+          "id": "446",
+          "name": "Rabbit's Foot",
+          "quantity": 7,
+          "quality": 1
+        },
+        {
+          "id": "206",
+          "name": "Pizza",
+          "quantity": 1,
+          "quality": 0
+        },
+        {
+          "id": "446",
+          "name": "Rabbit's Foot",
+          "quantity": 1,
+          "quality": 0
+        },
+        {
+          "id": "88",
+          "name": "Coconut",
+          "quantity": 5,
+          "quality": 4
+        },
+        {
+          "id": "90",
+          "name": "Cactus Fruit",
+          "quantity": 2,
+          "quality": 4
+        },
+        {
+          "id": "393",
+          "name": "Coral",
+          "quantity": 10,
+          "quality": 4
+        },
+        {
+          "id": "372",
+          "name": "Clam",
+          "quantity": 8,
+          "quality": 4
+        },
+        {
+          "id": "749",
+          "name": "Omni Geode",
+          "quantity": 30,
+          "quality": 0
+        },
+        {
+          "id": "537",
+          "name": "Magma Geode",
+          "quantity": 4,
+          "quality": 0
+        },
+        {
+          "id": "88",
+          "name": "Coconut",
+          "quantity": 1,
+          "quality": 1
+        },
+        {
+          "id": "535",
+          "name": "Geode",
+          "quantity": 3,
+          "quality": 0
+        },
+        {
+          "id": "372",
+          "name": "Clam",
+          "quantity": 3,
+          "quality": 1
+        }
+      ],
+      "item_count": 16
+    },
+    {
+      "chest_number": 9,
+      "location": "Zusa",
+      "location_type": "Farm",
+      "items": [
+        {
+          "id": "80",
+          "name": "Quartz",
+          "quantity": 41,
+          "quality": 0
+        },
+        {
+          "id": "334",
+          "name": "Copper Bar",
+          "quantity": 167,
+          "quality": 0
+        },
+        {
+          "id": "336",
+          "name": "Gold Bar",
+          "quantity": 16,
+          "quality": 0
+        },
+        {
+          "id": "337",
+          "name": "Iridium Bar",
+          "quantity": 35,
+          "quality": 0
+        },
+        {
+          "id": "335",
+          "name": "Iron Bar",
+          "quantity": 33,
+          "quality": 0
+        },
+        {
+          "id": "338",
+          "name": "Refined Quartz",
+          "quantity": 49,
+          "quality": 0
+        },
+        {
+          "id": "82",
+          "name": "Fire Quartz",
+          "quantity": 8,
+          "quality": 0
+        },
+        {
+          "id": "390",
+          "name": "Stone",
+          "quantity": 136,
+          "quality": 0
+        },
+        {
+          "id": "378",
+          "name": "Copper Ore",
+          "quantity": 217,
+          "quality": 0
+        },
+        {
+          "id": "380",
+          "name": "Iron Ore",
+          "quantity": 86,
+          "quality": 0
+        },
+        {
+          "id": "386",
+          "name": "Iridium Ore",
+          "quantity": 15,
+          "quality": 0
+        },
+        {
+          "id": "384",
+          "name": "Gold Ore",
+          "quantity": 170,
+          "quality": 0
         }
       ],
       "item_count": 12
     },
     {
-      "chest_number": 14,
-      "location": "Brase",
+      "chest_number": 10,
+      "location": "Zusa",
       "location_type": "Farm",
       "items": [
         {
@@ -6470,392 +5878,738 @@
         {
           "id": "70",
           "name": "Jade",
-          "quantity": 14,
+          "quantity": 18,
           "quality": 0
         }
       ],
       "item_count": 39
     },
     {
-      "chest_number": 15,
-      "location": "Brase",
+      "chest_number": 11,
+      "location": "Zusa",
       "location_type": "Farm",
       "items": [
         {
-          "id": "80",
-          "name": "Quartz",
-          "quantity": 41,
-          "quality": 0
-        },
-        {
-          "id": "334",
-          "name": "Copper Bar",
-          "quantity": 167,
-          "quality": 0
-        },
-        {
-          "id": "336",
-          "name": "Gold Bar",
-          "quantity": 104,
-          "quality": 0
-        },
-        {
-          "id": "337",
-          "name": "Iridium Bar",
-          "quantity": 46,
-          "quality": 0
-        },
-        {
-          "id": "335",
-          "name": "Iron Bar",
-          "quantity": 33,
-          "quality": 0
-        },
-        {
-          "id": "384",
-          "name": "Gold Ore",
-          "quantity": 220,
-          "quality": 0
-        },
-        {
-          "id": "338",
-          "name": "Refined Quartz",
-          "quantity": 49,
-          "quality": 0
-        },
-        {
-          "id": "82",
-          "name": "Fire Quartz",
-          "quantity": 7,
-          "quality": 0
-        },
-        {
-          "id": "390",
-          "name": "Stone",
-          "quantity": 136,
-          "quality": 0
-        },
-        {
-          "id": "378",
-          "name": "Copper Ore",
-          "quantity": 173,
-          "quality": 0
-        },
-        {
-          "id": "386",
-          "name": "Iridium Ore",
-          "quantity": 133,
-          "quality": 0
-        },
-        {
-          "id": "380",
-          "name": "Iron Ore",
-          "quantity": 50,
-          "quality": 0
-        }
-      ],
-      "item_count": 12
-    },
-    {
-      "chest_number": 16,
-      "location": "Brase",
-      "location_type": "Farm",
-      "items": [
-        {
-          "id": "68",
-          "name": "Stardrop Tea",
+          "id": "621",
+          "name": "Quality Sprinkler",
           "quantity": 1,
           "quality": 0
         },
         {
-          "id": "874",
-          "name": "Bug Steak",
-          "quantity": 1,
-          "quality": 0
-        },
-        {
-          "id": "446",
-          "name": "Rabbit's Foot",
-          "quantity": 5,
-          "quality": 4
-        },
-        {
-          "id": "446",
-          "name": "Rabbit's Foot",
-          "quantity": 2,
-          "quality": 2
-        },
-        {
-          "id": "446",
-          "name": "Rabbit's Foot",
-          "quantity": 6,
-          "quality": 1
-        },
-        {
-          "id": "206",
-          "name": "Pizza",
-          "quantity": 1,
-          "quality": 0
-        },
-        {
-          "id": "446",
-          "name": "Rabbit's Foot",
-          "quantity": 1,
-          "quality": 0
-        },
-        {
-          "id": "88",
-          "name": "Coconut",
-          "quantity": 5,
-          "quality": 4
-        },
-        {
-          "id": "90",
-          "name": "Cactus Fruit",
-          "quantity": 2,
-          "quality": 4
-        },
-        {
-          "id": "393",
-          "name": "Coral",
-          "quantity": 10,
-          "quality": 4
-        },
-        {
-          "id": "372",
-          "name": "Clam",
-          "quantity": 7,
-          "quality": 4
-        },
-        {
-          "id": "749",
-          "name": "Omni Geode",
-          "quantity": 24,
-          "quality": 0
-        },
-        {
-          "id": "537",
-          "name": "Magma Geode",
-          "quantity": 4,
-          "quality": 0
-        },
-        {
-          "id": "88",
-          "name": "Coconut",
-          "quantity": 1,
-          "quality": 1
-        },
-        {
-          "id": "535",
-          "name": "Geode",
+          "id": "599",
+          "name": "Sprinkler",
           "quantity": 3,
           "quality": 0
         },
         {
-          "id": "372",
-          "name": "Clam",
+          "id": "369",
+          "name": "Quality Fertilizer",
+          "quantity": 37,
+          "quality": 0
+        },
+        {
+          "id": "499",
+          "name": "Ancient Seeds",
+          "quantity": 7,
+          "quality": 0
+        },
+        {
+          "id": "473",
+          "name": "Bean Starter",
           "quantity": 1,
-          "quality": 1
-        }
-      ],
-      "item_count": 16
-    },
-    {
-      "chest_number": 17,
-      "location": "Brase",
-      "location_type": "Farm",
-      "items": [
-        {
-          "id": "390",
-          "name": "Stone",
-          "quantity": 999,
           "quality": 0
         },
         {
-          "id": "390",
-          "name": "Stone",
-          "quantity": 999,
+          "id": "494",
+          "name": "Beet Seeds",
+          "quantity": 1,
           "quality": 0
         },
         {
-          "id": "390",
-          "name": "Stone",
-          "quantity": 999,
-          "quality": 0
-        },
-        {
-          "id": "390",
-          "name": "Stone",
-          "quantity": 999,
-          "quality": 0
-        },
-        {
-          "id": "881",
-          "name": "Bone Fragment",
-          "quantity": 149,
-          "quality": 0
-        },
-        {
-          "id": "390",
-          "name": "Stone",
-          "quantity": 999,
-          "quality": 0
-        },
-        {
-          "id": "771",
-          "name": "Fiber",
-          "quantity": 433,
-          "quality": 0
-        },
-        {
-          "id": "178",
-          "name": "Hay",
-          "quantity": 281,
-          "quality": 0
-        },
-        {
-          "id": "330",
-          "name": "Clay",
-          "quantity": 305,
-          "quality": 0
-        },
-        {
-          "id": "709",
-          "name": "Hardwood",
-          "quantity": 181,
-          "quality": 0
-        },
-        {
-          "id": "390",
-          "name": "Stone",
-          "quantity": 243,
-          "quality": 0
-        },
-        {
-          "id": "388",
-          "name": "Wood",
-          "quantity": 31,
-          "quality": 0
-        }
-      ],
-      "item_count": 12
-    },
-    {
-      "chest_number": 18,
-      "location": "Brase",
-      "location_type": "Farm",
-      "items": [
-        {
-          "id": "634",
-          "name": "Apricot",
-          "quantity": 18,
-          "quality": 0
-        },
-        {
-          "id": "398",
-          "name": "Grape",
-          "quantity": 4,
-          "quality": 2
-        },
-        {
-          "id": "398",
-          "name": "Grape",
-          "quantity": 3,
-          "quality": 1
-        },
-        {
-          "id": "635",
-          "name": "Orange",
-          "quantity": 22,
-          "quality": 0
-        },
-        {
-          "id": "636",
-          "name": "Peach",
-          "quantity": 10,
-          "quality": 0
-        },
-        {
-          "id": "637",
-          "name": "Pomegranate",
+          "id": "302",
+          "name": "Hops Starter",
           "quantity": 19,
           "quality": 0
         },
         {
-          "id": "400",
-          "name": "Strawberry",
-          "quantity": 4,
+          "id": "8",
+          "name": "Mixed Flower Seeds",
+          "quantity": 83,
           "quality": 0
         },
         {
-          "id": "281",
-          "name": "Chanterelle",
-          "quantity": 5,
-          "quality": 1
-        },
-        {
-          "id": "281",
-          "name": "Chanterelle",
-          "quantity": 33,
+          "id": "85",
+          "name": "Summer Squash Seeds",
+          "quantity": 2,
           "quality": 0
         },
         {
-          "id": "404",
-          "name": "Common Mushroom",
-          "quantity": 23,
-          "quality": 1
+          "id": "396",
+          "name": "Spice Berry",
+          "quantity": 3,
+          "quality": 4
         },
         {
-          "id": "404",
-          "name": "Common Mushroom",
-          "quantity": 59,
+          "id": "402",
+          "name": "Sweet Pea",
+          "quantity": 2,
+          "quality": 4
+        },
+        {
+          "id": "398",
+          "name": "Grape",
+          "quantity": 3,
+          "quality": 4
+        }
+      ],
+      "item_count": 12
+    },
+    {
+      "chest_number": 12,
+      "location": "Zusa",
+      "location_type": "Farm",
+      "items": [
+        {
+          "id": "38",
+          "name": "Moss",
+          "quantity": 330,
           "quality": 0
         },
         {
-          "id": "257",
-          "name": "Morel",
-          "quantity": 27,
-          "quality": 1
+          "id": "725",
+          "name": "Oak Resin",
+          "quantity": 120,
+          "quality": 0
         },
         {
-          "id": "257",
-          "name": "Morel",
+          "id": "726",
+          "name": "Pine Tar",
+          "quantity": 30,
+          "quality": 0
+        },
+        {
+          "id": "309",
+          "name": "Acorn",
+          "quantity": 152,
+          "quality": 0
+        },
+        {
+          "id": "259",
+          "name": "Fiddlehead Fern",
+          "quantity": 47,
+          "quality": 0
+        },
+        {
+          "id": "92",
+          "name": "Sap",
+          "quantity": 980,
+          "quality": 0
+        },
+        {
+          "id": "92",
+          "name": "Sap",
+          "quantity": 999,
+          "quality": 0
+        },
+        {
+          "id": "39",
+          "name": "Mossy Seed",
           "quantity": 7,
           "quality": 0
         },
         {
-          "id": "422",
-          "name": "Purple Mushroom",
-          "quantity": 2,
-          "quality": 1
+          "id": "724",
+          "name": "Maple Syrup",
+          "quantity": 7,
+          "quality": 0
         },
         {
-          "id": "422",
-          "name": "Purple Mushroom",
+          "id": "311",
+          "name": "Pine Cone",
+          "quantity": 262,
+          "quality": 0
+        },
+        {
+          "id": "310",
+          "name": "Maple Seed",
+          "quantity": 84,
+          "quality": 0
+        },
+        {
+          "id": "292",
+          "name": "Mahogany Seed",
+          "quantity": 1,
+          "quality": 0
+        }
+      ],
+      "item_count": 12
+    },
+    {
+      "chest_number": 13,
+      "location": "Zusa",
+      "location_type": "Farm",
+      "items": [
+        {
+          "id": "466",
+          "name": "Deluxe Speed-Gro",
+          "quantity": 56,
+          "quality": 0
+        },
+        {
+          "id": "770",
+          "name": "Mixed Seeds",
+          "quantity": 1,
+          "quality": 0
+        },
+        {
+          "id": "831",
+          "name": "Taro Tuber",
+          "quantity": 9,
+          "quality": 0
+        }
+      ],
+      "item_count": 3
+    },
+    {
+      "chest_number": 14,
+      "location": "Zusa",
+      "location_type": "Farm",
+      "items": [
+        {
+          "id": "IridiumRod",
+          "name": "Iridium Rod",
+          "quantity": 1,
+          "quality": 0
+        },
+        {
+          "id": "116",
+          "name": "Dried Starfish",
           "quantity": 3,
           "quality": 0
         },
         {
-          "id": "400",
-          "name": "Strawberry",
-          "quantity": 21,
-          "quality": 1
-        },
-        {
-          "id": "638",
-          "name": "Cherry",
-          "quantity": 10,
+          "id": "153",
+          "name": "Green Algae",
+          "quantity": 30,
           "quality": 0
         },
         {
-          "id": "613",
-          "name": "Apple",
+          "id": "157",
+          "name": "White Algae",
+          "quantity": 26,
+          "quality": 0
+        },
+        {
+          "id": "132",
+          "name": "River Jelly",
+          "quantity": 2,
+          "quality": 0
+        },
+        {
+          "id": "134",
+          "name": "Sea Jelly",
           "quantity": 4,
           "quality": 0
         },
         {
-          "id": "63",
-          "name": "Raisins",
+          "id": "152",
+          "name": "Seaweed",
+          "quantity": 35,
+          "quality": 0
+        },
+        {
+          "id": "705",
+          "name": "Albacore",
+          "quantity": 5,
+          "quality": 2
+        },
+        {
+          "id": "129",
+          "name": "Anchovy",
+          "quantity": 1,
+          "quality": 2
+        },
+        {
+          "id": "800",
+          "name": "Blobfish",
+          "quantity": 1,
+          "quality": 1
+        },
+        {
+          "id": "132",
+          "name": "Bream",
+          "quantity": 1,
+          "quality": 4
+        },
+        {
+          "id": "700",
+          "name": "Bullhead",
+          "quantity": 1,
+          "quality": 2
+        },
+        {
+          "id": "702",
+          "name": "Chub",
+          "quantity": 3,
+          "quality": 4
+        },
+        {
+          "id": "718",
+          "name": "Cockle",
+          "quantity": 3,
+          "quality": 1
+        },
+        {
+          "id": "717",
+          "name": "Crab",
+          "quantity": 1,
+          "quality": 0
+        },
+        {
+          "id": "716",
+          "name": "Crayfish",
+          "quantity": 1,
+          "quality": 0
+        },
+        {
+          "id": "704",
+          "name": "Dorado",
+          "quantity": 1,
+          "quality": 2
+        },
+        {
+          "id": "704",
+          "name": "Dorado",
+          "quantity": 1,
+          "quality": 0
+        },
+        {
+          "id": "708",
+          "name": "Halibut",
+          "quantity": 4,
+          "quality": 2
+        },
+        {
+          "id": "147",
+          "name": "Herring",
+          "quantity": 5,
+          "quality": 2
+        },
+        {
+          "id": "136",
+          "name": "Largemouth Bass",
+          "quantity": 1,
+          "quality": 2
+        },
+        {
+          "id": "162",
+          "name": "Lava Eel",
+          "quantity": 2,
+          "quality": 2
+        },
+        {
+          "id": "269",
+          "name": "Midnight Carp",
+          "quantity": 1,
+          "quality": 0
+        },
+        {
+          "id": "798",
+          "name": "Midnight Squid",
+          "quantity": 1,
+          "quality": 2
+        },
+        {
+          "id": "719",
+          "name": "Mussel",
+          "quantity": 26,
+          "quality": 0
+        },
+        {
+          "id": "141",
+          "name": "Perch",
+          "quantity": 1,
+          "quality": 2
+        },
+        {
+          "id": "722",
+          "name": "Periwinkle",
+          "quantity": 1,
+          "quality": 0
+        },
+        {
+          "id": "144",
+          "name": "Pike",
+          "quantity": 1,
+          "quality": 2
+        },
+        {
+          "id": "138",
+          "name": "Rainbow Trout",
+          "quantity": 9,
+          "quality": 4
+        },
+        {
+          "id": "146",
+          "name": "Red Mullet",
+          "quantity": 1,
+          "quality": 2
+        },
+        {
+          "id": "131",
+          "name": "Sardine",
+          "quantity": 2,
+          "quality": 4
+        },
+        {
+          "id": "154",
+          "name": "Sea Cucumber",
+          "quantity": 1,
+          "quality": 4
+        },
+        {
+          "id": "706",
+          "name": "Shad",
+          "quantity": 1,
+          "quality": 2
+        },
+        {
+          "id": "720",
+          "name": "Shrimp",
+          "quantity": 2,
+          "quality": 1
+        },
+        {
+          "id": "137",
+          "name": "Smallmouth Bass",
+          "quantity": 1,
+          "quality": 2
+        },
+        {
+          "id": "721",
+          "name": "Snail",
+          "quantity": 1,
+          "quality": 1
+        },
+        {
+          "id": "721",
+          "name": "Snail",
+          "quantity": 3,
+          "quality": 0
+        },
+        {
+          "id": "799",
+          "name": "Spook Fish",
+          "quantity": 1,
+          "quality": 1
+        },
+        {
+          "id": "151",
+          "name": "Squid",
+          "quantity": 4,
+          "quality": 2
+        },
+        {
+          "id": "145",
+          "name": "Sunfish",
+          "quantity": 2,
+          "quality": 2
+        },
+        {
+          "id": "155",
+          "name": "Super Cucumber",
+          "quantity": 2,
+          "quality": 2
+        },
+        {
+          "id": "699",
+          "name": "Tiger Trout",
+          "quantity": 1,
+          "quality": 1
+        },
+        {
+          "id": "701",
+          "name": "Tilapia",
+          "quantity": 1,
+          "quality": 2
+        },
+        {
+          "id": "130",
+          "name": "Tuna",
+          "quantity": 1,
+          "quality": 2
+        },
+        {
+          "id": "242",
+          "name": "Dish O' The Sea",
+          "quantity": 3,
+          "quality": 0
+        },
+        {
+          "id": "265",
+          "name": "Seafoam Pudding",
+          "quantity": 1,
+          "quality": 0
+        },
+        {
+          "id": "57",
+          "name": "Squid Bait",
+          "quantity": 7,
+          "quality": 0
+        },
+        {
+          "id": "57",
+          "name": "Rainbow Trout Bait",
+          "quantity": 6,
+          "quality": 0
+        },
+        {
+          "id": "703",
+          "name": "Magnet",
+          "quantity": 4,
+          "quality": 0
+        },
+        {
+          "id": "774",
+          "name": "Wild Bait",
+          "quantity": 2,
+          "quality": 0
+        },
+        {
+          "id": "691",
+          "name": "Barbed Hook",
+          "quantity": 1,
+          "quality": 0
+        },
+        {
+          "id": "695",
+          "name": "Cork Bobber",
+          "quantity": 1,
+          "quality": 0
+        },
+        {
+          "id": "856",
+          "name": "Curiosity Lure",
+          "quantity": 1,
+          "quality": 0
+        },
+        {
+          "id": "56",
+          "name": "Sonar Bobber",
+          "quantity": 1,
+          "quality": 0
+        },
+        {
+          "id": "393",
+          "name": "Coral",
+          "quantity": 43,
+          "quality": 4
+        },
+        {
+          "id": "392",
+          "name": "Nautilus Shell",
+          "quantity": 8,
+          "quality": 4
+        },
+        {
+          "id": "394",
+          "name": "Rainbow Shell",
+          "quantity": 6,
+          "quality": 4
+        },
+        {
+          "id": "397",
+          "name": "Sea Urchin",
+          "quantity": 8,
+          "quality": 4
+        },
+        {
+          "id": "814",
+          "name": "Squid Ink",
+          "quantity": 1,
+          "quality": 0
+        }
+      ],
+      "item_count": 59
+    },
+    {
+      "chest_number": 15,
+      "location": "Zusa",
+      "location_type": "Farm",
+      "items": [
+        {
+          "id": "531",
+          "name": "Aquamarine Ring",
+          "quantity": 1,
+          "quality": 0
+        },
+        {
+          "id": "122",
+          "name": "Dwarf Gadget",
+          "quantity": 1,
+          "quality": 0
+        },
+        {
+          "id": "373",
+          "name": "Golden Pumpkin",
+          "quantity": 3,
+          "quality": 0
+        },
+        {
+          "id": "797",
+          "name": "Pearl",
+          "quantity": 2,
+          "quality": 0
+        },
+        {
+          "id": "690",
+          "name": "Warp Totem: Beach",
+          "quantity": 3,
+          "quality": 0
+        },
+        {
+          "id": "787",
+          "name": "Battery Pack",
+          "quantity": 38,
+          "quality": 0
+        },
+        {
+          "id": "166",
+          "name": "Treasure Chest",
+          "quantity": 1,
+          "quality": 0
+        },
+        {
+          "id": "121",
+          "name": "Golden Animal Cracker",
+          "quantity": 1,
+          "quality": 0
+        },
+        {
+          "id": "872",
+          "name": "Fairy Dust",
+          "quantity": 5,
+          "quality": 0
+        }
+      ],
+      "item_count": 9
+    },
+    {
+      "chest_number": 16,
+      "location": "Zusa",
+      "location_type": "Farm",
+      "items": [
+        {
+          "id": "8",
+          "name": "Obsidian Edge",
+          "quantity": 1,
+          "quality": 0
+        },
+        {
+          "id": "45",
+          "name": "Wicked Kris",
+          "quantity": 1,
+          "quality": 0
+        },
+        {
+          "id": "767",
+          "name": "Bat Wing",
+          "quantity": 16,
+          "quality": 0
+        },
+        {
+          "id": "684",
+          "name": "Bug Meat",
+          "quantity": 30,
+          "quality": 0
+        },
+        {
+          "id": "766",
+          "name": "Slime",
+          "quantity": 93,
+          "quality": 0
+        },
+        {
+          "id": "768",
+          "name": "Solar Essence",
+          "quantity": 27,
+          "quality": 0
+        },
+        {
+          "id": "769",
+          "name": "Void Essence",
+          "quantity": 144,
+          "quality": 0
+        },
+        {
+          "id": "51",
+          "name": "Broken Trident",
+          "quantity": 1,
+          "quality": 0
+        },
+        {
+          "id": "133",
+          "name": "Cave Jelly",
+          "quantity": 4,
+          "quality": 0
+        },
+        {
+          "id": "18",
+          "name": "Burglar's Shank",
+          "quantity": 1,
+          "quality": 0
+        },
+        {
+          "id": "51",
+          "name": "Broken Trident",
+          "quantity": 1,
+          "quality": 0
+        },
+        {
+          "id": "14",
+          "name": "Neptune's Glaive",
+          "quantity": 1,
+          "quality": 0
+        },
+        {
+          "id": "26",
+          "name": "Lead Rod",
+          "quantity": 1,
+          "quality": 0
+        },
+        {
+          "id": "533",
+          "name": "Emerald Ring",
+          "quantity": 1,
+          "quality": 0
+        },
+        {
+          "id": "827",
+          "name": "Mummified Bat",
+          "quantity": 1,
+          "quality": 0
+        },
+        {
+          "id": "28",
+          "name": "The Slammer",
+          "quantity": 1,
+          "quality": 0
+        },
+        {
+          "id": "862",
+          "name": "Soul Sapper Ring",
+          "quantity": 1,
+          "quality": 0
+        },
+        {
+          "id": "861",
+          "name": "Protection Ring",
+          "quantity": 1,
+          "quality": 0
+        },
+        {
+          "id": "887",
+          "name": "Immunity Band",
           "quantity": 1,
           "quality": 0
         }
@@ -6863,114 +6617,220 @@
       "item_count": 19
     },
     {
-      "chest_number": 19,
-      "location": "Brase",
+      "chest_number": 17,
+      "location": "Zusa",
       "location_type": "Farm",
       "items": [
         {
-          "id": "340",
-          "name": "Wild Honey",
-          "quantity": 26,
+          "id": "322",
+          "name": "Wood Fence",
+          "quantity": 4,
           "quality": 0
         },
         {
-          "id": "433",
-          "name": "Coffee Bean",
-          "quantity": 69,
+          "id": "325",
+          "name": "Gate",
+          "quantity": 2,
           "quality": 0
         },
         {
-          "id": "433",
-          "name": "Coffee Bean",
-          "quantity": 999,
+          "id": "407",
+          "name": "Gravel Path",
+          "quantity": 22,
           "quality": 0
         },
         {
-          "id": "433",
-          "name": "Coffee Bean",
-          "quantity": 999,
+          "id": "329",
+          "name": "Stone Floor",
+          "quantity": 45,
           "quality": 0
         },
         {
-          "id": "304",
-          "name": "Hops",
-          "quantity": 51,
-          "quality": 2
-        },
-        {
-          "id": "304",
-          "name": "Hops",
-          "quantity": 69,
-          "quality": 1
-        },
-        {
-          "id": "304",
-          "name": "Hops",
-          "quantity": 79,
-          "quality": 0
-        },
-        {
-          "id": "262",
-          "name": "Wheat",
-          "quantity": 14,
-          "quality": 2
-        },
-        {
-          "id": "262",
-          "name": "Wheat",
-          "quantity": 20,
-          "quality": 1
-        },
-        {
-          "id": "262",
-          "name": "Wheat",
-          "quantity": 27,
-          "quality": 0
-        },
-        {
-          "id": "454",
-          "name": "Ancient Fruit",
-          "quantity": 179,
-          "quality": 2
-        },
-        {
-          "id": "454",
-          "name": "Ancient Fruit",
-          "quantity": 34,
-          "quality": 1
-        },
-        {
-          "id": "454",
-          "name": "Ancient Fruit",
-          "quantity": 46,
-          "quality": 0
-        },
-        {
-          "id": "268",
-          "name": "Starfruit",
-          "quantity": 18,
-          "quality": 2
-        },
-        {
-          "id": "268",
-          "name": "Starfruit",
-          "quantity": 57,
-          "quality": 1
-        },
-        {
-          "id": "268",
-          "name": "Starfruit",
-          "quantity": 59,
-          "quality": 0
-        },
-        {
-          "id": "815",
-          "name": "Tea Leaves",
-          "quantity": 1,
+          "id": "323",
+          "name": "Stone Fence",
+          "quantity": 71,
           "quality": 0
         }
       ],
-      "item_count": 17
+      "item_count": 5
+    },
+    {
+      "chest_number": 18,
+      "location": "Zusa",
+      "location_type": "Farm",
+      "items": [
+        {
+          "id": "171",
+          "name": "Broken CD",
+          "quantity": 6,
+          "quality": 0
+        },
+        {
+          "id": "169",
+          "name": "Driftwood",
+          "quantity": 4,
+          "quality": 0
+        },
+        {
+          "id": "170",
+          "name": "Broken Glasses",
+          "quantity": 2,
+          "quality": 0
+        },
+        {
+          "id": "167",
+          "name": "Joja Cola",
+          "quantity": 12,
+          "quality": 0
+        },
+        {
+          "id": "172",
+          "name": "Soggy Newspaper",
+          "quantity": 3,
+          "quality": 0
+        },
+        {
+          "id": "168",
+          "name": "Trash",
+          "quantity": 11,
+          "quality": 0
+        }
+      ],
+      "item_count": 6
+    },
+    {
+      "chest_number": 19,
+      "location": "Zusa",
+      "location_type": "Farm",
+      "items": [
+        {
+          "id": "349",
+          "name": "Energy Tonic",
+          "quantity": 2,
+          "quality": 0
+        },
+        {
+          "id": "59",
+          "name": "Tent Kit",
+          "quantity": 4,
+          "quality": 0
+        },
+        {
+          "id": "727",
+          "name": "Chowder",
+          "quantity": 2,
+          "quality": 0
+        },
+        {
+          "id": "732",
+          "name": "Crab Cakes",
+          "quantity": 6,
+          "quality": 0
+        },
+        {
+          "id": "205",
+          "name": "Fried Mushroom",
+          "quantity": 2,
+          "quality": 0
+        },
+        {
+          "id": "773",
+          "name": "Life Elixir",
+          "quantity": 9,
+          "quality": 0
+        },
+        {
+          "id": "243",
+          "name": "Miner's Treat",
+          "quantity": 10,
+          "quality": 0
+        },
+        {
+          "id": "772",
+          "name": "Oil of Garlic",
+          "quantity": 2,
+          "quality": 0
+        },
+        {
+          "id": "195",
+          "name": "Omelet",
+          "quantity": 1,
+          "quality": 0
+        },
+        {
+          "id": "196",
+          "name": "Salad",
+          "quantity": 9,
+          "quality": 0
+        },
+        {
+          "id": "241",
+          "name": "Survival Burger",
+          "quantity": 5,
+          "quality": 0
+        },
+        {
+          "id": "200",
+          "name": "Vegetable Medley",
+          "quantity": 2,
+          "quality": 0
+        },
+        {
+          "id": "286",
+          "name": "Cherry Bomb",
+          "quantity": 3,
+          "quality": 0
+        },
+        {
+          "id": "80",
+          "name": "Carrot",
+          "quantity": 11,
+          "quality": 0
+        },
+        {
+          "id": "78",
+          "name": "Cave Carrot",
+          "quantity": 18,
+          "quality": 0
+        },
+        {
+          "id": "517",
+          "name": "Glow Ring",
+          "quantity": 1,
+          "quality": 0
+        },
+        {
+          "id": "221",
+          "name": "Pink Cake",
+          "quantity": 4,
+          "quality": 0
+        },
+        {
+          "id": "689",
+          "name": "Warp Totem: Mountains",
+          "quantity": 3,
+          "quality": 0
+        },
+        {
+          "id": "4",
+          "name": "Galaxy Sword",
+          "quantity": 1,
+          "quality": 0
+        },
+        {
+          "id": "424",
+          "name": "Cheese",
+          "quantity": 146,
+          "quality": 2
+        },
+        {
+          "id": "226",
+          "name": "Spicy Eel",
+          "quantity": 2,
+          "quality": 0
+        }
+      ],
+      "item_count": 21
     },
     {
       "chest_number": 20,
@@ -7000,7 +6860,7 @@
         {
           "id": "454",
           "name": "Ancient Fruit",
-          "quantity": 48,
+          "quantity": 25,
           "quality": 1
         }
       ],
@@ -7148,6 +7008,98 @@
       "location_type": "IslandWest",
       "items": [
         {
+          "id": "862",
+          "name": "Soul Sapper Ring",
+          "quantity": 1,
+          "quality": 0
+        },
+        {
+          "id": "829",
+          "name": "Ginger",
+          "quantity": 3,
+          "quality": 0
+        },
+        {
+          "id": "827",
+          "name": "Mummified Bat",
+          "quantity": 3,
+          "quality": 0
+        },
+        {
+          "id": "852",
+          "name": "Dragon Tooth",
+          "quantity": 2,
+          "quality": 0
+        },
+        {
+          "id": "10",
+          "name": "Bee House",
+          "quantity": 25,
+          "quality": 0
+        },
+        {
+          "id": "645",
+          "name": "Iridium Sprinkler",
+          "quantity": 1,
+          "quality": 0
+        },
+        {
+          "id": "14",
+          "name": "Deluxe Bait",
+          "quantity": 9,
+          "quality": 0
+        },
+        {
+          "id": "710",
+          "name": "Crab Pot",
+          "quantity": 1,
+          "quality": 0
+        },
+        {
+          "id": "688",
+          "name": "Warp Totem: Farm",
+          "quantity": 15,
+          "quality": 0
+        },
+        {
+          "id": "SportsCap",
+          "name": "Sports Cap",
+          "quantity": 1,
+          "quality": 0
+        },
+        {
+          "id": "287",
+          "name": "Bomb",
+          "quantity": 117,
+          "quality": 0
+        },
+        {
+          "id": "288",
+          "name": "Mega Bomb",
+          "quantity": 38,
+          "quality": 0
+        },
+        {
+          "id": "848",
+          "name": "Cinder Shard",
+          "quantity": 24,
+          "quality": 0
+        },
+        {
+          "id": "881",
+          "name": "Bone Fragment",
+          "quantity": 20,
+          "quality": 0
+        }
+      ],
+      "item_count": 14
+    },
+    {
+      "chest_number": 28,
+      "location": "Birdie",
+      "location_type": "IslandWest",
+      "items": [
+        {
           "id": "271",
           "name": "Unmilled Rice",
           "quantity": 2,
@@ -7228,7 +7180,7 @@
         {
           "id": "398",
           "name": "Grape",
-          "quantity": 4,
+          "quantity": 5,
           "quality": 1
         },
         {
@@ -7245,68 +7197,6 @@
         }
       ],
       "item_count": 16
-    },
-    {
-      "chest_number": 28,
-      "location": "Birdie",
-      "location_type": "IslandWest",
-      "items": [
-        {
-          "id": "862",
-          "name": "Soul Sapper Ring",
-          "quantity": 1,
-          "quality": 0
-        },
-        {
-          "id": "829",
-          "name": "Ginger",
-          "quantity": 2,
-          "quality": 0
-        },
-        {
-          "id": "827",
-          "name": "Mummified Bat",
-          "quantity": 3,
-          "quality": 0
-        },
-        {
-          "id": "852",
-          "name": "Dragon Tooth",
-          "quantity": 1,
-          "quality": 0
-        },
-        {
-          "id": "10",
-          "name": "Bee House",
-          "quantity": 25,
-          "quality": 0
-        },
-        {
-          "id": "645",
-          "name": "Iridium Sprinkler",
-          "quantity": 1,
-          "quality": 0
-        },
-        {
-          "id": "14",
-          "name": "Deluxe Bait",
-          "quantity": 9,
-          "quality": 0
-        },
-        {
-          "id": "710",
-          "name": "Crab Pot",
-          "quantity": 1,
-          "quality": 0
-        },
-        {
-          "id": "688",
-          "name": "Warp Totem: Farm",
-          "quantity": 15,
-          "quality": 0
-        }
-      ],
-      "item_count": 9
     }
   ],
   "weather_tomorrow": "unknown",
