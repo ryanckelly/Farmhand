@@ -1,24 +1,18 @@
 {
-  "selected_at": "2025-11-22",
-  "reasoning": "Selected based on proximity to completion (Museum 87%, Walnuts 73%), goal alignment (Qi Room is a medium-term goal), quick wins (Beach Bridge, Secret Woods axe upgrade), and strategic progression blocker (Professor Snail unlocks Field Office and fossil collection)",
+  "selected_at": "2025-11-23T00:00:00Z",
+  "reasoning": "Selected based on goal alignment with goals.md Fall Year 3 priorities: Museum completion (88% done, needs 11 more items), Golden Walnuts (74% done, unlocks Qi's Walnut Room at 100), Secret Woods/Beach Bridge (explicit short-term goals), and Professor Snail (prerequisite for Island Field Office and quests). Mix of near-completion wins and strategic blockers.",
   "unlocks": [
     {
       "name": "Museum Collection (95)",
-      "completion_percent": 87,
-      "next_step": "Donate all 95 items to Museum (83/95)",
+      "completion_percent": 88,
+      "next_step": "Donate all 95 items to Museum (84/95)",
       "category": "Progression"
     },
     {
       "name": "Golden Walnuts (100)",
-      "completion_percent": 73,
-      "next_step": "Find 100 Golden Walnuts (73/100)",
+      "completion_percent": 74,
+      "next_step": "Find 100 Golden Walnuts (74/100)",
       "category": "Island Features"
-    },
-    {
-      "name": "Beach Bridge",
-      "completion_percent": 0,
-      "next_step": "Collect 300 wood",
-      "category": "Map Access"
     },
     {
       "name": "Secret Woods",
@@ -27,7 +21,13 @@
       "category": "Map Access"
     },
     {
-      "name": "Professor Snail Tent",
+      "name": "Beach Bridge",
+      "completion_percent": 0,
+      "next_step": "Collect 300 wood",
+      "category": "Map Access"
+    },
+    {
+      "name": "Professor Snail's Tent",
       "completion_percent": 0,
       "next_step": "Free Professor Snail from boulder",
       "category": "Island Features"

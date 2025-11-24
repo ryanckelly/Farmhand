@@ -1,6 +1,6 @@
 {
-  "generated_at": "2025-11-23T14:03:25.071185",
-  "game_date": "Fall 8, Year 3",
+  "generated_at": "2025-11-23T20:50:47.030443",
+  "game_date": "Fall 9, Year 3",
   "unlocks": {
     "community_center": {
       "completed": 31,
@@ -28,9 +28,9 @@
       "percent": 1.0
     },
     "golden_walnuts": {
-      "found": 74,
+      "found": 80,
       "total": 130,
-      "percent": 0.5692307692307692
+      "percent": 0.6153846153846154
     },
     "skull_cavern_depth": {
       "deepest": 155,
@@ -79,21 +79,21 @@
     }
   },
   "financials": {
-    "current_balance": 337040,
-    "daily_average": 2877,
-    "weekly_trend": -1.0150346871069946,
+    "current_balance": 379989,
+    "daily_average": 19170,
+    "weekly_trend": -1.1065936422704816,
     "best_day": {
       "amount": 357539,
       "date": "Spring 24, Year 3"
     },
     "sparkline_data": [
-      -0.2104082574780128,
       0.0436962157171435,
       0.27863365727204936,
       1.0,
       -1.4903262271990152,
       0.20067234052627217,
-      0.23734330796273717
+      0.23734330796273717,
+      0.12709662527668944
     ]
   },
   "momentum_3session": {
@@ -102,12 +102,12 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+2565/session)"
+        "description": "High XP gains (+2783/session)"
       },
       {
-        "category": "Social",
+        "category": "Money",
         "icon": "[HOT]",
-        "description": "Strong relationships (+374 pts/session)"
+        "description": "Strong earnings (+63,655g/session)"
       }
     ],
     "cold_streaks": [
@@ -115,11 +115,6 @@
         "category": "Bundles",
         "icon": "[COLD]",
         "description": "No bundle progress in 3 sessions"
-      },
-      {
-        "category": "Money",
-        "icon": "[COLD]",
-        "description": "Net losses (-118,533g/session)"
       }
     ],
     "rising_trends": [],
@@ -137,12 +132,12 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+3310/session)"
+        "description": "High XP gains (+3257/session)"
       },
       {
         "category": "Social",
         "icon": "[HOT]",
-        "description": "Strong relationships (+246 pts/session)"
+        "description": "Strong relationships (+258 pts/session)"
       }
     ],
     "cold_streaks": [
@@ -154,11 +149,6 @@
     ],
     "rising_trends": [],
     "stalled_areas": [
-      {
-        "category": "Money",
-        "icon": "[STALLED]",
-        "description": "Low income (2,877g/session)"
-      },
       {
         "category": "Museum",
         "icon": "[STALLED]",
