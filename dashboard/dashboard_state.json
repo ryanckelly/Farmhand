@@ -1,6 +1,6 @@
 {
-  "generated_at": "2025-11-24T20:37:22.016250",
-  "game_date": "Fall 14, Year 3",
+  "generated_at": "2025-11-24T21:02:23.840504",
+  "game_date": "Fall 15, Year 3",
   "unlocks": {
     "community_center": {
       "completed": 31,
@@ -28,9 +28,9 @@
       "percent": 1.0
     },
     "golden_walnuts": {
-      "found": 80,
+      "found": 82,
       "total": 130,
-      "percent": 0.6153846153846154
+      "percent": 0.6307692307692307
     },
     "skull_cavern_depth": {
       "deepest": 155,
@@ -64,7 +64,7 @@
         "total": 81
       },
       "recipes_crafted": {
-        "count": 61,
+        "count": 62,
         "total": 149
       },
       "stardrops_found": {
@@ -79,21 +79,21 @@
     }
   },
   "financials": {
-    "current_balance": 837627,
-    "daily_average": 82970,
-    "weekly_trend": 9.798382448638096,
+    "current_balance": 986828,
+    "daily_average": 92826,
+    "weekly_trend": 31.257148530579823,
     "best_day": {
       "amount": 357539,
       "date": "Spring 24, Year 3"
     },
     "sparkline_data": [
-      0.3736431652799389,
       0.20008478761169138,
       -0.041606492308552366,
       0.7811221780167152,
       0.06022249760079011,
       1.0,
-      0.3322416540106404
+      0.3322416540106404,
+      0.6950767281299207
     ]
   },
   "momentum_3session": {
@@ -102,17 +102,12 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+3564/session)"
+        "description": "High XP gains (+5408/session)"
       },
       {
         "category": "Money",
         "icon": "[HOT]",
-        "description": "Strong earnings (+99,632g/session)"
-      },
-      {
-        "category": "Social",
-        "icon": "[HOT]",
-        "description": "Strong relationships (+376 pts/session)"
+        "description": "Strong earnings (+145,057g/session)"
       }
     ],
     "cold_streaks": [
@@ -120,6 +115,11 @@
         "category": "Bundles",
         "icon": "[COLD]",
         "description": "No bundle progress in 3 sessions"
+      },
+      {
+        "category": "Social",
+        "icon": "[COLD]",
+        "description": "No relationship progress"
       }
     ],
     "rising_trends": [],
@@ -137,12 +137,12 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+3237/session)"
+        "description": "High XP gains (+3838/session)"
       },
       {
         "category": "Money",
         "icon": "[HOT]",
-        "description": "Strong earnings (+82,970g/session)"
+        "description": "Strong earnings (+92,826g/session)"
       }
     ],
     "cold_streaks": [
