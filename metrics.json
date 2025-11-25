@@ -1883,14 +1883,41 @@
         "stardrops_found": 5,
         "monster_goals": 0
       }
+    },
+    {
+      "date": "2025-11-24T21:23:25.455292",
+      "game_date": "Fall 16, Year 3",
+      "money": 1019350,
+      "total_earned": 8819438,
+      "animals": 35,
+      "skills": {
+        "farming": 10,
+        "fishing": 10,
+        "foraging": 10,
+        "mining": 10,
+        "combat": 10,
+        "luck": 0
+      },
+      "bundles_complete": 31,
+      "perfection": {
+        "overall_percent": 21.7,
+        "obelisks": 2,
+        "golden_clock": false,
+        "produce_shipped": 0,
+        "fish_caught": 58,
+        "recipes_cooked": 3,
+        "recipes_crafted": 62,
+        "stardrops_found": 5,
+        "monster_goals": 0
+      }
     }
   ],
   "trends": {
-    "daily_income_avg": 149201,
-    "money_growth_rate": 0.17812343680421
+    "daily_income_avg": 32522,
+    "money_growth_rate": 0.03295609771915673
   },
   "meta": {
     "tracking_started": "2024-01-15",
-    "total_snapshots": 82
+    "total_snapshots": 83
   }
 }
