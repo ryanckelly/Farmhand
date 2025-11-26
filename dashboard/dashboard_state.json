@@ -1,6 +1,6 @@
 {
-  "generated_at": "2025-11-25T22:29:11.548178",
-  "game_date": "Fall 20, Year 3",
+  "generated_at": "2025-11-26T18:52:23.129008",
+  "game_date": "Fall 21, Year 3",
   "unlocks": {
     "community_center": {
       "completed": 31,
@@ -79,21 +79,21 @@
     }
   },
   "financials": {
-    "current_balance": 1520008,
-    "daily_average": 107671,
-    "weekly_trend": 0.30558856442040866,
+    "current_balance": 1665584,
+    "daily_average": 118279,
+    "weekly_trend": 0.4255678893095796,
     "best_day": {
       "amount": 435164,
       "date": "Fall 20, Year 3"
     },
     "sparkline_data": [
-      0.16388533977994504,
       0.34286154185548434,
       0.07473504242078849,
       0.3041106341517221,
       0.10467318068590233,
       -0.2582796371023338,
-      1.0
+      1.0,
+      0.334531349100569
     ]
   },
   "momentum_3session": {
@@ -102,17 +102,17 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+5267/session)"
+        "description": "High XP gains (+5194/session)"
       },
       {
         "category": "Money",
         "icon": "[HOT]",
-        "description": "Strong earnings (+122,773g/session)"
+        "description": "Strong earnings (+156,115g/session)"
       },
       {
         "category": "Social",
         "icon": "[HOT]",
-        "description": "Strong relationships (+445 pts/session)"
+        "description": "Strong relationships (+344 pts/session)"
       }
     ],
     "cold_streaks": [
@@ -137,12 +137,12 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+3450/session)"
+        "description": "High XP gains (+3962/session)"
       },
       {
         "category": "Money",
         "icon": "[HOT]",
-        "description": "Strong earnings (+107,671g/session)"
+        "description": "Strong earnings (+118,279g/session)"
       }
     ],
     "cold_streaks": [

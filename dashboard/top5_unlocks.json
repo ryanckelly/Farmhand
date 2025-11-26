@@ -1,11 +1,11 @@
 {
-  "selected_at": "2025-11-25T12:00:00Z",
-  "reasoning": "Selected based on goal alignment with goals.md Fall Year 3 priorities: Museum at 88% is closest to Stardrop reward (11 items needed), Golden Walnuts at 82% approaching Qi's Walnut Room threshold, Secret Woods and Professor Snail are explicit short-term goals, Casino provides endgame content. Beach Bridge already complete (100%) so replaced with Casino.",
+  "selected_at": "2025-11-26T00:00:00Z",
+  "reasoning": "Selected based on: (1) proximity to completion - Museum at 94% (5 items to Stardrop!), Golden Walnuts at 82% (18 to Qi's Room); (2) goals.md explicit Fall Year 3 priorities - Secret Woods and Professor Snail; (3) Casino for progression and endgame content access.",
   "unlocks": [
     {
       "name": "Museum Collection (95)",
-      "completion_percent": 88,
-      "next_step": "Donate all 95 items to Museum (84/95)",
+      "completion_percent": 94,
+      "next_step": "Donate all 95 items to Museum (90/95)",
       "category": "Progression"
     },
     {
