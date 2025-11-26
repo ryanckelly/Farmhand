@@ -1,6 +1,6 @@
 {
-  "selected_at": "2025-11-23T00:00:00Z",
-  "reasoning": "Selected based on goal alignment with goals.md Fall Year 3 priorities: Museum completion (88% done, needs 11 more items), Golden Walnuts (74% done, unlocks Qi's Walnut Room at 100), Secret Woods/Beach Bridge (explicit short-term goals), and Professor Snail (prerequisite for Island Field Office and quests). Mix of near-completion wins and strategic blockers.",
+  "selected_at": "2025-11-25T12:00:00Z",
+  "reasoning": "Selected based on goal alignment with goals.md Fall Year 3 priorities: Museum at 88% is closest to Stardrop reward (11 items needed), Golden Walnuts at 82% approaching Qi's Walnut Room threshold, Secret Woods and Professor Snail are explicit short-term goals, Casino provides endgame content. Beach Bridge already complete (100%) so replaced with Casino.",
   "unlocks": [
     {
       "name": "Museum Collection (95)",
@@ -10,8 +10,8 @@
     },
     {
       "name": "Golden Walnuts (100)",
-      "completion_percent": 74,
-      "next_step": "Find 100 Golden Walnuts (74/100)",
+      "completion_percent": 82,
+      "next_step": "Find 100 Golden Walnuts (82/100)",
       "category": "Island Features"
     },
     {
@@ -21,16 +21,16 @@
       "category": "Map Access"
     },
     {
-      "name": "Beach Bridge",
-      "completion_percent": 0,
-      "next_step": "Collect 300 wood",
-      "category": "Map Access"
-    },
-    {
       "name": "Professor Snail's Tent",
       "completion_percent": 0,
       "next_step": "Free Professor Snail from boulder",
       "category": "Island Features"
+    },
+    {
+      "name": "Casino (Club Card)",
+      "completion_percent": 0,
+      "next_step": "Complete 'Mysterious Qi' questline",
+      "category": "Progression"
     }
   ]
 }
