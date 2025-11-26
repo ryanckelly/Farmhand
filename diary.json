@@ -17401,12 +17401,230 @@
           "monster_goals_completed": 0
         }
       }
+    },
+    {
+      "session_id": "2025-11-26-1922",
+      "detected_at": "2025-11-26T19:22:24.875661",
+      "game_progress": {
+        "start": "Fall 21, Year 3",
+        "end": "Fall 22, Year 3",
+        "start_parsed": {
+          "season": "fall",
+          "day": 21,
+          "year": 3
+        },
+        "end_parsed": {
+          "season": "fall",
+          "day": 22,
+          "year": 3
+        },
+        "days_played": 1,
+        "play_time_minutes": 28
+      },
+      "financial": {
+        "starting_money": 1665584,
+        "ending_money": 1712556,
+        "change": 46972,
+        "total_earned_lifetime": 9667644
+      },
+      "key_accomplishments": [
+        "Gained 52 Fishing XP",
+        "Gained 13,187 Mining XP",
+        "Gained 140 Combat XP",
+        "Earned 46,972g (net)",
+        "Reached floor 270 in Skull Cavern (new record!)",
+        "Progressed 1 in-game day(s)"
+      ],
+      "bundle_readiness": {
+        "ready_to_complete": [],
+        "priority_bundles": []
+      },
+      "changes_detail": {
+        "money_change": 46972,
+        "total_earned_change": 48472,
+        "days_passed": 1,
+        "play_time_change": 1694912,
+        "skill_changes": {
+          "fishing": {
+            "old_level": 10,
+            "new_level": 10,
+            "xp_gained": 52
+          },
+          "mining": {
+            "old_level": 10,
+            "new_level": 10,
+            "xp_gained": 13187
+          },
+          "combat": {
+            "old_level": 10,
+            "new_level": 10,
+            "xp_gained": 140
+          }
+        },
+        "animals_change": 0,
+        "friendship_changes": {
+          "Lewis": {
+            "old_hearts": 2,
+            "new_hearts": 2,
+            "points_gained": -2
+          },
+          "Robin": {
+            "old_hearts": 5,
+            "new_hearts": 5,
+            "points_gained": -2
+          },
+          "Pierre": {
+            "old_hearts": 1,
+            "new_hearts": 1,
+            "points_gained": -2
+          },
+          "Marnie": {
+            "old_hearts": 5,
+            "new_hearts": 5,
+            "points_gained": -2
+          },
+          "Leah": {
+            "old_hearts": 0,
+            "new_hearts": 0,
+            "points_gained": -2
+          },
+          "Gus": {
+            "old_hearts": 3,
+            "new_hearts": 3,
+            "points_gained": -2
+          },
+          "Evelyn": {
+            "old_hearts": 1,
+            "new_hearts": 1,
+            "points_gained": -2
+          },
+          "George": {
+            "old_hearts": 1,
+            "new_hearts": 1,
+            "points_gained": -2
+          },
+          "Penny": {
+            "old_hearts": 2,
+            "new_hearts": 2,
+            "points_gained": -2
+          },
+          "Sam": {
+            "old_hearts": 0,
+            "new_hearts": 0,
+            "points_gained": -2
+          },
+          "Pam": {
+            "old_hearts": 2,
+            "new_hearts": 2,
+            "points_gained": -2
+          },
+          "Clint": {
+            "old_hearts": 2,
+            "new_hearts": 2,
+            "points_gained": -2
+          },
+          "Alex": {
+            "old_hearts": 0,
+            "new_hearts": 0,
+            "points_gained": -2
+          },
+          "Elliott": {
+            "old_hearts": 4,
+            "new_hearts": 4,
+            "points_gained": -2
+          },
+          "Jodi": {
+            "old_hearts": 5,
+            "new_hearts": 5,
+            "points_gained": -2
+          },
+          "Vincent": {
+            "old_hearts": 1,
+            "new_hearts": 1,
+            "points_gained": -2
+          },
+          "Jas": {
+            "old_hearts": 1,
+            "new_hearts": 1,
+            "points_gained": -2
+          },
+          "Willy": {
+            "old_hearts": 7,
+            "new_hearts": 7,
+            "points_gained": -2
+          },
+          "Emily": {
+            "old_hearts": 1,
+            "new_hearts": 1,
+            "points_gained": -2
+          },
+          "Demetrius": {
+            "old_hearts": 1,
+            "new_hearts": 1,
+            "points_gained": -2
+          },
+          "Linus": {
+            "old_hearts": 3,
+            "new_hearts": 3,
+            "points_gained": -2
+          },
+          "Caroline": {
+            "old_hearts": 1,
+            "new_hearts": 1,
+            "points_gained": -2
+          },
+          "Wizard": {
+            "old_hearts": 3,
+            "new_hearts": 3,
+            "points_gained": -2
+          },
+          "Dwarf": {
+            "old_hearts": 5,
+            "new_hearts": 5,
+            "points_gained": -2
+          },
+          "Kent": {
+            "old_hearts": 2,
+            "new_hearts": 2,
+            "points_gained": -2
+          },
+          "Krobus": {
+            "old_hearts": 2,
+            "new_hearts": 2,
+            "points_gained": -2
+          },
+          "Leo": {
+            "old_hearts": 0,
+            "new_hearts": 0,
+            "points_gained": -2
+          },
+          "fart": {
+            "old_hearts": 1,
+            "new_hearts": 1,
+            "points_gained": -2
+          }
+        },
+        "bundles_completed": 0,
+        "golden_walnuts_found": 0,
+        "skull_cavern_depth_change": 115,
+        "perfection_changes": {
+          "overall_percent_change": 0.0,
+          "obelisks_built": 0,
+          "golden_clock_acquired": false,
+          "produce_shipped_change": 0,
+          "fish_caught_change": 0,
+          "recipes_cooked_change": 0,
+          "recipes_crafted_change": 0,
+          "stardrops_found_change": 0,
+          "monster_goals_completed": 0
+        }
+      }
     }
   ],
   "meta": {
     "created": "2024-01-15",
-    "total_sessions": 88,
-    "last_updated": "2025-11-26T18:52:22.953662",
+    "total_sessions": 89,
+    "last_updated": "2025-11-26T19:22:24.879317",
     "schema_version": "1.2",
     "date_index": {
       "game": {
@@ -17417,13 +17635,13 @@
         },
         "latest": {
           "season": "fall",
-          "day": 21,
+          "day": 22,
           "year": 3
         }
       },
       "real": {
         "earliest": "2025-11-01T11:26:24.877454",
-        "latest": "2025-11-26T18:52:22.941220"
+        "latest": "2025-11-26T19:22:24.875661"
       }
     }
   }
