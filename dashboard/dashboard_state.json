@@ -1,6 +1,6 @@
 {
-  "generated_at": "2025-11-25T21:19:05.432680",
-  "game_date": "Fall 17, Year 3",
+  "generated_at": "2025-11-25T21:48:07.343860",
+  "game_date": "Fall 18, Year 3",
   "unlocks": {
     "community_center": {
       "completed": 31,
@@ -79,21 +79,21 @@
     }
   },
   "financials": {
-    "current_balance": 1151688,
-    "daily_average": 111518,
-    "weekly_trend": 6.064652753896,
+    "current_balance": 1197238,
+    "daily_average": 94072,
+    "weekly_trend": 2.578619872617003,
     "best_day": {
       "amount": 357539,
       "date": "Spring 24, Year 3"
     },
     "sparkline_data": [
-      0.7811221780167152,
       0.06022249760079011,
       1.0,
       0.3322416540106404,
       0.6950767281299207,
       0.15150893996850745,
-      0.6165177448358754
+      0.6165177448358754,
+      0.21220196222758486
     ]
   },
   "momentum_3session": {
@@ -102,12 +102,12 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+2496/session)"
+        "description": "High XP gains (+2053/session)"
       },
       {
         "category": "Money",
         "icon": "[HOT]",
-        "description": "Strong earnings (+104,687g/session)"
+        "description": "Strong earnings (+70,136g/session)"
       }
     ],
     "cold_streaks": [
@@ -115,11 +115,6 @@
         "category": "Bundles",
         "icon": "[COLD]",
         "description": "No bundle progress in 3 sessions"
-      },
-      {
-        "category": "Social",
-        "icon": "[COLD]",
-        "description": "No relationship progress"
       }
     ],
     "rising_trends": [],
@@ -137,12 +132,12 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+3671/session)"
+        "description": "High XP gains (+3264/session)"
       },
       {
         "category": "Money",
         "icon": "[HOT]",
-        "description": "Strong earnings (+111,518g/session)"
+        "description": "Strong earnings (+94,072g/session)"
       }
     ],
     "cold_streaks": [
