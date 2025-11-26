@@ -1,6 +1,6 @@
 {
-  "generated_at": "2025-11-25T21:48:07.343860",
-  "game_date": "Fall 18, Year 3",
+  "generated_at": "2025-11-25T22:11:09.665378",
+  "game_date": "Fall 19, Year 3",
   "unlocks": {
     "community_center": {
       "completed": 31,
@@ -8,9 +8,9 @@
       "percent": 1.0333333333333334
     },
     "museum": {
-      "donated": 84,
+      "donated": 90,
       "total": 95,
-      "percent": 0.8842105263157894
+      "percent": 0.9473684210526315
     },
     "cooking": {
       "known": 0,
@@ -79,21 +79,21 @@
     }
   },
   "financials": {
-    "current_balance": 1197238,
-    "daily_average": 94072,
-    "weekly_trend": 2.578619872617003,
+    "current_balance": 1084844,
+    "daily_average": 76169,
+    "weekly_trend": -4.781877504699081,
     "best_day": {
       "amount": 357539,
       "date": "Spring 24, Year 3"
     },
     "sparkline_data": [
-      0.06022249760079011,
       1.0,
       0.3322416540106404,
       0.6950767281299207,
       0.15150893996850745,
       0.6165177448358754,
-      0.21220196222758486
+      0.21220196222758486,
+      -0.5236054301340762
     ]
   },
   "momentum_3session": {
@@ -102,12 +102,12 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+2053/session)"
+        "description": "High XP gains (+2200/session)"
       },
       {
-        "category": "Money",
+        "category": "Social",
         "icon": "[HOT]",
-        "description": "Strong earnings (+70,136g/session)"
+        "description": "Strong relationships (+407 pts/session)"
       }
     ],
     "cold_streaks": [
@@ -132,12 +132,12 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+3264/session)"
+        "description": "High XP gains (+3420/session)"
       },
       {
         "category": "Money",
         "icon": "[HOT]",
-        "description": "Strong earnings (+94,072g/session)"
+        "description": "Strong earnings (+76,169g/session)"
       }
     ],
     "cold_streaks": [
