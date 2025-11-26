@@ -1,6 +1,6 @@
 {
-  "generated_at": "2025-11-26T19:22:25.014831",
-  "game_date": "Fall 22, Year 3",
+  "generated_at": "2025-11-26T19:43:26.758109",
+  "game_date": "Fall 23, Year 3",
   "unlocks": {
     "community_center": {
       "completed": 31,
@@ -38,7 +38,7 @@
       "milestone_200": true
     },
     "perfection": {
-      "overall_percent": 21.7,
+      "overall_percent": 21.8,
       "obelisks": {
         "count": 2,
         "total": 4,
@@ -64,7 +64,7 @@
         "total": 81
       },
       "recipes_crafted": {
-        "count": 62,
+        "count": 63,
         "total": 149
       },
       "stardrops_found": {
@@ -79,21 +79,21 @@
     }
   },
   "financials": {
-    "current_balance": 1712556,
-    "daily_average": 103675,
-    "weekly_trend": 0.11686888646758625,
+    "current_balance": 2116952,
+    "daily_average": 156800,
+    "weekly_trend": 0.7167171597892271,
     "best_day": {
       "amount": 435164,
       "date": "Fall 20, Year 3"
     },
     "sparkline_data": [
-      0.07473504242078849,
       0.3041106341517221,
       0.10467318068590233,
       -0.2582796371023338,
       1.0,
       0.334531349100569,
-      0.1079409142300374
+      0.1079409142300374,
+      0.9292956218804864
     ]
   },
   "momentum_3session": {
@@ -102,12 +102,12 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+9133/session)"
+        "description": "High XP gains (+6090/session)"
       },
       {
         "category": "Money",
         "icon": "[HOT]",
-        "description": "Strong earnings (+209,237g/session)"
+        "description": "Strong earnings (+198,981g/session)"
       }
     ],
     "cold_streaks": [
@@ -137,12 +137,12 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+5017/session)"
+        "description": "High XP gains (+4921/session)"
       },
       {
         "category": "Money",
         "icon": "[HOT]",
-        "description": "Strong earnings (+103,675g/session)"
+        "description": "Strong earnings (+156,800g/session)"
       }
     ],
     "cold_streaks": [
