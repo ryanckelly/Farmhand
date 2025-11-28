@@ -1,6 +1,6 @@
 {
-  "generated_at": "2025-11-26T19:43:26.758109",
-  "game_date": "Fall 23, Year 3",
+  "generated_at": "2025-11-27T21:02:36.405649",
+  "game_date": "Fall 25, Year 3",
   "unlocks": {
     "community_center": {
       "completed": 31,
@@ -38,14 +38,14 @@
       "milestone_200": true
     },
     "perfection": {
-      "overall_percent": 21.8,
+      "overall_percent": 22.9,
       "obelisks": {
-        "count": 2,
+        "count": 3,
         "total": 4,
         "details": {
           "Earth Obelisk": 1,
           "Water Obelisk": 1,
-          "Desert Obelisk": 0,
+          "Desert Obelisk": 1,
           "Island Obelisk": 0
         }
       },
@@ -64,7 +64,7 @@
         "total": 81
       },
       "recipes_crafted": {
-        "count": 63,
+        "count": 64,
         "total": 149
       },
       "stardrops_found": {
@@ -79,21 +79,21 @@
     }
   },
   "financials": {
-    "current_balance": 2116952,
-    "daily_average": 156800,
-    "weekly_trend": 0.7167171597892271,
+    "current_balance": 1271383,
+    "daily_average": 10592,
+    "weekly_trend": -0.8874047279536043,
     "best_day": {
       "amount": 435164,
       "date": "Fall 20, Year 3"
     },
     "sparkline_data": [
-      0.3041106341517221,
-      0.10467318068590233,
       -0.2582796371023338,
       1.0,
       0.334531349100569,
       0.1079409142300374,
-      0.9292956218804864
+      0.9292956218804864,
+      -2.169598128521661,
+      0.22649391953378498
     ]
   },
   "momentum_3session": {
@@ -102,12 +102,7 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+6090/session)"
-      },
-      {
-        "category": "Money",
-        "icon": "[HOT]",
-        "description": "Strong earnings (+198,981g/session)"
+        "description": "High XP gains (+962/session)"
       }
     ],
     "cold_streaks": [
@@ -115,6 +110,11 @@
         "category": "Bundles",
         "icon": "[COLD]",
         "description": "No bundle progress in 3 sessions"
+      },
+      {
+        "category": "Money",
+        "icon": "[COLD]",
+        "description": "Net losses (-147,057g/session)"
       },
       {
         "category": "Social",
@@ -137,12 +137,7 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+4921/session)"
-      },
-      {
-        "category": "Money",
-        "icon": "[HOT]",
-        "description": "Strong earnings (+156,800g/session)"
+        "description": "High XP gains (+4549/session)"
       }
     ],
     "cold_streaks": [
