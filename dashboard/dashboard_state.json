@@ -1,6 +1,6 @@
 {
-  "generated_at": "2025-11-28T20:33:34.633811",
-  "game_date": "Fall 27, Year 3",
+  "generated_at": "2025-11-28T20:56:36.704430",
+  "game_date": "Fall 28, Year 3",
   "unlocks": {
     "community_center": {
       "completed": 31,
@@ -38,15 +38,15 @@
       "milestone_200": true
     },
     "perfection": {
-      "overall_percent": 22.9,
+      "overall_percent": 23.9,
       "obelisks": {
-        "count": 3,
+        "count": 4,
         "total": 4,
         "details": {
           "Earth Obelisk": 1,
           "Water Obelisk": 1,
           "Desert Obelisk": 1,
-          "Island Obelisk": 0
+          "Island Obelisk": 1
         }
       },
       "golden_clock": false,
@@ -79,21 +79,21 @@
     }
   },
   "financials": {
-    "current_balance": 1107383,
-    "daily_average": -58946,
-    "weekly_trend": -1.5474672879588376,
+    "current_balance": 111056,
+    "daily_average": -222075,
+    "weekly_trend": -2.8775467808110804,
     "best_day": {
       "amount": 435164,
       "date": "Fall 20, Year 3"
     },
     "sparkline_data": [
-      0.35998377827673866,
       0.11615347332812392,
       1.0,
       -2.33466948238855,
       0.24372644635456334,
       -0.7472477472576385,
-      0.34170466572369657
+      0.34170466572369657,
+      -2.4637409865577307
     ]
   },
   "momentum_3session": {
@@ -102,7 +102,7 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+5680/session)"
+        "description": "High XP gains (+6787/session)"
       }
     ],
     "cold_streaks": [
@@ -114,7 +114,7 @@
       {
         "category": "Money",
         "icon": "[COLD]",
-        "description": "Net losses (-21,812g/session)"
+        "description": "Net losses (-386,775g/session)"
       },
       {
         "category": "Social",
@@ -137,7 +137,7 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+5104/session)"
+        "description": "High XP gains (+5232/session)"
       }
     ],
     "cold_streaks": [
@@ -149,7 +149,7 @@
       {
         "category": "Money",
         "icon": "[COLD]",
-        "description": "Net losses (-58,946g/session)"
+        "description": "Net losses (-222,075g/session)"
       },
       {
         "category": "Social",
