@@ -1,6 +1,6 @@
 {
-  "generated_at": "2025-11-27T21:24:38.579968",
-  "game_date": "Fall 26, Year 3",
+  "generated_at": "2025-11-28T20:33:34.633811",
+  "game_date": "Fall 27, Year 3",
   "unlocks": {
     "community_center": {
       "completed": 31,
@@ -79,21 +79,21 @@
     }
   },
   "financials": {
-    "current_balance": 969199,
-    "daily_average": -16520,
-    "weekly_trend": -1.216893478472884,
+    "current_balance": 1107383,
+    "daily_average": -58946,
+    "weekly_trend": -1.5474672879588376,
     "best_day": {
       "amount": 435164,
       "date": "Fall 20, Year 3"
     },
     "sparkline_data": [
+      0.35998377827673866,
+      0.11615347332812392,
       1.0,
-      0.334531349100569,
-      0.1079409142300374,
-      0.9292956218804864,
-      -2.169598128521661,
-      0.22649391953378498,
-      -0.6944140599865798
+      -2.33466948238855,
+      0.24372644635456334,
+      -0.7472477472576385,
+      0.34170466572369657
     ]
   },
   "momentum_3session": {
@@ -102,7 +102,7 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+3926/session)"
+        "description": "High XP gains (+5680/session)"
       }
     ],
     "cold_streaks": [
@@ -114,7 +114,7 @@
       {
         "category": "Money",
         "icon": "[COLD]",
-        "description": "Net losses (-382,584g/session)"
+        "description": "Net losses (-21,812g/session)"
       },
       {
         "category": "Social",
@@ -137,7 +137,7 @@
       {
         "category": "Skills",
         "icon": "[HOT]",
-        "description": "High XP gains (+5660/session)"
+        "description": "High XP gains (+5104/session)"
       }
     ],
     "cold_streaks": [
@@ -149,7 +149,7 @@
       {
         "category": "Money",
         "icon": "[COLD]",
-        "description": "Net losses (-16,520g/session)"
+        "description": "Net losses (-58,946g/session)"
       },
       {
         "category": "Social",
