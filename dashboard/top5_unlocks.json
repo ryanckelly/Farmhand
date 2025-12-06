@@ -1,17 +1,23 @@
 {
-  "selected_at": "2025-11-28T12:00:00Z",
-  "reasoning": "Selected based on: (1) Near-completion - Museum at 94% (5 items to Stardrop!); (2) goals.md explicit Fall Year 3 priorities - Secret Woods and Professor Snail; (3) Dependency chain - Prof Snail unlocks Field Office for fossils; (4) Casino for endgame content; (5) Leo friendship for town expansion. Note: Golden Walnuts now COMPLETE (130/130)!",
+  "selected_at": "2025-12-06T18:35:00Z",
+  "reasoning": "Selected based on: (1) Museum at 96% - only 3 items to Stardrop! (2) Mutant Bug Lair at 66% - active progress, need Krobus friendship (3) Witch's Swamp at 25% - dependency chain from Bug Lair to Witch's Hut (4) Professor Snail - quick win, unlocks Field Office fossils (5) Secret Woods - simple axe upgrade for daily hardwood",
   "unlocks": [
     {
       "name": "Museum Collection (95)",
-      "completion_percent": 94,
-      "next_step": "Donate all 95 items to Museum (90/95)",
+      "completion_percent": 96,
+      "next_step": "Donate all 95 items to Museum (92/95)",
       "category": "Progression"
     },
     {
-      "name": "Secret Woods",
-      "completion_percent": 0,
-      "next_step": "Upgrade Axe to Steel or better",
+      "name": "Mutant Bug Lair",
+      "completion_percent": 66,
+      "next_step": "Befriend Krobus (2+ hearts)",
+      "category": "Map Access"
+    },
+    {
+      "name": "Witch's Swamp",
+      "completion_percent": 25,
+      "next_step": "Unlock Mutant Bug Lair",
       "category": "Map Access"
     },
     {
@@ -21,16 +27,10 @@
       "category": "Island Features"
     },
     {
-      "name": "Casino (Club Card)",
+      "name": "Secret Woods",
       "completion_percent": 0,
-      "next_step": "Complete 'Mysterious Qi' questline",
-      "category": "Progression"
-    },
-    {
-      "name": "Leo's Return to Town",
-      "completion_percent": 0,
-      "next_step": "Befriend Leo (6+ hearts)",
-      "category": "Progression"
+      "next_step": "Upgrade Axe to Steel or better",
+      "category": "Map Access"
     }
   ]
 }

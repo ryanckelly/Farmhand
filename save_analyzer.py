@@ -4,7 +4,7 @@ from datetime import datetime
 from pathlib import Path
 from bundle_definitions import get_bundle_info, get_missing_items_for_bundle
 
-SAVE_PATH = r'C:\Users\ryanc\AppData\Roaming\StardewValley\Saves\ryfarm_419564418\ryfarm_419564418'
+SAVE_PATH = r'C:\Users\RyanKelly\AppData\Roaming\StardewValley\Saves\ryfarm_419564418\ryfarm_419564418'
 
 def analyze_save():
     """

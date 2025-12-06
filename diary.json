@@ -18952,12 +18952,254 @@
           "monster_goals_completed": 0
         }
       }
+    },
+    {
+      "session_id": "2025-12-06-1948",
+      "detected_at": "2025-12-06T19:48:55.255414",
+      "game_progress": {
+        "start": "Fall 28, Year 3",
+        "end": "Winter 5, Year 3",
+        "start_parsed": {
+          "season": "fall",
+          "day": 28,
+          "year": 3
+        },
+        "end_parsed": {
+          "season": "winter",
+          "day": 5,
+          "year": 3
+        },
+        "days_played": 5,
+        "play_time_minutes": 96
+      },
+      "financial": {
+        "starting_money": 111056,
+        "ending_money": 859902,
+        "change": 748846,
+        "total_earned_lifetime": 11329590
+      },
+      "key_accomplishments": [
+        "Gained 10,585 Farming XP",
+        "Gained 410 Fishing XP",
+        "Gained 508 Foraging XP",
+        "Gained 95 Mining XP",
+        "Earned 748,846g (net)",
+        "Reached 6 hearts with Jodi",
+        "Reached 6 hearts with Linus",
+        "Reached 5 hearts with Krobus",
+        "Progressed 5 in-game day(s)",
+        "Crafted 1 new item(s)"
+      ],
+      "bundle_readiness": {
+        "ready_to_complete": [],
+        "priority_bundles": []
+      },
+      "changes_detail": {
+        "money_change": 748846,
+        "total_earned_change": 772621,
+        "days_passed": 5,
+        "play_time_change": 5785712,
+        "skill_changes": {
+          "farming": {
+            "old_level": 10,
+            "new_level": 10,
+            "xp_gained": 10585
+          },
+          "fishing": {
+            "old_level": 10,
+            "new_level": 10,
+            "xp_gained": 410
+          },
+          "foraging": {
+            "old_level": 10,
+            "new_level": 10,
+            "xp_gained": 508
+          },
+          "mining": {
+            "old_level": 10,
+            "new_level": 10,
+            "xp_gained": 95
+          }
+        },
+        "animals_change": 0,
+        "friendship_changes": {
+          "Lewis": {
+            "old_hearts": 2,
+            "new_hearts": 2,
+            "points_gained": 86
+          },
+          "Robin": {
+            "old_hearts": 5,
+            "new_hearts": 5,
+            "points_gained": -10
+          },
+          "Abigail": {
+            "old_hearts": 14,
+            "new_hearts": 14,
+            "points_gained": 12
+          },
+          "Pierre": {
+            "old_hearts": 1,
+            "new_hearts": 1,
+            "points_gained": -10
+          },
+          "Marnie": {
+            "old_hearts": 5,
+            "new_hearts": 5,
+            "points_gained": -10
+          },
+          "Leah": {
+            "old_hearts": 0,
+            "new_hearts": 0,
+            "points_gained": -10
+          },
+          "Gus": {
+            "old_hearts": 3,
+            "new_hearts": 3,
+            "points_gained": 86
+          },
+          "Evelyn": {
+            "old_hearts": 1,
+            "new_hearts": 1,
+            "points_gained": -10
+          },
+          "George": {
+            "old_hearts": 1,
+            "new_hearts": 1,
+            "points_gained": -10
+          },
+          "Penny": {
+            "old_hearts": 2,
+            "new_hearts": 2,
+            "points_gained": -10
+          },
+          "Sam": {
+            "old_hearts": 0,
+            "new_hearts": 0,
+            "points_gained": 86
+          },
+          "Shane": {
+            "old_hearts": 0,
+            "new_hearts": 0,
+            "points_gained": 86
+          },
+          "Pam": {
+            "old_hearts": 2,
+            "new_hearts": 2,
+            "points_gained": -10
+          },
+          "Clint": {
+            "old_hearts": 2,
+            "new_hearts": 2,
+            "points_gained": 86
+          },
+          "Elliott": {
+            "old_hearts": 4,
+            "new_hearts": 4,
+            "points_gained": 17
+          },
+          "Haley": {
+            "old_hearts": 0,
+            "new_hearts": 0,
+            "points_gained": 86
+          },
+          "Jodi": {
+            "old_hearts": 5,
+            "new_hearts": 6,
+            "points_gained": 86
+          },
+          "Vincent": {
+            "old_hearts": 1,
+            "new_hearts": 1,
+            "points_gained": 86
+          },
+          "Jas": {
+            "old_hearts": 1,
+            "new_hearts": 1,
+            "points_gained": -10
+          },
+          "Willy": {
+            "old_hearts": 7,
+            "new_hearts": 6,
+            "points_gained": -10
+          },
+          "Emily": {
+            "old_hearts": 1,
+            "new_hearts": 1,
+            "points_gained": 86
+          },
+          "Demetrius": {
+            "old_hearts": 1,
+            "new_hearts": 1,
+            "points_gained": -10
+          },
+          "Linus": {
+            "old_hearts": 3,
+            "new_hearts": 6,
+            "points_gained": 764
+          },
+          "Caroline": {
+            "old_hearts": 1,
+            "new_hearts": 1,
+            "points_gained": -10
+          },
+          "Wizard": {
+            "old_hearts": 3,
+            "new_hearts": 3,
+            "points_gained": -10
+          },
+          "Dwarf": {
+            "old_hearts": 5,
+            "new_hearts": 5,
+            "points_gained": -10
+          },
+          "Kent": {
+            "old_hearts": 2,
+            "new_hearts": 2,
+            "points_gained": -10
+          },
+          "Krobus": {
+            "old_hearts": 2,
+            "new_hearts": 5,
+            "points_gained": 762
+          },
+          "Sandy": {
+            "old_hearts": 0,
+            "new_hearts": 0,
+            "points_gained": 92
+          },
+          "Leo": {
+            "old_hearts": 0,
+            "new_hearts": 0,
+            "points_gained": -8
+          },
+          "fart": {
+            "old_hearts": 1,
+            "new_hearts": 1,
+            "points_gained": -10
+          }
+        },
+        "bundles_completed": 0,
+        "golden_walnuts_found": 0,
+        "skull_cavern_depth_change": 0,
+        "perfection_changes": {
+          "overall_percent_change": 0.0,
+          "obelisks_built": 0,
+          "golden_clock_acquired": false,
+          "produce_shipped_change": 0,
+          "fish_caught_change": 0,
+          "recipes_cooked_change": 0,
+          "recipes_crafted_change": 1,
+          "stardrops_found_change": 0,
+          "monster_goals_completed": 0
+        }
+      }
     }
   ],
   "meta": {
     "created": "2024-01-15",
-    "total_sessions": 95,
-    "last_updated": "2025-11-28T20:56:36.572164",
+    "total_sessions": 96,
+    "last_updated": "2025-12-06T19:48:55.257978",
     "schema_version": "1.2",
     "date_index": {
       "game": {
@@ -18967,14 +19209,14 @@
           "year": 2
         },
         "latest": {
-          "season": "fall",
-          "day": 28,
+          "season": "winter",
+          "day": 5,
           "year": 3
         }
       },
       "real": {
         "earliest": "2025-11-01T11:26:24.877454",
-        "latest": "2025-11-28T20:56:36.568583"
+        "latest": "2025-12-06T19:48:55.255414"
       }
     }
   }

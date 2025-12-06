@@ -2234,14 +2234,41 @@
         "stardrops_found": 5,
         "monster_goals": 0
       }
+    },
+    {
+      "date": "2025-12-06T19:48:55.285620",
+      "game_date": "Winter 5, Year 3",
+      "money": 859902,
+      "total_earned": 11329590,
+      "animals": 35,
+      "skills": {
+        "farming": 10,
+        "fishing": 10,
+        "foraging": 10,
+        "mining": 10,
+        "combat": 10,
+        "luck": 0
+      },
+      "bundles_complete": 31,
+      "perfection": {
+        "overall_percent": 23.9,
+        "obelisks": 4,
+        "golden_clock": false,
+        "produce_shipped": 0,
+        "fish_caught": 58,
+        "recipes_cooked": 3,
+        "recipes_crafted": 65,
+        "stardrops_found": 5,
+        "monster_goals": 0
+      }
     }
   ],
   "trends": {
-    "daily_income_avg": -996327,
-    "money_growth_rate": -0.899713107389223
+    "daily_income_avg": 748846,
+    "money_growth_rate": 6.74295850741968
   },
   "meta": {
     "tracking_started": "2024-01-15",
-    "total_snapshots": 95
+    "total_snapshots": 96
   }
 }

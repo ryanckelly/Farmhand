@@ -5,9 +5,10 @@ from datetime import datetime
 from save_analyzer import analyze_save
 from bundle_checker import check_bundle_readiness, get_ready_bundles_summary, get_bundles_by_priority
 
-DIARY_PATH = Path(r'C:\opt\stardew\diary.json')
-METRICS_PATH = Path(r'C:\opt\stardew\metrics.json')
-SNAPSHOT_PATH = Path(r'C:\opt\stardew\save_snapshot.json')
+BASE_DIR = Path(__file__).parent
+DIARY_PATH = BASE_DIR / 'diary.json'
+METRICS_PATH = BASE_DIR / 'metrics.json'
+SNAPSHOT_PATH = BASE_DIR / 'save_snapshot.json'
 
 def track_session():
     """
@@ -842,7 +843,7 @@ def get_real_date_range(entries):
 
 def generate_rollups_file():
     """Generate diary_rollups.json from current diary.json."""
-    ROLLUPS_PATH = Path(r'C:\opt\stardew\diary_rollups.json')
+    ROLLUPS_PATH = BASE_DIR / 'diary_rollups.json'
 
     if not DIARY_PATH.exists():
         print("diary.json not found - cannot generate rollups")

@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "stardew-wiki": {
+      "type": "stdio",
+      "command": "python",
+      "args": ["C:/Personal/Farmhand/mcp_servers/stardew_wiki_mcp.py"],
+      "env": {}
+    }
+  }
+}
